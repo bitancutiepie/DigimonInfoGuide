@@ -179,6 +179,16 @@
                 </div>
 
                 <div class="action-row">
+                    <button id="teamPlannerBtn" class="filter-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        Team Planner
+                    </button>
                     <button id="showFavsBtn" class="filter-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -262,20 +272,56 @@
             </div>
         </div>
 
+        <!-- Floating Team Widget -->
+        <div id="floatingTeamWidget" class="floating-team-widget hidden">
+            <div class="ft-header" onclick="document.getElementById('teamPlannerBtn').click()">
+                <div class="ft-title">My Team <span id="ftCount">0/6</span></div>
+                <div class="ft-expand-icon">⤢</div>
+            </div>
+            <div id="ftGrid" class="ft-grid">
+                <!-- Mini portraits -->
+            </div>
+        </div>
+
+        <!-- Team Planner Modal -->
+        <div id="teamModal" class="modal hidden">
+            <div class="modal-content team-modal-content">
+                <span class="close-modal" id="closeTeamModal">&times;</span>
+                <div class="modal-header">
+                    <h2>Team Planner <span style="font-size:0.8em; opacity:0.7; font-weight:normal;">(Max 6)</span></h2>
+                </div>
+
+                <div id="teamStats" class="team-stats">
+                    <!-- Analysis Stats will go here -->
+                </div>
+
+                <div class="team-grid-container">
+                    <div id="teamGrid" class="team-grid">
+                        <!-- Team Members will appear here -->
+                    </div>
+                </div>
+
+                <div class="team-actions">
+                    <button id="clearTeamBtn" class="reset-all-btn">Clear Team</button>
+                    <!-- Potential optimized suggestions or sharing -->
+                </div>
+            </div>
+        </div>
+
         <!-- Patch Notes Modal -->
         <div id="patchNotesModal" class="modal hidden">
             <div class="modal-content patch-notes-content">
-                <span class="close-patch-notes">&times;</span>
                 <div class="patch-header">
                     <h2>Latest Updates</h2>
-                    <span class="patch-version">v1.2.0</span>
+                    <span class="patch-version">v1.3.0</span>
                 </div>
                 <div class="patch-body">
                     <ul class="patch-list">
-                        <li><strong>Advanced Sorting:</strong> Sort by Name or Evolution Count.</li>
-                        <li><strong>Performance:</strong> Faster search and instant list updates.</li>
-                        <li><strong>Back to Top:</strong> Quick navigation button for easy browsing.</li>
-                        <li><strong>View Digimon Routes:</strong> Explore all available locations in the game.</li>
+                        <li><strong>Team Planner:</strong> Build and analyze your ultimate Digimon team.</li>
+                        <li><strong>Level Filters:</strong> Filter by Stage (Rookie to Ultra) and Card Level.</li>
+                        <li><strong>Mobile Optimization:</strong> New bottom navigation bar for seamless mobile
+                            browsing.</li>
+                        <li><strong>UX Refinement:</strong> Improved modal management to prevent screen stacking.</li>
                     </ul>
                 </div>
                 <button id="closePatchBtn" class="patch-done-btn">Got it!</button>
@@ -283,6 +329,57 @@
         </div>
 
         <button id="backToTop" class="back-to-top hidden" title="Back to Top">↑</button>
+
+        <!-- Custom Confirmation Toast -->
+        <div id="confirmModal" class="confirm-modal hidden">
+            <div class="confirm-content">
+                <p id="confirmMessage">Are you sure?</p>
+                <div class="confirm-actions">
+                    <button id="confirmYes" class="confirm-btn yes">Yes, do it</button>
+                    <button id="confirmNo" class="confirm-btn no">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Bottom Navigation -->
+        <nav class="mobile-bottom-nav">
+            <button class="nav-item" id="navTop" title="Scroll to Top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+                <span>Top</span>
+            </button>
+            <button class="nav-item" id="navTeam" title="Team Planner">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span>Team</span>
+            </button>
+            <button class="nav-item" id="navTypes" title="Type Chart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                </svg>
+                <span>Types</span>
+            </button>
+            <button class="nav-item" id="navLocs" title="Locations">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Locs</span>
+            </button>
+        </nav>
     </div>
 
     <script src="locations_data.js"></script>

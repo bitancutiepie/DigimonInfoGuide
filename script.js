@@ -53,6 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Stage Filter Element
     const stageFilter = document.getElementById('stageFilter');
 
+    function closeAllModals() {
+        if (detailModal) detailModal.classList.add('hidden');
+        if (typeModal) typeModal.classList.add('hidden');
+        if (locationsModal) locationsModal.classList.add('hidden');
+        if (locationDetailModal) locationDetailModal.classList.add('hidden');
+        if (teamModal) teamModal.classList.add('hidden');
+        if (patchModal) patchModal.classList.add('hidden');
+        modalHistory = [];
+    }
+
     // Debounce helper
     function debounce(func, wait) {
         let timeout;
@@ -126,6 +136,176 @@ document.addEventListener('DOMContentLoaded', () => {
             openDigimonDetail(previous, true); // Re-open with isBackAction = true
         }
     };
+
+    // --- Favorites Logic ---
+    function getFavorites() {
+        return JSON.parse(localStorage.getItem('digimon_favs')) || [];
+    }
+
+    function saveFavorites(favs) {
+        localStorage.setItem('digimon_favs', JSON.stringify(favs));
+    }
+
+    window.toggleFavorite = (name) => {
+        let favs = getFavorites();
+        if (favs.includes(name)) {
+            favs = favs.filter(n => n !== name);
+        } else {
+            favs.push(name);
+        }
+        saveFavorites(favs);
+        renderList();
+    };
+
+    // --- Team Planner Logic ---
+    function getTeam() {
+        return JSON.parse(localStorage.getItem('digimon_team')) || [];
+    }
+
+    function saveTeam(team) {
+        localStorage.setItem('digimon_team', JSON.stringify(team));
+    }
+
+    window.toggleTeam = (name) => {
+        let team = getTeam();
+        if (team.includes(name)) {
+            team = team.filter(n => n !== name);
+        } else {
+            if (team.length >= 6) {
+                alert("Team is full! Max 6 Digimon.");
+                return;
+            }
+            team.push(name);
+        }
+        saveTeam(team);
+        renderList();
+        renderTeamModal(); // Refresh logic if open
+        renderFloatingTeam(); // Refresh floating widget
+
+        // Refresh detail modal if open
+        const openDetailName = modalHistory.length > 0 ? modalHistory[modalHistory.length - 1] : null;
+        if (openDetailName === name) {
+            openDigimonDetail(name, false, true); // true for 'isReload' to prevent pushing history?
+            // Actually openDigimonDetail handles history logic. If same name, we can force re-render.
+            // But openDigimonDetail(name) checks if last history is name.
+            // Let's just re-call it.
+            openDigimonDetail(name);
+        }
+    };
+
+    function renderFloatingTeam() {
+        const team = getTeam();
+        const widget = document.getElementById('floatingTeamWidget');
+        const grid = document.getElementById('ftGrid');
+        const countSpan = document.getElementById('ftCount');
+
+        if (!widget || !grid) return;
+
+        if (team.length === 0) {
+            widget.classList.add('hidden');
+            return;
+        }
+        widget.classList.remove('hidden');
+        countSpan.textContent = `${team.length}/6`;
+
+        grid.innerHTML = '';
+        for (let i = 0; i < 6; i++) {
+            const slot = document.createElement('div');
+            if (i < team.length) {
+                const name = team[i];
+                const d = digimonMap.get(name);
+                slot.className = 'ft-slot filled';
+                // Using first letter or placeholder as we don't have images
+                slot.innerHTML = `
+                    <button class="ft-remove-btn" onclick="event.stopPropagation(); toggleTeam('${name.replace(/'/g, "\\'")}')">×</button>
+                    <div class="ft-img-placeholder" title="${name}">${name}</div>
+                `;
+                slot.onclick = () => window.openDigimonDetail(name);
+            } else {
+                slot.className = 'ft-slot empty';
+                slot.innerHTML = '+';
+            }
+            grid.appendChild(slot);
+        }
+    }
+
+    function renderTeamModal() {
+        const team = getTeam();
+        const grid = document.getElementById('teamGrid');
+        const stats = document.getElementById('teamStats');
+
+        if (!grid || !stats) return;
+
+        grid.innerHTML = '';
+        stats.innerHTML = '';
+
+        if (team.length === 0) {
+            grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; color:rgba(255,255,255,0.5);">Your team is empty. Add Digimon from the main list.</div>';
+            return;
+        }
+
+        // Stats Analysis
+        let typeCounts = {};
+        let stageCounts = {};
+        let totalLevels = 0;
+        let count = 0;
+
+        team.forEach(name => {
+            const d = digimonMap.get(name);
+            if (!d) return;
+
+            // Render Card
+            const card = document.createElement('div');
+            card.className = 'team-member-card';
+            card.innerHTML = `
+                <button class="team-remove-btn" onclick="toggleTeam('${name.replace(/'/g, "\\'")}')">×</button>
+                <div class="digimon-name">${d.name}</div>
+                ${renderStageBadge(d.name)}
+                <div class="digimon-types" style="justify-content:center;">${renderTypeBadges(d.types)}</div>
+            `;
+            card.onclick = () => window.openDigimonDetail(name);
+            grid.appendChild(card);
+
+            // Analysis Data
+            if (d.types) d.types.forEach(t => typeCounts[t] = (typeCounts[t] || 0) + 1);
+            if (d.stage) stageCounts[d.stage] = (stageCounts[d.stage] || 0) + 1;
+            if (d.cardLevel) {
+                totalLevels += d.cardLevel;
+                count++;
+            }
+        });
+
+        // Render Stats
+        // 1. Type Distribution
+        const sortedTypes = Object.entries(typeCounts).sort((a, b) => b[1] - a[1]);
+        let typeStatHtml = `<div class="stat-group"><div class="stat-title">Type Distribution</div><div class="stat-bars">`;
+        sortedTypes.forEach(([type, c]) => {
+            const percent = (c / team.length) * 100;
+            typeStatHtml += `
+                <div class="stat-bar-item">
+                    <div class="stat-bar-label">${type}</div>
+                    <div class="stat-bar-track"><div class="stat-bar-fill type-${type.toLowerCase().replace(/\s+/g, '')}" style="width:${percent}%"></div></div>
+                    <div class="stat-value">${c}</div>
+                </div>`;
+        });
+        typeStatHtml += `</div></div>`;
+
+        // 2. Stage Distribution
+        const sortedStages = Object.entries(stageCounts).sort((a, b) => b[1] - a[1]);
+        let stageStatHtml = `<div class="stat-group"><div class="stat-title">Stage Balance</div><div class="stat-bars">`;
+        sortedStages.forEach(([stage, c]) => {
+            const percent = (c / team.length) * 100;
+            stageStatHtml += `
+                <div class="stat-bar-item">
+                    <div class="stat-bar-label">${stage}</div>
+                    <div class="stat-bar-track"><div class="stat-bar-fill ${stageColorClass(stage)}" style="width:${percent}%"></div></div>
+                    <div class="stat-value">${c}</div>
+                </div>`;
+        });
+        stageStatHtml += `</div></div>`;
+
+        stats.innerHTML = typeStatHtml + stageStatHtml;
+    }
 
     function loadData() {
         if (typeof DIGIMON_DB === 'undefined') {
@@ -416,11 +596,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const isFav = getFavorites().includes(digi.name);
             const favClass = isFav ? 'fav-active' : '';
 
+            const isTeam = getTeam().includes(digi.name);
+            const teamClass = isTeam ? 'team-active' : '';
+            const teamIconSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>`;
+
             const stageText = digi.stage ? `${digi.stage} • Lv ${digi.cardLevel || '?'}` : '';
             const stageClass = digi.stage ? stageColorClass(digi.stage) : '';
             const stageHtml = stageText ? `<span class="stage-badge ${stageClass}">${stageText}</span>` : '';
 
             card.innerHTML = `
+                <div class="team-icon ${teamClass}" onclick="event.stopPropagation(); toggleTeam('${digi.name.replace(/'/g, "\\'")}')" title="Add to Team">${teamIconSvg}</div>
                 <div class="fav-icon ${favClass}" onclick="event.stopPropagation(); toggleFavorite('${digi.name.replace(/'/g, "\\'")}')">★</div>
                 <div class="digimon-name">${digi.name}</div>
                 ${stageHtml}
@@ -449,6 +634,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Choice Modal function
     window.openChoiceModal = (name) => {
+        closeAllModals();
         const digi = digimonMap.get(name);
         if (!digi) return;
 
@@ -482,6 +668,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Open evolution tree modal (for base forms)
     window.openEvoTree = (nameOrObj) => {
+        closeAllModals();
         const baseDigi = typeof nameOrObj === 'string' ? digimonMap.get(nameOrObj) : nameOrObj;
         if (!baseDigi) return;
         const tree = buildEvoTree(baseDigi, new Set());
@@ -615,6 +802,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Open single Digimon detail (when searching or clicking in tree)
     // Open single Digimon detail (when searching or clicking in tree)
     window.openDigimonDetail = (name, isBackAction = false) => {
+        if (!isBackAction) closeAllModals();
         const digi = digimonMap.get(name);
         if (!digi) return;
 
@@ -630,17 +818,24 @@ document.addEventListener('DOMContentLoaded', () => {
             ? `<button onclick="goBackInHistory()" class="modal-back-btn">← Back</button>`
             : '';
 
-        // Build abilities section
+        // Detail Modal Header with Team Button
+        const isTeam = getTeam().includes(digi.name);
+        const teamBtnText = isTeam ? 'Remove from Team' : 'Add to Team';
+        const teamBtnClass = isTeam ? 'active' : '';
+        const teamBtnHtml = `<button class="modal-team-btn ${teamBtnClass}" onclick="toggleTeam('${digi.name.replace(/'/g, "\\'")}')">${isTeam ? '✓ In Team' : '+ Add to Team'}</button>`;
+
+        const stageText = digi.stage ? `<span class="stage-badge ${stageColorClass(digi.stage)}" style="margin-top: -0.25rem; margin-bottom: 0.5rem; align-self: flex-start;">${digi.stage} • Lv ${digi.cardLevel || '?'}</span>` : '';
+
+
+
+
+        // Abilities
         let abilitiesHtml = '';
         if (digi.ability || digi.hiddenAbility) {
-            abilitiesHtml = '<div class="abilities-row">';
-            if (digi.ability) {
-                abilitiesHtml += `<span class="ability-badge">${digi.ability}</span>`;
-            }
-            if (digi.hiddenAbility) {
-                abilitiesHtml += `<span class="ability-badge hidden-ability">${digi.hiddenAbility} (Hidden)</span>`;
-            }
-            abilitiesHtml += '</div>';
+            abilitiesHtml = `<div class="digimon-abilities">`;
+            if (digi.ability) abilitiesHtml += `<div class="ability-pill" title="Ability">${digi.ability}</div>`;
+            if (digi.hiddenAbility) abilitiesHtml += `<div class="ability-pill hidden-ability" title="Hidden Ability">${digi.hiddenAbility}</div>`;
+            abilitiesHtml += `</div>`;
         }
 
         // Locations
@@ -706,13 +901,14 @@ document.addEventListener('DOMContentLoaded', () => {
             evoMoveHtml = `<div class="sig-move"><span class="sig-label">Signature:</span> ${digi.evoMove}</div>`;
         }
 
-        const stageText = digi.stage ? `<span class="stage-badge ${stageColorClass(digi.stage)}" style="margin-top: -0.25rem; margin-bottom: 0.5rem; align-self: flex-start;">${digi.stage} • Lv ${digi.cardLevel || '?'}</span>` : '';
-
         modalBody.innerHTML = `
             <div class="modal-nav-bar">${backBtnHtml}</div>
             <div class="modal-header digimon-detail-header">
                 <div class="header-content" style="display: flex; flex-direction: column; align-items: flex-start;">
-                    <h2>${digi.name}</h2>
+                    <div style="display:flex; align-items:center; width:100%; justify-content:space-between;">
+                        <h2>${digi.name}</h2>
+                        ${teamBtnHtml}
+                    </div>
                     ${stageText}
                     <div class="digimon-types" style="justify-content: flex-start;">${typesHtml}</div>
                 </div>
@@ -747,6 +943,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Locations Feature Functions
     function openLocationsModal() {
+        closeAllModals();
         if (typeof LOCATIONS_DATA === 'undefined') {
             console.error("LOCATIONS_DATA is not defined.");
             return;
@@ -783,8 +980,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     `;
         }).join('')}
-            </div>
-        `;
+            </div>`;
 
         locationDetailModal.classList.remove('hidden');
     }
@@ -932,6 +1128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     toggleTypeChart.addEventListener('click', () => {
+        closeAllModals();
         const container = document.getElementById('typeResultsContainer');
         if (container) container.classList.add('hidden');
         typeListDiv.innerHTML = Array.from(allTypes).sort().map(t =>
@@ -957,7 +1154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         matching.sort((a, b) => a.name.localeCompare(b.name));
 
-        title.innerHTML = `${type} Digimon (${matching.length})`;
+        title.innerHTML = `${type} Digimon(${matching.length})`;
         container.classList.remove('hidden');
 
         if (matching.length === 0) {
@@ -970,9 +1167,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement('div');
             card.className = 'type-result-card';
             card.innerHTML = `
-                <div class="result-name">${digi.name}</div>
-                <div class="result-types">${renderTypeBadges(digi.types)}</div>
-            `;
+    <div class="result-name">${digi.name}</div>
+        <div class="result-types">${renderTypeBadges(digi.types)}</div>
+`;
             card.onclick = () => {
                 // Keep modal open but show detail? 
                 // Detailed modal usually overlays. 
@@ -1019,9 +1216,114 @@ document.addEventListener('DOMContentLoaded', () => {
     if (patchModal) {
         const closePatch = () => patchModal.classList.add('hidden');
         closePatchBtn.addEventListener('click', closePatch);
-        closePatchX.addEventListener('click', closePatch);
         patchModal.addEventListener('click', (e) => {
             if (e.target === patchModal) closePatch();
+        });
+    }
+
+    // Team Modal Logic (Inside DOMContentLoaded)
+    const teamModal = document.getElementById('teamModal');
+    const teamBtn = document.getElementById('teamPlannerBtn');
+    const closeTeam = document.getElementById('closeTeamModal');
+    const clearTeamBtn = document.getElementById('clearTeamBtn');
+
+    if (teamBtn) {
+        teamBtn.addEventListener('click', () => {
+            closeAllModals();
+            renderTeamModal(); // Function is defined in window scope, so accessible
+            teamModal.classList.remove('hidden');
+        });
+    }
+
+    if (closeTeam) {
+        closeTeam.addEventListener('click', () => {
+            teamModal.classList.add('hidden');
+        });
+    }
+
+    // --- Custom Confirmation Logic ---
+    const confirmModal = document.getElementById('confirmModal');
+    const confirmMessage = document.getElementById('confirmMessage');
+    const confirmYes = document.getElementById('confirmYes');
+    const confirmNo = document.getElementById('confirmNo');
+    let onConfirmCallback = null;
+
+    window.showCustomConfirm = (message, callback) => {
+        confirmMessage.textContent = message;
+        onConfirmCallback = callback;
+        confirmModal.classList.remove('hidden');
+    };
+
+    if (confirmYes) {
+        confirmYes.addEventListener('click', () => {
+            if (onConfirmCallback) onConfirmCallback();
+            confirmModal.classList.add('hidden');
+            onConfirmCallback = null;
+        });
+    }
+
+    if (confirmNo) {
+        confirmNo.addEventListener('click', () => {
+            confirmModal.classList.add('hidden');
+            onConfirmCallback = null;
+        });
+    }
+
+    if (clearTeamBtn) {
+        clearTeamBtn.addEventListener('click', () => {
+            showCustomConfirm('Are you sure you want to clear your entire team?', () => {
+                saveTeam([]);
+                renderTeamModal();
+                renderList();
+            });
+        });
+    }
+
+    // Close modals on outside click
+    window.addEventListener('click', (e) => {
+        if (e.target === detailModal) { // duplicate variable check? 'modal' vs 'detailModal'
+            detailModal.classList.add('hidden');
+            modalHistory = []; // Reset history
+        }
+        if (e.target === typeModal) typeModal.classList.add('hidden');
+        if (e.target === locationsModal) locationsModal.classList.add('hidden');
+        if (e.target === locationDetailModal) locationDetailModal.classList.add('hidden');
+        if (e.target === teamModal) teamModal.classList.add('hidden');
+    });
+
+    // Init Floating Widget
+    renderFloatingTeam();
+
+    // --- Mobile Navbar Logic ---
+    const navTop = document.getElementById('navTop');
+    const navTeam = document.getElementById('navTeam');
+    const navTypes = document.getElementById('navTypes');
+    const navLocs = document.getElementById('navLocs');
+
+    if (navTop) {
+        navTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    if (navTeam) {
+        navTeam.addEventListener('click', () => {
+            const teamBtn = document.getElementById('teamPlannerBtn');
+            if (teamBtn) teamBtn.click();
+        });
+    }
+
+    if (navTypes) {
+        navTypes.addEventListener('click', () => {
+            const typeBtn = document.getElementById('toggleTypeChart');
+            if (typeBtn) typeBtn.click();
+        });
+    }
+
+    if (navLocs) {
+        navLocs.addEventListener('click', () => {
+            const locsBtn = document.getElementById('viewLocationsBtn');
+            if (locsBtn) locsBtn.click();
         });
     }
 });
