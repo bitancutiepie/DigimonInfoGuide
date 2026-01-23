@@ -71,9 +71,9 @@ body::before {
 }
 
 .app-container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 3rem 2rem;
     position: relative;
     min-height: 100vh;
 }
@@ -81,7 +81,7 @@ body::before {
 /* Header */
 .main-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .banner-image {
@@ -94,59 +94,176 @@ body::before {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
-.search-container {
+/* Filter Section */
+.filter-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
 }
 
-.search-container input,
-.search-container select {
+.search-row {
     width: 100%;
-    max-width: 400px;
-    padding: 0.875rem 1.25rem;
-    border-radius: 8px;
+}
+
+.filter-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.input-icon svg {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border-radius: 12px;
     border: 1px solid var(--border);
     background: var(--card-bg);
     color: var(--text-primary);
     font-size: 1rem;
-    transition: border-color 0.2s;
+    transition: all 0.2s;
     outline: none;
     font-family: var(--font-body);
-}
-
-.search-container select {
-    cursor: pointer;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%238fb3c4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 1.2rem;
     appearance: none;
     -webkit-appearance: none;
 }
 
-.search-container input:focus,
-.search-container select:focus {
-    border-color: var(--accent);
+/* Custom Select Arrow */
+.select-arrow {
+    position: absolute;
+    right: 1rem;
+    color: var(--text-secondary);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
 }
 
-.clear-btn {
+/* Clear Button inside Input */
+.clear-input-btn {
+    position: absolute;
+    right: 3rem;
+    /* Left of the arrow if select, or just right if input */
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--text-secondary);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    padding: 0;
+}
+
+.input-group input+.clear-input-btn {
+    right: 1rem;
+    /* Adjust for text input vs select */
+}
+
+.clear-input-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+}
+
+.clear-input-btn.hidden {
+    display: none;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(0, 242, 255, 0.1);
+    background: var(--card-bg-hover);
+}
+
+.action-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn,
+.reset-all-btn,
+.view-locations-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.view-locations-btn {
+    width: 100%;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: white;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 242, 255, 0.3);
+}
+
+.view-locations-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 242, 255, 0.4);
+}
+
+.filter-btn {
     background: var(--card-bg);
     border: 1px solid var(--border);
     color: var(--text-secondary);
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: border-color 0.2s, color 0.2s;
 }
 
-.clear-btn:hover {
+.filter-btn:hover,
+.filter-btn.active {
     border-color: var(--accent);
     color: var(--accent);
+    background: rgba(0, 242, 255, 0.05);
+}
+
+.reset-all-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+}
+
+.reset-all-btn:hover {
+    border-color: #ff4d4d;
+    color: #ff4d4d;
+    background: rgba(255, 77, 77, 0.05);
 }
 
 .result-count {
@@ -158,8 +275,8 @@ body::before {
 /* Grid */
 .digimon-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
 }
 
 /* Card Design - Glassmorphism */
@@ -168,12 +285,12 @@ body::before {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 1.25rem;
+    border-radius: 20px;
+    padding: 2rem;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .digimon-card:hover,
@@ -203,6 +320,64 @@ body::before {
     justify-content: center;
     gap: 0.3rem;
     margin-bottom: 0.5rem;
+}
+
+/* Stage Badges */
+.stage-badge {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+    /* Oval / Pill shape */
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #fff;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 0.6rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Glassy Stage Colors */
+.stage-rookie {
+    background: rgba(76, 161, 175, 0.3);
+    border-color: rgba(76, 161, 175, 0.6);
+    box-shadow: 0 0 10px rgba(76, 161, 175, 0.2);
+}
+
+.stage-champion {
+    background: rgba(52, 152, 219, 0.3);
+    border-color: rgba(52, 152, 219, 0.6);
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+}
+
+.stage-ultimate {
+    background: rgba(231, 76, 60, 0.3);
+    border-color: rgba(231, 76, 60, 0.6);
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.2);
+}
+
+.stage-mega {
+    background: rgba(142, 68, 173, 0.3);
+    border-color: rgba(142, 68, 173, 0.6);
+    box-shadow: 0 0 10px rgba(142, 68, 173, 0.2);
+}
+
+.stage-ultra {
+    background: rgba(241, 196, 15, 0.3);
+    border-color: rgba(241, 196, 15, 0.6);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.2);
+}
+
+.stage-ultra\+ {
+    background: rgba(44, 62, 80, 0.6);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    box-shadow: 0 0 12px rgba(0, 242, 255, 0.3);
 }
 
 .evo-count {
@@ -437,8 +612,8 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--border);
     gap: 1rem;
 }
@@ -676,14 +851,15 @@ body::before {
 .evo-card {
     display: flex;
     align-items: center;
-    background: rgba(10, 26, 31, 0.5);
+    background: rgba(10, 26, 31, 0.6);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    gap: 1rem;
 }
 
 .evo-card:hover {

@@ -5,11 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
     let modalHistory = [];
     let isShowingFavorites = false;
 
-    // Type color mapping
     const typeColorClass = (type) => {
         const t = type.toLowerCase().replace(/\s+/g, '');
         const validTypes = ['fire', 'water', 'ice', 'ground', 'rock', 'electric', 'holy', 'dark', 'fighting', 'steel', 'bug', 'poison', 'undead', 'dragon', 'fairy', 'magic', 'normal', 'mystery', 'grass', 'flying', 'chaos'];
         return validTypes.includes(t) ? `type-${t}` : 'type-unknown';
+    };
+
+    const stageColorClass = (stage) => {
+        if (!stage) return '';
+        const s = stage.toLowerCase().replace(/\+/g, '\\+').replace(/\s+/g, ''); // Escape + for selector if needed, but here just for class name
+        // actually plain 'stage-ultra+' might be tricky in CSS selector if not escaped, but class list is fine.
+        // Let's normalize name: Ultra+ -> ultra-plus or keep it simple.
+        // My CSS has .stage-ultra\+
+        // In class attribute it should be "stage-ultra+"
+        return `stage-${s}`;
     };
 
     const listContainer = document.getElementById('digimonList');
@@ -40,6 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToTopBtn = document.getElementById('backToTop');
     const showFavsBtn = document.getElementById('showFavsBtn');
     const resetAllBtn = document.getElementById('resetAllBtn');
+
+    // Stage Filter Element
+    const stageFilter = document.getElementById('stageFilter');
 
     // Debounce helper
     function debounce(func, wait) {
@@ -192,6 +204,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return types.map(t => `<span class="type-badge ${typeColorClass(t)}">${t}</span>`).join('');
     }
 
+    function renderStageBadge(digiName) {
+        const d = digimonMap.get(digiName);
+        if (!d || !d.stage) return '';
+        return `<span class="stage-badge ${stageColorClass(d.stage)}" style="font-size:0.5rem; padding:0.15rem 0.4rem; margin-bottom:0.25rem;">${d.stage} • Lv ${d.cardLevel || '?'}</span>`;
+    }
+
     // Build full evolution tree from a starting point
     function buildEvoTree(startDigi, visited = new Set()) {
         if (!startDigi || visited.has(startDigi.name)) return null;
@@ -244,6 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${methodBadge}
                         <div class="evo-card-h" onclick="openDigimonDetail('${node.name.replace(/'/g, "\\'")}')">
                             <div class="evo-card-name">${node.name}</div>
+                            ${renderStageBadge(node.name)}
                             <div class="evo-card-types">${renderTypeBadges(node.types)}</div>
                         </div>
                     </div>
@@ -269,9 +288,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const nameFilter = searchInput.value.trim().toLowerCase();
         const locFilter = routeInput.value.trim().toLowerCase();
         const typeFilterValue = typeFilter ? typeFilter.value.trim().toLowerCase() : '';
+        const stageFilterValue = stageFilter ? stageFilter.value.trim() : ''; // Case sensitive usually, but standard values are capitalized
         const currentSort = sortOrder ? sortOrder.value : 'name_asc';
 
-        const isSearching = nameFilter.length > 0 || locFilter.length > 0 || typeFilterValue.length > 0;
+        const isSearching = nameFilter.length > 0 || locFilter.length > 0 || typeFilterValue.length > 0 || stageFilterValue.length > 0;
 
         let displayList = [];
         let totalCount = 0;
@@ -290,7 +310,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     matchesType = digi.types && digi.types.some(t => t.toLowerCase() === typeFilterValue);
                 }
 
-                if (matchesName && matchesLoc && matchesType) {
+                let matchesStage = true;
+                if (stageFilterValue !== '') {
+                    matchesStage = digi.stage === stageFilterValue;
+                }
+
+                if (matchesName && matchesLoc && matchesType && matchesStage) {
                     displayList.push(digi);
                 }
             });
@@ -305,6 +330,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     const countA = countTreeNodes(buildEvoTree(a, new Set())) - 1;
                     const countB = countTreeNodes(buildEvoTree(b, new Set())) - 1;
                     return countB - countA || a.name.localeCompare(b.name);
+                });
+            } else if (currentSort === 'stage_asc' || currentSort === 'card_asc') {
+                displayList.sort((a, b) => {
+                    const levelA = a.cardLevel || 0;
+                    const levelB = b.cardLevel || 0;
+                    return levelA - levelB || a.name.localeCompare(b.name);
                 });
             }
 
@@ -322,6 +353,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     const countA = countTreeNodes(buildEvoTree(a, new Set())) - 1;
                     const countB = countTreeNodes(buildEvoTree(b, new Set())) - 1;
                     return countB - countA || a.name.localeCompare(b.name);
+                });
+            } else if (currentSort === 'stage_asc' || currentSort === 'card_asc') {
+                displayList.sort((a, b) => {
+                    const levelA = a.cardLevel || 0;
+                    const levelB = b.cardLevel || 0;
+                    return levelA - levelB || a.name.localeCompare(b.name);
                 });
             }
             totalCount = baseForms.length;
@@ -348,7 +385,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (displayList.length === 0) {
-            listContainer.innerHTML = '<div class="no-results">No Digimon found. Try a different search.</div>';
+            listContainer.innerHTML = `
+                <div class="no-results">
+                    <p>No Digimon found matching your criteria.</p>
+                    <button class="reset-all-btn" onclick="document.getElementById('resetAllBtn').click()" style="margin-top: 1rem; display: inline-block;">↺ Reset Filters</button>
+                </div>
+            `;
             return;
         }
 
@@ -374,9 +416,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const isFav = getFavorites().includes(digi.name);
             const favClass = isFav ? 'fav-active' : '';
 
+            const stageText = digi.stage ? `${digi.stage} • Lv ${digi.cardLevel || '?'}` : '';
+            const stageClass = digi.stage ? stageColorClass(digi.stage) : '';
+            const stageHtml = stageText ? `<span class="stage-badge ${stageClass}">${stageText}</span>` : '';
+
             card.innerHTML = `
                 <div class="fav-icon ${favClass}" onclick="event.stopPropagation(); toggleFavorite('${digi.name.replace(/'/g, "\\'")}')">★</div>
                 <div class="digimon-name">${digi.name}</div>
+                ${stageHtml}
                 <div class="digimon-types">${renderTypeBadges(digi.types)}</div>
                 ${evoText}
                 ${locHtml}
@@ -444,11 +491,13 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="modal-header">
                 <div class="header-content">
                     <h2>${baseDigi.name} Evolution Line</h2>
-                    <p class="modal-subtitle">Scroll to Zoom • Clearer Professional View</p>
+                    <p class="modal-subtitle">Drag to Pan • Use Buttons to Zoom</p>
                 </div>
-                <button id="resetZoomBtn" class="toggle-zoom-btn" title="Reset View">
-                    Reset View
-                </button>
+                <div class="zoom-controls" style="display: flex; gap: 0.5rem;">
+                     <button id="zoomOutBtn" class="toggle-zoom-btn" title="Zoom Out">-</button>
+                     <button id="zoomInBtn" class="toggle-zoom-btn" title="Zoom In">+</button>
+                     <button id="resetZoomBtn" class="toggle-zoom-btn" title="Reset View">Reset</button>
+                </div>
             </div>
             <div id="evoTreeOuter" class="evo-tree-outer">
                 <div id="evoTreeContainer" class="evo-tree-container">
@@ -458,6 +507,8 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         const resetBtn = document.getElementById('resetZoomBtn');
+        const zoomInBtn = document.getElementById('zoomInBtn');
+        const zoomOutBtn = document.getElementById('zoomOutBtn');
         const outer = document.getElementById('evoTreeOuter');
         const container = document.getElementById('evoTreeContainer');
 
@@ -466,7 +517,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let startX, startY, scrollLeft, scrollTop;
 
         if (outer && container) {
-            // Zoom logic
+            // Zoom logic (Wheel)
             outer.addEventListener('wheel', (e) => {
                 e.preventDefault();
                 const delta = e.deltaY > 0 ? -0.1 : 0.1;
@@ -474,7 +525,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 container.style.transform = `scale(${zoomLevel})`;
             }, { passive: false });
 
-            // Drag logic
+            // Button Zoom Logic
+            if (zoomInBtn) {
+                zoomInBtn.addEventListener('click', () => {
+                    zoomLevel = Math.min(zoomLevel + 0.2, 2);
+                    container.style.transform = `scale(${zoomLevel})`;
+                });
+            }
+            if (zoomOutBtn) {
+                zoomOutBtn.addEventListener('click', () => {
+                    zoomLevel = Math.max(0.1, zoomLevel - 0.2);
+                    container.style.transform = `scale(${zoomLevel})`;
+                });
+            }
+
+            // Mouse Drag logic
             outer.addEventListener('mousedown', (e) => {
                 isDown = true;
                 outer.classList.add('active');
@@ -497,6 +562,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 outer.scrollLeft = scrollLeft - walkX;
                 outer.scrollTop = scrollTop - walkY;
             });
+
+            // Touch Drag Logic
+            outer.addEventListener('touchstart', (e) => {
+                isDown = true;
+                outer.classList.add('active');
+                const touch = e.touches[0];
+                startX = touch.pageX - outer.offsetLeft;
+                startY = touch.pageY - outer.offsetTop;
+                scrollLeft = outer.scrollLeft;
+                scrollTop = outer.scrollTop;
+            });
+
+            outer.addEventListener('touchend', () => { isDown = false; outer.classList.remove('active'); });
+
+            outer.addEventListener('touchmove', (e) => {
+                if (!isDown) return;
+                // Prevent default specifically if mostly horizontal/vertical drag to avoid page scroll?
+                // Actually for a map/tree view, we usually want to prevent page scroll while dragging this element.
+                e.preventDefault();
+                const touch = e.touches[0];
+                const x = touch.pageX - outer.offsetLeft;
+                const y = touch.pageY - outer.offsetTop;
+                const walkX = (x - startX) * 1.5;
+                const walkY = (y - startY) * 1.5;
+                outer.scrollLeft = scrollLeft - walkX;
+                outer.scrollTop = scrollTop - walkY;
+            }, { passive: false });
+
 
             // Center initially
             setTimeout(() => {
@@ -565,7 +658,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (digi.prev && digi.prev.length > 0) {
             prevHtml = '<div class="evo-chain">' + digi.prev.map(p => `
                 <div class="evo-card" onclick="openDigimonDetail('${p.name.replace(/'/g, "\\'")}')">
-                    <span class="evo-card-name">${p.name}</span>
+                    <div style="display:flex; flex-direction:column; align-items:center;">
+                        <span class="evo-card-name">${p.name}</span>
+                        ${renderStageBadge(p.name)}
+                    </div>
                     <span class="evo-card-arrow">→</span>
                     <span class="evo-card-method clickable-method" onclick="event.stopPropagation(); copyToClipboard('${p.method || 'No info'}')" title="Click to copy">${p.method || 'No info in Discord'}</span>
                 </div>
@@ -581,7 +677,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="evo-card" onclick="openDigimonDetail('${n.name.replace(/'/g, "\\'")}')">
                     <span class="evo-card-method clickable-method" onclick="event.stopPropagation(); copyToClipboard('${n.method || 'No info'}')" title="Click to copy">${n.method || 'No info in Discord'}</span>
                     <span class="evo-card-arrow">→</span>
-                    <span class="evo-card-name">${n.name}</span>
+                    <div style="display:flex; flex-direction:column; align-items:center;">
+                       <span class="evo-card-name">${n.name}</span>
+                       ${renderStageBadge(n.name)}
+                    </div>
                 </div>
             `).join('') + '</div>';
         } else {
@@ -607,11 +706,16 @@ document.addEventListener('DOMContentLoaded', () => {
             evoMoveHtml = `<div class="sig-move"><span class="sig-label">Signature:</span> ${digi.evoMove}</div>`;
         }
 
+        const stageText = digi.stage ? `<span class="stage-badge ${stageColorClass(digi.stage)}" style="margin-top: -0.25rem; margin-bottom: 0.5rem; align-self: flex-start;">${digi.stage} • Lv ${digi.cardLevel || '?'}</span>` : '';
+
         modalBody.innerHTML = `
             <div class="modal-nav-bar">${backBtnHtml}</div>
             <div class="modal-header digimon-detail-header">
-                <h2>${digi.name}</h2>
-                <div class="digimon-types">${typesHtml}</div>
+                <div class="header-content" style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <h2>${digi.name}</h2>
+                    ${stageText}
+                    <div class="digimon-types" style="justify-content: flex-start;">${typesHtml}</div>
+                </div>
                 ${abilitiesHtml}
             </div>
             
@@ -705,18 +809,54 @@ document.addEventListener('DOMContentLoaded', () => {
         renderList();
     };
 
+    window.clearStageFilter = () => {
+        if (stageFilter) {
+            stageFilter.value = '';
+        }
+        renderList();
+    };
+
     loadData();
     renderList();
 
     // Event listeners
+    function updateClearButton(inputId, btnId) {
+        const input = document.getElementById(inputId);
+        const btn = document.getElementById(btnId);
+        if (input && btn) {
+            if (input.value && input.value.trim() !== "") {
+                btn.classList.remove('hidden');
+            } else {
+                btn.classList.add('hidden');
+            }
+        }
+    }
+
+    // Event listeners
     const debouncedRender = debounce(() => { renderList(); }, 300);
 
-    searchInput.addEventListener('input', debouncedRender);
+    searchInput.addEventListener('input', () => {
+        debouncedRender();
+        updateClearButton('searchInput', 'clearNameBtn');
+    });
+
     if (routeInput) {
-        routeInput.addEventListener('change', () => { renderList(); });
+        routeInput.addEventListener('change', () => {
+            renderList();
+            updateClearButton('routeInput', 'clearRouteBtn');
+        });
     }
     if (typeFilter) {
-        typeFilter.addEventListener('change', () => { renderList(); });
+        typeFilter.addEventListener('change', () => {
+            renderList();
+            updateClearButton('typeFilter', 'clearTypeBtn');
+        });
+    }
+    if (stageFilter) {
+        stageFilter.addEventListener('change', () => {
+            renderList();
+            updateClearButton('stageFilter', 'clearStageBtn');
+        });
     }
     if (sortOrder) {
         sortOrder.addEventListener('change', () => { renderList(); });
@@ -730,9 +870,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (resetAllBtn) {
         resetAllBtn.addEventListener('click', () => {
-            if (searchInput) searchInput.value = '';
-            if (routeInput) routeInput.selectedIndex = 0;
-            if (typeFilter) typeFilter.selectedIndex = 0;
+            if (searchInput) { searchInput.value = ''; updateClearButton('searchInput', 'clearNameBtn'); }
+            if (routeInput) { routeInput.selectedIndex = 0; updateClearButton('routeInput', 'clearRouteBtn'); }
+            if (typeFilter) { typeFilter.selectedIndex = 0; updateClearButton('typeFilter', 'clearTypeBtn'); }
             if (sortOrder) sortOrder.value = 'name_asc';
             isShowingFavorites = false;
             if (showFavsBtn) showFavsBtn.classList.remove('active');
@@ -740,8 +880,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     if (clearTypeBtn) {
-        clearTypeBtn.addEventListener('click', () => { clearTypeFilter(); });
+        clearTypeBtn.addEventListener('click', () => {
+            clearTypeFilter();
+            updateClearButton('typeFilter', 'clearTypeBtn');
+        });
     }
+
+    // Extended clearSearch to update buttons
+    const originalClearSearch = window.clearSearch;
+    window.clearSearch = (inputId) => {
+        originalClearSearch(inputId);
+        if (inputId === 'searchInput') updateClearButton('searchInput', 'clearNameBtn');
+        if (inputId === 'routeInput') updateClearButton('routeInput', 'clearRouteBtn');
+    };
 
     // Back to Top Logic
     window.addEventListener('scroll', () => {
