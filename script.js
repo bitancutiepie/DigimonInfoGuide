@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const digimonMap = new Map();
     const allTypes = new Set();
     const baseForms = []; // Digimon with no prev evolutions
+    let modalHistory = [];
+    let isShowingFavorites = false;
 
     // Type color mapping
     const typeColorClass = (type) => {
@@ -36,6 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const clearTypeBtn = document.getElementById('clearTypeBtn');
     const sortOrder = document.getElementById('sortOrder');
     const backToTopBtn = document.getElementById('backToTop');
+    const showFavsBtn = document.getElementById('showFavsBtn');
+    const resetAllBtn = document.getElementById('resetAllBtn');
 
     // Debounce helper
     function debounce(func, wait) {
@@ -54,12 +58,62 @@ document.addEventListener('DOMContentLoaded', () => {
     async function copyToClipboard(text) {
         try {
             await navigator.clipboard.writeText(text);
-            // Optional: Add a subtle toast or visual feedback here
-            console.log('Copied to clipboard:', text);
+            showToast(`Copied: "${text}"`);
         } catch (err) {
             console.error('Failed to copy text: ', err);
         }
     }
+
+    function showToast(message) {
+        let toast = document.getElementById("toast");
+        if (!toast) {
+            toast = document.createElement("div");
+            toast.id = "toast";
+            toast.className = "toast";
+            document.body.appendChild(toast);
+        }
+        toast.textContent = message;
+        toast.className = "toast show";
+        setTimeout(() => {
+            toast.className = "toast";
+        }, 3000);
+    }
+
+    function getFavorites() {
+        return JSON.parse(localStorage.getItem('digimon_favorites') || '[]');
+    }
+
+    window.toggleFavorite = (name) => {
+        const favs = getFavorites();
+        const index = favs.indexOf(name);
+        if (index === -1) {
+            favs.push(name);
+        } else {
+            favs.splice(index, 1);
+        }
+        localStorage.setItem('digimon_favorites', JSON.stringify(favs));
+
+        // Refresh views
+        if (!detailModal.classList.contains('hidden')) {
+            const currentName = modalHistory[modalHistory.length - 1];
+            if (currentName === name) {
+                // Check if we are in detail view or choice view
+                if (document.querySelector('.digimon-detail-header') || document.querySelector('.choice-container')) {
+                    // If it's the detail view, refresh it
+                    if (document.querySelector('.digimon-detail-header')) openDigimonDetail(name, true);
+                }
+            }
+        }
+        renderList();
+    };
+
+    window.goBackInHistory = () => {
+        if (modalHistory.length > 1) {
+            modalHistory.pop(); // Remove current
+            const previous = modalHistory[modalHistory.length - 1];
+            openDigimonDetail(previous, true); // Re-open with isBackAction = true
+        }
+    };
 
     function loadData() {
         if (typeof DIGIMON_DB === 'undefined') {
@@ -164,42 +218,39 @@ document.addEventListener('DOMContentLoaded', () => {
         return node;
     }
 
-    // Render evolution tree as horizontal card layout
-    function renderEvoTree(node, isFirst = true) {
+    // Render evolution tree as a structured balanced diagram
+    function renderEvoTree(node) {
         if (!node) return '';
 
         const methodBadge = node.method ? `<div class="evo-method-label">${node.method}</div>` : '';
-        const arrow = !isFirst ? '<div class="evo-connector"><span class="evo-arrow-h">→</span></div>' : '';
 
-        let html = `
-            ${arrow}
-            <div class="evo-node-wrapper">
-                ${methodBadge}
-                <div class="evo-card-h" onclick="openDigimonDetail('${node.name.replace(/'/g, "\\'")}')">
-                    <div class="evo-card-name">${node.name}</div>
-                    <div class="evo-card-types">${renderTypeBadges(node.types)}</div>
+        let childrenHtml = '';
+        if (node.children && node.children.length > 0) {
+            childrenHtml = `
+                <div class="evo-children">
+                    ${node.children.map(child => `
+                        <div class="evo-branch">
+                            ${renderEvoTree(child)}
+                        </div>
+                    `).join('')}
                 </div>
+            `;
+        }
+
+        return `
+            <div class="evo-item ${node.children.length > 0 ? 'has-children' : ''}">
+                <div class="evo-node-container">
+                    <div class="evo-node-block">
+                        ${methodBadge}
+                        <div class="evo-card-h" onclick="openDigimonDetail('${node.name.replace(/'/g, "\\'")}')">
+                            <div class="evo-card-name">${node.name}</div>
+                            <div class="evo-card-types">${renderTypeBadges(node.types)}</div>
+                        </div>
+                    </div>
+                </div>
+                ${childrenHtml}
             </div>
         `;
-
-        if (node.children && node.children.length > 0) {
-            if (node.children.length === 1) {
-                // Single evolution - continue horizontal
-                html += renderEvoTree(node.children[0], false);
-            } else {
-                // Multiple branches - show each branch completely
-                html += '<div class="evo-connector"><span class="evo-arrow-h">→</span></div>';
-                html += '<div class="evo-branches">';
-                node.children.forEach(child => {
-                    html += '<div class="evo-branch-row">';
-                    // Recursively render the entire branch
-                    html += renderEvoTree(child, true);
-                    html += '</div>';
-                });
-                html += '</div>';
-            }
-        }
-        return html;
     }
 
     // Count total evolutions in a tree
@@ -276,6 +327,16 @@ document.addEventListener('DOMContentLoaded', () => {
             totalCount = baseForms.length;
         }
 
+        if (isShowingFavorites) {
+            const favs = getFavorites();
+            displayList = displayList.filter(d => favs.includes(d.name));
+            if (isSearching) {
+                // Keep totalCount as is or update? Usually we want to see how many of the searched match favorites
+            } else {
+                totalCount = displayList.length;
+            }
+        }
+
         // Update result count
         if (resultCount) {
             if (isSearching) {
@@ -310,7 +371,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 locHtml = `<div class="loc-preview">Found in ${digi.locations.length} location(s)</div>`;
             }
 
+            const isFav = getFavorites().includes(digi.name);
+            const favClass = isFav ? 'fav-active' : '';
+
             card.innerHTML = `
+                <div class="fav-icon ${favClass}" onclick="event.stopPropagation(); toggleFavorite('${digi.name.replace(/'/g, "\\'")}')">★</div>
                 <div class="digimon-name">${digi.name}</div>
                 <div class="digimon-types">${renderTypeBadges(digi.types)}</div>
                 ${evoText}
@@ -318,11 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
 
             card.addEventListener('click', () => {
-                if (isSearching) {
-                    openDigimonDetail(digi.name);
-                } else {
-                    openEvoTree(digi);
-                }
+                window.openChoiceModal(digi.name);
             });
 
             // Keyboard support
@@ -339,31 +400,142 @@ document.addEventListener('DOMContentLoaded', () => {
         listContainer.appendChild(fragment);
     }
 
+    // Choice Modal function
+    window.openChoiceModal = (name) => {
+        const digi = digimonMap.get(name);
+        if (!digi) return;
+
+        modalBody.innerHTML = `
+            <div class="choice-container">
+                <div class="choice-header">
+                    <h2>${digi.name}</h2>
+                    <p>Select what you'd like to view</p>
+                </div>
+                <div class="choice-grid">
+                    <button class="choice-card" onclick="window.openEvoTree('${digi.name.replace(/'/g, "\\'")}')">
+                        <div class="choice-icon">🧬</div>
+                        <div class="choice-text">
+                            <h3>Evolution Line</h3>
+                            <p>Visual tree of all possible paths</p>
+                        </div>
+                    </button>
+                    <button class="choice-card" onclick="window.openDigimonDetail('${digi.name.replace(/'/g, "\\'")}')">
+                        <div class="choice-icon">📊</div>
+                        <div class="choice-text">
+                            <h3>Details & Info</h3>
+                            <p>Moves, Routes, and Data</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        `;
+        detailModal.classList.remove('hidden');
+        modalHistory = [name];
+    };
+
     // Open evolution tree modal (for base forms)
-    function openEvoTree(baseDigi) {
+    window.openEvoTree = (nameOrObj) => {
+        const baseDigi = typeof nameOrObj === 'string' ? digimonMap.get(nameOrObj) : nameOrObj;
+        if (!baseDigi) return;
         const tree = buildEvoTree(baseDigi, new Set());
         const treeHtml = renderEvoTree(tree);
 
         modalBody.innerHTML = `
             <div class="modal-header">
-                <h2>${baseDigi.name} Evolution Line</h2>
-                <p class="modal-subtitle">Click any Digimon to see details</p>
+                <div class="header-content">
+                    <h2>${baseDigi.name} Evolution Line</h2>
+                    <p class="modal-subtitle">Scroll to Zoom • Clearer Professional View</p>
+                </div>
+                <button id="resetZoomBtn" class="toggle-zoom-btn" title="Reset View">
+                    Reset View
+                </button>
             </div>
-            <div class="evo-tree-container">
-                ${treeHtml}
+            <div id="evoTreeOuter" class="evo-tree-outer">
+                <div id="evoTreeContainer" class="evo-tree-container">
+                    ${treeHtml}
+                </div>
             </div>
         `;
 
+        const resetBtn = document.getElementById('resetZoomBtn');
+        const outer = document.getElementById('evoTreeOuter');
+        const container = document.getElementById('evoTreeContainer');
+
+        let zoomLevel = 1;
+        let isDown = false;
+        let startX, startY, scrollLeft, scrollTop;
+
+        if (outer && container) {
+            // Zoom logic
+            outer.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const delta = e.deltaY > 0 ? -0.1 : 0.1;
+                zoomLevel = Math.min(Math.max(0.1, zoomLevel + delta), 2);
+                container.style.transform = `scale(${zoomLevel})`;
+            }, { passive: false });
+
+            // Drag logic
+            outer.addEventListener('mousedown', (e) => {
+                isDown = true;
+                outer.classList.add('active');
+                startX = e.pageX - outer.offsetLeft;
+                startY = e.pageY - outer.offsetTop;
+                scrollLeft = outer.scrollLeft;
+                scrollTop = outer.scrollTop;
+            });
+
+            outer.addEventListener('mouseleave', () => { isDown = false; outer.classList.remove('active'); });
+            outer.addEventListener('mouseup', () => { isDown = false; outer.classList.remove('active'); });
+
+            outer.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - outer.offsetLeft;
+                const y = e.pageY - outer.offsetTop;
+                const walkX = (x - startX) * 1.5;
+                const walkY = (y - startY) * 1.5;
+                outer.scrollLeft = scrollLeft - walkX;
+                outer.scrollTop = scrollTop - walkY;
+            });
+
+            // Center initially
+            setTimeout(() => {
+                outer.scrollLeft = (container.scrollWidth - outer.clientWidth) / 2;
+                outer.scrollTop = (container.scrollHeight - outer.clientHeight) / 2;
+            }, 10);
+        }
+
+        if (resetBtn && container && outer) {
+            resetBtn.addEventListener('click', () => {
+                zoomLevel = 1;
+                container.style.transform = 'scale(1)';
+                outer.scrollLeft = (container.scrollWidth - outer.clientWidth) / 2;
+                outer.scrollTop = (container.scrollHeight - outer.clientHeight) / 2;
+            });
+        }
+
         detailModal.classList.remove('hidden');
+        modalHistory = []; // Reset history when opening a new tree
         detailModal.focus();
     }
 
     // Open single Digimon detail (when searching or clicking in tree)
-    window.openDigimonDetail = (name) => {
+    // Open single Digimon detail (when searching or clicking in tree)
+    window.openDigimonDetail = (name, isBackAction = false) => {
         const digi = digimonMap.get(name);
         if (!digi) return;
 
+        // History management
+        if (!isBackAction && (modalHistory.length === 0 || modalHistory[modalHistory.length - 1] !== name)) {
+            modalHistory.push(name);
+        }
+
         const typesHtml = renderTypeBadges(digi.types);
+
+        // Navigation Bar
+        const backBtnHtml = modalHistory.length > 1
+            ? `<button onclick="goBackInHistory()" class="modal-back-btn">← Back</button>`
+            : '';
 
         // Build abilities section
         let abilitiesHtml = '';
@@ -436,7 +608,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         modalBody.innerHTML = `
-            <div class="modal-header">
+            <div class="modal-nav-bar">${backBtnHtml}</div>
+            <div class="modal-header digimon-detail-header">
                 <h2>${digi.name}</h2>
                 <div class="digimon-types">${typesHtml}</div>
                 ${abilitiesHtml}
@@ -548,6 +721,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sortOrder) {
         sortOrder.addEventListener('change', () => { renderList(); });
     }
+    if (showFavsBtn) {
+        showFavsBtn.addEventListener('click', () => {
+            isShowingFavorites = !isShowingFavorites;
+            showFavsBtn.classList.toggle('active', isShowingFavorites);
+            renderList();
+        });
+    }
+    if (resetAllBtn) {
+        resetAllBtn.addEventListener('click', () => {
+            if (searchInput) searchInput.value = '';
+            if (routeInput) routeInput.selectedIndex = 0;
+            if (typeFilter) typeFilter.selectedIndex = 0;
+            if (sortOrder) sortOrder.value = 'name_asc';
+            isShowingFavorites = false;
+            if (showFavsBtn) showFavsBtn.classList.remove('active');
+            renderList();
+        });
+    }
     if (clearTypeBtn) {
         clearTypeBtn.addEventListener('click', () => { clearTypeFilter(); });
     }
@@ -569,20 +760,77 @@ document.addEventListener('DOMContentLoaded', () => {
     closeLocationsModal.addEventListener('click', () => locationsModal.classList.add('hidden'));
     closeLocationDetail.addEventListener('click', () => locationDetailModal.classList.add('hidden'));
 
-    closeModal.addEventListener('click', () => { detailModal.classList.add('hidden'); });
+    closeModal.addEventListener('click', () => {
+        detailModal.classList.add('hidden');
+        modalHistory = [];
+    });
 
     // Add backdrop clicks for new modals
-    locationsModal.addEventListener('click', (e) => { if (e.target === locationsModal) locationsModal.classList.add('hidden'); });
-    locationDetailModal.addEventListener('click', (e) => { if (e.target === locationDetailModal) locationDetailModal.classList.add('hidden'); });
+    locationsModal.addEventListener('click', (e) => {
+        if (e.target === locationsModal) locationsModal.classList.add('hidden');
+    });
+    locationDetailModal.addEventListener('click', (e) => {
+        if (e.target === locationDetailModal) locationDetailModal.classList.add('hidden');
+    });
 
-    detailModal.addEventListener('click', (e) => { if (e.target === detailModal) detailModal.classList.add('hidden'); });
+    detailModal.addEventListener('click', (e) => {
+        if (e.target === detailModal) {
+            detailModal.classList.add('hidden');
+            modalHistory = [];
+        }
+    });
 
     toggleTypeChart.addEventListener('click', () => {
+        const container = document.getElementById('typeResultsContainer');
+        if (container) container.classList.add('hidden');
         typeListDiv.innerHTML = Array.from(allTypes).sort().map(t =>
-            `<div class="type-pill type-badge ${typeColorClass(t)}">${t}</div>`
+            `<div class="type-pill type-badge ${typeColorClass(t)}" onclick="filterByType('${t}')" style="cursor: pointer;">${t}</div>`
         ).join('');
         typeModal.classList.remove('hidden');
     });
+
+    window.filterByType = (type) => {
+        const container = document.getElementById('typeResultsContainer');
+        const resultsGrid = document.getElementById('typeResults');
+        const title = document.getElementById('typeResultsTitle');
+
+        if (!container || !resultsGrid || !title) return;
+
+        resultsGrid.innerHTML = '';
+        const matching = [];
+        digimonMap.forEach(digi => {
+            if (digi.types && digi.types.includes(type)) {
+                matching.push(digi);
+            }
+        });
+
+        matching.sort((a, b) => a.name.localeCompare(b.name));
+
+        title.innerHTML = `${type} Digimon (${matching.length})`;
+        container.classList.remove('hidden');
+
+        if (matching.length === 0) {
+            resultsGrid.innerHTML = '<div class="no-results">No Digimon found.</div>';
+            return;
+        }
+
+        const fragment = document.createDocumentFragment();
+        matching.forEach(digi => {
+            const card = document.createElement('div');
+            card.className = 'type-result-card';
+            card.innerHTML = `
+                <div class="result-name">${digi.name}</div>
+                <div class="result-types">${renderTypeBadges(digi.types)}</div>
+            `;
+            card.onclick = () => {
+                // Keep modal open but show detail? 
+                // Detailed modal usually overlays. 
+                openDigimonDetail(digi.name);
+            };
+            fragment.appendChild(card);
+        });
+        resultsGrid.appendChild(fragment);
+    };
 
     closeTypeModal.addEventListener('click', () => { typeModal.classList.add('hidden'); });
     typeModal.addEventListener('click', (e) => { if (e.target === typeModal) typeModal.classList.add('hidden'); });

@@ -59,6 +59,8 @@
                     <option value="evo_count">Sort: Evo Count</option>
                 </select>
             </div>
+            <button id="showFavsBtn" class="filter-btn">★ Show Favorites</button>
+            <button id="resetAllBtn" class="reset-all-btn" title="Reset all filters">↺ Reset All</button>
             <button id="viewLocationsBtn" class="view-locations-btn">View Digimon Locations</button>
             <div id="resultCount" class="result-count"></div>
         </header>
@@ -91,6 +93,10 @@
                 <h2>Type Chart</h2>
                 <p class="note">Types found in the guide:</p>
                 <div id="typeList" class="type-grid"></div>
+                <div id="typeResultsContainer" class="type-results-container hidden">
+                    <h3 id="typeResultsTitle" class="type-results-header"></h3>
+                    <div id="typeResults" class="type-results-grid"></div>
+                </div>
             </div>
         </div>
 

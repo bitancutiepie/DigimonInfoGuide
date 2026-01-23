@@ -1,13 +1,27 @@
+// Perfectly Formatted Location Data
 const LOCATIONS_DATA = {
+  "103": [
+    "Culumon"
+  ],
+  "110 (Guardian)": [
+    "Gargomon",
+    "Gawappamon",
+    "Parasaurmon",
+    "Seasarmon",
+    "Thundermon",
+    "Witchmon"
+  ],
+  "112 (Part 2)": [
+    "Aquilamon"
+  ],
+  "117": [
+    "Culumon"
+  ],
   "Agumon Crest": [
     "Bakemon",
     "Betamon",
     "BetelGammamon",
     "Gammamon"
-  ],
-  "Ancient Tomb": [
-    "Baihumon",
-    "Zhuqiaomon"
   ],
   "Biyomon Crest": [
     "Galemon",
@@ -16,6 +30,9 @@ const LOCATIONS_DATA = {
     "Piyomon",
     "Xiquemon",
     "Yatagaramon"
+  ],
+  "F3": [
+    "Okuwamon"
   ],
   "Fiery Path": [
     "Asuramon",
@@ -50,21 +67,27 @@ const LOCATIONS_DATA = {
   "Granite Cave F1": [
     "DarkTyrannomon",
     "Elizamon",
-    "Monochromon",
     "Monodramon",
     "Sunarizamon"
+  ],
+  "Granite Cave F1/F4": [
+    "Monochromon"
   ],
   "Granite Cave F2": [
     "Bakemon",
     "DemiDevimon",
     "Dracmon",
     "Floramon",
-    "Gammamon",
-    "Ghostmon",
-    "GulusGammamon",
     "Keramon",
-    "Phascomon",
     "Tsukaimon"
+  ],
+  "Granite Cave F2/F3": [
+    "Ghostmon",
+    "Phascomon"
+  ],
+  "Granite Cave F2/F4": [
+    "Gammamon",
+    "GulusGammamon"
   ],
   "Granite Cave F4": [
     "BetelGammamon",
@@ -133,6 +156,28 @@ const LOCATIONS_DATA = {
     "Mihiramon",
     "Sandiramon"
   ],
+  "Mt Pyre": [
+    "Bakemon",
+    "DemiDevimon",
+    "Devidramon",
+    "Devimon",
+    "Dracmon",
+    "Ghostmon",
+    "Musyamon",
+    "Phantomon",
+    "Sangloupmon"
+  ],
+  "Old Mauville": [
+    "Bulkmon",
+    "Filmon",
+    "Herissmon",
+    "Kabuterimon",
+    "Kokuwamon",
+    "LoaderLeomon",
+    "MetalTyrannomon",
+    "Pulsemon",
+    "Thundermon"
+  ],
   "Petalburg Woods": [
     "Digmon",
     "Hawkmon",
@@ -150,7 +195,7 @@ const LOCATIONS_DATA = {
   "Route 101": [
     "Agumon",
     "Angoramon",
-    "Armadillomon",
+    "Armadimon",
     "Gabumon",
     "Gazimon",
     "Kudamon",
@@ -160,19 +205,26 @@ const LOCATIONS_DATA = {
     "Veemon"
   ],
   "Route 102": [
+    "Agumon",
     "Elizamon",
     "Falcomon",
+    "Gabumon",
+    "Gazimon",
     "Goblimon",
     "Impmon",
+    "Labramon",
     "Luxmon",
     "Palmon",
     "Tentomon",
+    "Terriermon",
+    "Veemon",
     "Wormmon"
   ],
   "Route 103": [
     "Betamon",
     "Birdramon",
     "Chuumon",
+    "Falcomon",
     "Gargomon",
     "Hawkmon",
     "Jellymon",
@@ -181,6 +233,7 @@ const LOCATIONS_DATA = {
     "Pteromon",
     "Sangomon",
     "Sorcerimon",
+    "Wormmon",
     "Xiquemon"
   ],
   "Route 103 (Part 2)": [
@@ -200,17 +253,34 @@ const LOCATIONS_DATA = {
     "Wizarmon"
   ],
   "Route 104": [
+    "Agumon",
     "Airdramon",
     "Bearmon",
+    "Betamon",
+    "Chuumon",
+    "Gabumon",
     "Gomamon",
     "KoDokugumon",
+    "Labramon",
     "Liollmon",
+    "Luxmon",
+    "Palmon",
     "Penmon",
-    "Tinkermon"
+    "Piyomon",
+    "Pomumon",
+    "Sangomon",
+    "Tentomon",
+    "Tinkermon",
+    "Veemon",
+    "Wormmon",
+    "Xiquemon"
   ],
   "Route 110": [
+    "Airdramon",
     "Ankylomon",
+    "Birdramon",
     "DORUgamon",
+    "Dobermon",
     "Dolphmon",
     "ExVeemon",
     "Filmon",
@@ -225,12 +295,17 @@ const LOCATIONS_DATA = {
     "Ogremon",
     "Pegasmon",
     "Piddomon",
+    "Punkmon",
     "Seasarmon",
     "Shellmon",
     "Shoeshoemon",
+    "Sorcerimon",
     "Stingmon",
+    "TeslaJellymon",
     "Thundermon",
-    "Wendimon"
+    "Wendimon",
+    "Wizarmon",
+    "Xiquemon"
   ],
   "Route 110 (Guardian)": [
     "Gaogamon",
@@ -245,10 +320,14 @@ const LOCATIONS_DATA = {
     "Wolfmon"
   ],
   "Route 111": [
+    "Airdramon",
+    "Ankylomon",
     "Aquilamon",
+    "Armadimon",
     "Brachiomon",
     "CannonBeemon",
     "Climbmon",
+    "DORUgamon",
     "Devidramon",
     "Dokugumon",
     "Dorulumon",
@@ -257,6 +336,7 @@ const LOCATIONS_DATA = {
     "Golemon",
     "Growmon",
     "Hudiemon",
+    "Jazamon",
     "Lavogaritamon",
     "Lavorvomon",
     "Meramon",
@@ -266,21 +346,32 @@ const LOCATIONS_DATA = {
     "Scorpiomon",
     "Strikedramon",
     "Sunarizamon",
+    "TeslaJellymon",
     "Togemon",
     "Tropiamon",
     "Tyrannomon",
+    "Vorvomon",
     "Waspmon",
     "Witchmon",
-    "Woodmon",
-    "Zhuqiaomon"
+    "Wizarmon",
+    "Woodmon"
   ],
   "Route 111 (Desert)": [
     "Locomon",
     "Mummymon"
   ],
+  "Route 111 Ancient Tomb": [
+    "Zhuqiaomon"
+  ],
   "Route 112": [
+    "Birdramon",
     "ForgeBeemon",
+    "Golemon",
     "Groundramon",
+    "Jazamon",
+    "Meramon",
+    "Vorvomon",
+    "Waspmon",
     "Wingdramon"
   ],
   "Route 113": [
@@ -288,16 +379,24 @@ const LOCATIONS_DATA = {
     "Betsumon",
     "Canoweissmon",
     "DexDORUguremon",
+    "Lavorvomon",
     "MasterTyrannomon",
     "Oboromon",
-    "Regulusmon"
+    "Regulusmon",
+    "Strikedramon"
   ],
   "Route 114": [
     "Apemon",
+    "Brachiomon",
     "Caturamon",
+    "Dinohumon",
+    "Gaogamon",
+    "Goblimon",
     "GrandGalemon",
+    "Hagurumon",
     "Hippogriffomon",
-    "Jazardmon"
+    "Jazardmon",
+    "Shoeshoemon"
   ],
   "Route 116": [
     "Blucomon",
@@ -307,6 +406,7 @@ const LOCATIONS_DATA = {
     "Guilmon",
     "Hagurumon",
     "Herissmon",
+    "Impmon",
     "Jazamon",
     "KoKabuterimon",
     "Kotemon",
@@ -316,38 +416,75 @@ const LOCATIONS_DATA = {
     "Morphomon",
     "Pulsemon",
     "Renamon",
+    "Sorcerimon",
     "Vorvomon",
+    "Xiquemon",
     "Zubamon"
   ],
   "Route 117": [
+    "Darcmon",
+    "Gargomon",
     "Garurumon",
+    "Hudiemon",
     "Liamon",
+    "Parasaurmon",
+    "Sorcerimon",
     "Tortomon"
   ],
   "Route 118": [
     "Bastemon",
+    "Betsumon",
+    "Darcmon",
+    "Elizamon",
     "LadyDevimon",
     "Nefertimon",
-    "Oleamon"
+    "Oleamon",
+    "Shoemon"
   ],
   "Route 119": [
+    "Bastemon",
+    "Betsumon",
+    "Elizamon",
     "Ghilliedhumon",
     "Monzaemon",
-    "WaruMonzaemon"
+    "Oleamon",
+    "Shoemon",
+    "WaruMonzaemon",
+    "Witchmon"
   ],
   "Route 120": [
     "Cargodramon",
+    "Commandramon",
+    "ForgeBeemon",
     "FunBeemon",
+    "Ghilliedhumon",
     "GrapLeomon",
+    "Hi-Commandramon",
     "Sealsdramon",
-    "Tankdramon"
+    "Tankdramon",
+    "Waspmon"
   ],
   "Route 121": [
-    "Baihumon",
     "Cherrymon",
     "Ikkakumon",
+    "Loogamon",
+    "Loogarmon",
     "Musyamon",
-    "Tsukaimon"
+    "Tsukaimon",
+    "Witchmon"
+  ],
+  "Route 121 Ancient Tomb": [
+    "Baihumon"
+  ],
+  "Routes 101": [
+    "Culumon"
+  ],
+  "Rustboro (Trade)": [
+    "Gogmamon"
+  ],
+  "Rusturf": [
+    "Digmon",
+    "Goblimon"
   ],
   "Rusturf Tunnel": [
     "DORUmon",
@@ -387,22 +524,26 @@ const LOCATIONS_DATA = {
     "Lopmon",
     "Luxmon",
     "Patamon",
-    "Piddomon",
     "Salamon",
     "Turuiemon"
   ],
   "Spear Pillar F1 (as Gatomon)": [
     "Tailmon"
   ],
+  "Spear Pillar F1/F3": [
+    "Piddomon"
+  ],
   "Spear Pillar F3": [
-    "Angewomon",
-    "ArkhaiAngemon",
     "Gargolemon",
-    "Gokuumon",
     "Nefertimon"
   ],
+  "Spear Pillar F3/F5": [
+    "Angewomon",
+    "ArkhaiAngemon",
+    "Gokuumon"
+  ],
   "Spear Pillar F5": [
-    "Andiramon (Deva)",
+    "AndiramonDeva",
     "ClavisAngemon",
     "HolyAngemon",
     "Manticoremon",
@@ -413,7 +554,7 @@ const LOCATIONS_DATA = {
     "Lucemon"
   ],
   "Tentomon Crest": [
-    "Armadillomon",
+    "Armadimon",
     "Blitzmon",
     "Exermon",
     "FunBeemon",
@@ -422,5 +563,41 @@ const LOCATIONS_DATA = {
     "Morphomon",
     "Pulsemon",
     "Stingmon"
+  ],
+  "Victory Road F1": [
+    "AtlurKabuterimon",
+    "Duramon",
+    "GranKuwagamon",
+    "Mamemon",
+    "MasterTyrannomon",
+    "MetalGreymon",
+    "Okuwamon",
+    "Ouryumon",
+    "RaijiLudomon",
+    "Rapidmon"
+  ],
+  "Victory Road F2": [
+    "AeroVeedramon",
+    "Blastmon",
+    "DexDORUguremon",
+    "MetalTyrannomon",
+    "Metallicdramon",
+    "Rebellimon",
+    "Tropiamon",
+    "UltimateBrachiomon",
+    "Wingdramon"
+  ],
+  "Victory Road F3": [
+    "Ajatarmon",
+    "Etemon",
+    "Mystimon",
+    "Orochimon",
+    "SaberLeomon",
+    "Triceramon",
+    "WereGarurumon",
+    "Wisemon"
+  ],
+  "etc.": [
+    "Culumon"
   ]
 };
