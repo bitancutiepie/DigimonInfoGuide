@@ -113,17 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Single evolution - continue horizontal
                 html += renderEvoTree(node.children[0], false);
             } else {
-                // Multiple branches - show vertically stacked paths
+                // Multiple branches - show each branch completely
                 html += '<div class="evo-connector"><span class="evo-arrow-h">→</span></div>';
                 html += '<div class="evo-branches">';
                 node.children.forEach(child => {
-                    html += `<div class="evo-branch-row">
-                        <div class="evo-method-label">${child.method || 'No info in Discord'}</div>
-                        <div class="evo-card-h" onclick="openDigimonDetail('${child.name.replace(/'/g, "\\'")}')">
-                            <div class="evo-card-name">${child.name}</div>
-                            <div class="evo-card-types">${renderTypeBadges(child.types)}</div>
-                        </div>
-                    </div>`;
+                    html += '<div class="evo-branch-row">';
+                    // Recursively render the entire branch
+                    html += renderEvoTree(child, true);
+                    html += '</div>';
                 });
                 html += '</div>';
             }

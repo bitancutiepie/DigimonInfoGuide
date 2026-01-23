@@ -497,14 +497,15 @@ body::before {
 .evo-branches {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     flex-shrink: 0;
 }
 
 .evo-branch-row {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
 }
 
 .evo-branch-row .evo-card-h {
