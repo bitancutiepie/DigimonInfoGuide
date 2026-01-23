@@ -99,7 +99,7 @@ def parse_checklist():
             if not raw_name: continue
             
             name = normalize_name(raw_name)
-            types = [t.strip() for t in [row[2], row[3]] if t.strip()]
+            types = [t.strip() if t.strip() != "???" else "CHAOS" for t in [row[2], row[3]] if t.strip()]
             ability = row[4].strip()
             hidden = row[5].strip()
             evo_move = row[7].strip()
@@ -204,7 +204,7 @@ def parse_routes(digimon_db):
         
         entry = digimon_db[name]
         if not entry["id"] and id_val != "-": entry["id"] = id_val
-        if not entry["types"]: entry["types"] = [t.strip() for t in types_str.split('/') if t.strip()]
+        if not entry["types"]: entry["types"] = [t.strip() if t.strip() != "???" else "CHAOS" for t in types_str.split('/') if t.strip()]
             
         if locs_raw and "Not Yet Logged" not in locs_raw and "Evolution Only" not in locs_raw:
             raw_loc_list = locs_raw.split(',')

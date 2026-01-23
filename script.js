@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Type color mapping
     const typeColorClass = (type) => {
         const t = type.toLowerCase().replace(/\s+/g, '');
-        const validTypes = ['fire', 'water', 'ice', 'ground', 'rock', 'electric', 'holy', 'dark', 'fighting', 'steel', 'bug', 'poison', 'undead', 'dragon', 'fairy', 'magic', 'normal', 'mystery', 'grass', 'flying'];
+        const validTypes = ['fire', 'water', 'ice', 'ground', 'rock', 'electric', 'holy', 'dark', 'fighting', 'steel', 'bug', 'poison', 'undead', 'dragon', 'fairy', 'magic', 'normal', 'mystery', 'grass', 'flying', 'chaos'];
         return validTypes.includes(t) ? `type-${t}` : 'type-unknown';
     };
 

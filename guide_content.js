@@ -7591,7 +7591,7 @@ const DIGIMON_DB = [
     "id": "137",
     "name": "Chaosmon Valdur Arm",
     "types": [
-      "???"
+      "CHAOS"
     ],
     "ability": "Moody",
     "hiddenAbility": "",
@@ -13298,7 +13298,7 @@ const DIGIMON_DB = [
     "id": "237",
     "name": "Culumon",
     "types": [
-      "???"
+      "CHAOS"
     ],
     "ability": "No Guard",
     "hiddenAbility": "",
@@ -18651,7 +18651,7 @@ const DIGIMON_DB = [
     "id": "331",
     "name": "Caosmon",
     "types": [
-      "???"
+      "CHAOS"
     ],
     "ability": "Moody",
     "hiddenAbility": "",
@@ -27164,7 +27164,7 @@ const DIGIMON_DB = [
     "id": "487",
     "name": "Susanoomon",
     "types": [
-      "Normal"
+      "CHAOS"
     ],
     "ability": "Protean",
     "hiddenAbility": "",
@@ -27192,7 +27192,7 @@ const DIGIMON_DB = [
     "id": "489",
     "name": "Kimeramon",
     "types": [
-      "???"
+      "CHAOS"
     ],
     "ability": "Protean",
     "hiddenAbility": "Libero",
@@ -27273,7 +27273,7 @@ const DIGIMON_DB = [
     "id": "490",
     "name": "Millenniummon",
     "types": [
-      "???"
+      "CHAOS"
     ],
     "ability": "Shadow Shield",
     "hiddenAbility": "Power of Alchemy",
@@ -27428,7 +27428,7 @@ const DIGIMON_DB = [
     "id": "494",
     "name": "GraceNovamon",
     "types": [
-      "???"
+      "CHAOS"
     ],
     "ability": "Neuroforce",
     "hiddenAbility": "",
@@ -27472,7 +27472,7 @@ const DIGIMON_DB = [
     "id": "495",
     "name": "Betsumon",
     "types": [
-      "???"
+      "CHAOS"
     ],
     "ability": "Imposter",
     "hiddenAbility": "Imposter",

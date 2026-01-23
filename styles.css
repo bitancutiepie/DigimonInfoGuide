@@ -36,6 +36,7 @@
     --type-mystery: #68a090;
     --type-grass: #78c850;
     --type-flying: #a890f0;
+    --type-chaos: #ff00ff;
 }
 
 * {
@@ -296,6 +297,12 @@ body::before {
 .type-badge.type-dark {
     background: var(--type-dark);
     color: #fff;
+}
+
+.type-badge.type-chaos {
+    background: linear-gradient(45deg, #ff00ff, #800080);
+    color: #fff;
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.4);
 }
 
 .type-badge.type-fighting {
