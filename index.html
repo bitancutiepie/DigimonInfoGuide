@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digimon Evolution Guide - Digimon Trials</title>
+    <meta name="description"
+        content="Ultimate evolution and location guide for Digimon Trials. Find your favorit Digimon, their evolution paths, and where to catch them.">
+    <meta name="keywords" content="Digimon, Digimon Trials, Evolution Guide, Digimon Locations, Type Chart">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,14 +17,49 @@
 </head>
 
 <body>
+    <!-- Splash Screen -->
+    <div id="splashScreen" class="splash-screen">
+        <div class="splash-content">
+            <div class="digi-ring-outer"></div>
+            <div class="digi-ring"></div>
+            <div class="digi-core"></div>
+            <h1 class="splash-title">DIGIMON<br>GUIDER</h1>
+            <p class="creator-tag">Created by Bitancor</p>
+        </div>
+    </div>
+
     <div class="app-container">
         <header class="main-header">
-            <img src="banner.png" alt="Digimon Info Guide - For the Game Digimon Trials" class="banner-image">
+            <img src="banner.png" alt="Digimon Info Guide - For the Game Digimon Trials" class="banner-image"
+                loading="lazy">
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search any Digimon by name..."
                     aria-label="Search Digimon">
-                <button type="button" class="clear-btn" onclick="clearSearch()" title="Clear search">✕</button>
+                <button type="button" class="clear-btn" id="clearNameBtn" onclick="clearSearch('searchInput')"
+                    title="Clear search">✕</button>
             </div>
+            <div class="search-container">
+                <select id="routeInput" aria-label="Filter by Location">
+                    <option value="">All Locations</option>
+                </select>
+                <button type="button" class="clear-btn" id="clearRouteBtn" onclick="clearSearch('routeInput')"
+                    title="Clear filter">✕</button>
+            </div>
+            <div class="search-container">
+                <select id="typeFilter" aria-label="Filter by Type">
+                    <option value="">All Types</option>
+                </select>
+                <button type="button" class="clear-btn" id="clearTypeBtn" onclick="clearTypeFilter()"
+                    title="Clear type filter">✕</button>
+            </div>
+            <div class="search-container">
+                <select id="sortOrder" aria-label="Sort Order">
+                    <option value="name_asc">Sort: A-Z</option>
+                    <option value="name_desc">Sort: Z-A</option>
+                    <option value="evo_count">Sort: Evo Count</option>
+                </select>
+            </div>
+            <button id="viewLocationsBtn" class="view-locations-btn">View Digimon Locations</button>
             <div id="resultCount" class="result-count"></div>
         </header>
 
@@ -30,6 +68,10 @@
                 <!-- Digimon cards will be injected here -->
             </section>
         </main>
+
+        <footer class="main-footer">
+            <p>Created by <strong>Bitancor</strong></p>
+        </footer>
 
         <!-- Modal for details -->
         <div id="detailModal" class="modal hidden">
@@ -51,8 +93,48 @@
                 <div id="typeList" class="type-grid"></div>
             </div>
         </div>
+
+        <!-- Locations Modal -->
+        <div id="locationsModal" class="modal hidden">
+            <div class="modal-content locations-modal-content">
+                <span class="close-locations-modal">&times;</span>
+                <h2>Digimon Locations</h2>
+                <p class="modal-subtitle">Click a location to see all Digimon found there</p>
+                <div id="locationsList" class="locations-list"></div>
+            </div>
+        </div>
+
+        <div id="locationDetailModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-location-detail">&times;</span>
+                <div id="locationDetailBody"></div>
+            </div>
+        </div>
+
+        <!-- Patch Notes Modal -->
+        <div id="patchNotesModal" class="modal hidden">
+            <div class="modal-content patch-notes-content">
+                <span class="close-patch-notes">&times;</span>
+                <div class="patch-header">
+                    <h2>Latest Updates</h2>
+                    <span class="patch-version">v1.2.0</span>
+                </div>
+                <div class="patch-body">
+                    <ul class="patch-list">
+                        <li><strong>Advanced Sorting:</strong> Sort by Name or Evolution Count.</li>
+                        <li><strong>Performance:</strong> Faster search and instant list updates.</li>
+                        <li><strong>Back to Top:</strong> Quick navigation button for easy browsing.</li>
+                        <li><strong>View Digimon Routes:</strong> Explore all available locations in the game.</li>
+                    </ul>
+                </div>
+                <button id="closePatchBtn" class="patch-done-btn">Got it!</button>
+            </div>
+        </div>
+
+        <button id="backToTop" class="back-to-top hidden" title="Back to Top">↑</button>
     </div>
 
+    <script src="locations_data.js"></script>
     <script src="guide_content.js"></script>
     <script src="script.js"></script>
 </body>

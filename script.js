@@ -10,6 +10,57 @@ document.addEventListener('DOMContentLoaded', () => {
         return validTypes.includes(t) ? `type-${t}` : 'type-unknown';
     };
 
+    const listContainer = document.getElementById('digimonList');
+    const searchInput = document.getElementById('searchInput');
+    const routeInput = document.getElementById('routeInput');
+    const detailModal = document.getElementById('detailModal');
+    const modalBody = document.getElementById('modalBody');
+    const closeModal = document.querySelector('.close-modal');
+
+    // Locations Feature Elements
+    const viewLocationsBtn = document.getElementById('viewLocationsBtn');
+    const locationsModal = document.getElementById('locationsModal');
+    const locationsList = document.getElementById('locationsList');
+    const closeLocationsModal = document.querySelector('.close-locations-modal');
+
+    const locationDetailModal = document.getElementById('locationDetailModal');
+    const locationDetailBody = document.getElementById('locationDetailBody');
+    const closeLocationDetail = document.querySelector('.close-location-detail');
+
+    const typeModal = document.getElementById('typeModal');
+    const toggleTypeChart = document.getElementById('toggleTypeChart');
+    const closeTypeModal = document.querySelector('.close-type-modal');
+    const typeListDiv = document.getElementById('typeList');
+    const resultCount = document.getElementById('resultCount');
+    const typeFilter = document.getElementById('typeFilter');
+    const clearTypeBtn = document.getElementById('clearTypeBtn');
+    const sortOrder = document.getElementById('sortOrder');
+    const backToTopBtn = document.getElementById('backToTop');
+
+    // Debounce helper
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    // Copy to clipboard helper
+    async function copyToClipboard(text) {
+        try {
+            await navigator.clipboard.writeText(text);
+            // Optional: Add a subtle toast or visual feedback here
+            console.log('Copied to clipboard:', text);
+        } catch (err) {
+            console.error('Failed to copy text: ', err);
+        }
+    }
+
     function loadData() {
         if (typeof DIGIMON_DB === 'undefined') {
             console.error("DIGIMON_DB is not defined.");
@@ -30,6 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 entry.prev.forEach(p => {
                     if (!existing.prev.some(ep => ep.name === p.name)) existing.prev.push(p);
                 });
+                if (entry.locations) {
+                    if (!existing.locations) existing.locations = [];
+                    entry.locations.forEach(l => {
+                        if (!existing.locations.includes(l)) existing.locations.push(l);
+                    });
+                }
             }
             entry.types.forEach(t => allTypes.add(t));
         });
@@ -44,18 +101,35 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         baseForms.sort((a, b) => a.name.localeCompare(b.name));
-    }
 
-    const listContainer = document.getElementById('digimonList');
-    const searchInput = document.getElementById('searchInput');
-    const detailModal = document.getElementById('detailModal');
-    const modalBody = document.getElementById('modalBody');
-    const closeModal = document.querySelector('.close-modal');
-    const typeModal = document.getElementById('typeModal');
-    const toggleTypeChart = document.getElementById('toggleTypeChart');
-    const closeTypeModal = document.querySelector('.close-type-modal');
-    const typeListDiv = document.getElementById('typeList');
-    const resultCount = document.getElementById('resultCount');
+        // Populate type filter dropdown
+        if (typeFilter) {
+            // Clear current options except the first one
+            while (typeFilter.options.length > 1) {
+                typeFilter.remove(1);
+            }
+            Array.from(allTypes).sort().forEach(type => {
+                const option = document.createElement('option');
+                option.value = type;
+                option.textContent = type;
+                typeFilter.appendChild(option);
+            });
+        }
+
+        // Populate location filter dropdown
+        if (routeInput && typeof LOCATIONS_DATA !== 'undefined') {
+            // Clear current options except the first one
+            while (routeInput.options.length > 1) {
+                routeInput.remove(1);
+            }
+            Object.keys(LOCATIONS_DATA).sort().forEach(loc => {
+                const option = document.createElement('option');
+                option.value = loc;
+                option.textContent = loc;
+                routeInput.appendChild(option);
+            });
+        }
+    }
 
     function renderTypeBadges(types) {
         if (!types || types.length === 0) {
@@ -138,24 +212,67 @@ document.addEventListener('DOMContentLoaded', () => {
         return count;
     }
 
-    function renderList(filter = '') {
+    function renderList() {
         listContainer.innerHTML = '';
-        const isSearching = filter.trim().length > 0;
+
+        const nameFilter = searchInput.value.trim().toLowerCase();
+        const locFilter = routeInput.value.trim().toLowerCase();
+        const typeFilterValue = typeFilter ? typeFilter.value.trim().toLowerCase() : '';
+        const currentSort = sortOrder ? sortOrder.value : 'name_asc';
+
+        const isSearching = nameFilter.length > 0 || locFilter.length > 0 || typeFilterValue.length > 0;
+
         let displayList = [];
         let totalCount = 0;
 
         if (isSearching) {
             // When searching, show all matching Digimon
             digimonMap.forEach((digi, name) => {
-                if (name.toLowerCase().includes(filter.toLowerCase())) {
+                const matchesName = nameFilter === '' || name.toLowerCase().includes(nameFilter);
+                let matchesLoc = true;
+                if (locFilter !== '') {
+                    matchesLoc = digi.locations && digi.locations.some(l => l.toLowerCase().includes(locFilter));
+                }
+
+                let matchesType = true;
+                if (typeFilterValue !== '') {
+                    matchesType = digi.types && digi.types.some(t => t.toLowerCase() === typeFilterValue);
+                }
+
+                if (matchesName && matchesLoc && matchesType) {
                     displayList.push(digi);
                 }
             });
-            displayList.sort((a, b) => a.name.localeCompare(b.name));
+
+            // Sorting Logic
+            if (currentSort === 'name_asc') {
+                displayList.sort((a, b) => a.name.localeCompare(b.name));
+            } else if (currentSort === 'name_desc') {
+                displayList.sort((a, b) => b.name.localeCompare(a.name));
+            } else if (currentSort === 'evo_count') {
+                displayList.sort((a, b) => {
+                    const countA = countTreeNodes(buildEvoTree(a, new Set())) - 1;
+                    const countB = countTreeNodes(buildEvoTree(b, new Set())) - 1;
+                    return countB - countA || a.name.localeCompare(b.name);
+                });
+            }
+
             totalCount = digimonMap.size;
         } else {
             // On landing page, show only base forms
-            displayList = baseForms;
+            displayList = [...baseForms];
+
+            if (currentSort === 'name_asc') {
+                displayList.sort((a, b) => a.name.localeCompare(b.name));
+            } else if (currentSort === 'name_desc') {
+                displayList.sort((a, b) => b.name.localeCompare(a.name));
+            } else if (currentSort === 'evo_count') {
+                displayList.sort((a, b) => {
+                    const countA = countTreeNodes(buildEvoTree(a, new Set())) - 1;
+                    const countB = countTreeNodes(buildEvoTree(b, new Set())) - 1;
+                    return countB - countA || a.name.localeCompare(b.name);
+                });
+            }
             totalCount = baseForms.length;
         }
 
@@ -174,6 +291,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        const fragment = document.createDocumentFragment();
+
         displayList.forEach((digi, index) => {
             const card = document.createElement('div');
             card.className = 'digimon-card';
@@ -185,10 +304,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const evoCount = isSearching ? 0 : countTreeNodes(buildEvoTree(digi, new Set())) - 1;
             const evoText = isSearching ? '' : (evoCount > 0 ? `<div class="evo-count">${evoCount} evolution${evoCount > 1 ? 's' : ''}</div>` : '');
 
+            // Locations preview (small badge if filtered)
+            let locHtml = '';
+            if (locFilter !== '' && digi.locations) {
+                locHtml = `<div class="loc-preview">Found in ${digi.locations.length} location(s)</div>`;
+            }
+
             card.innerHTML = `
                 <div class="digimon-name">${digi.name}</div>
                 <div class="digimon-types">${renderTypeBadges(digi.types)}</div>
                 ${evoText}
+                ${locHtml}
             `;
 
             card.addEventListener('click', () => {
@@ -207,8 +333,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            listContainer.appendChild(card);
+            fragment.appendChild(card);
         });
+
+        listContainer.appendChild(fragment);
     }
 
     // Open evolution tree modal (for base forms)
@@ -250,6 +378,16 @@ document.addEventListener('DOMContentLoaded', () => {
             abilitiesHtml += '</div>';
         }
 
+        // Locations
+        let locHtml = '';
+        if (digi.locations && digi.locations.length > 0) {
+            locHtml = '<div class="locations-grid">' + digi.locations.map(l =>
+                `<span class="location-badge">${l}</span>`
+            ).join('') + '</div>';
+        } else {
+            locHtml = '<div class="evo-empty">No location data found</div>';
+        }
+
         // Build prev evolutions
         let prevHtml = '';
         if (digi.prev && digi.prev.length > 0) {
@@ -257,7 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="evo-card" onclick="openDigimonDetail('${p.name.replace(/'/g, "\\'")}')">
                     <span class="evo-card-name">${p.name}</span>
                     <span class="evo-card-arrow">→</span>
-                    <span class="evo-card-method">${p.method || 'No info in Discord'}</span>
+                    <span class="evo-card-method clickable-method" onclick="event.stopPropagation(); copyToClipboard('${p.method || 'No info'}')" title="Click to copy">${p.method || 'No info in Discord'}</span>
                 </div>
             `).join('') + '</div>';
         } else {
@@ -269,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (digi.next && digi.next.length > 0) {
             nextHtml = '<div class="evo-chain">' + digi.next.map(n => `
                 <div class="evo-card" onclick="openDigimonDetail('${n.name.replace(/'/g, "\\'")}')">
-                    <span class="evo-card-method">${n.method || 'No info in Discord'}</span>
+                    <span class="evo-card-method clickable-method" onclick="event.stopPropagation(); copyToClipboard('${n.method || 'No info'}')" title="Click to copy">${n.method || 'No info in Discord'}</span>
                     <span class="evo-card-arrow">→</span>
                     <span class="evo-card-name">${n.name}</span>
                 </div>
@@ -307,6 +445,11 @@ document.addEventListener('DOMContentLoaded', () => {
             ${evoMoveHtml}
             
             <div class="evo-section">
+                <div class="evo-title">Locations</div>
+                ${locHtml}
+            </div>
+
+            <div class="evo-section">
                 <div class="evo-title">Evolves From</div>
                 ${prevHtml}
             </div>
@@ -325,23 +468,113 @@ document.addEventListener('DOMContentLoaded', () => {
         detailModal.classList.remove('hidden');
     };
 
+    // Locations Feature Functions
+    function openLocationsModal() {
+        if (typeof LOCATIONS_DATA === 'undefined') {
+            console.error("LOCATIONS_DATA is not defined.");
+            return;
+        }
+
+        locationsList.innerHTML = '';
+        const sortedLocations = Object.keys(LOCATIONS_DATA).sort();
+
+        sortedLocations.forEach(loc => {
+            const item = document.createElement('div');
+            item.className = 'location-item';
+            item.textContent = loc;
+            item.onclick = () => showLocationDetails(loc);
+            locationsList.appendChild(item);
+        });
+
+        locationsModal.classList.remove('hidden');
+    }
+
+    function showLocationDetails(locationName) {
+        const digimonNames = LOCATIONS_DATA[locationName];
+        if (!digimonNames) return;
+
+        locationDetailBody.innerHTML = `
+            <div class="location-detail-title">${locationName}</div>
+            <div class="loc-digimon-grid">
+                ${digimonNames.map(name => {
+            const digi = digimonMap.get(name);
+            const types = digi ? digi.types : [];
+            return `
+                        <div class="loc-digimon-card" onclick="openDigimonDetail('${name.replace(/'/g, "\\'")}')">
+                            <div class="digimon-name">${name}</div>
+                            <div class="digimon-types">${renderTypeBadges(types)}</div>
+                        </div>
+                    `;
+        }).join('')}
+            </div>
+        `;
+
+        locationDetailModal.classList.remove('hidden');
+    }
+
     // Keep old function for compatibility
     window.openDigimonByName = window.openDigimonDetail;
 
     // Clear search
-    window.clearSearch = () => {
-        searchInput.value = '';
+    window.clearSearch = (inputId) => {
+        const input = document.getElementById(inputId);
+        if (input) {
+            input.value = '';
+            input.focus();
+        }
         renderList();
-        searchInput.focus();
+    };
+
+    window.clearTypeFilter = () => {
+        if (typeFilter) {
+            typeFilter.value = '';
+        }
+        renderList();
     };
 
     loadData();
     renderList();
 
     // Event listeners
-    searchInput.addEventListener('input', (e) => { renderList(e.target.value); });
+    const debouncedRender = debounce(() => { renderList(); }, 300);
+
+    searchInput.addEventListener('input', debouncedRender);
+    if (routeInput) {
+        routeInput.addEventListener('change', () => { renderList(); });
+    }
+    if (typeFilter) {
+        typeFilter.addEventListener('change', () => { renderList(); });
+    }
+    if (sortOrder) {
+        sortOrder.addEventListener('change', () => { renderList(); });
+    }
+    if (clearTypeBtn) {
+        clearTypeBtn.addEventListener('click', () => { clearTypeFilter(); });
+    }
+
+    // Back to Top Logic
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.remove('hidden');
+        } else {
+            backToTopBtn.classList.add('hidden');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    viewLocationsBtn.addEventListener('click', openLocationsModal);
+    closeLocationsModal.addEventListener('click', () => locationsModal.classList.add('hidden'));
+    closeLocationDetail.addEventListener('click', () => locationDetailModal.classList.add('hidden'));
 
     closeModal.addEventListener('click', () => { detailModal.classList.add('hidden'); });
+
+    // Add backdrop clicks for new modals
+    locationsModal.addEventListener('click', (e) => { if (e.target === locationsModal) locationsModal.classList.add('hidden'); });
+    locationDetailModal.addEventListener('click', (e) => { if (e.target === locationDetailModal) locationDetailModal.classList.add('hidden'); });
+
     detailModal.addEventListener('click', (e) => { if (e.target === detailModal) detailModal.classList.add('hidden'); });
 
     toggleTypeChart.addEventListener('click', () => {
@@ -359,6 +592,37 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Escape') {
             detailModal.classList.add('hidden');
             typeModal.classList.add('hidden');
+            locationsModal.classList.add('hidden');
+            locationDetailModal.classList.add('hidden');
         }
     });
+
+    // Hide splash screen after initialization
+    const splash = document.getElementById('splashScreen');
+    const patchModal = document.getElementById('patchNotesModal');
+    const closePatchBtn = document.getElementById('closePatchBtn');
+    const closePatchX = document.querySelector('.close-patch-notes');
+
+    if (splash) {
+        setTimeout(() => {
+            splash.classList.add('fade-out');
+            // Remove from DOM after transition
+            setTimeout(() => {
+                splash.remove();
+                // Show patch notes after splash is gone
+                if (patchModal) {
+                    patchModal.classList.remove('hidden');
+                }
+            }, 800);
+        }, 2000); // Show for 2 seconds
+    }
+
+    if (patchModal) {
+        const closePatch = () => patchModal.classList.add('hidden');
+        closePatchBtn.addEventListener('click', closePatch);
+        closePatchX.addEventListener('click', closePatch);
+        patchModal.addEventListener('click', (e) => {
+            if (e.target === patchModal) closePatch();
+        });
+    }
 });

@@ -88,6 +88,12 @@ def load_evolution_notes():
     except Exception as e:
         print(f"Warning: Could not load notes from {XLSX_FILE}: {e}")
     
+    
+    # Fix known typos in XLSX comments
+    if "AtlurKabuterumon" in notes:
+        notes["AtlurKabuterimon"] = notes.pop("AtlurKabuterumon")
+        print("Fixed typo: AtlurKabuterumon -> AtlurKabuterimon in notes")
+
     return notes
 
 def load_csv_data():
@@ -186,6 +192,8 @@ def build_evolution_links(digimon_list, notes):
                     # Check if not already added
                     if not any(n["name"] == digi["name"] for n in source_digi["next"]):
                         source_digi["next"].append({"name": digi["name"], "method": method})
+                else:
+                    print(f"Warning: {digi['name']} evolves from unknown '{source_name}'")
 
 def main():
     print("Loading data...")
@@ -199,8 +207,114 @@ def main():
     # Build evolution links
     build_evolution_links(digimon_list, notes)
     
+    # Load and add locations
+    locations = load_routes()
+    add_locations(digimon_list, locations)
+    
     # Sort by dex number
     digimon_list.sort(key=lambda x: x["dex"])
+
+def load_routes():
+    """Load route data from detailedRoutes.txt table."""
+    route_file = "detailedRoutes.txt"
+    digimon_locations = {} # Name -> List of locations
+    
+    try:
+        with open(route_file, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+            
+        in_table = False
+        for line in lines:
+            line = line.strip()
+            
+            # Detect table start
+            if line.startswith('| ID |'):
+                in_table = True
+                continue
+            
+            # Skip separator or non-table lines
+            if not in_table or line.startswith('|:---') or not line.startswith('|'):
+                continue
+                
+            # Parse table row: | ID | Digimon | Type | Wild Location | Evolution/Notes |
+            parts = [p.strip() for p in line.split('|')]
+            if len(parts) < 6: # Column parts + empty ends
+                continue
+                
+            name = parts[2].replace('**', '').strip()
+            location_text = parts[4]
+            
+            if not name or name == 'Digimon' or 'Not Yet Logged' in location_text:
+                continue
+                
+            # Extract locations (e.g. Route 101, Spear Pillar F1)
+            loc_parts = location_text.split(',')
+            for loc in loc_parts:
+                loc = loc.strip()
+                if not loc:
+                    continue
+                
+                # Cleanup: Rt 101 -> Route 101
+                loc = re.sub(r'^Rt\s+', 'Route ', loc)
+                
+                if name not in digimon_locations:
+                    digimon_locations[name] = []
+                if loc not in digimon_locations[name]:
+                    digimon_locations[name].append(loc)
+                            
+        print(f"Loaded locations for {len(digimon_locations)} Digimon")
+        return digimon_locations
+        
+    except Exception as e:
+        print(f"Warning: Could not load routes from {route_file}: {e}")
+        return {}
+
+def add_locations(digimon_list, digimon_locations):
+    """Add locations to Digimon entries."""
+    # Map for fuzzy/alias matching could be added here
+    aliases = {
+        "Gatomon": "Tailmon",
+        "Kudamon": "Kudamon", # Check if matches CSV
+        "Tyranomon": "Tyrannomon",
+        "DarkTyranomon": "DarkTyrannomon",
+        "AlturKabuterimon": "AtlurKabuterimon",
+        "AlturKabuterimon (Red)": "AtlurKabuterimon",
+        "Gryzmon": "Grizzlymon",
+        "Symbaremon": "SymbareAngoramon",
+        "Parasaur": "Parasaurmon",
+        "Aidramon": "Airdramon",
+        "Climbon": "Climbmon", 
+        "Halsemon": "Holsmon",
+        "Mercuremon": "Mercurymon",
+        "RaijinLudomon": "RaijiLudomon",
+        "MetallicDramon": "Metallicdramon",
+        "DexDORUGreymon": "DexDORUguremon",
+    }
+    
+    # Create a quick lookup map for case-insensitive matching
+    name_map = {d["name"].lower(): d for d in digimon_list}
+
+    for name, route_list in digimon_locations.items():
+        target_name = name
+        
+        # Check aliases
+        if name in aliases:
+            target_name = aliases[name]
+        
+        # Try to find in digimon list
+        d = name_map.get(target_name.lower())
+        if d:
+            if "locations" not in d:
+                d["locations"] = []
+            # Add new unique locations
+            for loc in route_list:
+                if loc not in d["locations"]:
+                    d["locations"].append(loc)
+        else:
+            # Maybe it's a "User Name" vs "Official Name" issue or minor typo
+            pass # Silent ignore for now or print warning?
+            # print(f"Location warning: Could not find Digimon '{name}' in DB")
+
     
     # Count stats
     with_types = sum(1 for d in digimon_list if d["types"])
