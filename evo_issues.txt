@@ -1,0 +1,134 @@
+﻿UNKNOWN SOURCE for Wendimon: 'Tururiemon Dark Data' (No matching Digimon in DB)
+MISSING IN DB: WarWreymon
+UNKNOWN SOURCE for BlitzGreymon: 'Metal Greymon' (No matching Digimon in DB)
+MISSING IN DB: Lv New Mauvile"
+METHOD MISMATCH for Omegamon: Ref says 'MetalGarurumon Jogress' (from WarGreymon), DB says 'Jogress'
+METHOD MISMATCH for Garurumon: Ref says 'Lv18' (from Gabumon), DB says 'Lv18 Lv18'
+MISSING IN DB: Strabimon Lv18"
+METHOD MISMATCH for Omegamon Alter S: Ref says 'BlitzGreymon Jogress' (from CresGarurumon), DB says 'Jogress'
+MISSING IN DB: AtlurKabuterumon
+METHOD MISMATCH for Rafflesimon: Ref says 'Rosemon Jogress' (from Lotusmon), DB says 'Jogress'
+UNKNOWN SOURCE for Ikkakumon: 'Gomgamon Lv18' (No matching Digimon in DB)
+METHOD MISMATCH for Plesiomon: Ref says 'King's Rock' (from Zudomon), DB says 'King\u0027s Rock'
+METHOD MISMATCH for Paildramon: Ref says 'Lv28 Stingmon' (from ExVeemon), DB says 'Lv28'
+METHOD MISMATCH for Imperialdramon Dragon: Ref says 'Lv52' (from Paildramon), DB says 'Lv52 Lv 52'
+MISSING IN DB: Dinobeemon Lv 52"
+MISSING PREV for Imperialdramon Paladin: Reference lists Imperialdramon Fighter (Omega Data)
+BROKEN LINK: Imperialdramon Fighter indicates next->Imperialdramon Paladin missing
+MISSING PREV for Magnamon X: Reference lists Magnamon X (Antibody)
+BROKEN LINK: Magnamon X indicates next->Magnamon X missing
+METHOD MISMATCH for Dinobeemon: Ref says 'Lv28 ExVeemon' (from Stingmon), DB says 'Lv28'
+METHOD MISMATCH for Shakkoumon: Ref says 'Lv28 Angemon' (from Ankylomon), DB says 'Lv28'
+METHOD MISMATCH for KingWhamon: Ref says 'King's Rock' (from Whamon), DB says 'King\u0027s Rock'
+METHOD MISMATCH for ElDoradimon: Ref says 'Lv54' (from Scorpiomon), DB says 'Lv54 Lv54'
+MISSING IN DB: Jagamon Lv54"
+METHOD MISMATCH for Tlalocmon: Ref says 'Jogress ElDoradimon' (from SaberLeomon), DB says 'Jogress'
+METHOD MISMATCH for Silphymon: Ref says 'Lv28 Tailmon' (from Aquilamon), DB says 'Lv28'
+MISSING PREV for Peacockmon: Reference lists Peacockmon (Lv32)
+BROKEN LINK: Peacockmon indicates next->Peacockmon missing
+METHOD MISMATCH for Chaosmon Valdur Arm: Ref says 'Jogress Valdurmon' (from BanchoLeomon), DB says 'Jogress'
+UNKNOWN SOURCE for DORUgoramon: 'DORUguremon LV54' (No matching Digimon in DB)
+UNKNOWN SOURCE for Alphamon: 'DORUguremon Auspicious Armor' (No matching Digimon in DB)
+METHOD MISMATCH for Alphamon Ouryuken: Ref says 'Jogress Ouryumon' (from Alphamon), DB says 'Jogress'
+METHOD MISMATCH for Vritamon: Ref says 'Salamander Break' (from Agnimon), DB says 'Salamander Break Flame Storm'
+MISSING IN DB: Agnimon Flame Storm"
+METHOD MISMATCH for Aldamon: Ref says 'Lv32' (from Agnimon), DB says 'Lv32 Vritramon Lv32'
+MISSING IN DB: Vritramon Lv32"
+MISSING PREV for Wolfmon: Reference lists Wolfmon (Light Data)
+BROKEN LINK: Wolfmon indicates next->Wolfmon missing
+METHOD MISMATCH for Garummon: Ref says 'Wolf Kendo' (from Wolfmon), DB says 'Wolf Kendo Lupine Laser'
+MISSING IN DB: Wolfmon Lupine Laser"
+METHOD MISMATCH for Beowolfmon: Ref says 'Lv32' (from Wolfmon), DB says 'Lv32 Lv32'
+MISSING IN DB: Garummon Lv32"
+METHOD MISMATCH for Shutumon: Ref says 'Brezzo Petalo' (from Fairymon), DB says 'Brezzo Petalo Plasma Talon'
+MISSING IN DB: Fairymon Plasma Talon"
+METHOD MISMATCH for JetSilphymon: Ref says 'Lv32' (from Fairymon), DB says 'Lv32 Shutumon Lv32'
+MISSING IN DB: Shutumon Lv32"
+METHOD MISMATCH for Hippogriffomon: Ref says 'Lv32' (from Aquilamon), DB says 'Lv32 Lv32'
+MISSING IN DB: Darcmon Lv32"
+METHOD MISMATCH for Bolgmon: Ref says 'Thor Hammer' (from Blitzmon), DB says 'Thor Hammer Electro Cannon'
+MISSING IN DB: Blitzmon Electro Cannon"
+METHOD MISMATCH for RhinoKabuterimon: Ref says 'Lv32' (from Bolgmon), DB says 'Lv. 32'
+METHOD MISMATCH for Blizzarmon: Ref says 'Snow Bomber' (from Chakmon), DB says 'Snow Bomber Avalanche Step'
+MISSING IN DB: Chakmon Avalanche Step"
+METHOD MISMATCH for Frozomon: Ref says 'Lv32' (from Chakmon), DB says 'Lv32 Blizzarmon Lv32'
+MISSING IN DB: Blizzarmon Lv32"
+METHOD MISMATCH for Gigasmon: Ref says 'Grotte Hammer' (from Grottemon), DB says 'Grotte Hammer Quagmire Twist'
+MISSING IN DB: Grottemon Quagmire Twist"
+METHOD MISMATCH for Volcamon: Ref says 'Lv32' (from Gigasmon), DB says 'Lv. 32'
+METHOD MISMATCH for Calmaramon: Ref says 'Jealousy Rain' (from Ranamon), DB says 'Jealousy Rain Titanic Charge'
+MISSING IN DB: Ranamon Titanic Charge"
+METHOD MISMATCH for Mermaimon: Ref says 'Lv32' (from Calmaramon), DB says 'Lv. 32'
+METHOD MISMATCH for ShinMonzaemon: Ref says 'Lv54' (from Monzaemon), DB says 'Lv54 Lv54 Night Daze'
+MISSING IN DB: WaruMonzaemon Lv54
+MISSING IN DB: ExTyrannomon Night Daze"
+MISSING PREV for Leomon: Reference lists Leomon (Lv18 Amped)
+BROKEN LINK: Leomon indicates next->Leomon missing
+METHOD MISMATCH for GrapLeomon: Ref says 'Lv32' (from Leomon), DB says 'Lv32 Gryzzlimon Hammer Rush'
+MISSING IN DB: Gryzzlimon Hammer Rush"
+UNKNOWN SOURCE for SaberLeomon: 'Loader Leomon Lv54' (No matching Digimon in DB)
+METHOD MISMATCH for Rihimon: Ref says 'Lv32' (from Lowemon), DB says 'Lv32 KaiserLeomon Lv32'
+MISSING IN DB: KaiserLeomon Lv32"
+METHOD MISMATCH for Petaldramon: Ref says 'Blockage Seed' (from Arbormon), DB says 'Blockage Seed Arbormor Leaf Cyclone'
+MISSING IN DB: Arbormor Leaf Cyclone"
+METHOD MISMATCH for Entmon: Ref says 'Lv32 Petaldramon' (from Arbormon), DB says 'Lv32 Lv32'
+MISSING IN DB: Petaldramon Lv32 Arbormon"
+UNKNOWN SOURCE for GreatGryzzlymon: 'Gryzzlimon Lv18 Amped' (No matching Digimon in DB)
+METHOD MISMATCH for YaegerDorulumon: Ref says 'King's Shield' (from Dorulumon), DB says 'King\u0027s Shield'
+METHOD MISMATCH for RagnaLoardmon: Ref says 'Jogress BryweLudramon' (from Durandamon), DB says 'Jogress'
+UNKNOWN SOURCE for RaijiLudomon: 'RiaLudomon Lv32' (No matching Digimon in DB)
+METHOD MISMATCH for Examon: Ref says 'Jogress Breakdramon' (from Slayerdramon), DB says 'Jogress'
+METHOD MISMATCH for Tyrannomon: Ref says 'Lv18 Attack > Defense' (from Betamon), DB says 'Lv18 Attack \u003e Defense'
+METHOD MISMATCH for Dinomon: Ref says 'Lv54' (from MasterTyrannomon), DB says 'Lv54 Dragon Pulse'
+MISSING IN DB: ExTyrannomon Dragon Pulse"
+METHOD MISMATCH for RustTyranomon: Ref says 'Lv54' (from MetalTyrannomon), DB says 'Lv54 Thunder Cloud'
+MISSING IN DB: ExTyrannomon Thunder Cloud"
+MISSING PREV for Hi-Commandramon: Reference lists Hi-Commandramon (Lv18 Lowkey)
+BROKEN LINK: Hi-Commandramon indicates next->Hi-Commandramon missing
+MISSING PREV for Cargodramon: Reference lists Cargodramon (Lv32)
+BROKEN LINK: Cargodramon indicates next->Cargodramon missing
+METHOD MISMATCH for Brigadramon: Ref says 'Lv54' (from Cargodramon), DB says 'Lv54 Lv54'
+MISSING IN DB: Ghilliedhumon Lv54"
+METHOD MISMATCH for Darkdramon: Ref says 'Lv54' (from Tankdramon), DB says 'Lv54 Lv54'
+MISSING IN DB: Ghilliedhumon Lv54"
+METHOD MISMATCH for Caosmon: Ref says 'Jogress Darkdramon' (from BanchoLeomon), DB says 'Jogress'
+METHOD MISMATCH for Seadramon: Ref says 'Lv18 Defense > Attack' (from Betamon), DB says 'Lv18 Defense \u003e Attack'
+METHOD MISMATCH for Aegisdramon: Ref says 'Jogress MetalSeadramon' (from Plesiomon), DB says 'Jogress'
+METHOD MISMATCH for Proximamon: Ref says 'Jogress Arcturusmon' (from Siriusmon), DB says 'Jogress'
+METHOD MISMATCH for Fenriloogamon Takemikazuchi: Ref says 'Jogress Kazuchimon' (from Fenriloogamon), DB says 'Jogress'
+UNKNOWN SOURCE for NoblePumpmon: 'Pumpkinmon Lv50' (No matching Digimon in DB)
+METHOD MISMATCH for LadyDevimon: Ref says 'Lv32 Lowkey' (from Witchmon), DB says 'Lv32 Lowkey Lv30'
+MISSING IN DB: Hudiemon Lv30"
+METHOD MISMATCH for Mastemon: Ref says 'Jogress LadyDevimon' (from Angewomon), DB says 'Jogress'
+METHOD MISMATCH for Lilithmon: Ref says 'Lv54' (from LadyDevimon), DB says 'Lv54 Lv54'
+MISSING IN DB: Bastemon Lv54"
+UNKNOWN SOURCE for Erlangmon: 'Canturamon Lv54' (No matching Digimon in DB)
+MISSING PREV for Anubismon: Reference lists Anubismon (Lv54)
+BROKEN LINK: Anubismon indicates next->Anubismon missing
+METHOD MISMATCH for Regalecusmon: Ref says 'Lv54' (from MarineKimeramon), DB says 'Lv54 Lv54'
+MISSING IN DB: Gusokumon Lv54"
+METHOD MISMATCH for Susanoomon: Ref says 'Jogress AncientGarurumon' (from AncientGreymon), DB says 'Jogress'
+METHOD MISMATCH for Mugendramon: Ref says 'Mechanic Data' (from MetalTyrannomon), DB says 'Mechanic Data Lv70 Mechanic Data Lv70'
+MISSING IN DB: Megadramon Lv70
+MISSING IN DB: Megadramon Mechanic Data
+MISSING IN DB: MetalMamemon Lv70"
+METHOD MISMATCH for Kimeramon: Ref says 'Organic Data' (from Greymon), DB says 'Organic Data Organic Data Organic Data Organic Data Organic Data Organic Data Organic Data'
+MISSING IN DB: Garurumon Organic Data
+MISSING IN DB: Kabuterimon Organic Data
+MISSING IN DB: Airdramon Organic Data
+MISSING IN DB: Kuwagamon Organic Data
+MISSING IN DB: Monochromon Organic Data
+MISSING IN DB: Devimon Organic Data"
+METHOD MISMATCH for Millenniummon: Ref says 'Jogress Kimeramon' (from Mugendramon), DB says 'Jogress'
+METHOD MISMATCH for Shakamon: Ref says 'Jogress Sagomon' (from Gokuumon), DB says 'Jogress'
+METHOD MISMATCH for GraceNovamon: Ref says 'Jogress Dianamon' (from Apollomon), DB says 'Jogress'
+MISSING IN DB: PBmonHP
+MISSING IN DB: PBmonAT
+MISSING IN DB: PBmonDF
+MISSING IN DB: PBmonSPA
+MISSING IN DB: PBmonSPDF
+MISSING IN DB: PBmonSPE
+METHOD MISMATCH for Ariemon: Ref says 'Lunar Scale' (from MarinBullmon), DB says 'Lunar Scale Water Data'
+MISSING IN DB: Ryugumon Water Data"
+METHOD MISMATCH for ExTyrannomon: Ref says 'Fire Data' (from Monzaemon), DB says 'Fire Data Cute Plush'
+MISSING IN DB: Tyrannomon Cute Plush"

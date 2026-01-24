@@ -410,18 +410,43 @@ document.addEventListener('DOMContentLoaded', () => {
         return `<span class="stage-badge ${stageColorClass(d.stage)}" style="font-size:0.5rem; padding:0.15rem 0.4rem; margin-bottom:0.25rem;">${d.stage} • Lv ${d.cardLevel || '?'}</span>`;
     }
 
+    // Direct Fandom Wiki image URLs for Digimon not on official Reference Book
+    // These are static CDN URLs that should be more reliable
+    const FANDOM_DIRECT_IMAGES = {
+        "piddomon": "https://static.wikia.nocookie.net/digimon/images/1/1a/Piddomon_b.jpg",
+        "kingwhamon": "https://static.wikia.nocookie.net/digimon/images/4/45/6-05_Analyzer-06_JP.png",
+        "ancientmegatheriummon": "https://static.wikia.nocookie.net/digimon/images/1/15/AncientMegatheriummon_b.jpg",
+        "megatheurimon": "https://static.wikia.nocookie.net/digimon/images/1/15/AncientMegatheriummon_b.jpg", // Same as AncientMegatheriummon
+        "grapleomon": "https://static.wikia.nocookie.net/digimon/images/1/1f/GrapLeomon_b.jpg",
+        "jagamon": "https://static.wikia.nocookie.net/digimon/images/a/a3/Jagamon_b.jpg",
+        "marinechimairamon": "https://static.wikia.nocookie.net/digimon/images/6/61/MarineChimairamon_b.jpg",
+        "marinekimeramon": "https://static.wikia.nocookie.net/digimon/images/6/61/MarineChimairamon_b.jpg", // Alias
+        "gokuumon": "https://static.wikia.nocookie.net/digimon/images/d/d9/Gokuumon_b.jpg",
+        "chuumon": "https://static.wikia.nocookie.net/digimon/images/9/9a/Chuumon_b.jpg",
+        "extyrannomon": "https://static.wikia.nocookie.net/digimon/images/1/11/ExTyrannomon_b.jpg",
+        "laeusgreymon": "https://static.wikia.nocookie.net/digimon/images/b/ba/LaeusGreymon_b.jpg",
+        "zinogarurumon": "https://static.wikia.nocookie.net/digimon/images/9/98/ZinoGarurumon_b.jpg",
+        "greymon": "https://static.wikia.nocookie.net/digimon/images/5/56/Greymon_b.jpg",
+    };
+
     // Image source configurations - multiple fallbacks for maximum coverage
     const IMAGE_SOURCES = {
         // Primary: Official Digimon Reference Book (Japanese)
         digimonNet: (mappedName) => `https://digimon.net/cimages/digimon/${mappedName}.jpg`,
 
-        // Secondary: Digimon API (uses English names)
+        // Secondary: Fandom Wiki (direct static URLs for specific Digimon)
+        fandomDirect: (name) => {
+            const lowerName = name.toLowerCase().replace(/\s+/g, '');
+            return FANDOM_DIRECT_IMAGES[lowerName] || null;
+        },
+
+        // Tertiary: Digimon API (uses English names)
         digimonApi: (name) => `https://digimon-api.com/images/digimon_sprites/${encodeURIComponent(name)}.png`,
 
-        // Tertiary: Wikimon (uses English names, various formats)
+        // Quaternary: Wikimon (uses English names, various formats)
         wikimon: (name) => `https://wikimon.net/images/${name.charAt(0).toLowerCase()}/${name.replace(/\s+/g, '_')}.jpg`,
 
-        // Quaternary: Digimon API alternate format
+        // Quinary: Digimon API alternate format
         digimonApiAlt: (name) => `https://digi-api.com/images/digimon/w/${encodeURIComponent(name)}.png`,
     };
 
@@ -443,36 +468,87 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get primary image URL
     function getImageUrl(name) {
-        const mappedName = getMappedName(name);
-        return IMAGE_SOURCES.digimonNet(mappedName);
+        const fallbacks = getFallbackUrls(name);
+        return fallbacks[0];
     }
 
     // Get all fallback URLs for a Digimon
     function getFallbackUrls(name) {
         const mappedName = getMappedName(name);
-        return [
-            IMAGE_SOURCES.digimonNet(mappedName),
+        const fandomUrl = IMAGE_SOURCES.fandomDirect(name);
+
+        // If explicitly marked as missing in our map, prioritize Fandom images
+        if (mappedName === "PHOTO NOT AVAILABLE") {
+            const urls = [];
+            if (fandomUrl) urls.push(fandomUrl);
+            urls.push(
+                IMAGE_SOURCES.wikimon(name),
+                IMAGE_SOURCES.digimonApi(name),
+                IMAGE_SOURCES.digimonApiAlt(name),
+            );
+            return urls;
+        }
+
+        // Standard fallback chain with Fandom as secondary option
+        const urls = [IMAGE_SOURCES.digimonNet(mappedName)];
+        if (fandomUrl) urls.push(fandomUrl);
+        urls.push(
+            IMAGE_SOURCES.wikimon(name),
             IMAGE_SOURCES.digimonApi(name),
             IMAGE_SOURCES.digimonApiAlt(name),
-            IMAGE_SOURCES.wikimon(name),
-        ];
+        );
+        return urls;
     }
 
     // Handle image load error - try next source
     window.handleImageError = function (img, name) {
+        // Prevent infinite loops with a counter
+        const retryCount = parseInt(img.dataset.retryCount || '0');
+        if (retryCount > 5) {
+            img.style.display = 'none';
+            img.parentElement.classList.add('image-failed');
+            return;
+        }
+        img.dataset.retryCount = retryCount + 1;
+
         const fallbacks = getFallbackUrls(name);
-        const currentSrc = img.src;
-        const currentIndex = fallbacks.findIndex(url => currentSrc.includes(url.split('/').pop().split('.')[0]));
+        const currentSrc = img.src; // Browser returns absolute, encoded URL
+
+        // Find current index by checking which fallback the current src resembles
+        // We decode currentSrc to match against raw simple filenames if needed
+        let currentIndex = -1;
+
+        // robust matching
+        try {
+            const decodedSrc = decodeURIComponent(currentSrc);
+            currentIndex = fallbacks.findIndex(url => {
+                // precise match or filename match
+                return currentSrc === url ||
+                    decodedSrc === url ||
+                    currentSrc.includes(encodeURIComponent(url.split('/').pop())) ||
+                    decodedSrc.includes(url.split('/').pop());
+            });
+        } catch (e) {
+            // Fallback simple match
+            currentIndex = fallbacks.findIndex(url => currentSrc.includes(url.split('/').pop().split('.')[0]));
+        }
 
         // Try next fallback source
-        for (let i = currentIndex + 1; i < fallbacks.length; i++) {
-            if (fallbacks[i] !== currentSrc) {
-                img.src = fallbacks[i];
+        if (currentIndex !== -1 && currentIndex < fallbacks.length - 1) {
+            const nextUrl = fallbacks[currentIndex + 1];
+            if (nextUrl && nextUrl !== currentSrc) {
+                img.src = nextUrl;
                 return;
             }
         }
 
-        // All sources failed - show placeholder
+        // If we couldn't find current or it was the last one, try the first one ONLY if we haven't tried ANY yet (index -1)
+        // But if index is -1, it means we don't know where we are. 
+        // If retryCount is 0, we might have started with a bad initial SRC not in our fallback list?
+        // But getImageUrl uses fallbacks[0]. 
+        // If index is -1 despite that, it's safer to just fail or try the *next* likely one if we can guess.
+        // Let's just fail to be safe against loops, effectively hiding it.
+
         img.style.display = 'none';
         img.parentElement.classList.add('image-failed');
     };
@@ -577,7 +653,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const locFilter = routeInput.value.trim().toLowerCase();
         const typeFilterValue = typeFilter ? typeFilter.value.trim().toLowerCase() : '';
         const stageFilterValue = stageFilter ? stageFilter.value.trim() : ''; // Case sensitive usually, but standard values are capitalized
-        const currentSort = sortOrder ? sortOrder.value : 'name_asc';
+        const currentSort = sortOrder ? sortOrder.value : 'dex_asc';
 
         const isSearching = nameFilter.length > 0 || locFilter.length > 0 || typeFilterValue.length > 0 || stageFilterValue.length > 0;
 
@@ -609,7 +685,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // Sorting Logic
-            if (currentSort === 'name_asc') {
+            if (currentSort === 'dex_asc') {
+                displayList.sort((a, b) => {
+                    const idA = parseInt(a.id) || 9999;
+                    const idB = parseInt(b.id) || 9999;
+                    return idA - idB;
+                });
+            } else if (currentSort === 'name_asc') {
                 displayList.sort((a, b) => a.name.localeCompare(b.name));
             } else if (currentSort === 'name_desc') {
                 displayList.sort((a, b) => b.name.localeCompare(a.name));
@@ -632,7 +714,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // On landing page, show only base forms
             displayList = [...baseForms];
 
-            if (currentSort === 'name_asc') {
+            if (currentSort === 'dex_asc') {
+                displayList.sort((a, b) => {
+                    const idA = parseInt(a.id) || 9999;
+                    const idB = parseInt(b.id) || 9999;
+                    return idA - idB;
+                });
+            } else if (currentSort === 'name_asc') {
                 displayList.sort((a, b) => a.name.localeCompare(b.name));
             } else if (currentSort === 'name_desc') {
                 displayList.sort((a, b) => b.name.localeCompare(a.name));
@@ -797,10 +885,35 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Open evolution tree modal (for base forms)
+    // Find the root ancestor (earliest form) by tracing back through prev evolutions
+    function findRootAncestor(digi, visited = new Set()) {
+        if (!digi || visited.has(digi.name)) return digi;
+        visited.add(digi.name);
+
+        // If this Digimon has no prev evolutions, it's a root
+        if (!digi.prev || digi.prev.length === 0) {
+            return digi;
+        }
+
+        // Find the first valid prev evolution and trace back from there
+        for (const prevEvo of digi.prev) {
+            const prevDigi = digimonMap.get(prevEvo.name);
+            if (prevDigi && !visited.has(prevDigi.name)) {
+                return findRootAncestor(prevDigi, visited);
+            }
+        }
+
+        // If all prev evolutions are visited or invalid, this is the root
+        return digi;
+    }
+
     window.openEvoTree = (nameOrObj) => {
         closeAllModals();
-        const baseDigi = typeof nameOrObj === 'string' ? digimonMap.get(nameOrObj) : nameOrObj;
-        if (!baseDigi) return;
+        const clickedDigi = typeof nameOrObj === 'string' ? digimonMap.get(nameOrObj) : nameOrObj;
+        if (!clickedDigi) return;
+
+        // Find the root ancestor to show full evolution tree
+        const baseDigi = findRootAncestor(clickedDigi, new Set());
         const tree = buildEvoTree(baseDigi, new Set());
         const treeHtml = renderEvoTree(tree);
 

@@ -273,8 +273,8 @@ const DIGIMON_DB = [
                 "method": "Lv35"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Champion",
+        "cardLevel": 4
     },
     {
         "id": "6",
@@ -328,8 +328,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Champion",
+        "cardLevel": 4
     },
     {
         "id": "7",
@@ -685,8 +685,8 @@ const DIGIMON_DB = [
                 "method": "Lv56"
             }
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "14",
@@ -744,8 +744,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "15",
@@ -1109,8 +1109,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "22",
@@ -2101,8 +2101,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "39",
@@ -3759,8 +3759,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "66",
@@ -4135,8 +4135,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "72",
@@ -4969,8 +4969,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "86",
@@ -6305,8 +6305,8 @@ const DIGIMON_DB = [
                 "method": "X Antibody"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Champion",
+        "cardLevel": 4
     },
     {
         "id": "108",
@@ -7115,8 +7115,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Champion",
+        "cardLevel": 4
     },
     {
         "id": "121",
@@ -7178,8 +7178,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Champion",
+        "cardLevel": 4
     },
     {
         "id": "122",
@@ -7245,8 +7245,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Champion",
+        "cardLevel": 4
     },
     {
         "id": "123",
@@ -7479,8 +7479,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "127",
@@ -8024,8 +8024,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Champion",
+        "cardLevel": 4
     },
     {
         "id": "136",
@@ -8094,8 +8094,8 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Champion",
+        "cardLevel": 4
     },
     {
         "id": "137",
@@ -10029,8 +10029,8 @@ const DIGIMON_DB = [
                 "method": "Lv18"
             }
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "169",
@@ -10091,7 +10091,7 @@ const DIGIMON_DB = [
                 "method": "Lv32 Vritramon Lv32"
             }
         ],
-        "stage": "Champion",
+        "stage": "Hybrid",
         "cardLevel": 4
     },
     {
@@ -10153,8 +10153,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "171",
@@ -10663,8 +10663,8 @@ const DIGIMON_DB = [
                 "method": "Light Data"
             }
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "179",
@@ -10721,7 +10721,7 @@ const DIGIMON_DB = [
                 "method": "Lv32  Lv32"
             }
         ],
-        "stage": "Champion",
+        "stage": "Hybrid",
         "cardLevel": 4
     },
     {
@@ -10791,8 +10791,8 @@ const DIGIMON_DB = [
                 "method": "Auspicioius Armor"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "181",
@@ -10928,8 +10928,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "183",
@@ -11035,7 +11035,7 @@ const DIGIMON_DB = [
                 "method": "Lv32 Shutumon Lv32"
             }
         ],
-        "stage": "Champion",
+        "stage": "Hybrid",
         "cardLevel": 4
     },
     {
@@ -11101,8 +11101,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "186",
@@ -11540,8 +11540,8 @@ const DIGIMON_DB = [
                 "method": "Thunder Data"
             }
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "193",
@@ -11594,7 +11594,7 @@ const DIGIMON_DB = [
                 "method": "Lv. 32"
             }
         ],
-        "stage": "Champion",
+        "stage": "Hybrid",
         "cardLevel": 4
     },
     {
@@ -11660,8 +11660,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "195",
@@ -11839,7 +11839,7 @@ const DIGIMON_DB = [
                 "method": "Lv32 Blizzarmon Lv32"
             }
         ],
-        "stage": "Champion",
+        "stage": "Hybrid",
         "cardLevel": 4
     },
     {
@@ -11905,8 +11905,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "199",
@@ -12373,8 +12373,8 @@ const DIGIMON_DB = [
                 "method": "Earth Data"
             }
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "207",
@@ -12615,7 +12615,7 @@ const DIGIMON_DB = [
                 "method": "Lv. 32"
             }
         ],
-        "stage": "Champion",
+        "stage": "Hybrid",
         "cardLevel": 4
     },
     {
@@ -12681,8 +12681,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "212",
@@ -12799,8 +12799,8 @@ const DIGIMON_DB = [
                 "method": "Lv18"
             }
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "214",
@@ -12853,8 +12853,8 @@ const DIGIMON_DB = [
                 "method": "Lv32"
             }
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "215",
@@ -12915,8 +12915,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "216",
@@ -13218,8 +13218,8 @@ const DIGIMON_DB = [
                 "method": "Lv18 Amped"
             }
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "221",
@@ -13465,7 +13465,7 @@ const DIGIMON_DB = [
                 "method": "Lv. 32"
             }
         ],
-        "stage": "Champion",
+        "stage": "Hybrid",
         "cardLevel": 4
     },
     {
@@ -13530,8 +13530,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "226",
@@ -13998,8 +13998,8 @@ const DIGIMON_DB = [
                 "method": "Evil Plush"
             }
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "234",
@@ -14060,8 +14060,8 @@ const DIGIMON_DB = [
                 "method": "Fire Data  Cute Plush"
             }
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "235",
@@ -14225,7 +14225,7 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Rookie",
+        "stage": "Unknown",
         "cardLevel": 3
     },
     {
@@ -14327,8 +14327,8 @@ const DIGIMON_DB = [
                 "method": "Loader  Lv54"
             }
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Champion",
+        "cardLevel": 4
     },
     {
         "id": "240",
@@ -14397,8 +14397,8 @@ const DIGIMON_DB = [
                 "method": "Gakuren"
             }
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "241",
@@ -14531,8 +14531,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "243",
@@ -15031,8 +15031,8 @@ const DIGIMON_DB = [
                 "method": "Wood Data"
             }
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "251",
@@ -15405,7 +15405,7 @@ const DIGIMON_DB = [
                 "method": "Lv32   Lv32"
             }
         ],
-        "stage": "Champion",
+        "stage": "Hybrid",
         "cardLevel": 4
     },
     {
@@ -15475,8 +15475,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "258",
@@ -18042,8 +18042,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "301",
@@ -19574,8 +19574,8 @@ const DIGIMON_DB = [
                 "method": "Lv54  Lv54"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "326",
@@ -19638,8 +19638,8 @@ const DIGIMON_DB = [
                 "method": "Lv54  Lv54"
             }
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "327",
@@ -19709,8 +19709,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "328",
@@ -19830,8 +19830,8 @@ const DIGIMON_DB = [
                 "method": "Lv54  Lv54"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "330",
@@ -19904,8 +19904,8 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "331",
@@ -19954,8 +19954,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "332",
@@ -21273,8 +21273,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "354",
@@ -21559,8 +21559,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "359",
@@ -22691,8 +22691,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "378",
@@ -24646,8 +24646,8 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "413",
@@ -24693,8 +24693,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "414",
@@ -29045,8 +29045,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "489",
@@ -29309,8 +29309,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "494",
@@ -29414,8 +29414,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "506",
@@ -29439,8 +29439,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "507",
@@ -29866,8 +29866,8 @@ const DIGIMON_DB = [
                 "method": "Lv32  Lv32"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "",
@@ -29947,8 +29947,8 @@ const DIGIMON_DB = [
                 "method": "Lv. 32"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "",
@@ -29978,8 +29978,8 @@ const DIGIMON_DB = [
                 "method": "Lv. 32"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "",
@@ -30009,8 +30009,8 @@ const DIGIMON_DB = [
                 "method": "Lv. 32"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "",
@@ -30037,8 +30037,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "",
@@ -30122,8 +30122,8 @@ const DIGIMON_DB = [
                 "method": "Lv. 32"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "",
@@ -30173,8 +30173,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Ultra",
+        "cardLevel": 7
     },
     {
         "id": "",
@@ -30228,8 +30228,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "",
@@ -30255,8 +30255,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Champion",
+        "cardLevel": 4
     },
     {
         "id": "",
@@ -30313,8 +30313,8 @@ const DIGIMON_DB = [
                 "method": "Jogress Arbormon"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "",
@@ -30425,8 +30425,8 @@ const DIGIMON_DB = [
                 "method": "Lv. 32"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "",
@@ -30452,8 +30452,8 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "",
@@ -30477,7 +30477,7 @@ const DIGIMON_DB = [
         "next": [
 
         ],
-        "stage": "Rookie",
-        "cardLevel": 3
+        "stage": "Mega",
+        "cardLevel": 6
     }
 ];
