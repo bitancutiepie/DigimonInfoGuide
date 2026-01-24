@@ -1,4 +1,4 @@
-﻿// Perfectly Formatted Digimon Data
+// Perfectly Formatted Digimon Data
 const DIGIMON_DB = [
     {
         "id": "1",
@@ -38,9 +38,7 @@ const DIGIMON_DB = [
         "locations": [
             "Spear Pillar F1"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Angemon",
@@ -59,7 +57,7 @@ const DIGIMON_DB = [
         ],
         "ability": "Justified",
         "hiddenAbility": "Purifying Salt",
-        "evoMove": "Heaven\u0027s Knuckle",
+        "evoMove": "Heaven's Knuckle",
         "moves": [
             {
                 "level": "23",
@@ -215,18 +213,14 @@ const DIGIMON_DB = [
                 "move": "Hurricane"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "HolyAngemon",
                 "method": "Lv56"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -316,18 +310,14 @@ const DIGIMON_DB = [
                 "move": "Ultra Turbulence"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Pegasmon",
                 "method": "Lv35"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Champion",
         "cardLevel": 4
     },
@@ -341,21 +331,15 @@ const DIGIMON_DB = [
         "ability": "Parental Bond",
         "hiddenAbility": "Justified",
         "evoMove": "Holy Flame",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "HolyAngemon",
                 "method": "Lv80"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -397,9 +381,7 @@ const DIGIMON_DB = [
         "locations": [
             "Spear Pillar F1"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Turuiemon",
@@ -565,18 +547,14 @@ const DIGIMON_DB = [
                 "move": "Giga Death"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "AndiramonDeva",
                 "method": "Lv56"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -623,8 +601,8 @@ const DIGIMON_DB = [
                 "method": "Lv35"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Champion",
+        "cardLevel": 4
     },
     {
         "id": "13",
@@ -670,9 +648,7 @@ const DIGIMON_DB = [
                 "move": "Bounce"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Wendimon",
@@ -732,18 +708,14 @@ const DIGIMON_DB = [
                 "move": "Giga Death"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Andiramon",
                 "method": "Lv56"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultimate",
         "cardLevel": 5
     },
@@ -785,9 +757,7 @@ const DIGIMON_DB = [
         "locations": [
             "Spear Pillar F1"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Tailmon",
@@ -929,7 +899,7 @@ const DIGIMON_DB = [
         "moves": [
             {
                 "level": "59",
-                "move": "King\u0027s Shield"
+                "move": "King's Shield"
             },
             {
                 "level": "62",
@@ -960,18 +930,14 @@ const DIGIMON_DB = [
                 "move": "Grand Cross"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Angewomon",
                 "method": "Lv56"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -1023,8 +989,8 @@ const DIGIMON_DB = [
                 "method": "Lv35"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Champion",
+        "cardLevel": 4
     },
     {
         "id": "20",
@@ -1081,8 +1047,8 @@ const DIGIMON_DB = [
                 "method": "Lv80"
             }
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "21",
@@ -1094,21 +1060,15 @@ const DIGIMON_DB = [
         "ability": "Magic Bounce",
         "hiddenAbility": "Regenerator",
         "evoMove": "Holy Flame",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Kyukimon",
                 "method": "Lv80"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -1147,9 +1107,7 @@ const DIGIMON_DB = [
             "Route 101",
             "Route 102"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Devidramon",
@@ -1321,18 +1279,14 @@ const DIGIMON_DB = [
                 "move": "Hyper Beam"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Orochimon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -1368,9 +1322,7 @@ const DIGIMON_DB = [
             "Route 104",
             "Spear Pillar F1"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Piddomon",
@@ -1542,7 +1494,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "80",
-                "move": "King\u0027s Shield"
+                "move": "King's Shield"
             }
         ],
         "locations": [
@@ -1554,9 +1506,7 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -1664,9 +1614,7 @@ const DIGIMON_DB = [
                 "method": "Lv34"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultimate",
         "cardLevel": 5
     },
@@ -1707,9 +1655,7 @@ const DIGIMON_DB = [
             "Route 104",
             "Granite Cave"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Greymon",
@@ -1895,9 +1841,7 @@ const DIGIMON_DB = [
                 "move": "Sunsteel Strike"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MetalGreymon",
@@ -1965,9 +1909,7 @@ const DIGIMON_DB = [
                 "move": "Dragon Dance"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MetalGreymon",
@@ -2035,9 +1977,7 @@ const DIGIMON_DB = [
                 "move": "Thunder Cage"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Greymon",
@@ -2085,9 +2025,7 @@ const DIGIMON_DB = [
                 "move": "All Delete"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MetalGarurumon",
@@ -2098,9 +2036,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -2141,9 +2077,7 @@ const DIGIMON_DB = [
             "Route 102",
             "Route 104"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Garurumon",
@@ -2336,9 +2270,7 @@ const DIGIMON_DB = [
                 "move": "Moonblast"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "WereGarurumon",
@@ -2406,9 +2338,7 @@ const DIGIMON_DB = [
                 "move": "Moongeist Beam"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "WereGarurumon",
@@ -2437,7 +2367,7 @@ const DIGIMON_DB = [
         "moves": [
             {
                 "level": "83",
-                "move": "King\u0027s Shield"
+                "move": "King's Shield"
             },
             {
                 "level": "86",
@@ -2456,9 +2386,7 @@ const DIGIMON_DB = [
                 "move": "All Delete"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "CresGarurumon",
@@ -2469,9 +2397,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -2512,9 +2438,7 @@ const DIGIMON_DB = [
             "Jagged Pass",
             "Biyomon Crest"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Birdramon",
@@ -2629,9 +2553,7 @@ const DIGIMON_DB = [
                 "move": "Brave Bird"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Birdramon",
@@ -2703,18 +2625,14 @@ const DIGIMON_DB = [
                 "move": "Overheat"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Garudamon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -2779,9 +2697,7 @@ const DIGIMON_DB = [
                 "method": "Zuzaku Core"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -2883,9 +2799,7 @@ const DIGIMON_DB = [
                 "move": "Moonblast"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Xiquemon",
@@ -2953,18 +2867,14 @@ const DIGIMON_DB = [
                 "move": "Thunderclap"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Huankunmon",
                 "method": "Lv52"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -3005,9 +2915,7 @@ const DIGIMON_DB = [
             "Route 104",
             "Petalburg Woods"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Kabuterimon",
@@ -3194,18 +3102,14 @@ const DIGIMON_DB = [
                 "move": "Bolt Strike"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "AtlurKabuterimon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -3261,18 +3165,14 @@ const DIGIMON_DB = [
                 "move": "Dark Lightning"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "AtlurKabuterimon",
                 "method": "Sachet"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -3458,9 +3358,7 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -3501,9 +3399,7 @@ const DIGIMON_DB = [
             "Route 104",
             "Petalburg Woods"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Togemon",
@@ -3615,9 +3511,7 @@ const DIGIMON_DB = [
                 "move": "High Jump Kick"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Togemon",
@@ -3689,9 +3583,7 @@ const DIGIMON_DB = [
                 "move": "Leaf Storm"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Lilimon",
@@ -3743,9 +3635,7 @@ const DIGIMON_DB = [
                 "move": "Fleur Cannon"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Lotusmon",
@@ -3756,9 +3646,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -3814,18 +3702,14 @@ const DIGIMON_DB = [
                 "move": "Leaf Storm"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Lilimon",
                 "method": "Gakuren"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -3865,9 +3749,7 @@ const DIGIMON_DB = [
                 "move": "Petal Blizzard"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Palmon",
@@ -3930,9 +3812,7 @@ const DIGIMON_DB = [
                 "move": "Lovely Attack"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Sunflowmon",
@@ -3996,9 +3876,7 @@ const DIGIMON_DB = [
                 "move": "Spell Blast"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Lilamon",
@@ -4053,9 +3931,7 @@ const DIGIMON_DB = [
                 "move": "Seed Tempest"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Sunflowmon",
@@ -4116,25 +3992,21 @@ const DIGIMON_DB = [
             },
             {
                 "level": "77",
-                "move": "Nature\u0027s Madness"
+                "move": "Nature's Madness"
             },
             {
                 "level": "80",
                 "move": "Frenzy Plant"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Blossomon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultimate",
         "cardLevel": 5
     },
@@ -4173,9 +4045,7 @@ const DIGIMON_DB = [
             "Route 104",
             "Shoal Cave"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Ikkakumon",
@@ -4283,9 +4153,7 @@ const DIGIMON_DB = [
                 "move": "Liquidation"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Ikkakumon",
@@ -4299,7 +4167,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Plesiomon",
-                "method": "King\u0027s Rock"
+                "method": "King's Rock"
             }
         ],
         "stage": "Ultimate",
@@ -4353,18 +4221,14 @@ const DIGIMON_DB = [
                 "move": "Freeze Shock"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Zudomon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -4419,13 +4283,11 @@ const DIGIMON_DB = [
                 "move": "Hydro Cannon"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Zudomon",
-                "method": "King\u0027s Rock"
+                "method": "King's Rock"
             }
         ],
         "next": [
@@ -4472,9 +4334,7 @@ const DIGIMON_DB = [
             "Route 101",
             "Route 102"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Gargomon",
@@ -4652,18 +4512,14 @@ const DIGIMON_DB = [
                 "move": "Explosion"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Rapidmon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -4702,9 +4558,7 @@ const DIGIMON_DB = [
         "locations": [
             "Route 116"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Growmon",
@@ -4813,9 +4667,7 @@ const DIGIMON_DB = [
                 "move": "Dragon Claw"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Growmon",
@@ -4883,9 +4735,7 @@ const DIGIMON_DB = [
                 "move": "Sunsteel Strike"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MegaloGrowmon",
@@ -4913,7 +4763,7 @@ const DIGIMON_DB = [
             "Dragon"
         ],
         "ability": "Intimidate",
-        "hiddenAbility": "Dragon\u0027s Maw",
+        "hiddenAbility": "Dragon's Maw",
         "evoMove": "Meggido Flame",
         "moves": [
             {
@@ -4957,18 +4807,14 @@ const DIGIMON_DB = [
                 "move": "Gift of Darkness"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Dukemon",
                 "method": "Dark Data"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -5007,9 +4853,7 @@ const DIGIMON_DB = [
         "locations": [
             "Route 116"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Kyubimon",
@@ -5189,18 +5033,14 @@ const DIGIMON_DB = [
                 "move": "Night Daze"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Taomon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -5302,9 +5142,7 @@ const DIGIMON_DB = [
                 "move": "Dazzling Gleam"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Tenkomon",
@@ -5368,18 +5206,14 @@ const DIGIMON_DB = [
                 "move": "Spell Blast"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Sekkamon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -5417,9 +5251,7 @@ const DIGIMON_DB = [
         "locations": [
             "Granite Cave F1"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Strikedramon",
@@ -5532,9 +5364,7 @@ const DIGIMON_DB = [
                 "move": "Pulse Laser"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Strikedramon",
@@ -5602,18 +5432,14 @@ const DIGIMON_DB = [
                 "move": "Fissure"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Cyberdramon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -5653,9 +5479,7 @@ const DIGIMON_DB = [
             "Route 102",
             "Route 104"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Gargolemon",
@@ -5854,18 +5678,14 @@ const DIGIMON_DB = [
                 "move": "Close Combat"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "AeroVeedramon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -5987,9 +5807,7 @@ const DIGIMON_DB = [
                 "move": "Hyper Beam"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Paildramon",
@@ -6107,9 +5925,7 @@ const DIGIMON_DB = [
                 "move": "Fly"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Lighdramon",
@@ -6133,7 +5949,7 @@ const DIGIMON_DB = [
             "Dragon"
         ],
         "ability": "Hadron Engine",
-        "hiddenAbility": "Dragon\u0027s Maw",
+        "hiddenAbility": "Dragon's Maw",
         "evoMove": "Fusion Bolt",
         "moves": [
             {
@@ -6153,18 +5969,14 @@ const DIGIMON_DB = [
                 "move": "Bolt Strike"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Majiramon",
                 "method": "Lv70"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -6271,7 +6083,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "59",
-                "move": "King\u0027s Shield"
+                "move": "King's Shield"
             },
             {
                 "level": "62",
@@ -6346,9 +6158,7 @@ const DIGIMON_DB = [
             "Route 104",
             "Petalburg Woods"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Stingmon",
@@ -6469,9 +6279,7 @@ const DIGIMON_DB = [
                 "move": "Smart Strike"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Stingmon",
@@ -6539,18 +6347,14 @@ const DIGIMON_DB = [
                 "move": "Bug NIghtmare"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "JewelBeemon",
                 "method": "Gakuren"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -6656,9 +6460,7 @@ const DIGIMON_DB = [
             "Route 111",
             "Tentomon Crest"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Ankylomon",
@@ -6859,9 +6661,7 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -6984,18 +6784,14 @@ const DIGIMON_DB = [
                 "move": "Smart Strike"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Shakkoumon",
                 "method": "Lv 52"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -7035,9 +6831,7 @@ const DIGIMON_DB = [
                 "move": "Triple Dive"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Armadimon",
@@ -7096,9 +6890,7 @@ const DIGIMON_DB = [
                 "move": "Rain Dance"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Submarimon",
@@ -7108,7 +6900,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "KingWhamon",
-                "method": "King\u0027s Rock"
+                "method": "King's Rock"
             },
             {
                 "name": "MarineAngemon",
@@ -7166,18 +6958,14 @@ const DIGIMON_DB = [
                 "move": "Fissure"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Whamon",
-                "method": "King\u0027s Rock"
+                "method": "King's Rock"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Champion",
         "cardLevel": 4
     },
@@ -7233,18 +7021,14 @@ const DIGIMON_DB = [
                 "move": "Origin Pulse"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Whamon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Champion",
         "cardLevel": 4
     },
@@ -7406,16 +7190,14 @@ const DIGIMON_DB = [
             },
             {
                 "level": "77",
-                "move": "Land\u0027s Wrath"
+                "move": "Land's Wrath"
             },
             {
                 "level": "80",
                 "move": "Hydro Cannon"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Scorpiomon",
@@ -7463,9 +7245,7 @@ const DIGIMON_DB = [
                 "move": "Hurricane"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "ElDoradimon",
@@ -7476,9 +7256,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -7517,9 +7295,7 @@ const DIGIMON_DB = [
             "Route 103",
             "Petalburg Woods"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Aquilamon",
@@ -7722,9 +7498,7 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -7764,9 +7538,7 @@ const DIGIMON_DB = [
                 "move": "Steel Blade"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Hawkmon",
@@ -7826,9 +7598,7 @@ const DIGIMON_DB = [
                 "move": "Bitter Blade"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Shurimon",
@@ -7896,18 +7666,14 @@ const DIGIMON_DB = [
                 "move": "Fissure"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Fumamon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -7947,9 +7713,7 @@ const DIGIMON_DB = [
                 "move": "Tornado"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Hawkmon",
@@ -8079,9 +7843,7 @@ const DIGIMON_DB = [
                 "move": "Oblivion Wing"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Peacockmon",
@@ -8094,8 +7856,8 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "137",
@@ -8128,9 +7890,7 @@ const DIGIMON_DB = [
                 "move": "End of Paradox"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "BanchoLeomon",
@@ -8141,9 +7901,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -8186,9 +7944,7 @@ const DIGIMON_DB = [
             "Route 102",
             "Route 116"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Wizarmon",
@@ -8307,9 +8063,7 @@ const DIGIMON_DB = [
                 "move": "Spirit Shackle"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Wizarmon",
@@ -8377,9 +8131,7 @@ const DIGIMON_DB = [
                 "move": "Close Combat"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Baalmon",
@@ -8509,18 +8261,14 @@ const DIGIMON_DB = [
                 "move": "Draco Meteor"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Mystimon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -8624,9 +8372,7 @@ const DIGIMON_DB = [
                 "move": "Demon Claw"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Punkmon",
@@ -8694,18 +8440,14 @@ const DIGIMON_DB = [
                 "move": "Draco Meteor"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Loudmon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -8743,9 +8485,7 @@ const DIGIMON_DB = [
         "locations": [
             "Rusturf Tunnel"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "DORUgamon",
@@ -8859,9 +8599,7 @@ const DIGIMON_DB = [
                 "move": "Dragon Claw"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "DORUgamon",
@@ -8933,18 +8671,14 @@ const DIGIMON_DB = [
                 "move": "Draco Meteor"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Doruguremon",
                 "method": "LV54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -9113,18 +8847,14 @@ const DIGIMON_DB = [
                 "move": "Soul Predator"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "DexDORUguremon",
                 "method": "LV54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -9144,7 +8874,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "56",
-                "move": "King\u0027s Shield"
+                "move": "King's Shield"
             },
             {
                 "level": "59",
@@ -9179,9 +8909,7 @@ const DIGIMON_DB = [
                 "move": "Secret Sword"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Doruguremon",
@@ -9214,7 +8942,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "56",
-                "move": "King\u0027s Shield"
+                "move": "King's Shield"
             },
             {
                 "level": "59",
@@ -9254,7 +8982,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "86",
-                "move": "King\u0027s Shiel"
+                "move": "King's Shiel"
             },
             {
                 "level": "89",
@@ -9265,9 +8993,7 @@ const DIGIMON_DB = [
                 "move": "Hyper Beam"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Alphamon",
@@ -9278,9 +9004,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultra",
         "cardLevel": 7
     },
@@ -9318,9 +9042,7 @@ const DIGIMON_DB = [
         "locations": [
             "Rusturf Tunnel"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Ginryumon",
@@ -9425,9 +9147,7 @@ const DIGIMON_DB = [
                 "move": "Meltdown"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Ginryumon",
@@ -9540,12 +9260,8 @@ const DIGIMON_DB = [
                 "move": "Bullet Punch"
             }
         ],
-        "locations": [
-
-        ],
-        "prev": [
-
-        ],
+        "locations": [],
+        "prev": [],
         "next": [
             {
                 "name": "Gaogamon",
@@ -9658,9 +9374,7 @@ const DIGIMON_DB = [
                 "move": "Detect"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Gaogamon",
@@ -9728,9 +9442,7 @@ const DIGIMON_DB = [
                 "move": "Aura Sphere"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MachGaogamon",
@@ -9782,9 +9494,7 @@ const DIGIMON_DB = [
             "Route 102",
             "Route 103"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Peckmon",
@@ -9962,9 +9672,7 @@ const DIGIMON_DB = [
                 "move": "Bleakwind Storm"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Yatagaramon",
@@ -10016,9 +9724,7 @@ const DIGIMON_DB = [
             "Granite Cave",
             "Fiery Path"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Agnimon",
@@ -10072,9 +9778,7 @@ const DIGIMON_DB = [
                 "move": "Jump Kick"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Flamon",
@@ -10138,9 +9842,7 @@ const DIGIMON_DB = [
                 "move": "Meltdown"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Agnimon",
@@ -10164,7 +9866,7 @@ const DIGIMON_DB = [
             "Dragon"
         ],
         "ability": "Orichalcum Pulse",
-        "hiddenAbility": "Dragon\u0027s Maw",
+        "hiddenAbility": "Dragon's Maw",
         "evoMove": "Omega Burst",
         "moves": [
             {
@@ -10208,9 +9910,7 @@ const DIGIMON_DB = [
                 "move": "Infinity Burn"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Aldamon",
@@ -10413,18 +10113,14 @@ const DIGIMON_DB = [
                 "move": "7 Heavens"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Asuramon",
                 "method": "Auspicious Armor"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -10472,9 +10168,7 @@ const DIGIMON_DB = [
                 "move": "Flare Blitz"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Asuramon",
@@ -10600,18 +10294,14 @@ const DIGIMON_DB = [
                 "move": "Necro Eclipse"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "DeathMeramon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -10650,9 +10340,7 @@ const DIGIMON_DB = [
             "Rusturf Tunnel",
             "Gabumon Crest"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Garurumon",
@@ -10663,8 +10351,8 @@ const DIGIMON_DB = [
                 "method": "Light Data"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Rookie",
+        "cardLevel": 3
     },
     {
         "id": "179",
@@ -10768,9 +10456,7 @@ const DIGIMON_DB = [
                 "move": "Trinity Gospel"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Garummon",
@@ -10846,9 +10532,7 @@ const DIGIMON_DB = [
                 "move": "Laser Cannon"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Beowolfmon",
@@ -10916,20 +10600,16 @@ const DIGIMON_DB = [
                 "move": "Meteor Assault"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Beowolfmon",
                 "method": "Auspicioius Armor"
             }
         ],
-        "next": [
-
-        ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "next": [],
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "183",
@@ -10968,9 +10648,7 @@ const DIGIMON_DB = [
             "Petalburg Woods",
             "Spear Pillar"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Fairymon",
@@ -11016,9 +10694,7 @@ const DIGIMON_DB = [
                 "move": "Hammer Rush"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Tinkermon",
@@ -11082,9 +10758,7 @@ const DIGIMON_DB = [
                 "move": "Fly"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Fairymon",
@@ -11156,18 +10830,14 @@ const DIGIMON_DB = [
                 "move": "Floral Healing"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "JetSilphymon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -11352,18 +11022,14 @@ const DIGIMON_DB = [
                 "move": "Meteor Mash"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Hippogriffomon",
                 "method": "Lv54 Female"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -11415,18 +11081,14 @@ const DIGIMON_DB = [
                 "move": "Necro Eclipse"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Hippogriffomon",
                 "method": "Sachet"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -11481,18 +11143,14 @@ const DIGIMON_DB = [
                 "move": "Bleakwind Storm"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Hippogriffomon",
                 "method": "Lv54 Male"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -11531,17 +11189,15 @@ const DIGIMON_DB = [
             "Petalburg Woods",
             "Route 116"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Blitzmon",
                 "method": "Thunder Data"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Rookie",
+        "cardLevel": 3
     },
     {
         "id": "193",
@@ -11641,9 +11297,7 @@ const DIGIMON_DB = [
                 "move": "Discharge"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Blitzmon",
@@ -11715,18 +11369,14 @@ const DIGIMON_DB = [
                 "move": "Ancient Power"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "RhinoKabuterimon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -11765,9 +11415,7 @@ const DIGIMON_DB = [
             "Route 104",
             "Shoal Cave"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Chakmon",
@@ -11820,9 +11468,7 @@ const DIGIMON_DB = [
                 "move": "Icy Wind"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Penmon",
@@ -11886,9 +11532,7 @@ const DIGIMON_DB = [
                 "move": "Giga Freeze"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Chakmon",
@@ -11905,8 +11549,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "199",
@@ -11959,18 +11603,14 @@ const DIGIMON_DB = [
                 "move": "Giga Impact"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Frozomon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -12140,18 +11780,14 @@ const DIGIMON_DB = [
                 "move": "Meteor Mash"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Mammothmon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -12186,9 +11822,7 @@ const DIGIMON_DB = [
                 "move": "Freeze-Dry"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Penmon",
@@ -12247,9 +11881,7 @@ const DIGIMON_DB = [
                 "move": "Aurora Veil"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Frigimon",
@@ -12308,18 +11940,14 @@ const DIGIMON_DB = [
                 "move": "Skitter Smack"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Polarbearmon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -12360,9 +11988,7 @@ const DIGIMON_DB = [
             "Granite Cave",
             "Rusturf"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Ogremon",
@@ -12546,18 +12172,14 @@ const DIGIMON_DB = [
                 "move": "Gigaton Hammer"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Rebellimon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -12596,9 +12218,7 @@ const DIGIMON_DB = [
                 "move": "Dig"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Goblimon",
@@ -12662,9 +12282,7 @@ const DIGIMON_DB = [
                 "move": "Screech"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Grottemon",
@@ -12681,8 +12299,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "212",
@@ -12736,18 +12354,14 @@ const DIGIMON_DB = [
                 "move": "Sandsear Storm"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Volcamon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -12786,9 +12400,7 @@ const DIGIMON_DB = [
             "Route 116",
             "Route 114"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Mercurymon",
@@ -12799,8 +12411,8 @@ const DIGIMON_DB = [
                 "method": "Lv18"
             }
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Rookie",
+        "cardLevel": 3
     },
     {
         "id": "214",
@@ -12915,8 +12527,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "216",
@@ -12970,18 +12582,14 @@ const DIGIMON_DB = [
                 "move": "Doom Desire"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Wisemon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -13150,18 +12758,14 @@ const DIGIMON_DB = [
                 "move": "Ally Switch"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Locomon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -13201,9 +12805,7 @@ const DIGIMON_DB = [
             "Route 103",
             "Route 104"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Shellmon",
@@ -13218,8 +12820,8 @@ const DIGIMON_DB = [
                 "method": "Lv18 Amped"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Rookie",
+        "cardLevel": 3
     },
     {
         "id": "221",
@@ -13318,9 +12920,7 @@ const DIGIMON_DB = [
                 "move": "Toxic Spikes"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Shellmon",
@@ -13392,9 +12992,7 @@ const DIGIMON_DB = [
                 "move": "Dragon Energy"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MarinBullmon",
@@ -13446,9 +13044,7 @@ const DIGIMON_DB = [
                 "move": "Sludge"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Sangomon",
@@ -13511,9 +13107,7 @@ const DIGIMON_DB = [
                 "move": "Chilling Water"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Ranamon",
@@ -13530,8 +13124,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "226",
@@ -13581,18 +13175,14 @@ const DIGIMON_DB = [
                 "move": "Flip Turn"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Mermaimon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -13632,9 +13222,7 @@ const DIGIMON_DB = [
                 "move": "Triple Dive"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Sangomon",
@@ -13693,9 +13281,7 @@ const DIGIMON_DB = [
                 "move": "Anchor Shot"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Tobiumon",
@@ -13747,18 +13333,14 @@ const DIGIMON_DB = [
                 "move": "River Of Power"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Piranimon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -13814,18 +13396,14 @@ const DIGIMON_DB = [
                 "move": "Astral Barrage"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Piranimon",
                 "method": "Unholy Heart"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -13873,9 +13451,7 @@ const DIGIMON_DB = [
                 "move": "Moonblast"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Shellmon",
@@ -13939,18 +13515,14 @@ const DIGIMON_DB = [
                 "move": "Flower Shield"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Pixiemon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -13985,9 +13557,7 @@ const DIGIMON_DB = [
             "Petalburg Woods",
             "Route 110"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Monzaemon",
@@ -13998,8 +13568,8 @@ const DIGIMON_DB = [
                 "method": "Evil Plush"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Champion",
+        "cardLevel": 4
     },
     {
         "id": "234",
@@ -14177,9 +13747,7 @@ const DIGIMON_DB = [
                 "move": "Poltergeist"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "WaruMonzaemon",
@@ -14194,9 +13762,7 @@ const DIGIMON_DB = [
                 "method": "Lv54  Lv54  Night Daze"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultimate",
         "cardLevel": 5
     },
@@ -14209,9 +13775,7 @@ const DIGIMON_DB = [
         "ability": "No Guard",
         "hiddenAbility": "",
         "evoMove": "Heal Pulse",
-        "moves": [
-
-        ],
+        "moves": [],
         "locations": [
             "Routes 101",
             "103",
@@ -14219,12 +13783,8 @@ const DIGIMON_DB = [
             "Mirage Tower",
             "etc."
         ],
-        "prev": [
-
-        ],
-        "next": [
-
-        ],
+        "prev": [],
+        "next": [],
         "stage": "Unknown",
         "cardLevel": 3
     },
@@ -14264,9 +13824,7 @@ const DIGIMON_DB = [
             "Route 104",
             "Rusturf Tunnel"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Liamon",
@@ -14314,9 +13872,7 @@ const DIGIMON_DB = [
         "locations": [
             "Route 103 (Part 2)"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "GrapLeomon",
@@ -14452,18 +14008,14 @@ const DIGIMON_DB = [
                 "move": "Dynamic Punch"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "GrapLeomon",
                 "method": "LV54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultimate",
         "cardLevel": 5
     },
@@ -14519,18 +14071,14 @@ const DIGIMON_DB = [
                 "move": "Divine Breaker"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "GrapLeomon",
                 "method": "Swords Dance"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -14586,9 +14134,7 @@ const DIGIMON_DB = [
                 "move": "Close Combat"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "GrapLeomon",
@@ -14829,9 +14375,7 @@ const DIGIMON_DB = [
                 "move": "Electric Cloud"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Liollmon",
@@ -14894,9 +14438,7 @@ const DIGIMON_DB = [
                 "move": "Necrophobia"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Lowemon",
@@ -14967,18 +14509,14 @@ const DIGIMON_DB = [
                 "move": "Dark Prominence"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Rihimon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -15018,9 +14556,7 @@ const DIGIMON_DB = [
             "Route 104",
             "Petalburg Woods"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Parasaurmon",
@@ -15031,8 +14567,8 @@ const DIGIMON_DB = [
                 "method": "Wood Data"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Rookie",
+        "cardLevel": 3
     },
     {
         "id": "251",
@@ -15206,18 +14742,14 @@ const DIGIMON_DB = [
                 "move": "Meteor Assault"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Ajatarmon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -15336,18 +14868,14 @@ const DIGIMON_DB = [
                 "move": "Frenzy Plant"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Tropiamon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -15386,9 +14914,7 @@ const DIGIMON_DB = [
                 "move": "Iron Head"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Pomumon",
@@ -15452,9 +14978,7 @@ const DIGIMON_DB = [
                 "move": "Evil Bite"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Arbormon",
@@ -15475,8 +14999,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "258",
@@ -15530,18 +15054,14 @@ const DIGIMON_DB = [
                 "move": "Meteor Mash"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Entmon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -15581,9 +15101,7 @@ const DIGIMON_DB = [
             "Route 116",
             "Granite Cave"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Paledramon",
@@ -15766,18 +15284,14 @@ const DIGIMON_DB = [
                 "move": "Freeze Shock"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "CrysPaledramon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -15949,18 +15463,14 @@ const DIGIMON_DB = [
                 "move": "Aurora Veil"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Panjyamon X",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -15998,9 +15508,7 @@ const DIGIMON_DB = [
         "locations": [
             "Route 116"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Dinohumon",
@@ -16109,9 +15617,7 @@ const DIGIMON_DB = [
                 "move": "Body Press"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Dinohumon",
@@ -16183,18 +15689,14 @@ const DIGIMON_DB = [
                 "move": "Meteor Assault"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Knightmon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -16207,7 +15709,7 @@ const DIGIMON_DB = [
         ],
         "ability": "Magic Bounce",
         "hiddenAbility": "Sturdy",
-        "evoMove": "King\u0027s Shield",
+        "evoMove": "King's Shield",
         "moves": [
             {
                 "level": "55",
@@ -16250,18 +15752,14 @@ const DIGIMON_DB = [
                 "move": "Meteor Assault"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Knightmon",
                 "method": "Malicious Armor"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -16435,18 +15933,14 @@ const DIGIMON_DB = [
                 "move": "Guillotine"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Oboromon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -16484,9 +15978,7 @@ const DIGIMON_DB = [
         "locations": [
             "Route 104"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Grizzlymon",
@@ -16540,9 +16032,7 @@ const DIGIMON_DB = [
                 "move": "Rock Slide"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Bearmon",
@@ -16602,9 +16092,7 @@ const DIGIMON_DB = [
                 "move": "Wicked Blow"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Grizzlymon",
@@ -16664,18 +16152,14 @@ const DIGIMON_DB = [
                 "move": "Belly Drum"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "GreatGryzzlymon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -16712,7 +16196,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "31",
-                "move": "King\u0027s Shield"
+                "move": "King's Shield"
             }
         ],
         "locations": [
@@ -16727,7 +16211,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "YaegerDorulumon",
-                "method": "King\u0027s Shield"
+                "method": "King's Shield"
             },
             {
                 "name": "Mihiramon",
@@ -16781,13 +16265,11 @@ const DIGIMON_DB = [
                 "move": "Laser Focus"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Dorulumon",
-                "method": "King\u0027s Shield"
+                "method": "King's Shield"
             }
         ],
         "next": [
@@ -16864,9 +16346,7 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -16922,9 +16402,7 @@ const DIGIMON_DB = [
                 "move": "Meteor Assault"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "YaegerDorulumon",
@@ -17023,7 +16501,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "59",
-                "move": "King\u0027s Shield"
+                "move": "King's Shield"
             },
             {
                 "level": "62",
@@ -17063,9 +16541,7 @@ const DIGIMON_DB = [
                 "method": "Biakko Core"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -17104,9 +16580,7 @@ const DIGIMON_DB = [
             "Route 116",
             "Rusturf Tunnel"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "ZubaEagermon",
@@ -17151,9 +16625,7 @@ const DIGIMON_DB = [
                 "move": "Aerial Ace"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Zubamon",
@@ -17281,9 +16753,7 @@ const DIGIMON_DB = [
                 "move": "Omega Blade"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Duramon",
@@ -17308,7 +16778,7 @@ const DIGIMON_DB = [
         ],
         "ability": "Stance Change",
         "hiddenAbility": "",
-        "evoMove": "King\u0027s Shield",
+        "evoMove": "King's Shield",
         "moves": [
             {
                 "level": "83",
@@ -17331,9 +16801,7 @@ const DIGIMON_DB = [
                 "move": "Dual Edge Flow"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "BryweLudramon",
@@ -17344,9 +16812,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultra",
         "cardLevel": 7
     },
@@ -17385,9 +16851,7 @@ const DIGIMON_DB = [
             "Route 116",
             "Rusturf Tunnel"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "TiaLudomon",
@@ -17433,9 +16897,7 @@ const DIGIMON_DB = [
                 "move": "Light Screen"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Ludomon",
@@ -17522,7 +16984,7 @@ const DIGIMON_DB = [
         ],
         "ability": "Bulletproof",
         "hiddenAbility": "Magic Guard",
-        "evoMove": "King\u0027s Shield",
+        "evoMove": "King's Shield",
         "moves": [
             {
                 "level": "55",
@@ -17565,9 +17027,7 @@ const DIGIMON_DB = [
                 "move": "Sacred Fire"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "RaijiLudomon",
@@ -17615,9 +17075,7 @@ const DIGIMON_DB = [
             "Rusturf Tunnel",
             "Granite Cave"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "CoreDramon Blue",
@@ -17803,9 +17261,7 @@ const DIGIMON_DB = [
                 "move": "Draco Meteor"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Wingdramon",
@@ -17986,16 +17442,14 @@ const DIGIMON_DB = [
             },
             {
                 "level": "77",
-                "move": "Land\u0027s Wrath"
+                "move": "Land's Wrath"
             },
             {
                 "level": "80",
                 "move": "Dragon Energy"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Groundramon",
@@ -18026,9 +17480,7 @@ const DIGIMON_DB = [
                 "move": "Whirlwind"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Slayerdramon",
@@ -18039,9 +17491,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -18083,9 +17533,7 @@ const DIGIMON_DB = [
             "Route 112",
             "Fiery Path"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Lavorvomon",
@@ -18261,18 +17709,14 @@ const DIGIMON_DB = [
                 "move": "Burning Jealousy"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Lavogaritamon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -18318,7 +17762,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Betamon",
-                "method": "Lv18 Attack \u003e Defense"
+                "method": "Lv18 Attack > Defense"
             }
         ],
         "next": [
@@ -18454,9 +17898,7 @@ const DIGIMON_DB = [
                 "move": "Infinity Burn"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MasterTyrannomon",
@@ -18467,9 +17909,7 @@ const DIGIMON_DB = [
                 "method": "Lv54  Dragon Pulse"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -18510,9 +17950,7 @@ const DIGIMON_DB = [
             "Route 111",
             "Route 112"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Jazardmon",
@@ -18616,9 +18054,7 @@ const DIGIMON_DB = [
                 "move": "Power Gatling"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Jazardmon",
@@ -18695,9 +18131,7 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -18874,9 +18308,7 @@ const DIGIMON_DB = [
                 "move": "Mugen Cannon"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MetalTyrannomon",
@@ -18887,9 +18319,7 @@ const DIGIMON_DB = [
                 "method": "Lv54  Thunder Cloud"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -18928,9 +18358,7 @@ const DIGIMON_DB = [
                 "move": "Dynamax Cannon"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MetalTyrannomon",
@@ -18988,9 +18416,7 @@ const DIGIMON_DB = [
         "locations": [
             "Granite Cave F2/F3"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "MadLeomon",
@@ -19097,9 +18523,7 @@ const DIGIMON_DB = [
                 "move": "Punishment"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MadLeomon",
@@ -19162,18 +18586,14 @@ const DIGIMON_DB = [
                 "move": "Hyperspace Fury"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Astamon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -19213,9 +18633,7 @@ const DIGIMON_DB = [
             "Petalburg Woods",
             "Route 104"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Dokugumon",
@@ -19323,9 +18741,7 @@ const DIGIMON_DB = [
                 "move": "Sludge Bomb"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Hudiemon",
@@ -19389,18 +18805,14 @@ const DIGIMON_DB = [
                 "move": "Baton Pass"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Archnemon",
                 "method": "Unspecified"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -19440,9 +18852,7 @@ const DIGIMON_DB = [
             "Route 116",
             "Route 120"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Sealsdramon",
@@ -19574,8 +18984,8 @@ const DIGIMON_DB = [
                 "method": "Lv54  Lv54"
             }
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "326",
@@ -19625,9 +19035,7 @@ const DIGIMON_DB = [
             "Route 119",
             "Route 120"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Brigadramon",
@@ -19638,8 +19046,8 @@ const DIGIMON_DB = [
                 "method": "Lv54  Lv54"
             }
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "327",
@@ -19662,7 +19070,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "59",
-                "move": "King\u0027s Shield"
+                "move": "King's Shield"
             },
             {
                 "level": "62",
@@ -19693,9 +19101,7 @@ const DIGIMON_DB = [
                 "move": "Mugen Cannon"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Ghilliedhumon",
@@ -19706,9 +19112,7 @@ const DIGIMON_DB = [
                 "method": "Lv54  Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -19830,8 +19234,8 @@ const DIGIMON_DB = [
                 "method": "Lv54  Lv54"
             }
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "330",
@@ -19885,9 +19289,7 @@ const DIGIMON_DB = [
                 "move": "Meteor Mash"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Ghilliedhumon",
@@ -19938,9 +19340,7 @@ const DIGIMON_DB = [
                 "move": "End of Paradox"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "BanchoLeomon",
@@ -19951,9 +19351,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -19993,9 +19391,7 @@ const DIGIMON_DB = [
             "Granite Cave F2",
             "Mt Pyre"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Sangloupmon",
@@ -20107,9 +19503,7 @@ const DIGIMON_DB = [
                 "move": "High Jump Kick"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Sangloupmon",
@@ -20134,7 +19528,7 @@ const DIGIMON_DB = [
         ],
         "ability": "Intimidate",
         "hiddenAbility": "Super Luck",
-        "evoMove": "Gorgon\u0027s Eye",
+        "evoMove": "Gorgon's Eye",
         "moves": [
             {
                 "level": "55",
@@ -20177,18 +19571,14 @@ const DIGIMON_DB = [
                 "move": "Meteor Beam"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Matadormon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -20236,9 +19626,7 @@ const DIGIMON_DB = [
                 "move": "Heal Block"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Sangloupmon",
@@ -20306,18 +19694,14 @@ const DIGIMON_DB = [
                 "move": "Moongeist Beam"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Myotismon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -20357,9 +19741,7 @@ const DIGIMON_DB = [
             "Granite Cave F2",
             "Mt Pyre"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Devimon",
@@ -20479,9 +19861,7 @@ const DIGIMON_DB = [
                 "move": "Poison Jab"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Devimon",
@@ -20545,18 +19925,14 @@ const DIGIMON_DB = [
                 "move": "Acid Breath"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "NeoDevimon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -20670,18 +20046,14 @@ const DIGIMON_DB = [
                 "move": "Ally Switch"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Jokermon",
                 "method": "Lv32"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -20724,9 +20096,7 @@ const DIGIMON_DB = [
                 "move": "False Surrender"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "DemiDevimon",
@@ -20786,9 +20156,7 @@ const DIGIMON_DB = [
                 "move": "Demon Katana"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Vilemon",
@@ -20848,18 +20216,14 @@ const DIGIMON_DB = [
                 "move": "Necro Eclipse"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "SkullSatamon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -20894,12 +20258,8 @@ const DIGIMON_DB = [
                 "move": "Double Kick"
             }
         ],
-        "locations": [
-
-        ],
-        "prev": [
-
-        ],
+        "locations": [],
+        "prev": [],
         "next": [
             {
                 "name": "Gesomon",
@@ -20945,9 +20305,7 @@ const DIGIMON_DB = [
                 "move": "Smokescreen"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Gizamon",
@@ -21011,9 +20369,7 @@ const DIGIMON_DB = [
                 "move": "Dark Pulse"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Gesomon",
@@ -21081,18 +20437,14 @@ const DIGIMON_DB = [
                 "move": "Ruination"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MarineDevimon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -21192,9 +20544,7 @@ const DIGIMON_DB = [
                 "move": "Icicle Crash"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Dolphmon",
@@ -21207,8 +20557,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "353",
@@ -21261,18 +20611,14 @@ const DIGIMON_DB = [
                 "move": "Hydro Cannon"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Hangyomon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -21313,17 +20659,15 @@ const DIGIMON_DB = [
             "Route 104",
             "Agumon Crest"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Tyrannomon",
-                "method": "Lv18 Attack \u003e Defense"
+                "method": "Lv18 Attack > Defense"
             },
             {
                 "name": "Seadramon",
-                "method": "Lv18 Defense \u003e Attack"
+                "method": "Lv18 Defense > Attack"
             },
             {
                 "name": "Airdramon",
@@ -21371,7 +20715,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Betamon",
-                "method": "Lv18 Defense \u003e Attack"
+                "method": "Lv18 Defense > Attack"
             }
         ],
         "next": [
@@ -21427,9 +20771,7 @@ const DIGIMON_DB = [
                 "move": "Iron Tail"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Seadramon",
@@ -21497,9 +20839,7 @@ const DIGIMON_DB = [
                 "move": "Volt Switch"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MegaSeadramon",
@@ -21543,9 +20883,7 @@ const DIGIMON_DB = [
                 "move": "Hyper Beam"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MetalSeadramon",
@@ -21556,9 +20894,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -21663,9 +20999,7 @@ const DIGIMON_DB = [
                 "move": "Electric Cloud"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Airdramon",
@@ -21720,9 +21054,7 @@ const DIGIMON_DB = [
             "Granite Cave F1",
             "Route 111"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Tortomon",
@@ -21841,9 +21173,7 @@ const DIGIMON_DB = [
                 "move": "Flare Blitz"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Tortomon",
@@ -22034,9 +21364,7 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -22212,18 +21540,14 @@ const DIGIMON_DB = [
                 "move": "Outrage"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Triceramon",
                 "method": "Lv. 54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -22262,9 +21586,7 @@ const DIGIMON_DB = [
             "Granite Cave F2/F4",
             "Agumon Crest"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "BetelGammamon",
@@ -22439,9 +21761,7 @@ const DIGIMON_DB = [
                 "move": "Dragon Hammer"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Canoweissmon",
@@ -22625,9 +21945,7 @@ const DIGIMON_DB = [
                 "move": "Gunk Shot"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Regulusmon",
@@ -22675,9 +21993,7 @@ const DIGIMON_DB = [
                 "move": "Necro Eclipse"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Arcturusmon",
@@ -22688,9 +22004,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -22729,9 +22043,7 @@ const DIGIMON_DB = [
         "locations": [
             "Route 101"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "SymbareAngoramon",
@@ -22906,18 +22218,14 @@ const DIGIMON_DB = [
                 "move": "Trump Sword"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Lamortmon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -22956,9 +22264,7 @@ const DIGIMON_DB = [
         "locations": [
             "Route 103"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "TeslaJellymon",
@@ -23064,9 +22370,7 @@ const DIGIMON_DB = [
                 "move": "Toxic"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "TeslaJellymon",
@@ -23134,18 +22438,14 @@ const DIGIMON_DB = [
                 "move": "Origin Pulse"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Thetismon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -23186,9 +22486,7 @@ const DIGIMON_DB = [
             "Route 116",
             "Tentomon Crest"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Hudiemon",
@@ -23292,9 +22590,7 @@ const DIGIMON_DB = [
             "Tentomon Crest",
             "Route 120"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Waspmon",
@@ -23377,7 +22673,7 @@ const DIGIMON_DB = [
         "moves": [
             {
                 "level": "33",
-                "move": "King\u0027s Shield"
+                "move": "King's Shield"
             },
             {
                 "level": "36",
@@ -23408,9 +22704,7 @@ const DIGIMON_DB = [
                 "move": "Megahorn"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Waspmon",
@@ -23478,18 +22772,14 @@ const DIGIMON_DB = [
                 "move": "Guillotine"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Vespamon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -23650,18 +22940,14 @@ const DIGIMON_DB = [
                 "move": "Darkness Love"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "CannonBeemon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -23701,9 +22987,7 @@ const DIGIMON_DB = [
             "Route 116",
             "Old Mauville"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Filmon",
@@ -23804,9 +23088,7 @@ const DIGIMON_DB = [
                 "move": "Spike Cannon"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Filmon",
@@ -23842,9 +23124,7 @@ const DIGIMON_DB = [
                 "move": "Gift of Darkness"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Stiffilmon",
@@ -23896,18 +23176,14 @@ const DIGIMON_DB = [
                 "move": "Focus Blast"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Rasenmon Fury Mode",
                 "method": "Friendship"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultra",
         "cardLevel": 7
     },
@@ -23943,9 +23219,7 @@ const DIGIMON_DB = [
             "Tentomon Crest",
             "Old Mauville"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Bulkmon",
@@ -24057,9 +23331,7 @@ const DIGIMON_DB = [
                 "move": "Thunderclap"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Bulkmon",
@@ -24131,9 +23403,7 @@ const DIGIMON_DB = [
                 "move": "Double Shock"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Boutmon",
@@ -24306,18 +23576,14 @@ const DIGIMON_DB = [
                 "move": "Terrain Pulse"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Climbmon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -24373,18 +23639,14 @@ const DIGIMON_DB = [
                 "move": "Meggido Flame"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Boutmon",
                 "method": "Malicious Armor"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -24424,9 +23686,7 @@ const DIGIMON_DB = [
             "Route 116",
             "Route 121"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Loogarmon",
@@ -24503,9 +23763,7 @@ const DIGIMON_DB = [
                 "move": "Raging Fury"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Loogarmon",
@@ -24561,9 +23819,7 @@ const DIGIMON_DB = [
                 "move": "Agility"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Helloogarmon",
@@ -24576,8 +23832,8 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultimate",
+        "cardLevel": 5
     },
     {
         "id": "412",
@@ -24631,9 +23887,7 @@ const DIGIMON_DB = [
                 "move": "Spell Blast"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Soloogarmon",
@@ -24677,9 +23931,7 @@ const DIGIMON_DB = [
                 "move": "Red Inferno"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Fenriloogamon",
@@ -24690,9 +23942,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -24730,9 +23980,7 @@ const DIGIMON_DB = [
         "locations": [
             "Route 101"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Reppamon",
@@ -24840,9 +24088,7 @@ const DIGIMON_DB = [
                 "move": "Recover"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Reppamon",
@@ -24914,18 +24160,14 @@ const DIGIMON_DB = [
                 "move": "Bleakwind Storm"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Tyilinmon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -24981,18 +24223,14 @@ const DIGIMON_DB = [
                 "move": "Bleakwind Storm"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Tyilinmon",
                 "method": "Auspicious Armor"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -25031,9 +24269,7 @@ const DIGIMON_DB = [
             "Granite Cave F2/F3",
             "Mt Pyre"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Bakemon",
@@ -25215,18 +24451,14 @@ const DIGIMON_DB = [
                 "move": "Stored Power"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Phantomon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -25274,9 +24506,7 @@ const DIGIMON_DB = [
                 "move": "Fake Out"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Bakemon",
@@ -25344,18 +24574,14 @@ const DIGIMON_DB = [
                 "move": "Seed Flare"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Pumpmon",
                 "method": "Lv50"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -25438,7 +24664,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "56",
-                "move": "King\u0027s Shield"
+                "move": "King's Shield"
             },
             {
                 "level": "59",
@@ -25465,18 +24691,14 @@ const DIGIMON_DB = [
                 "move": "Necro Eclipse"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Mummymon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -25516,9 +24738,7 @@ const DIGIMON_DB = [
             "Granite Cave F2",
             "Route 121"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Witchmon",
@@ -25716,9 +24936,7 @@ const DIGIMON_DB = [
                 "move": "Spell Blast"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "LadyDevimon",
@@ -25786,9 +25004,7 @@ const DIGIMON_DB = [
                 "move": "Necro Eclipse"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "LadyDevimon",
@@ -25799,9 +25015,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -25916,9 +25130,7 @@ const DIGIMON_DB = [
                 "move": "Ruination"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "LadyDevimon",
@@ -25929,9 +25141,7 @@ const DIGIMON_DB = [
                 "method": "Lv54  Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -25972,9 +25182,7 @@ const DIGIMON_DB = [
             "Route 104",
             "Spear Pillar"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Seasarmon",
@@ -26156,18 +25364,14 @@ const DIGIMON_DB = [
                 "move": "Sharp Claymore"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Caturamon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -26266,9 +25470,7 @@ const DIGIMON_DB = [
                 "move": "Rashomon"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Dobermon",
@@ -26336,18 +25538,14 @@ const DIGIMON_DB = [
                 "move": "Heaven Judge"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Cerberusmon",
                 "method": "Lv. 54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -26385,9 +25583,7 @@ const DIGIMON_DB = [
         "locations": [
             "Route 103 (Part 2)"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Ebidramon",
@@ -26429,9 +25625,7 @@ const DIGIMON_DB = [
                 "move": "Mud Bomb"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Crabmon",
@@ -26495,9 +25689,7 @@ const DIGIMON_DB = [
                 "move": "Anchor Shot"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Ebidramon",
@@ -26557,9 +25749,7 @@ const DIGIMON_DB = [
                 "move": "X-Scissor"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Ebidramon",
@@ -26627,9 +25817,7 @@ const DIGIMON_DB = [
                 "move": "Rain Dance"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MarineKimeramon",
@@ -26640,9 +25828,7 @@ const DIGIMON_DB = [
                 "method": "Lv54  Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -26680,9 +25866,7 @@ const DIGIMON_DB = [
         "locations": [
             "Route 116"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Apemon",
@@ -26705,7 +25889,7 @@ const DIGIMON_DB = [
         "moves": [
             {
                 "level": "19",
-                "move": "Heaven\u0027s Knuckle"
+                "move": "Heaven's Knuckle"
             },
             {
                 "level": "21",
@@ -26839,12 +26023,8 @@ const DIGIMON_DB = [
                 "move": "Headbutt"
             }
         ],
-        "locations": [
-
-        ],
-        "prev": [
-
-        ],
+        "locations": [],
+        "prev": [],
         "next": [
             {
                 "name": "Gawappamon",
@@ -26953,9 +26133,7 @@ const DIGIMON_DB = [
                 "move": "Soak"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Gawappamon",
@@ -27027,18 +26205,14 @@ const DIGIMON_DB = [
                 "move": "Origin Pulse"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Sagomon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -27218,9 +26392,7 @@ const DIGIMON_DB = [
                 "method": "Genku Core"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -27259,9 +26431,7 @@ const DIGIMON_DB = [
             "Tentomon Crest",
             "Old Mauville"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Thundermon",
@@ -27440,18 +26610,14 @@ const DIGIMON_DB = [
                 "move": "Giga Impact"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Mamemon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -27495,9 +26661,7 @@ const DIGIMON_DB = [
                 "move": "Explosion"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Mamemon",
@@ -27547,9 +26711,7 @@ const DIGIMON_DB = [
         "locations": [
             "Granite Cave F2"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Woodmon",
@@ -27727,9 +26889,7 @@ const DIGIMON_DB = [
                 "move": "Seed Flare"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Oleamon",
@@ -27858,18 +27018,14 @@ const DIGIMON_DB = [
                 "move": "Darkest Lariat"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Cherrymon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -27908,9 +27064,7 @@ const DIGIMON_DB = [
         "locations": [
             "Granite Cave F2"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Chrysalimon",
@@ -27956,9 +27110,7 @@ const DIGIMON_DB = [
                 "move": "X-Scissor"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Keramon",
@@ -28018,9 +27170,7 @@ const DIGIMON_DB = [
                 "move": "Gunk Shot"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Chrysalimon",
@@ -28088,18 +27238,14 @@ const DIGIMON_DB = [
                 "move": "Explosion"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Infermon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -28134,9 +27280,7 @@ const DIGIMON_DB = [
             "Route 103",
             "Route 104"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Sukamon",
@@ -28295,18 +27439,14 @@ const DIGIMON_DB = [
                 "move": "Kongou"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Etemon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -28344,9 +27484,7 @@ const DIGIMON_DB = [
         "locations": [
             "Route 103"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Galemon",
@@ -28526,18 +27664,14 @@ const DIGIMON_DB = [
                 "move": "Behemoth Blade"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "GrandGalemon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -28579,9 +27713,7 @@ const DIGIMON_DB = [
             "Route 119",
             "Rusturf Tunnel"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Shoeshoemon",
@@ -28768,18 +27900,14 @@ const DIGIMON_DB = [
                 "move": "Victory Dance"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Chaperomon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -28820,9 +27948,7 @@ const DIGIMON_DB = [
             "Route 119",
             "Granite Cave F1"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Dimetromon",
@@ -28929,9 +28055,7 @@ const DIGIMON_DB = [
                 "move": "Dragon Pulse"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Dimetromon",
@@ -28964,7 +28088,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "56",
-                "move": "Gorgon\u0027s Eye"
+                "move": "Gorgon's Eye"
             },
             {
                 "level": "59",
@@ -28999,18 +28123,14 @@ const DIGIMON_DB = [
                 "move": "Corrosive Gas"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Lamiamon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -29029,9 +28149,7 @@ const DIGIMON_DB = [
                 "move": "All Delete"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "AncientGarurumon",
@@ -29042,9 +28160,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -29091,9 +28207,7 @@ const DIGIMON_DB = [
                 "move": "Evil Bite"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Kabuterimon",
@@ -29142,12 +28256,8 @@ const DIGIMON_DB = [
         "ability": "Shadow Shield",
         "hiddenAbility": "Power of Alchemy",
         "evoMove": "Dimension Destroyer",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Mugendramon",
@@ -29158,9 +28268,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -29200,9 +28308,7 @@ const DIGIMON_DB = [
                 "move": "Hyper Voice"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Gokuumon",
@@ -29213,9 +28319,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -29245,9 +28349,7 @@ const DIGIMON_DB = [
         "locations": [
             "Spear Pillar F5 (Rare)"
         ],
-        "prev": [
-
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Lucemon Falldown",
@@ -29297,18 +28399,14 @@ const DIGIMON_DB = [
                 "move": "Gift of Darkness"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Lucemon",
                 "method": "Lv30"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultimate",
         "cardLevel": 5
     },
@@ -29343,9 +28441,7 @@ const DIGIMON_DB = [
                 "move": "Spacial Rend"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Apollomon",
@@ -29356,9 +28452,7 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultra",
         "cardLevel": 7
     },
@@ -29371,9 +28465,7 @@ const DIGIMON_DB = [
         "ability": "Imposter",
         "hiddenAbility": "Imposter",
         "evoMove": "Transform",
-        "moves": [
-
-        ],
+        "moves": [],
         "locations": [
             "Route 113",
             "Route 118",
@@ -29385,13 +28477,10 @@ const DIGIMON_DB = [
                 "method": "Cute Plush"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultimate",
         "cardLevel": 5
     },
-
     {
         "id": "505",
         "name": "LaeusGreymon",
@@ -29402,18 +28491,10 @@ const DIGIMON_DB = [
         "ability": "Corrosion",
         "hiddenAbility": "Orichalcum Pulse",
         "evoMove": "Bleakwind Storm",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
-        "prev": [
-
-        ],
-        "next": [
-
-        ],
+        "moves": [],
+        "locations": [],
+        "prev": [],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -29427,18 +28508,10 @@ const DIGIMON_DB = [
         "ability": "Motor Drive",
         "hiddenAbility": "Hadron Engine",
         "evoMove": "Sheer Cold",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
-        "prev": [
-
-        ],
-        "next": [
-
-        ],
+        "moves": [],
+        "locations": [],
+        "prev": [],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -29494,18 +28567,14 @@ const DIGIMON_DB = [
                 "move": "Edens Javelin"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Chaperomon",
                 "method": "Gakuren"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -29560,9 +28629,7 @@ const DIGIMON_DB = [
                 "move": "VIctory Dance"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "MarinBullmon",
@@ -29573,9 +28640,7 @@ const DIGIMON_DB = [
                 "method": "Lunar Scale  Water Data"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -29615,9 +28680,7 @@ const DIGIMON_DB = [
                 "move": "Rock Slide"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Sunarizamon",
@@ -29677,9 +28740,7 @@ const DIGIMON_DB = [
                 "move": "Stone Edge"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Landramon",
@@ -29731,18 +28792,14 @@ const DIGIMON_DB = [
                 "move": "Ancient Power"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Proganomon",
                 "method": "Lv54"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -29786,9 +28843,7 @@ const DIGIMON_DB = [
                 "move": "Thunder Cloud"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Tyrannomon",
@@ -29851,9 +28906,7 @@ const DIGIMON_DB = [
                 "move": "Aerial Ace"
             }
         ],
-        "locations": [
-
-        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Wolfmon",
@@ -29878,45 +28931,29 @@ const DIGIMON_DB = [
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
-        "prev": [
-
-        ],
-        "next": [
-
-        ],
+        "moves": [],
+        "locations": [],
+        "prev": [],
+        "next": [],
         "stage": "Rookie",
         "cardLevel": 3
     },
     {
         "id": "",
         "name": "Beelzebumon Blast",
-        "types": [
-
-        ],
+        "types": [],
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Beelzebumon",
                 "method": "Toy Gun"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultra",
         "cardLevel": 7
     },
@@ -29929,12 +28966,8 @@ const DIGIMON_DB = [
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Chakmon",
@@ -29960,12 +28993,8 @@ const DIGIMON_DB = [
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Blitzmon",
@@ -29991,12 +29020,8 @@ const DIGIMON_DB = [
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Ranamon",
@@ -30022,21 +29047,15 @@ const DIGIMON_DB = [
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Ceresmon",
                 "method": "Famis"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
@@ -30050,48 +29069,34 @@ const DIGIMON_DB = [
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Duftmon",
                 "method": "Vulcan Crush"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultra",
         "cardLevel": 7
     },
     {
         "id": "",
         "name": "Dukemon Crimson",
-        "types": [
-
-        ],
+        "types": [],
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Dukemon",
                 "method": "Grani"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultra",
         "cardLevel": 7
     },
@@ -30104,12 +29109,8 @@ const DIGIMON_DB = [
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Grottemon",
@@ -30128,51 +29129,33 @@ const DIGIMON_DB = [
     {
         "id": "",
         "name": "Imperialdramon Fighter",
-        "types": [
-
-        ],
+        "types": [],
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Imperialdramon Dragon",
                 "method": "Positron Laser"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultra",
         "cardLevel": 7
     },
     {
         "id": "",
         "name": "Imperialdramon Paladin",
-        "types": [
-
-        ],
+        "types": [],
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
-        "prev": [
-
-        ],
-        "next": [
-
-        ],
+        "moves": [],
+        "locations": [],
+        "prev": [],
+        "next": [],
         "stage": "Ultra",
         "cardLevel": 7
     },
@@ -30185,12 +29168,8 @@ const DIGIMON_DB = [
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Lowemon",
@@ -30216,72 +29195,48 @@ const DIGIMON_DB = [
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
-        "prev": [
-
-        ],
-        "next": [
-
-        ],
+        "moves": [],
+        "locations": [],
+        "prev": [],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     },
     {
         "id": "",
         "name": "Magnamon X",
-        "types": [
-
-        ],
+        "types": [],
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Magnamon",
                 "method": "X Antibody"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Champion",
         "cardLevel": 4
     },
     {
         "id": "",
         "name": "MirageGaogamon Burst",
-        "types": [
-
-        ],
+        "types": [],
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "MirageGaogamon",
                 "method": "MIrage Soul"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultra",
         "cardLevel": 7
     },
@@ -30295,12 +29250,8 @@ const DIGIMON_DB = [
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Arbormon",
@@ -30319,81 +29270,57 @@ const DIGIMON_DB = [
     {
         "id": "",
         "name": "Ravemon Burst",
-        "types": [
-
-        ],
+        "types": [],
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Ravemon",
                 "method": "Raven Soul"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultra",
         "cardLevel": 7
     },
     {
         "id": "",
         "name": "Rosemon Burst",
-        "types": [
-
-        ],
+        "types": [],
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Rosemon",
                 "method": "Rose Soul"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultra",
         "cardLevel": 7
     },
     {
         "id": "",
         "name": "ShineGreymon Burst",
-        "types": [
-
-        ],
+        "types": [],
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "ShineGreymon",
                 "method": "Shine Soul"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Ultra",
         "cardLevel": 7
     },
@@ -30407,12 +29334,8 @@ const DIGIMON_DB = [
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Fairymon",
@@ -30431,27 +29354,19 @@ const DIGIMON_DB = [
     {
         "id": "",
         "name": "Vritamon",
-        "types": [
-
-        ],
+        "types": [],
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
+        "moves": [],
+        "locations": [],
         "prev": [
             {
                 "name": "Agnimon",
                 "method": "Salamander Break  Flame Storm"
             }
         ],
-        "next": [
-
-        ],
+        "next": [],
         "stage": "Hybrid",
         "cardLevel": 4
     },
@@ -30465,18 +29380,10 @@ const DIGIMON_DB = [
         "ability": "",
         "hiddenAbility": "",
         "evoMove": "",
-        "moves": [
-
-        ],
-        "locations": [
-
-        ],
-        "prev": [
-
-        ],
-        "next": [
-
-        ],
+        "moves": [],
+        "locations": [],
+        "prev": [],
+        "next": [],
         "stage": "Mega",
         "cardLevel": 6
     }

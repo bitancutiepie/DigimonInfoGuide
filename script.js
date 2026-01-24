@@ -1573,6 +1573,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    if (clearTeamBtn) {
+        clearTeamBtn.addEventListener('click', () => {
+            window.showCustomConfirm('Clear all Digimon from your team?', () => {
+                saveTeam([]);
+                renderTeamModal();
+                renderFloatingTeam();
+                renderList();
+                showToast('Team cleared!');
+            });
+        });
+    }
+
     // --- Custom Confirmation Logic ---
     const confirmModal = document.getElementById('confirmModal');
     const confirmMessage = document.getElementById('confirmMessage');
@@ -1598,16 +1610,6 @@ document.addEventListener('DOMContentLoaded', () => {
         confirmNo.addEventListener('click', () => {
             confirmModal.classList.add('hidden');
             onConfirmCallback = null;
-        });
-    }
-
-    if (clearTeamBtn) {
-        clearTeamBtn.addEventListener('click', () => {
-            showCustomConfirm('Are you sure you want to clear your entire team?', () => {
-                saveTeam([]);
-                renderTeamModal();
-                renderList();
-            });
         });
     }
 
