@@ -218,7 +218,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Using first letter or placeholder as we don't have images
                 slot.innerHTML = `
                     <button class="ft-remove-btn" onclick="event.stopPropagation(); toggleTeam('${name.replace(/'/g, "\\'")}')">×</button>
-                    <div class="ft-img-placeholder" title="${name}">${name}</div>
+                    <div class="ft-profile-image-container">
+                        <img 
+                            src="${getImageUrl(name)}" 
+                            alt="${name}" 
+                            class="ft-profile-image"
+                            data-name="${name.replace(/'/g, "\\'")}"
+                            onerror="handleImageError(this, '${name.replace(/'/g, "\\'")}');"
+                            loading="lazy"
+                        />
+                    </div>
                 `;
                 slot.onclick = () => window.openDigimonDetail(name);
             } else {
@@ -257,9 +266,20 @@ document.addEventListener('DOMContentLoaded', () => {
             // Render Card
             const card = document.createElement('div');
             card.className = 'team-member-card';
+            const imageUrl = getImageUrl(name);
             card.innerHTML = `
                 <button class="team-remove-btn" onclick="toggleTeam('${name.replace(/'/g, "\\'")}')">×</button>
-                <div class="digimon-name">${d.name}</div>
+                <div class="digimon-profile-image-container" style="width: 70px; height: 70px; margin: 0 auto 0.5rem; border-width: 2px;">
+                    <img 
+                        src="${imageUrl}" 
+                        alt="${d.name}" 
+                        class="digimon-profile-image"
+                        data-name="${name.replace(/'/g, "\\'")}"
+                        onerror="handleImageError(this, '${name.replace(/'/g, "\\'")}');"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="digimon-name" style="font-size: 0.9rem;">${d.name}</div>
                 ${renderStageBadge(d.name)}
                 <div class="digimon-types" style="justify-content:center;">${renderTypeBadges(d.types)}</div>
             `;
@@ -390,6 +410,74 @@ document.addEventListener('DOMContentLoaded', () => {
         return `<span class="stage-badge ${stageColorClass(d.stage)}" style="font-size:0.5rem; padding:0.15rem 0.4rem; margin-bottom:0.25rem;">${d.stage} • Lv ${d.cardLevel || '?'}</span>`;
     }
 
+    // Image source configurations - multiple fallbacks for maximum coverage
+    const IMAGE_SOURCES = {
+        // Primary: Official Digimon Reference Book (Japanese)
+        digimonNet: (mappedName) => `https://digimon.net/cimages/digimon/${mappedName}.jpg`,
+
+        // Secondary: Digimon API (uses English names)
+        digimonApi: (name) => `https://digimon-api.com/images/digimon_sprites/${encodeURIComponent(name)}.png`,
+
+        // Tertiary: Wikimon (uses English names, various formats)
+        wikimon: (name) => `https://wikimon.net/images/${name.charAt(0).toLowerCase()}/${name.replace(/\s+/g, '_')}.jpg`,
+
+        // Quaternary: Digimon API alternate format
+        digimonApiAlt: (name) => `https://digi-api.com/images/digimon/w/${encodeURIComponent(name)}.png`,
+    };
+
+    // Get the mapped name for official reference book
+    function getMappedName(name) {
+        const lowerName = name.toLowerCase();
+
+        // Check the reference map first
+        if (window.REFERENCE_IMAGE_MAP && window.REFERENCE_IMAGE_MAP[lowerName]) {
+            return window.REFERENCE_IMAGE_MAP[lowerName];
+        }
+
+        // Fallback: normalize the name
+        return lowerName
+            .replace(/\s+/g, '')
+            .replace(/[\[\]\(\)]/g, '')
+            .replace(/[^a-z0-9-]/g, '');
+    }
+
+    // Get primary image URL
+    function getImageUrl(name) {
+        const mappedName = getMappedName(name);
+        return IMAGE_SOURCES.digimonNet(mappedName);
+    }
+
+    // Get all fallback URLs for a Digimon
+    function getFallbackUrls(name) {
+        const mappedName = getMappedName(name);
+        return [
+            IMAGE_SOURCES.digimonNet(mappedName),
+            IMAGE_SOURCES.digimonApi(name),
+            IMAGE_SOURCES.digimonApiAlt(name),
+            IMAGE_SOURCES.wikimon(name),
+        ];
+    }
+
+    // Handle image load error - try next source
+    window.handleImageError = function (img, name) {
+        const fallbacks = getFallbackUrls(name);
+        const currentSrc = img.src;
+        const currentIndex = fallbacks.findIndex(url => currentSrc.includes(url.split('/').pop().split('.')[0]));
+
+        // Try next fallback source
+        for (let i = currentIndex + 1; i < fallbacks.length; i++) {
+            if (fallbacks[i] !== currentSrc) {
+                img.src = fallbacks[i];
+                return;
+            }
+        }
+
+        // All sources failed - show placeholder
+        img.style.display = 'none';
+        img.parentElement.classList.add('image-failed');
+    };
+
+
     // Build full evolution tree from a starting point
     function buildEvoTree(startDigi, visited = new Set()) {
         if (!startDigi || visited.has(startDigi.name)) return null;
@@ -421,6 +509,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!node) return '';
 
         const methodBadge = node.method ? `<div class="evo-method-label">${node.method}</div>` : '';
+        const imageUrl = getImageUrl(node.name);
 
         let childrenHtml = '';
         if (node.children && node.children.length > 0) {
@@ -441,6 +530,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="evo-node-block">
                         ${methodBadge}
                         <div class="evo-card-h" onclick="openDigimonDetail('${node.name.replace(/'/g, "\\'")}')">
+                            <div class="evo-hover-preview">
+                                <img 
+                                    src="${imageUrl}" 
+                                    alt="${node.name}" 
+                                    data-name="${node.name.replace(/'/g, "\\'")}"
+                                    onerror="handleImageError(this, '${node.name.replace(/'/g, "\\'")}');"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="evo-profile-image-container">
+                                <img 
+                                    src="${imageUrl}" 
+                                    alt="${node.name}" 
+                                    class="evo-profile-image"
+                                    data-name="${node.name.replace(/'/g, "\\'")}"
+                                    onerror="handleImageError(this, '${node.name.replace(/'/g, "\\'")}');"
+                                    loading="lazy"
+                                />
+                            </div>
                             <div class="evo-card-name">${node.name}</div>
                             ${renderStageBadge(node.name)}
                             <div class="evo-card-types">${renderTypeBadges(node.types)}</div>
@@ -604,9 +712,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const stageClass = digi.stage ? stageColorClass(digi.stage) : '';
             const stageHtml = stageText ? `<span class="stage-badge ${stageClass}">${stageText}</span>` : '';
 
+            const imageUrl = getImageUrl(digi.name);
+
             card.innerHTML = `
                 <div class="team-icon ${teamClass}" onclick="event.stopPropagation(); toggleTeam('${digi.name.replace(/'/g, "\\'")}')" title="Add to Team">${teamIconSvg}</div>
                 <div class="fav-icon ${favClass}" onclick="event.stopPropagation(); toggleFavorite('${digi.name.replace(/'/g, "\\'")}')">★</div>
+                <div class="digimon-profile-image-container">
+                    <img 
+                        src="${imageUrl}" 
+                        alt="${digi.name}" 
+                        class="digimon-profile-image"
+                        data-name="${digi.name.replace(/'/g, "\\'")}"
+                        onerror="handleImageError(this, '${digi.name.replace(/'/g, "\\'")}');"
+                        loading="lazy"
+                    />
+                </div>
                 <div class="digimon-name">${digi.name}</div>
                 ${stageHtml}
                 <div class="digimon-types">${renderTypeBadges(digi.types)}</div>
@@ -641,7 +761,17 @@ document.addEventListener('DOMContentLoaded', () => {
         modalBody.innerHTML = `
             <div class="choice-container">
                 <div class="choice-header">
-                    <h2>${digi.name}</h2>
+                    <div class="digimon-profile-image-container" style="width: 120px; height: 120px; margin: 0 auto 1.5rem; border-width: 3px; box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);">
+                        <img 
+                            src="${getImageUrl(digi.name)}" 
+                            alt="${digi.name}" 
+                            class="digimon-profile-image"
+                            data-name="${digi.name.replace(/'/g, "\\'")}"
+                            onerror="handleImageError(this, '${digi.name.replace(/'/g, "\\'")}');"
+                            loading="lazy"
+                        />
+                    </div>
+                    <h2 style="margin-bottom: 0.5rem;">${digi.name}</h2>
                     <p>Select what you'd like to view</p>
                 </div>
                 <div class="choice-grid">
@@ -812,6 +942,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const typesHtml = renderTypeBadges(digi.types);
+        const imageUrl = getImageUrl(digi.name);
 
         // Navigation Bar
         const backBtnHtml = modalHistory.length > 1
@@ -853,7 +984,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (digi.prev && digi.prev.length > 0) {
             prevHtml = '<div class="evo-chain">' + digi.prev.map(p => `
                 <div class="evo-card" onclick="openDigimonDetail('${p.name.replace(/'/g, "\\'")}')">
+                    <div class="evo-hover-preview">
+                        <img 
+                            src="${getImageUrl(p.name)}" 
+                            alt="${p.name}" 
+                            data-name="${p.name.replace(/'/g, "\\'")}"
+                            onerror="handleImageError(this, '${p.name.replace(/'/g, "\\'")}');"
+                            loading="lazy"
+                        />
+                    </div>
                     <div style="display:flex; flex-direction:column; align-items:center;">
+                        <div class="evo-profile-image-container" style="margin-bottom:0.25rem;">
+                            <img 
+                                src="${getImageUrl(p.name)}" 
+                                alt="${p.name}" 
+                                class="evo-profile-image"
+                                data-name="${p.name.replace(/'/g, "\\'")}"
+                                onerror="handleImageError(this, '${p.name.replace(/'/g, "\\'")}');"
+                                loading="lazy"
+                            />
+                        </div>
                         <span class="evo-card-name">${p.name}</span>
                         ${renderStageBadge(p.name)}
                     </div>
@@ -870,9 +1020,28 @@ document.addEventListener('DOMContentLoaded', () => {
         if (digi.next && digi.next.length > 0) {
             nextHtml = '<div class="evo-chain">' + digi.next.map(n => `
                 <div class="evo-card" onclick="openDigimonDetail('${n.name.replace(/'/g, "\\'")}')">
+                    <div class="evo-hover-preview">
+                        <img 
+                            src="${getImageUrl(n.name)}" 
+                            alt="${n.name}" 
+                            data-name="${n.name.replace(/'/g, "\\'")}"
+                            onerror="handleImageError(this, '${n.name.replace(/'/g, "\\'")}');"
+                            loading="lazy"
+                        />
+                    </div>
                     <span class="evo-card-method clickable-method" onclick="event.stopPropagation(); copyToClipboard('${n.method || 'No info'}')" title="Click to copy">${n.method || 'No info in Discord'}</span>
                     <span class="evo-card-arrow">→</span>
                     <div style="display:flex; flex-direction:column; align-items:center;">
+                        <div class="evo-profile-image-container" style="margin-bottom:0.25rem;">
+                            <img 
+                                src="${getImageUrl(n.name)}" 
+                                alt="${n.name}" 
+                                class="evo-profile-image"
+                                data-name="${n.name.replace(/'/g, "\\'")}"
+                                onerror="handleImageError(this, '${n.name.replace(/'/g, "\\'")}');"
+                                loading="lazy"
+                            />
+                        </div>
                        <span class="evo-card-name">${n.name}</span>
                        ${renderStageBadge(n.name)}
                     </div>
@@ -903,16 +1072,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modalBody.innerHTML = `
             <div class="modal-nav-bar">${backBtnHtml}</div>
-            <div class="modal-header digimon-detail-header">
-                <div class="header-content" style="display: flex; flex-direction: column; align-items: flex-start;">
-                    <div style="display:flex; align-items:center; width:100%; justify-content:space-between;">
-                        <h2>${digi.name}</h2>
-                        ${teamBtnHtml}
-                    </div>
-                    ${stageText}
-                    <div class="digimon-types" style="justify-content: flex-start;">${typesHtml}</div>
+            <div class="modal-header digimon-detail-header" style="display: flex; gap: 1.5rem; align-items: center;">
+                <div class="digimon-profile-image-container" style="width: 110px; height: 110px; margin: 0; flex-shrink: 0; border-width: 3px; box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);">
+                    <img 
+                        src="${imageUrl}" 
+                        alt="${digi.name}" 
+                        class="digimon-profile-image"
+                        data-name="${digi.name.replace(/'/g, "\\'")}"
+                        onerror="handleImageError(this, '${digi.name.replace(/'/g, "\\'")}');"
+                        loading="lazy"
+                    />
                 </div>
-                ${abilitiesHtml}
+                <div style="flex-grow: 1;">
+                    <div class="header-content" style="display: flex; flex-direction: column; align-items: flex-start;">
+                        <div style="display:flex; align-items:center; width:100%; justify-content:space-between; margin-bottom: 0.5rem;">
+                            <h2 style="margin: 0; line-height: 1;">${digi.name}</h2>
+                            ${teamBtnHtml}
+                        </div>
+                        ${stageText}
+                        <div class="digimon-types" style="justify-content: flex-start; margin-bottom: 0.5rem;">${typesHtml}</div>
+                    </div>
+                    ${abilitiesHtml}
+                </div>
             </div>
             
             ${evoMoveHtml}
@@ -975,6 +1156,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const types = digi ? digi.types : [];
             return `
                         <div class="loc-digimon-card" onclick="openDigimonDetail('${name.replace(/'/g, "\\'")}')">
+                            <div class="evo-hover-preview">
+                                <img 
+                                    src="${getImageUrl(name)}" 
+                                    alt="${name}" 
+                                    data-name="${name.replace(/'/g, "\\'")}"
+                                    onerror="handleImageError(this, '${name.replace(/'/g, "\\'")}');"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="digimon-profile-image-container" style="width: 60px; height: 60px; margin: 0 auto 0.5rem; border-width: 2px;">
+                                <img 
+                                    src="${getImageUrl(name)}" 
+                                    alt="${name}" 
+                                    class="digimon-profile-image"
+                                    data-name="${name.replace(/'/g, "\\'")}"
+                                    onerror="handleImageError(this, '${name.replace(/'/g, "\\'")}');"
+                                    loading="lazy"
+                                />
+                            </div>
                             <div class="digimon-name">${name}</div>
                             <div class="digimon-types">${renderTypeBadges(types)}</div>
                         </div>
@@ -1167,9 +1367,28 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement('div');
             card.className = 'type-result-card';
             card.innerHTML = `
-    <div class="result-name">${digi.name}</div>
-        <div class="result-types">${renderTypeBadges(digi.types)}</div>
-`;
+                <div class="evo-hover-preview">
+                    <img 
+                        src="${getImageUrl(digi.name)}" 
+                        alt="${digi.name}" 
+                        data-name="${digi.name.replace(/'/g, "\\'")}"
+                        onerror="handleImageError(this, '${digi.name.replace(/'/g, "\\'")}');"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="digimon-profile-image-container" style="width: 60px; height: 60px; margin: 0 auto 0.5rem; border-width: 2px;">
+                    <img 
+                        src="${getImageUrl(digi.name)}" 
+                        alt="${digi.name}" 
+                        class="digimon-profile-image"
+                        data-name="${digi.name.replace(/'/g, "\\'")}"
+                        onerror="handleImageError(this, '${digi.name.replace(/'/g, "\\'")}');"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="result-name">${digi.name}</div>
+                <div class="result-types">${renderTypeBadges(digi.types)}</div>
+            `;
             card.onclick = () => {
                 // Keep modal open but show detail? 
                 // Detailed modal usually overlays. 
@@ -1326,4 +1545,124 @@ document.addEventListener('DOMContentLoaded', () => {
             if (locsBtn) locsBtn.click();
         });
     }
+
+    // --- Missing Images Scanner ---
+    const findMissingImagesBtn = document.getElementById('findMissingImagesBtn');
+    const missingImagesModal = document.getElementById('missingImagesModal');
+
+    if (findMissingImagesBtn) {
+        findMissingImagesBtn.addEventListener('click', () => {
+            missingImagesModal.classList.remove('hidden');
+        });
+    }
+
+    // Store missing images list globally
+    window.missingImagesList = [];
+
+    // Scan for missing images
+    window.scanForMissingImages = async function () {
+        const statusEl = document.getElementById('missingImagesStatus');
+        const listEl = document.getElementById('missingImagesList');
+        const copyBtn = document.getElementById('copyMissingBtn');
+        const exportBtn = document.getElementById('exportMissingBtn');
+        const scanBtn = document.getElementById('scanMissingBtn');
+
+        window.missingImagesList = [];
+        listEl.innerHTML = '';
+        scanBtn.disabled = true;
+        scanBtn.textContent = '⏳ Scanning...';
+
+        const allDigimon = Array.from(digimonMap.values());
+        let checked = 0;
+        let missing = 0;
+
+        statusEl.innerHTML = `Scanning ${allDigimon.length} Digimon... <br><span style="font-size:0.8em;">This may take a minute.</span>`;
+
+        // Test each Digimon image
+        for (const digi of allDigimon) {
+            checked++;
+            statusEl.innerHTML = `Checking ${checked}/${allDigimon.length}: ${digi.name}`;
+
+            const imageLoaded = await testImageLoad(digi.name);
+
+            if (!imageLoaded) {
+                missing++;
+                window.missingImagesList.push(digi.name);
+
+                // Add to list in real-time
+                const item = document.createElement('div');
+                item.style.cssText = 'padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between;';
+                item.innerHTML = `
+                    <span>${digi.name}</span>
+                    <span style="color: var(--text-secondary); font-size: 0.8em;">${digi.stage || 'Unknown'}</span>
+                `;
+                listEl.appendChild(item);
+            }
+        }
+
+        // Done scanning
+        statusEl.innerHTML = `<strong>Scan Complete!</strong><br>Found <span style="color: #ff6b6b;">${missing}</span> Digimon with missing images out of ${allDigimon.length} total.`;
+
+        scanBtn.disabled = false;
+        scanBtn.textContent = '🔍 Scan Again';
+
+        if (missing > 0) {
+            copyBtn.style.display = 'inline-flex';
+            exportBtn.style.display = 'inline-flex';
+        }
+    };
+
+    // Test if an image loads from any source
+    async function testImageLoad(name) {
+        const fallbacks = getFallbackUrls(name);
+
+        for (const url of fallbacks) {
+            try {
+                const loaded = await new Promise((resolve) => {
+                    const img = new Image();
+                    img.onload = () => resolve(true);
+                    img.onerror = () => resolve(false);
+                    img.src = url;
+
+                    // Timeout after 3 seconds
+                    setTimeout(() => resolve(false), 3000);
+                });
+
+                if (loaded) return true;
+            } catch {
+                continue;
+            }
+        }
+
+        return false;
+    }
+
+    // Copy missing list to clipboard
+    window.copyMissingList = async function () {
+        const text = window.missingImagesList.join('\n');
+        try {
+            await navigator.clipboard.writeText(text);
+            showToast(`Copied ${window.missingImagesList.length} names to clipboard!`);
+        } catch (err) {
+            console.error('Failed to copy:', err);
+            showToast('Failed to copy. Try download instead.');
+        }
+    };
+
+    // Export missing list as text file
+    window.exportMissingList = function () {
+        const text = window.missingImagesList.join('\n');
+        const blob = new Blob([text], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'missing_digimon_images.txt';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        showToast(`Downloaded list of ${window.missingImagesList.length} Digimon!`);
+    };
 });

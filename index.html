@@ -198,6 +198,15 @@
                         </svg>
                         Show Favorites
                     </button>
+                    <button id="findMissingImagesBtn" class="filter-btn" title="Find Digimon with missing images">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                        Missing Images
+                    </button>
                     <button id="resetAllBtn" class="reset-all-btn" title="Reset all filters">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -341,6 +350,37 @@
             </div>
         </div>
 
+        <!-- Missing Images Modal -->
+        <div id="missingImagesModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal"
+                    onclick="document.getElementById('missingImagesModal').classList.add('hidden')">&times;</span>
+                <div class="modal-header">
+                    <h2>Missing Images Report</h2>
+                </div>
+                <div id="missingImagesStatus" style="padding: 1rem; text-align: center; color: var(--accent);">
+                    Click "Scan All" to check all Digimon images...
+                </div>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1rem;">
+                    <button id="scanMissingBtn" class="filter-btn" onclick="window.scanForMissingImages()">
+                        🔍 Scan All
+                    </button>
+                    <button id="copyMissingBtn" class="filter-btn" onclick="window.copyMissingList()"
+                        style="display: none;">
+                        📋 Copy List
+                    </button>
+                    <button id="exportMissingBtn" class="filter-btn" onclick="window.exportMissingList()"
+                        style="display: none;">
+                        💾 Download
+                    </button>
+                </div>
+                <div id="missingImagesList"
+                    style="max-height: 400px; overflow-y: auto; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px;">
+                    <!-- Missing images will be listed here -->
+                </div>
+            </div>
+        </div>
+
         <!-- Mobile Bottom Navigation -->
         <nav class="mobile-bottom-nav">
             <button class="nav-item" id="navTop" title="Scroll to Top">
@@ -382,6 +422,7 @@
         </nav>
     </div>
 
+    <script src="reference_map.js"></script>
     <script src="locations_data.js"></script>
     <script src="guide_content.js"></script>
     <script src="script.js"></script>

@@ -410,6 +410,269 @@ body::before {
     border-color: var(--accent);
 }
 
+/* Digimon Profile Image Styles */
+.digimon-profile-image-container {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 0.75rem;
+    border-radius: 4px;
+    overflow: visible;
+    /* For corner brackets */
+    border: 1px solid var(--accent);
+    background-color: rgba(10, 26, 31, 1);
+    background-image:
+        linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+    background-size: 10px 10px;
+    box-shadow:
+        0 0 15px rgba(0, 242, 255, 0.1),
+        2px 2px 0 rgba(0, 242, 255, 0.4);
+    /* Solid cube edge */
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.digimon-profile-image-container::before,
+.digimon-profile-image-container::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--accent);
+    z-index: 5;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.digimon-profile-image-container::before {
+    top: -4px;
+    left: -4px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.digimon-profile-image-container::after {
+    bottom: -4px;
+    right: -4px;
+    border-left: none;
+    border-top: none;
+}
+
+.digimon-card:hover .digimon-profile-image-container {
+    border-color: var(--accent);
+    box-shadow:
+        0 0 25px rgba(0, 242, 255, 0.4),
+        0 0 50px rgba(0, 242, 255, 0.2),
+        inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.digimon-card:hover .digimon-profile-image-container::before,
+.digimon-card:hover .digimon-profile-image-container::after {
+    opacity: 1;
+    width: 15px;
+    height: 15px;
+}
+
+.digimon-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.3s ease;
+    border-radius: 2px;
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+}
+
+.digimon-card:hover .digimon-profile-image {
+    transform: scale(1.1);
+}
+
+/* Fallback for failed images */
+.digimon-profile-image-container.image-failed {
+    background: linear-gradient(135deg, rgba(15, 37, 48, 0.9), rgba(10, 26, 31, 0.9));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.digimon-profile-image-container.image-failed::after {
+    content: '?';
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--text-secondary);
+    opacity: 0.5;
+}
+
+/* Evolution Tree Profile Images */
+.evo-profile-image-container {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 0.5rem;
+    border-radius: 4px;
+    overflow: visible;
+    border: 1px solid var(--accent);
+    background-color: rgba(10, 26, 31, 1);
+    background-image:
+        linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+    background-size: 8px 8px;
+    box-shadow:
+        0 0 10px rgba(0, 242, 255, 0.1),
+        1px 1px 0 rgba(0, 242, 255, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.evo-profile-image-container::before,
+.evo-profile-image-container::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 1.5px solid var(--accent);
+    z-index: 5;
+    opacity: 0.5;
+}
+
+.evo-profile-image-container::before {
+    top: -2px;
+    left: -2px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.evo-profile-image-container::after {
+    bottom: -2px;
+    right: -2px;
+    border-left: none;
+    border-top: none;
+}
+
+.evo-card-h:hover .evo-profile-image-container {
+    border-color: var(--accent);
+    box-shadow:
+        0 0 20px rgba(0, 242, 255, 0.4),
+        0 0 40px rgba(0, 242, 255, 0.2);
+}
+
+.evo-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.3s ease;
+    border-radius: 2px;
+}
+
+.evo-card-h:hover .evo-profile-image {
+    transform: scale(1.1);
+}
+
+.evo-profile-image-container.image-failed {
+    background: linear-gradient(135deg, rgba(15, 37, 48, 0.9), rgba(10, 26, 31, 0.9));
+}
+
+.evo-profile-image-container.image-failed::after {
+    content: '?';
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Evolution Hover Preview - Large Popup */
+.evo-card-h {
+    position: relative;
+    /* Ensure absolute children position relative to this */
+}
+
+.evo-hover-preview {
+    display: none;
+    position: absolute;
+    bottom: 120%;
+    /* Position above the card */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background-color: rgba(10, 26, 31, 1);
+    background-image:
+        linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    /* Cube style */
+    box-shadow:
+        0 0 40px rgba(0, 242, 255, 0.5),
+        3px 3px 0 rgba(0, 242, 255, 0.5),
+        /* Depth edge */
+        inset 0 0 30px rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    /* High z-index to overlap other elements */
+    pointer-events: none;
+    /* Don't interfere with mouse events */
+    padding: 10px;
+    /* Internal frame padding */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.evo-hover-preview::before,
+.evo-hover-preview::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--accent);
+    z-index: 10;
+}
+
+.evo-hover-preview::before {
+    top: -5px;
+    left: -5px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.evo-hover-preview::after {
+    bottom: -5px;
+    right: -5px;
+    border-left: none;
+    border-top: none;
+}
+
+.evo-card-h:hover .evo-hover-preview {
+    display: block;
+    animation: evoPopIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.evo-hover-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+/* Animation for the popup */
+@keyframes evoPopIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px) scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+}
+
+
 .digimon-name {
     font-family: var(--font-heading);
     font-size: 1.15rem;
@@ -1026,9 +1289,13 @@ body::before {
     width: 60px;
     height: 60px;
     aspect-ratio: 1;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    border: 1px dashed rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image:
+        linear-gradient(rgba(0, 242, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 255, 0.03) 1px, transparent 1px);
+    background-size: 8px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1037,6 +1304,7 @@ body::before {
     position: relative;
     cursor: pointer;
     transition: all 0.2s;
+    overflow: visible;
 }
 
 .ft-slot:hover {
@@ -1083,6 +1351,54 @@ body::before {
     background: rgba(0, 242, 255, 0.1);
 }
 
+.ft-profile-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+}
+
+.ft-profile-image-container::before,
+.ft-profile-image-container::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 1.5px solid var(--accent);
+    z-index: 5;
+    opacity: 0.6;
+}
+
+.ft-profile-image-container::before {
+    top: -2px;
+    left: -2px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.ft-profile-image-container::after {
+    bottom: -2px;
+    right: -2px;
+    border-left: none;
+    border-top: none;
+}
+
+.ft-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ft-slot:hover .ft-profile-image {
+    transform: scale(1.1);
+}
+
 .ft-slot .ft-img-placeholder {
     width: 100%;
     height: 100%;
@@ -1104,6 +1420,7 @@ body::before {
     text-shadow: 0 0 8px var(--accent);
     transform: scale(1.1);
 }
+
 
 /* Add to Team Icon Styles - Updated Position */
 .team-icon {
@@ -1209,7 +1526,16 @@ body::before {
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     gap: 1rem;
+    position: relative;
+    /* Anchor for hover preview */
 }
+
+/* Enable hover preview for evo-card */
+.evo-card:hover .evo-hover-preview {
+    display: block;
+    animation: evoPopIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
 
 .evo-card:hover {
     background: rgba(20, 56, 69, 0.6);
@@ -1619,6 +1945,7 @@ body::before {
 .loc-digimon-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
+    position: relative;
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
@@ -1629,6 +1956,12 @@ body::before {
     justify-content: center;
     min-height: 100px;
     word-break: break-word;
+}
+
+/* Enable hover preview for location cards */
+.loc-digimon-card:hover .evo-hover-preview {
+    display: block;
+    animation: evoPopIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .loc-digimon-card .digimon-name {
