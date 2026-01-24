@@ -1625,7 +1625,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     img.src = url;
 
                     // Timeout after 3 seconds
-                    setTimeout(() => resolve(false), 3000);
+                    setTimeout(() => resolve(false), 2000);
                 });
 
                 if (loaded) return true;
