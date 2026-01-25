@@ -286,5 +286,14 @@ window.EVO_REQUIREMENTS = {
     "Tenrin-Ittoryu": {
         type: "Move",
         description: "Must master the Tenrin-Ittoryu kenjutsu style."
+    },
+    "Famis": {
+        type: "Item",
+        description: "A mysterious item used for Ceresmon's evolution."
+    },
+    "New Mauvile": {
+        type: "Location",
+        description: "A specialized location/item required for BlitzGreymon."
     }
+
 };

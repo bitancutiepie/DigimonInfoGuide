@@ -67,11 +67,37 @@
     }
 
     /* Hide redundant floating elements on mobile */
-    .floating-team-widget,
     .back-to-top,
     .floating-btn {
         display: none !important;
     }
+
+    .floating-team-widget {
+        bottom: 85px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 95% !important;
+        max-width: 400px !important;
+        z-index: 1500 !important;
+    }
+
+    .ft-slot {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    .ft-grid {
+        gap: 0.5rem !important;
+        padding: 0.75rem !important;
+    }
+
+    .ft-remove-btn {
+        opacity: 1 !important;
+        transform: translate(0, 0) !important;
+    }
+
+
+
 
     /* Padding for navbar */
     .app-container {

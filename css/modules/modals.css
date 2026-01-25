@@ -640,7 +640,18 @@
     backdrop-filter: blur(8px);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
+
+.floating-team-widget.minimized .ft-grid {
+    display: none;
+}
+
+.floating-team-widget.minimized {
+    border-bottom: none;
+    border-radius: 12px;
+}
+
 
 .floating-team-widget.hidden {
     display: none;
@@ -648,16 +659,51 @@
 
 .ft-header {
     background: rgba(0, 242, 255, 0.1);
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    user-select: none;
 }
 
-.ft-header:hover {
+.ft-header:active {
     background: rgba(0, 242, 255, 0.2);
+}
+
+.ft-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.ft-control-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ft-control-btn:hover {
+    background: rgba(0, 242, 255, 0.2);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.floating-team-widget.minimized .collapse-icon {
+    transform: rotate(180deg);
+}
+
+.collapse-icon {
+    transition: transform 0.3s;
 }
 
 .ft-title {
@@ -666,7 +712,11 @@
     font-size: 0.9rem;
     color: var(--accent);
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
+
 
 .ft-grid {
     display: flex;

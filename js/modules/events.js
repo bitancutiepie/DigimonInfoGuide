@@ -42,6 +42,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // Debounced Search
     const debouncedRender = debounce(() => { renderList(); }, 300);
 
+    // Floating Team Widget Logic
+    const floatingWidget = document.getElementById('floatingTeamWidget');
+    const collapseTeamBtn = document.getElementById('collapseTeamBtn');
+
+    if (floatingWidget && collapseTeamBtn) {
+        collapseTeamBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            floatingWidget.classList.toggle('minimized');
+            // Save state if desired, but for now just toggle
+        });
+
+        // Header click also toggles if on mobile to make it easier
+        const ftHeader = floatingWidget.querySelector('.ft-header');
+        if (ftHeader) {
+            ftHeader.addEventListener('click', () => {
+                if (window.innerWidth <= 600) {
+                    floatingWidget.classList.toggle('minimized');
+                }
+            });
+        }
+
+        // Auto-minimize on mobile by default
+        if (window.innerWidth <= 600) {
+            floatingWidget.classList.add('minimized');
+        }
+    }
+
+
     if (searchInput) {
         searchInput.addEventListener('input', () => {
             debouncedRender();
