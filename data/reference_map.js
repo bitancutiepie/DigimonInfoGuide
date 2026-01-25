@@ -477,7 +477,7 @@ window.REFERENCE_IMAGE_MAP = {
     "pomumon": "pomumon",
     "proganomon": "proganomon",
     "proximamon": "proximamon",
-    "pteromon": "pteranomon",
+    "pteromon": "PHOTO NOT AVAILABLE",
     "pulsemon": "pulsemon",
     "pumpmon": "pumpmon",
     "punkmon": "punkmon",

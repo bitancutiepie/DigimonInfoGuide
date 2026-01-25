@@ -110,6 +110,7 @@ const FANDOM_DIRECT_IMAGES = {
     "rokusho": "https://static.wikia.nocookie.net/digimon/images/a/ad/Rokusho_i.png/revision/latest?cb=20221109045412",
     "gaioumonittomode": "https://static.wikia.nocookie.net/digimon/images/1/13/Gaiomon_Fierce_Blade_Mode_b.jpg/revision/latest?cb=20210630041844",
     "gaioumon itto mode": "https://static.wikia.nocookie.net/digimon/images/1/13/Gaiomon_Fierce_Blade_Mode_b.jpg/revision/latest?cb=20210630041844",
+    "pteromon": "https://static.wikia.nocookie.net/digimon/images/2/27/Pteromon_b.jpg/revision/latest?cb=20240119163838",
 };
 
 // Image source configurations - multiple fallbacks for maximum coverage
