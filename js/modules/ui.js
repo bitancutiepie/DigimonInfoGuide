@@ -448,6 +448,7 @@ function closeAllModals() {
     const locationDetailModal = document.getElementById('locationDetailModal');
     const teamModal = document.getElementById('teamModal');
     const patchModal = document.getElementById('patchNotesModal');
+    const gameNewsModal = document.getElementById('gameNewsModal');
     const battleModal = document.getElementById('battleModal');
 
     if (detailModal) detailModal.classList.add('hidden');
@@ -456,6 +457,8 @@ function closeAllModals() {
     if (locationDetailModal) locationDetailModal.classList.add('hidden');
     if (teamModal) teamModal.classList.add('hidden');
     if (patchModal) patchModal.classList.add('hidden');
+    if (patchModal) patchModal.classList.add('hidden');
+    if (gameNewsModal) gameNewsModal.classList.add('hidden');
     if (battleModal) battleModal.classList.add('hidden');
 
     modalHistory = [];

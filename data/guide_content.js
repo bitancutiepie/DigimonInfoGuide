@@ -1718,6 +1718,10 @@ const DIGIMON_DB = [
             {
                 "name": "Kimeramon",
                 "method": "Organic Data"
+            },
+            {
+                "name": "SkullGreymon",
+                "method": "Dark Data"
             }
         ],
         "stage": "Champion",
@@ -1852,6 +1856,10 @@ const DIGIMON_DB = [
             {
                 "name": "Omegamon",
                 "method": "Jogress"
+            },
+            {
+                "name": "VictoryGreymon",
+                "method": "Subspecies"
             }
         ],
         "stage": "Mega",
@@ -2281,6 +2289,10 @@ const DIGIMON_DB = [
             {
                 "name": "Omegamon",
                 "method": "Jogress"
+            },
+            {
+                "name": "Z'dGarurumon",
+                "method": "Subspecies"
             }
         ],
         "stage": "Mega",
@@ -2983,6 +2995,10 @@ const DIGIMON_DB = [
             {
                 "name": "Kimeramon",
                 "method": "Organic Data"
+            },
+            {
+                "name": "Metabee",
+                "method": "AW Data"
             }
         ],
         "stage": "Champion",
@@ -3229,6 +3245,10 @@ const DIGIMON_DB = [
             {
                 "name": "Kimeramon",
                 "method": "Organic Data"
+            },
+            {
+                "name": "Rokusho",
+                "method": "AW Data"
             }
         ],
         "stage": "Champion",
@@ -6163,6 +6183,10 @@ const DIGIMON_DB = [
             {
                 "name": "Stingmon",
                 "method": "Lv18"
+            },
+            {
+                "name": "Coatlmon",
+                "method": "Light Data"
             }
         ],
         "stage": "Rookie",
@@ -9553,6 +9577,10 @@ const DIGIMON_DB = [
             {
                 "name": "Yatagaramon",
                 "method": "Lv32"
+            },
+            {
+                "name": "Karatenmon",
+                "method": "Wind Data"
             }
         ],
         "stage": "Champion",
@@ -29386,5 +29414,176 @@ const DIGIMON_DB = [
         "next": [],
         "stage": "Mega",
         "cardLevel": 6
+    },
+    {
+        "id": "600",
+        "name": "Meicoomon",
+        "types": ["Chaos"],
+        "stage": "Champion",
+        "next": [{ "name": "Meicrackmon", "method": "Lv28" }],
+        "prev": [],
+        "cardLevel": 4
+    },
+    {
+        "id": "601",
+        "name": "Meicrackmon",
+        "types": ["Chaos"],
+        "stage": "Ultimate",
+        "next": [{ "name": "Rasielmon", "method": "Lv50" }, { "name": "Raguelmon", "method": "Darkness" }],
+        "prev": [{ "name": "Meicoomon", "method": "Lv28" }],
+        "cardLevel": 5
+    },
+    {
+        "id": "602",
+        "name": "Rasielmon",
+        "types": ["Holy"],
+        "stage": "Mega",
+        "next": [],
+        "prev": [{ "name": "Meicrackmon", "method": "Lv50" }],
+        "cardLevel": 6
+    },
+    {
+        "id": "603",
+        "name": "Gaioumon Itto Mode",
+        "types": ["Dragon", "Steel"],
+        "stage": "Burst Mode",
+        "next": [],
+        "prev": [{ "name": "Gaioumon", "method": "Tenrin-Ittoryu" }],
+        "cardLevel": 7
+    },
+    {
+        "id": "604",
+        "name": "Coatlmon",
+        "types": ["Light"],
+        "stage": "Armor",
+        "next": [{ "name": "Sandiramon", "method": "Lv50" }],
+        "prev": [{ "name": "Wormmon", "method": "Light Data" }],
+        "cardLevel": 4
+    },
+    {
+        "id": "605",
+        "name": "Sandiramon",
+        "types": ["Earth"],
+        "stage": "Ultimate",
+        "next": [{ "name": "Minervamon", "method": "Lv72" }],
+        "prev": [{ "name": "Coatlmon", "method": "Lv50" }],
+        "cardLevel": 5
+    },
+    {
+        "id": "606",
+        "name": "Minervamon",
+        "types": ["Olympian"],
+        "stage": "Mega",
+        "next": [{ "name": "Mervamon", "method": "Burst" }],
+        "prev": [{ "name": "Sandiramon", "method": "Lv72" }],
+        "cardLevel": 6
+    },
+    {
+        "id": "607",
+        "name": "Mervamon",
+        "types": ["Olympian"],
+        "stage": "Burst Mode",
+        "next": [],
+        "prev": [{ "name": "Minervamon", "method": "Burst" }],
+        "cardLevel": 7
+    },
+    {
+        "id": "608",
+        "name": "Karatenmon",
+        "types": ["Wind"],
+        "stage": "Ultimate",
+        "next": [{ "name": "Tengumon", "method": "Evolution" }],
+        "prev": [{ "name": "Peckmon", "method": "Wind Data" }],
+        "cardLevel": 5
+    },
+    {
+        "id": "609",
+        "name": "Tengumon",
+        "types": ["Wind", "Magic"],
+        "stage": "Mega",
+        "next": [],
+        "prev": [{ "name": "Karatenmon", "method": "Evolution" }],
+        "cardLevel": 6
+    },
+    {
+        "id": "610",
+        "name": "Seiten Gokuwmon",
+        "types": ["Fighter"],
+        "stage": "Mega",
+        "next": [],
+        "prev": [{ "name": "Gokuwmon", "method": "Evolution" }],
+        "cardLevel": 6
+    },
+    {
+        "id": "611",
+        "name": "VictoryGreymon",
+        "types": ["Dragon", "Fighter"],
+        "stage": "Mega",
+        "next": [],
+        "prev": [{ "name": "WarGreymon", "method": "Subspecies" }],
+        "cardLevel": 6
+    },
+    {
+        "id": "612",
+        "name": "Z'dGarurumon",
+        "types": ["Beast", "Machine"],
+        "stage": "Mega",
+        "next": [],
+        "prev": [{ "name": "MetalGarurumon", "method": "Subspecies" }],
+        "cardLevel": 6
+    },
+    {
+        "id": "613",
+        "name": "SkullGreymon",
+        "types": ["Undead"],
+        "stage": "Ultimate",
+        "next": [{ "name": "G-Erosion SkullGreymon", "method": "G-Cells" }],
+        "prev": [{ "name": "Greymon", "method": "Dark Data" }],
+        "cardLevel": 5
+    },
+    {
+        "id": "614",
+        "name": "Metabee",
+        "types": ["Machine"],
+        "stage": "Crossover",
+        "next": [{ "name": "Omedamon", "method": "Jogress" }],
+        "prev": [{ "name": "Kabuterimon", "method": "AW Data" }],
+        "cardLevel": 4
+    },
+    {
+        "id": "615",
+        "name": "Rokusho",
+        "types": ["Machine"],
+        "stage": "Crossover",
+        "next": [{ "name": "Omedamon", "method": "Jogress" }],
+        "prev": [{ "name": "Kuwagamon", "method": "AW Data" }],
+        "cardLevel": 4
+    },
+    {
+        "id": "616",
+        "name": "Omedamon",
+        "types": ["Machine"],
+        "stage": "Ultra",
+        "next": [],
+        "prev": [{ "name": "Metabee", "method": "Jogress" }, { "name": "Rokusho", "method": "Jogress" }],
+        "cardLevel": 7
+    },
+    {
+        "id": "617",
+        "name": "Cutemon",
+        "types": ["Fairy"],
+        "stage": "Rookie",
+        "next": [],
+        "prev": [],
+        "cardLevel": 3
+    },
+    {
+        "id": "618",
+        "name": "Gokuwmon",
+        "types": ["Fighter"],
+        "stage": "Ultimate",
+        "next": [{ "name": "Seiten Gokuwmon", "method": "Evolution" }],
+        "prev": [],
+        "cardLevel": 5
     }
 ];

@@ -145,6 +145,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Game News Modal
+    const gameNewsModal = document.getElementById('gameNewsModal');
+    const gameNewsBtn = document.getElementById('gameNewsBtn');
+    const closeGameNewsBtn = document.getElementById('closeGameNewsBtn');
+
+    if (gameNewsBtn) {
+        gameNewsBtn.addEventListener('click', () => {
+            closeAllModals();
+            if (gameNewsModal) gameNewsModal.classList.remove('hidden');
+        });
+    }
+
+    if (closeGameNewsBtn && gameNewsModal) {
+        closeGameNewsBtn.addEventListener('click', () => gameNewsModal.classList.add('hidden'));
+        gameNewsModal.addEventListener('click', (e) => {
+            if (e.target === gameNewsModal) gameNewsModal.classList.add('hidden');
+        });
+    }
+
     // Team Modal Logic
     const teamModal = document.getElementById('teamModal');
     const teamBtn = document.getElementById('teamPlannerBtn');
