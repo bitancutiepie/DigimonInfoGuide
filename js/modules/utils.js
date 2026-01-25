@@ -112,8 +112,8 @@ function renderStageBadge(digiName) {
     // Clean stage name (remove existing 'Lv' or 'Level' text to avoid duplication)
     const cleanStage = d.stage.replace(/(\s*-\s*)?Lvl?\.?\s*\d+/i, '').trim();
 
-    const levelText = d.cardLevel ? ` • Lv ${d.cardLevel}` : '';
-    return `<span class="stage-badge ${stageColorClass(d.stage)}" style="font-size:0.5rem; padding:0.15rem 0.4rem; margin-bottom:0.25rem;">${cleanStage}${levelText}</span>`;
+    const levelText = d.cardLevel ? ` - ${d.cardLevel}` : '';
+    return `<span class="badge-row"><span class="stage-badge ${stageColorClass(d.stage)}" style="font-size:0.5rem; padding:0.15rem 0.4rem; margin-bottom:0.25rem;">${cleanStage}${levelText}</span></span>`;
 }
 
 // --- Tree Helpers ---
@@ -175,27 +175,27 @@ function findRootAncestor(digi, visited = new Set()) {
     return digi;
 }
 
-// Test if an image loads from any source
+// Test if an image loads from any source (Local Only now)
 async function testImageLoad(name) {
     const fallbacks = getFallbackUrls(name);
+    if (!fallbacks.length) return false;
 
-    for (const url of fallbacks) {
-        try {
-            const loaded = await new Promise((resolve) => {
-                const img = new Image();
-                img.onload = () => resolve(true);
-                img.onerror = () => resolve(false);
-                img.src = url;
+    const url = fallbacks[0]; // Only one local URL now
 
-                // Timeout after 3 seconds
-                setTimeout(() => resolve(false), 2000);
-            });
+    try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 1000); // 1s timeout
 
-            if (loaded) return true;
-        } catch {
-            continue;
-        }
+        const response = await fetch(url, {
+            method: 'HEAD',
+            cache: 'no-cache', // Bypass cache to see if file actually exists
+            signal: controller.signal
+        });
+
+        clearTimeout(timeoutId);
+        return response.ok; // true if 200 OK
+    } catch (e) {
+        // If fetch fails or aborts, it's missing
+        return false;
     }
-
-    return false;
 }

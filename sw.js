@@ -1,35 +1,26 @@
-const CACHE_NAME = 'digimon-guider-v1';
+const CACHE_NAME = 'digimon-guider-v12';
 const ASSETS_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/css/styles.css',
-    '/css/modules/data_drops.css',
-    '/js/modules/state.js',
-    '/js/modules/utils.js',
-    '/js/modules/data.js',
-    '/js/modules/ui.js',
-    '/js/modules/battle.js',
-    '/js/modules/events.js',
-    '/js/script.js',
-    '/data/reference_map.js',
-    '/data/locations_data.js',
-    '/data/data_drops.js',
-    '/data/guide_content.js',
-    '/data/type_chart.js',
-    '/data/evo_requirements.js',
-    '/assets/banner.png'
+    '.',
+    'index.html',
+    'css/bundle.css',
+    'js/bundle.js?v=12',
+    'assets/banner.png',
+    'assets/appLogo.png',
+    'assets/bg.png'
 ];
 
-// Install Event
+// Install Event - Cache all core assets
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
+            console.log('SW: Pre-caching core assets');
             return cache.addAll(ASSETS_TO_CACHE);
         })
     );
+    self.skipWaiting();
 });
 
-// Activate Event
+// Activate Event - Clean up old caches
 self.addEventListener('activate', (event) => {
     event.waitUntil(
         caches.keys().then((keys) => {
@@ -38,39 +29,44 @@ self.addEventListener('activate', (event) => {
             );
         })
     );
+    self.clients.claim();
 });
 
-// Fetch Event - Stale-While-Revalidate Strategy for most, 
-// but specifically handle images with Cache-First
+// Fetch Event
 self.addEventListener('fetch', (event) => {
     const url = new URL(event.request.url);
 
-    // Cache images from any source
-    if (event.request.destination === 'image') {
+    // Filter out external API images from auto-caching to preserve storage if needed,
+    // but we actually WANT to cache them to avoid re-calls.
+    // However, our priority is LOCAL images now.
+
+    // 1. Cache-First Strategy for core assets and ALL images (local + external)
+    // This drastically reduces Edge Requests as it hits the network ONLY if missing from cache
+    if (ASSETS_TO_CACHE.includes(url.pathname) || event.request.destination === 'image') {
         event.respondWith(
             caches.match(event.request).then((cachedResponse) => {
-                if (cachedResponse) return cachedResponse;
+                if (cachedResponse) {
+                    return cachedResponse;
+                }
                 return fetch(event.request).then((networkResponse) => {
-                    return caches.open(CACHE_NAME).then((cache) => {
-                        cache.put(event.request, networkResponse.clone());
-                        return networkResponse;
-                    });
+                    // Cache only successful responses
+                    if (networkResponse && networkResponse.status === 200) {
+                        return caches.open(CACHE_NAME).then((cache) => {
+                            cache.put(event.request, networkResponse.clone());
+                            return networkResponse;
+                        });
+                    }
+                    return networkResponse;
                 });
             })
         );
         return;
     }
 
-    // Default Stale-While-Revalidate for other assets
+    // 2. Default strategy: Network-First for everything else
     event.respondWith(
-        caches.match(event.request).then((cachedResponse) => {
-            const networkFetch = fetch(event.request).then((networkResponse) => {
-                return caches.open(CACHE_NAME).then((cache) => {
-                    cache.put(event.request, networkResponse.clone());
-                    return networkResponse;
-                });
-            });
-            return cachedResponse || networkFetch;
+        fetch(event.request).catch(() => {
+            return caches.match(event.request);
         })
     );
 });

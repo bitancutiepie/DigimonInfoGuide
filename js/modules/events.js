@@ -610,4 +610,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
         showToast(`Downloaded list of ${window.missingImagesList.length} Digimon!`);
     };
+
+    // --- Improved Drag and Drop Logic for Team ---
+    const dropTargets = [
+        document.getElementById('floatingTeamWidget'),
+        document.getElementById('teamModal')
+    ];
+
+    dropTargets.forEach(target => {
+        if (!target) return;
+
+        // Use a counter to prevent flickering when moving over child elements
+        let targetDragCounter = 0;
+
+        target.addEventListener('dragenter', (e) => {
+            e.preventDefault();
+            targetDragCounter++;
+            target.classList.add('drag-over');
+        });
+
+        target.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'copy';
+        });
+
+        target.addEventListener('dragleave', (e) => {
+            targetDragCounter--;
+            if (targetDragCounter <= 0) {
+                targetDragCounter = 0;
+                target.classList.remove('drag-over');
+            }
+        });
+
+        target.addEventListener('drop', (e) => {
+            e.preventDefault();
+            targetDragCounter = 0;
+            target.classList.remove('drag-over');
+
+            const name = e.dataTransfer.getData('digimon-name');
+            if (name) {
+                const team = getTeam();
+                if (!team.includes(name)) {
+                    if (window.toggleTeam) {
+                        window.toggleTeam(name);
+                        showToast(`Added ${name} to team!`);
+                    }
+                } else {
+                    showToast(`${name} is already in the team.`);
+                }
+            }
+        });
+    });
+
+    // Global listener to cleanup if drag ends outside targets
+    document.addEventListener('dragend', () => {
+        dropTargets.forEach(target => {
+            if (target) {
+                target.classList.remove('drag-over');
+            }
+        });
+    });
 });

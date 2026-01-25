@@ -3,7 +3,7 @@ const DIGIMON_DB = [
     {
         "id": "1",
         "name": "Patamon",
-        "types": [
+                "types": [
             "Flying"
         ],
         "ability": "Run Away",
@@ -51,7 +51,7 @@ const DIGIMON_DB = [
     {
         "id": "2",
         "name": "Angemon",
-        "types": [
+                "types": [
             "Holy",
             "Flying"
         ],
@@ -106,7 +106,7 @@ const DIGIMON_DB = [
     {
         "id": "3",
         "name": "HolyAngemon",
-        "types": [
+                "types": [
             "Holy",
             "Flying"
         ],
@@ -168,7 +168,7 @@ const DIGIMON_DB = [
     {
         "id": "4",
         "name": "Seraphimon",
-        "types": [
+                "types": [
             "Holy",
             "Flying"
         ],
@@ -223,7 +223,7 @@ const DIGIMON_DB = [
     {
         "id": "5",
         "name": "Pegasmon",
-        "types": [
+                "types": [
             "Holy",
             "Flying"
         ],
@@ -269,7 +269,7 @@ const DIGIMON_DB = [
     {
         "id": "6",
         "name": "HolyAngemon Priest",
-        "types": [
+                "types": [
             "Holy",
             "Flying"
         ],
@@ -320,7 +320,7 @@ const DIGIMON_DB = [
     {
         "id": "7",
         "name": "Goddramon",
-        "types": [
+                "types": [
             "Holy",
             "Dragon"
         ],
@@ -342,7 +342,7 @@ const DIGIMON_DB = [
     {
         "id": "8",
         "name": "Lopmon",
-        "types": [
+                "types": [
             "Normal"
         ],
         "ability": "Inner Focus",
@@ -394,7 +394,7 @@ const DIGIMON_DB = [
     {
         "id": "9",
         "name": "Turuiemon",
-        "types": [
+                "types": [
             "Fighting"
         ],
         "ability": "Tough Claws",
@@ -444,7 +444,7 @@ const DIGIMON_DB = [
     {
         "id": "10",
         "name": "AndiramonDeva",
-        "types": [
+                "types": [
             "Fighting",
             "Holy"
         ],
@@ -502,7 +502,7 @@ const DIGIMON_DB = [
     {
         "id": "11",
         "name": "Cherubimon",
-        "types": [
+                "types": [
             "Holy",
             "Fighting"
         ],
@@ -557,7 +557,7 @@ const DIGIMON_DB = [
     {
         "id": "12",
         "name": "Wendimon",
-        "types": [
+                "types": [
             "Dark",
             "Fighting"
         ],
@@ -603,7 +603,7 @@ const DIGIMON_DB = [
     {
         "id": "13",
         "name": "Andiramon",
-        "types": [
+                "types": [
             "Dark",
             "Fighting"
         ],
@@ -663,7 +663,7 @@ const DIGIMON_DB = [
     {
         "id": "14",
         "name": "Cherubimon Evil",
-        "types": [
+                "types": [
             "Dark",
             "Fighting"
         ],
@@ -718,7 +718,7 @@ const DIGIMON_DB = [
     {
         "id": "15",
         "name": "Salamon",
-        "types": [
+                "types": [
             "Holy"
         ],
         "ability": "Cute Charm",
@@ -766,7 +766,7 @@ const DIGIMON_DB = [
     {
         "id": "16",
         "name": "Tailmon",
-        "types": [
+                "types": [
             "Holy"
         ],
         "ability": "Cute Charm",
@@ -819,7 +819,7 @@ const DIGIMON_DB = [
     {
         "id": "17",
         "name": "Angewomon",
-        "types": [
+                "types": [
             "Holy",
             "Fairy"
         ],
@@ -877,7 +877,7 @@ const DIGIMON_DB = [
     {
         "id": "18",
         "name": "Ophanimon",
-        "types": [
+                "types": [
             "Holy",
             "Fairy"
         ],
@@ -932,7 +932,7 @@ const DIGIMON_DB = [
     {
         "id": "19",
         "name": "Nefertimon",
-        "types": [
+                "types": [
             "Holy",
             "Flying"
         ],
@@ -983,7 +983,7 @@ const DIGIMON_DB = [
     {
         "id": "20",
         "name": "Kyukimon",
-        "types": [
+                "types": [
             "Holy",
             "Flying"
         ],
@@ -1041,7 +1041,7 @@ const DIGIMON_DB = [
     {
         "id": "21",
         "name": "HolyDramon",
-        "types": [
+                "types": [
             "Holy",
             "Dragon"
         ],
@@ -1063,7 +1063,7 @@ const DIGIMON_DB = [
     {
         "id": "22",
         "name": "Gazimon",
-        "types": [
+                "types": [
             "Dark"
         ],
         "ability": "Pickup",
@@ -1108,7 +1108,7 @@ const DIGIMON_DB = [
     {
         "id": "23",
         "name": "Devidramon",
-        "types": [
+                "types": [
             "Dark",
             "Dragon"
         ],
@@ -1164,7 +1164,7 @@ const DIGIMON_DB = [
     {
         "id": "24",
         "name": "Orochimon",
-        "types": [
+                "types": [
             "Dark",
             "Dragon"
         ],
@@ -1222,7 +1222,7 @@ const DIGIMON_DB = [
     {
         "id": "25",
         "name": "Nidhoggmon",
-        "types": [
+                "types": [
             "Dark",
             "Dragon"
         ],
@@ -1281,7 +1281,7 @@ const DIGIMON_DB = [
     {
         "id": "26",
         "name": "Luxmon",
-        "types": [
+                "types": [
             "Holy"
         ],
         "ability": "Oblivious",
@@ -1323,7 +1323,7 @@ const DIGIMON_DB = [
     {
         "id": "27",
         "name": "Piddomon",
-        "types": [
+                "types": [
             "Holy",
             "Fire"
         ],
@@ -1374,7 +1374,7 @@ const DIGIMON_DB = [
     {
         "id": "28",
         "name": "ArkhaiAngemon",
-        "types": [
+                "types": [
             "Holy",
             "Fire"
         ],
@@ -1440,7 +1440,7 @@ const DIGIMON_DB = [
     {
         "id": "29",
         "name": "ClavisAngemon",
-        "types": [
+                "types": [
             "Holy",
             "Fire"
         ],
@@ -1501,7 +1501,7 @@ const DIGIMON_DB = [
     {
         "id": "30",
         "name": "Gargolemon",
-        "types": [
+                "types": [
             "Holy",
             "Dragon"
         ],
@@ -1556,7 +1556,7 @@ const DIGIMON_DB = [
     {
         "id": "31",
         "name": "Manticoremon",
-        "types": [
+                "types": [
             "Holy",
             "Dragon"
         ],
@@ -1609,7 +1609,7 @@ const DIGIMON_DB = [
     {
         "id": "32",
         "name": "Agumon",
-        "types": [
+                "types": [
             "Fire"
         ],
         "ability": "Blaze",
@@ -1656,7 +1656,7 @@ const DIGIMON_DB = [
     {
         "id": "33",
         "name": "Greymon",
-        "types": [
+                "types": [
             "Fire"
         ],
         "ability": "Blaze",
@@ -1714,7 +1714,7 @@ const DIGIMON_DB = [
     {
         "id": "34",
         "name": "MetalGreymon",
-        "types": [
+                "types": [
             "Steel",
             "Fire"
         ],
@@ -1780,7 +1780,7 @@ const DIGIMON_DB = [
     {
         "id": "35",
         "name": "WarGreymon",
-        "types": [
+                "types": [
             "Fire",
             "Dragon"
         ],
@@ -1848,7 +1848,7 @@ const DIGIMON_DB = [
     {
         "id": "36",
         "name": "ShineGreymon",
-        "types": [
+                "types": [
             "Fire",
             "Holy"
         ],
@@ -1916,7 +1916,7 @@ const DIGIMON_DB = [
     {
         "id": "37",
         "name": "BlitzGreymon",
-        "types": [
+                "types": [
             "Steel",
             "Electric"
         ],
@@ -1984,7 +1984,7 @@ const DIGIMON_DB = [
     {
         "id": "38",
         "name": "Omegamon",
-        "types": [
+                "types": [
             "Fire",
             "Ice"
         ],
@@ -2031,7 +2031,7 @@ const DIGIMON_DB = [
     {
         "id": "39",
         "name": "Gabumon",
-        "types": [
+                "types": [
             "Fire",
             "Ice"
         ],
@@ -2078,7 +2078,7 @@ const DIGIMON_DB = [
     {
         "id": "40",
         "name": "Garurumon",
-        "types": [
+                "types": [
             "Fire",
             "Ice"
         ],
@@ -2142,7 +2142,7 @@ const DIGIMON_DB = [
     {
         "id": "41",
         "name": "WereGarurumon",
-        "types": [
+                "types": [
             "Ice",
             "Fighting"
         ],
@@ -2209,7 +2209,7 @@ const DIGIMON_DB = [
     {
         "id": "42",
         "name": "MetalGarurumon",
-        "types": [
+                "types": [
             "Ice",
             "Steel"
         ],
@@ -2277,7 +2277,7 @@ const DIGIMON_DB = [
     {
         "id": "43",
         "name": "CresGarurumon",
-        "types": [
+                "types": [
             "Ice",
             "Fighting"
         ],
@@ -2345,7 +2345,7 @@ const DIGIMON_DB = [
     {
         "id": "44",
         "name": "Omegamon Alter S",
-        "types": [
+                "types": [
             "Fighting",
             "Electric"
         ],
@@ -2392,7 +2392,7 @@ const DIGIMON_DB = [
     {
         "id": "45",
         "name": "Piyomon",
-        "types": [
+                "types": [
             "Flying"
         ],
         "ability": "Run Away",
@@ -2443,7 +2443,7 @@ const DIGIMON_DB = [
     {
         "id": "46",
         "name": "Birdramon",
-        "types": [
+                "types": [
             "Fire",
             "Flying"
         ],
@@ -2500,7 +2500,7 @@ const DIGIMON_DB = [
     {
         "id": "47",
         "name": "Garudamon",
-        "types": [
+                "types": [
             "Fire",
             "Flying"
         ],
@@ -2564,7 +2564,7 @@ const DIGIMON_DB = [
     {
         "id": "48",
         "name": "Hououmon",
-        "types": [
+                "types": [
             "Fire",
             "Holy"
         ],
@@ -2627,7 +2627,7 @@ const DIGIMON_DB = [
     {
         "id": "49",
         "name": "Zhuqiaomon",
-        "types": [
+                "types": [
             "Fire",
             "Flying"
         ],
@@ -2692,7 +2692,7 @@ const DIGIMON_DB = [
     {
         "id": "50",
         "name": "Xiquemon",
-        "types": [
+                "types": [
             "Water",
             "Flying"
         ],
@@ -2750,7 +2750,7 @@ const DIGIMON_DB = [
     {
         "id": "51",
         "name": "Huankunmon",
-        "types": [
+                "types": [
             "Water",
             "Flying"
         ],
@@ -2806,7 +2806,7 @@ const DIGIMON_DB = [
     {
         "id": "52",
         "name": "Xiangpengmon",
-        "types": [
+                "types": [
             "Water",
             "Flying"
         ],
@@ -2869,7 +2869,7 @@ const DIGIMON_DB = [
     {
         "id": "53",
         "name": "Tentomon",
-        "types": [
+                "types": [
             "Bug",
             "Electric"
         ],
@@ -2920,7 +2920,7 @@ const DIGIMON_DB = [
     {
         "id": "54",
         "name": "Kabuterimon",
-        "types": [
+                "types": [
             "Bug",
             "Electric"
         ],
@@ -2979,7 +2979,7 @@ const DIGIMON_DB = [
     {
         "id": "55",
         "name": "AtlurKabuterimon",
-        "types": [
+                "types": [
             "Bug",
             "Electric"
         ],
@@ -3045,7 +3045,7 @@ const DIGIMON_DB = [
     {
         "id": "56",
         "name": "HerculesKabuterimon",
-        "types": [
+                "types": [
             "Bug",
             "Electric"
         ],
@@ -3104,7 +3104,7 @@ const DIGIMON_DB = [
     {
         "id": "57",
         "name": "TyrantKabuterimon",
-        "types": [
+                "types": [
             "Bug",
             "Dark"
         ],
@@ -3167,7 +3167,7 @@ const DIGIMON_DB = [
     {
         "id": "58",
         "name": "Kuwagamon",
-        "types": [
+                "types": [
             "Bug",
             "Fighting"
         ],
@@ -3225,7 +3225,7 @@ const DIGIMON_DB = [
     {
         "id": "59",
         "name": "Okuwamon",
-        "types": [
+                "types": [
             "Bug",
             "Fighting"
         ],
@@ -3288,7 +3288,7 @@ const DIGIMON_DB = [
     {
         "id": "60",
         "name": "GranKuwagamon",
-        "types": [
+                "types": [
             "Bug",
             "Fighting"
         ],
@@ -3353,7 +3353,7 @@ const DIGIMON_DB = [
     {
         "id": "61",
         "name": "Palmon",
-        "types": [
+                "types": [
             "Grass",
             "Poison"
         ],
@@ -3404,7 +3404,7 @@ const DIGIMON_DB = [
     {
         "id": "62",
         "name": "Togemon",
-        "types": [
+                "types": [
             "Grass"
         ],
         "ability": "Sand Veil",
@@ -3458,7 +3458,7 @@ const DIGIMON_DB = [
     {
         "id": "63",
         "name": "Lilimon",
-        "types": [
+                "types": [
             "Grass",
             "Fairy"
         ],
@@ -3522,7 +3522,7 @@ const DIGIMON_DB = [
     {
         "id": "64",
         "name": "Rosemon",
-        "types": [
+                "types": [
             "Grass",
             "Poison"
         ],
@@ -3590,7 +3590,7 @@ const DIGIMON_DB = [
     {
         "id": "65",
         "name": "Rafflesimon",
-        "types": [
+                "types": [
             "Grass",
             "Fairy"
         ],
@@ -3633,7 +3633,7 @@ const DIGIMON_DB = [
     {
         "id": "66",
         "name": "BanchoLilimon",
-        "types": [
+                "types": [
             "Grass",
             "Fighting"
         ],
@@ -3696,7 +3696,7 @@ const DIGIMON_DB = [
     {
         "id": "67",
         "name": "Sunflowmon",
-        "types": [
+                "types": [
             "Grass",
             "Flying"
         ],
@@ -3752,7 +3752,7 @@ const DIGIMON_DB = [
     {
         "id": "68",
         "name": "Lilamon",
-        "types": [
+                "types": [
             "Grass"
         ],
         "ability": "Cute Charm",
@@ -3811,7 +3811,7 @@ const DIGIMON_DB = [
     {
         "id": "69",
         "name": "Lotusmon",
-        "types": [
+                "types": [
             "Grass",
             "Magic"
         ],
@@ -3875,7 +3875,7 @@ const DIGIMON_DB = [
     {
         "id": "70",
         "name": "Blossomon",
-        "types": [
+                "types": [
             "Grass"
         ],
         "ability": "Regenerator",
@@ -3930,7 +3930,7 @@ const DIGIMON_DB = [
     {
         "id": "71",
         "name": "Zamielmon",
-        "types": [
+                "types": [
             "Grass",
             "Fairy"
         ],
@@ -3993,7 +3993,7 @@ const DIGIMON_DB = [
     {
         "id": "72",
         "name": "Gomamon",
-        "types": [
+                "types": [
             "Water"
         ],
         "ability": "Thick Fat",
@@ -4038,7 +4038,7 @@ const DIGIMON_DB = [
     {
         "id": "73",
         "name": "Ikkakumon",
-        "types": [
+                "types": [
             "Water",
             "Ice"
         ],
@@ -4092,7 +4092,7 @@ const DIGIMON_DB = [
     {
         "id": "74",
         "name": "Zudomon",
-        "types": [
+                "types": [
             "Water",
             "Ice"
         ],
@@ -4156,7 +4156,7 @@ const DIGIMON_DB = [
     {
         "id": "75",
         "name": "Vikemon",
-        "types": [
+                "types": [
             "Water",
             "Ice"
         ],
@@ -4215,7 +4215,7 @@ const DIGIMON_DB = [
     {
         "id": "76",
         "name": "Plesiomon",
-        "types": [
+                "types": [
             "Water"
         ],
         "ability": "Liquid Voice",
@@ -4282,7 +4282,7 @@ const DIGIMON_DB = [
     {
         "id": "77",
         "name": "Terriermon",
-        "types": [
+                "types": [
             "Normal"
         ],
         "ability": "Steadfast",
@@ -4327,7 +4327,7 @@ const DIGIMON_DB = [
     {
         "id": "78",
         "name": "Gargomon",
-        "types": [
+                "types": [
             "Normal"
         ],
         "ability": "Steadfast",
@@ -4382,7 +4382,7 @@ const DIGIMON_DB = [
     {
         "id": "79",
         "name": "Rapidmon",
-        "types": [
+                "types": [
             "Steel"
         ],
         "ability": "Speed Boost",
@@ -4443,7 +4443,7 @@ const DIGIMON_DB = [
     {
         "id": "80",
         "name": "SaintGargomon",
-        "types": [
+                "types": [
             "Steel",
             "Fighting"
         ],
@@ -4506,7 +4506,7 @@ const DIGIMON_DB = [
     {
         "id": "81",
         "name": "Guilmon",
-        "types": [
+                "types": [
             "Fire",
             "Dark"
         ],
@@ -4551,7 +4551,7 @@ const DIGIMON_DB = [
     {
         "id": "82",
         "name": "Growmon",
-        "types": [
+                "types": [
             "Fire",
             "Dark"
         ],
@@ -4606,7 +4606,7 @@ const DIGIMON_DB = [
     {
         "id": "83",
         "name": "MegaloGrowmon",
-        "types": [
+                "types": [
             "Fire",
             "Steel"
         ],
@@ -4666,7 +4666,7 @@ const DIGIMON_DB = [
     {
         "id": "84",
         "name": "Dukemon",
-        "types": [
+                "types": [
             "Fire",
             "Fighting"
         ],
@@ -4738,7 +4738,7 @@ const DIGIMON_DB = [
     {
         "id": "85",
         "name": "Megidramon",
-        "types": [
+                "types": [
             "Dark",
             "Dragon"
         ],
@@ -4801,7 +4801,7 @@ const DIGIMON_DB = [
     {
         "id": "86",
         "name": "Renamon",
-        "types": [
+                "types": [
             "Fighting",
             "Magic"
         ],
@@ -4850,7 +4850,7 @@ const DIGIMON_DB = [
     {
         "id": "87",
         "name": "Kyubimon",
-        "types": [
+                "types": [
             "Magic",
             "Fire"
         ],
@@ -4906,7 +4906,7 @@ const DIGIMON_DB = [
     {
         "id": "88",
         "name": "Taomon",
-        "types": [
+                "types": [
             "Magic",
             "Fighting"
         ],
@@ -4968,7 +4968,7 @@ const DIGIMON_DB = [
     {
         "id": "89",
         "name": "Sakuyamon",
-        "types": [
+                "types": [
             "Magic",
             "Fighting"
         ],
@@ -5027,7 +5027,7 @@ const DIGIMON_DB = [
     {
         "id": "90",
         "name": "Tenkomon",
-        "types": [
+                "types": [
             "Ice",
             "Fairy"
         ],
@@ -5081,7 +5081,7 @@ const DIGIMON_DB = [
     {
         "id": "91",
         "name": "Sekkamon",
-        "types": [
+                "types": [
             "Ice",
             "Fairy"
         ],
@@ -5141,7 +5141,7 @@ const DIGIMON_DB = [
     {
         "id": "92",
         "name": "Yukinamon",
-        "types": [
+                "types": [
             "Ice",
             "Fairy"
         ],
@@ -5200,7 +5200,7 @@ const DIGIMON_DB = [
     {
         "id": "93",
         "name": "Monodramon",
-        "types": [
+                "types": [
             "Dragon"
         ],
         "ability": "Berserk",
@@ -5244,7 +5244,7 @@ const DIGIMON_DB = [
     {
         "id": "94",
         "name": "Strikedramon",
-        "types": [
+                "types": [
             "Dragon"
         ],
         "ability": "Berserk",
@@ -5299,7 +5299,7 @@ const DIGIMON_DB = [
     {
         "id": "95",
         "name": "Cyberdramon",
-        "types": [
+                "types": [
             "Dragon",
             "Steel"
         ],
@@ -5359,7 +5359,7 @@ const DIGIMON_DB = [
     {
         "id": "96",
         "name": "Justimon",
-        "types": [
+                "types": [
             "Fighting",
             "Steel"
         ],
@@ -5422,7 +5422,7 @@ const DIGIMON_DB = [
     {
         "id": "97",
         "name": "Veemon",
-        "types": [
+                "types": [
             "Dragon"
         ],
         "ability": "Rock Head",
@@ -5480,7 +5480,7 @@ const DIGIMON_DB = [
     {
         "id": "98",
         "name": "ExVeemon",
-        "types": [
+                "types": [
             "Dragon",
             "Flying"
         ],
@@ -5543,7 +5543,7 @@ const DIGIMON_DB = [
     {
         "id": "99",
         "name": "AeroVeedramon",
-        "types": [
+                "types": [
             "Dragon",
             "Flying"
         ],
@@ -5605,7 +5605,7 @@ const DIGIMON_DB = [
     {
         "id": "100",
         "name": "UlforceVeedramon",
-        "types": [
+                "types": [
             "Dragon",
             "Flying"
         ],
@@ -5668,7 +5668,7 @@ const DIGIMON_DB = [
     {
         "id": "101",
         "name": "Paildramon",
-        "types": [
+                "types": [
             "Dragon",
             "Bug"
         ],
@@ -5730,7 +5730,7 @@ const DIGIMON_DB = [
     {
         "id": "102",
         "name": "Imperialdramon Dragon",
-        "types": [
+                "types": [
             "Dragon",
             "Bug"
         ],
@@ -5802,7 +5802,7 @@ const DIGIMON_DB = [
     {
         "id": "103",
         "name": "Lighdramon",
-        "types": [
+                "types": [
             "Dragon",
             "Electric"
         ],
@@ -5856,7 +5856,7 @@ const DIGIMON_DB = [
     {
         "id": "104",
         "name": "Majiramon",
-        "types": [
+                "types": [
             "Dragon",
             "Electric"
         ],
@@ -5916,7 +5916,7 @@ const DIGIMON_DB = [
     {
         "id": "105",
         "name": "Qinglongmon",
-        "types": [
+                "types": [
             "Electric",
             "Dragon"
         ],
@@ -5955,7 +5955,7 @@ const DIGIMON_DB = [
     {
         "id": "106",
         "name": "Fladramon",
-        "types": [
+                "types": [
             "Dragon",
             "Fire"
         ],
@@ -6009,7 +6009,7 @@ const DIGIMON_DB = [
     {
         "id": "107",
         "name": "Magnamon",
-        "types": [
+                "types": [
             "Dragon",
             "Steel"
         ],
@@ -6095,7 +6095,7 @@ const DIGIMON_DB = [
     {
         "id": "108",
         "name": "Wormmon",
-        "types": [
+                "types": [
             "Bug",
             "Poison"
         ],
@@ -6143,7 +6143,7 @@ const DIGIMON_DB = [
     {
         "id": "109",
         "name": "Stingmon",
-        "types": [
+                "types": [
             "Bug",
             "Poison"
         ],
@@ -6202,7 +6202,7 @@ const DIGIMON_DB = [
     {
         "id": "110",
         "name": "JewelBeemon",
-        "types": [
+                "types": [
             "Bug",
             "Poison"
         ],
@@ -6262,7 +6262,7 @@ const DIGIMON_DB = [
     {
         "id": "111",
         "name": "BanchoStingmon",
-        "types": [
+                "types": [
             "Bug",
             "Poison"
         ],
@@ -6325,7 +6325,7 @@ const DIGIMON_DB = [
     {
         "id": "112",
         "name": "Dinobeemon",
-        "types": [
+                "types": [
             "Bug",
             "Dragon"
         ],
@@ -6387,7 +6387,7 @@ const DIGIMON_DB = [
     {
         "id": "113",
         "name": "Armadimon",
-        "types": [
+                "types": [
             "Ground"
         ],
         "ability": "Sturdy",
@@ -6441,7 +6441,7 @@ const DIGIMON_DB = [
     {
         "id": "114",
         "name": "Ankylomon",
-        "types": [
+                "types": [
             "Ground",
             "Steel"
         ],
@@ -6500,7 +6500,7 @@ const DIGIMON_DB = [
     {
         "id": "115",
         "name": "Brachiomon",
-        "types": [
+                "types": [
             "Ground",
             "Water"
         ],
@@ -6563,7 +6563,7 @@ const DIGIMON_DB = [
     {
         "id": "116",
         "name": "UltimateBrachiomon",
-        "types": [
+                "types": [
             "Ground",
             "Steel"
         ],
@@ -6628,7 +6628,7 @@ const DIGIMON_DB = [
     {
         "id": "117",
         "name": "Shakkoumon",
-        "types": [
+                "types": [
             "Steel",
             "Holy"
         ],
@@ -6687,7 +6687,7 @@ const DIGIMON_DB = [
     {
         "id": "118",
         "name": "SlashAngemon",
-        "types": [
+                "types": [
             "Steel",
             "Holy"
         ],
@@ -6754,7 +6754,7 @@ const DIGIMON_DB = [
     {
         "id": "119",
         "name": "Submarimon",
-        "types": [
+                "types": [
             "Ground",
             "Water"
         ],
@@ -6806,7 +6806,7 @@ const DIGIMON_DB = [
     {
         "id": "120",
         "name": "Whamon",
-        "types": [
+                "types": [
             "Water"
         ],
         "ability": "Storm Drain",
@@ -6869,7 +6869,7 @@ const DIGIMON_DB = [
     {
         "id": "121",
         "name": "KingWhamon",
-        "types": [
+                "types": [
             "Water",
             "Ground"
         ],
@@ -6928,7 +6928,7 @@ const DIGIMON_DB = [
     {
         "id": "122",
         "name": "MarineAngemon",
-        "types": [
+                "types": [
             "Holy",
             "Water"
         ],
@@ -6991,7 +6991,7 @@ const DIGIMON_DB = [
     {
         "id": "123",
         "name": "Digmon",
-        "types": [
+                "types": [
             "Ground",
             "Bug"
         ],
@@ -7046,7 +7046,7 @@ const DIGIMON_DB = [
     {
         "id": "124",
         "name": "Scorpiomon",
-        "types": [
+                "types": [
             "Ground",
             "Bug"
         ],
@@ -7108,7 +7108,7 @@ const DIGIMON_DB = [
     {
         "id": "125",
         "name": "ElDoradimon",
-        "types": [
+                "types": [
             "Ground",
             "Grass"
         ],
@@ -7176,7 +7176,7 @@ const DIGIMON_DB = [
     {
         "id": "126",
         "name": "Tlalocmon",
-        "types": [
+                "types": [
             "Electric",
             "Grass"
         ],
@@ -7219,7 +7219,7 @@ const DIGIMON_DB = [
     {
         "id": "127",
         "name": "Hawkmon",
-        "types": [
+                "types": [
             "Flying"
         ],
         "ability": "Keen Eye",
@@ -7263,7 +7263,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Holsmon",
-                "method": "Wind Data"
+                "method": "Flying Data"
             }
         ],
         "stage": "Rookie",
@@ -7272,7 +7272,7 @@ const DIGIMON_DB = [
     {
         "id": "128",
         "name": "Aquilamon",
-        "types": [
+                "types": [
             "Flying"
         ],
         "ability": "Keen Eye",
@@ -7330,7 +7330,7 @@ const DIGIMON_DB = [
     {
         "id": "129",
         "name": "Silphymon",
-        "types": [
+                "types": [
             "Flying",
             "Holy"
         ],
@@ -7392,7 +7392,7 @@ const DIGIMON_DB = [
     {
         "id": "130",
         "name": "Valkyrimon",
-        "types": [
+                "types": [
             "Flying",
             "Holy"
         ],
@@ -7457,7 +7457,7 @@ const DIGIMON_DB = [
     {
         "id": "131",
         "name": "Shurimon",
-        "types": [
+                "types": [
             "Flying",
             "Grass"
         ],
@@ -7509,7 +7509,7 @@ const DIGIMON_DB = [
     {
         "id": "132",
         "name": "Fumamon",
-        "types": [
+                "types": [
             "Steel",
             "Undead"
         ],
@@ -7569,7 +7569,7 @@ const DIGIMON_DB = [
     {
         "id": "133",
         "name": "Tactimon",
-        "types": [
+                "types": [
             "Steel",
             "Undead"
         ],
@@ -7632,7 +7632,7 @@ const DIGIMON_DB = [
     {
         "id": "134",
         "name": "Holsmon",
-        "types": [
+                "types": [
             "Flying",
             "Fairy"
         ],
@@ -7669,7 +7669,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Hawkmon",
-                "method": "Wind Data"
+                "method": "Flying Data"
             }
         ],
         "next": [
@@ -7684,7 +7684,7 @@ const DIGIMON_DB = [
     {
         "id": "135",
         "name": "Peacockmon",
-        "types": [
+                "types": [
             "Flying",
             "Steel"
         ],
@@ -7754,7 +7754,7 @@ const DIGIMON_DB = [
     {
         "id": "136",
         "name": "Valdurmon",
-        "types": [
+                "types": [
             "Flying",
             "Holy"
         ],
@@ -7822,7 +7822,7 @@ const DIGIMON_DB = [
     {
         "id": "137",
         "name": "Chaosmon Valdur Arm",
-        "types": [
+                "types": [
             "CHAOS"
         ],
         "ability": "Moody",
@@ -7868,7 +7868,7 @@ const DIGIMON_DB = [
     {
         "id": "138",
         "name": "Impmon",
-        "types": [
+                "types": [
             "Dark"
         ],
         "ability": "Prankster",
@@ -7921,7 +7921,7 @@ const DIGIMON_DB = [
     {
         "id": "139",
         "name": "Wizarmon",
-        "types": [
+                "types": [
             "Dark",
             "Magic"
         ],
@@ -7982,7 +7982,7 @@ const DIGIMON_DB = [
     {
         "id": "140",
         "name": "Baalmon",
-        "types": [
+                "types": [
             "Magic",
             "Dark"
         ],
@@ -8042,7 +8042,7 @@ const DIGIMON_DB = [
     {
         "id": "141",
         "name": "Beelzebumon",
-        "types": [
+                "types": [
             "Dark",
             "Steel"
         ],
@@ -8110,7 +8110,7 @@ const DIGIMON_DB = [
     {
         "id": "142",
         "name": "Mystimon",
-        "types": [
+                "types": [
             "Magic",
             "Fire"
         ],
@@ -8172,7 +8172,7 @@ const DIGIMON_DB = [
     {
         "id": "143",
         "name": "Dynasmon",
-        "types": [
+                "types": [
             "Magic",
             "Dragon"
         ],
@@ -8235,7 +8235,7 @@ const DIGIMON_DB = [
     {
         "id": "144",
         "name": "Punkmon",
-        "types": [
+                "types": [
             "Dark",
             "Dragon"
         ],
@@ -8291,7 +8291,7 @@ const DIGIMON_DB = [
     {
         "id": "145",
         "name": "Loudmon",
-        "types": [
+                "types": [
             "Dark",
             "Steel"
         ],
@@ -8351,7 +8351,7 @@ const DIGIMON_DB = [
     {
         "id": "146",
         "name": "Heavy MetalDramon",
-        "types": [
+                "types": [
             "Dark",
             "Dragon"
         ],
@@ -8409,7 +8409,7 @@ const DIGIMON_DB = [
     {
         "id": "147",
         "name": "DORUmon",
-        "types": [
+                "types": [
             "Steel"
         ],
         "ability": "Clear Body",
@@ -8457,7 +8457,7 @@ const DIGIMON_DB = [
     {
         "id": "148",
         "name": "DORUgamon",
-        "types": [
+                "types": [
             "Dragon",
             "Steel"
         ],
@@ -8513,7 +8513,7 @@ const DIGIMON_DB = [
     {
         "id": "149",
         "name": "Doruguremon",
-        "types": [
+                "types": [
             "Dragon",
             "Steel"
         ],
@@ -8577,7 +8577,7 @@ const DIGIMON_DB = [
     {
         "id": "150",
         "name": "DORUgoramon",
-        "types": [
+                "types": [
             "Dragon",
             "Steel"
         ],
@@ -8640,7 +8640,7 @@ const DIGIMON_DB = [
     {
         "id": "151",
         "name": "DexDORUgamon",
-        "types": [
+                "types": [
             "Dragon",
             "Undead"
         ],
@@ -8694,7 +8694,7 @@ const DIGIMON_DB = [
     {
         "id": "152",
         "name": "DexDORUguremon",
-        "types": [
+                "types": [
             "Dragon",
             "Undead"
         ],
@@ -8757,7 +8757,7 @@ const DIGIMON_DB = [
     {
         "id": "153",
         "name": "DexDORUgoramon",
-        "types": [
+                "types": [
             "Dragon",
             "Undead"
         ],
@@ -8816,7 +8816,7 @@ const DIGIMON_DB = [
     {
         "id": "154",
         "name": "Alphamon",
-        "types": [
+                "types": [
             "Steel"
         ],
         "ability": "Anticipation",
@@ -8883,7 +8883,7 @@ const DIGIMON_DB = [
     {
         "id": "155",
         "name": "Alphamon Ouryuken",
-        "types": [
+                "types": [
             "Steel",
             "Dragon"
         ],
@@ -8966,7 +8966,7 @@ const DIGIMON_DB = [
     {
         "id": "156",
         "name": "Ryudamon",
-        "types": [
+                "types": [
             "Fighting"
         ],
         "ability": "Sharpness",
@@ -9010,7 +9010,7 @@ const DIGIMON_DB = [
     {
         "id": "157",
         "name": "Ginryumon",
-        "types": [
+                "types": [
             "Fighting",
             "Dragon"
         ],
@@ -9061,7 +9061,7 @@ const DIGIMON_DB = [
     {
         "id": "158",
         "name": "Hisyaryumon",
-        "types": [
+                "types": [
             "Fighting",
             "Dragon"
         ],
@@ -9121,7 +9121,7 @@ const DIGIMON_DB = [
     {
         "id": "159",
         "name": "Ouryumon",
-        "types": [
+                "types": [
             "Fighting",
             "Dragon"
         ],
@@ -9187,7 +9187,7 @@ const DIGIMON_DB = [
     {
         "id": "160",
         "name": "Gaomon",
-        "types": [
+                "types": [
             "Fighting"
         ],
         "ability": "Justified",
@@ -9229,7 +9229,7 @@ const DIGIMON_DB = [
     {
         "id": "161",
         "name": "Gaogamon",
-        "types": [
+                "types": [
             "Fighting"
         ],
         "ability": "Justified",
@@ -9284,7 +9284,7 @@ const DIGIMON_DB = [
     {
         "id": "162",
         "name": "MachGaogamon",
-        "types": [
+                "types": [
             "Fighting",
             "Steel"
         ],
@@ -9348,7 +9348,7 @@ const DIGIMON_DB = [
     {
         "id": "163",
         "name": "MirageGaogamon",
-        "types": [
+                "types": [
             "Fighting",
             "Fairy"
         ],
@@ -9416,7 +9416,7 @@ const DIGIMON_DB = [
     {
         "id": "164",
         "name": "Falcomon",
-        "types": [
+                "types": [
             "Dark",
             "Flying"
         ],
@@ -9462,7 +9462,7 @@ const DIGIMON_DB = [
     {
         "id": "165",
         "name": "Peckmon",
-        "types": [
+                "types": [
             "Dark",
             "Flying"
         ],
@@ -9516,7 +9516,7 @@ const DIGIMON_DB = [
     {
         "id": "166",
         "name": "Yatagaramon",
-        "types": [
+                "types": [
             "Dark",
             "Flying"
         ],
@@ -9578,7 +9578,7 @@ const DIGIMON_DB = [
     {
         "id": "167",
         "name": "Ravemon",
-        "types": [
+                "types": [
             "Dark",
             "Flying"
         ],
@@ -9646,7 +9646,7 @@ const DIGIMON_DB = [
     {
         "id": "168",
         "name": "Flamon",
-        "types": [
+                "types": [
             "Fire"
         ],
         "ability": "Flash Fire",
@@ -9696,7 +9696,7 @@ const DIGIMON_DB = [
     {
         "id": "169",
         "name": "Agnimon",
-        "types": [
+                "types": [
             "Fire",
             "Fighting"
         ],
@@ -9760,7 +9760,7 @@ const DIGIMON_DB = [
     {
         "id": "170",
         "name": "Aldamon",
-        "types": [
+                "types": [
             "Fire",
             "Dragon"
         ],
@@ -9824,7 +9824,7 @@ const DIGIMON_DB = [
     {
         "id": "171",
         "name": "AncientGreymon",
-        "types": [
+                "types": [
             "Fire",
             "Dragon"
         ],
@@ -9892,7 +9892,7 @@ const DIGIMON_DB = [
     {
         "id": "172",
         "name": "Meramon",
-        "types": [
+                "types": [
             "Fire"
         ],
         "ability": "Flash Fire",
@@ -9952,7 +9952,7 @@ const DIGIMON_DB = [
     {
         "id": "173",
         "name": "Asuramon",
-        "types": [
+                "types": [
             "Fire",
             "Fighting"
         ],
@@ -10027,7 +10027,7 @@ const DIGIMON_DB = [
     {
         "id": "174",
         "name": "Gankoomon",
-        "types": [
+                "types": [
             "Fire",
             "Fighting"
         ],
@@ -10090,7 +10090,7 @@ const DIGIMON_DB = [
     {
         "id": "175",
         "name": "Apollomon",
-        "types": [
+                "types": [
             "Fire",
             "Holy"
         ],
@@ -10150,7 +10150,7 @@ const DIGIMON_DB = [
     {
         "id": "176",
         "name": "DeathMeramon",
-        "types": [
+                "types": [
             "Fire",
             "Undead"
         ],
@@ -10208,7 +10208,7 @@ const DIGIMON_DB = [
     {
         "id": "177",
         "name": "Demon",
-        "types": [
+                "types": [
             "Fire",
             "Undead"
         ],
@@ -10271,7 +10271,7 @@ const DIGIMON_DB = [
     {
         "id": "178",
         "name": "Strabimon",
-        "types": [
+                "types": [
             "Holy"
         ],
         "ability": "Berserk",
@@ -10324,7 +10324,7 @@ const DIGIMON_DB = [
     {
         "id": "179",
         "name": "Wolfmon",
-        "types": [
+                "types": [
             "Holy",
             "Fighting"
         ],
@@ -10394,7 +10394,7 @@ const DIGIMON_DB = [
     {
         "id": "180",
         "name": "Beowolfmon",
-        "types": [
+                "types": [
             "Holy",
             "Steel"
         ],
@@ -10462,7 +10462,7 @@ const DIGIMON_DB = [
     {
         "id": "181",
         "name": "AncientGarurumon",
-        "types": [
+                "types": [
             "Holy",
             "Steel"
         ],
@@ -10534,7 +10534,7 @@ const DIGIMON_DB = [
     {
         "id": "182",
         "name": "Takutoumon",
-        "types": [
+                "types": [
             "Holy",
             "Fighting"
         ],
@@ -10597,7 +10597,7 @@ const DIGIMON_DB = [
     {
         "id": "183",
         "name": "Tinkermon",
-        "types": [
+                "types": [
             "Flying",
             "Fairy"
         ],
@@ -10639,7 +10639,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Fairymon",
-                "method": "Wind Data"
+                "method": "Flying Data"
             }
         ],
         "stage": "Rookie",
@@ -10648,7 +10648,7 @@ const DIGIMON_DB = [
     {
         "id": "184",
         "name": "Fairymon",
-        "types": [
+                "types": [
             "Flying",
             "Fairy"
         ],
@@ -10681,7 +10681,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Tinkermon",
-                "method": "Wind Data"
+                "method": "Flying Data"
             }
         ],
         "next": [
@@ -10704,7 +10704,7 @@ const DIGIMON_DB = [
     {
         "id": "185",
         "name": "JetSilphymon",
-        "types": [
+                "types": [
             "Flying",
             "Fairy"
         ],
@@ -10768,7 +10768,7 @@ const DIGIMON_DB = [
     {
         "id": "186",
         "name": "AncientIrismon",
-        "types": [
+                "types": [
             "Flying",
             "Fairy"
         ],
@@ -10831,7 +10831,7 @@ const DIGIMON_DB = [
     {
         "id": "187",
         "name": "Darcmon",
-        "types": [
+                "types": [
             "Holy",
             "Flying"
         ],
@@ -10884,7 +10884,7 @@ const DIGIMON_DB = [
     {
         "id": "188",
         "name": "Hippogriffomon",
-        "types": [
+                "types": [
             "Holy",
             "Flying"
         ],
@@ -10960,7 +10960,7 @@ const DIGIMON_DB = [
     {
         "id": "189",
         "name": "LovelyAngemon",
-        "types": [
+                "types": [
             "Holy",
             "Fighting"
         ],
@@ -11023,7 +11023,7 @@ const DIGIMON_DB = [
     {
         "id": "190",
         "name": "Murmukusmon",
-        "types": [
+                "types": [
             "Dark",
             "Flying"
         ],
@@ -11082,7 +11082,7 @@ const DIGIMON_DB = [
     {
         "id": "191",
         "name": "Griffomon",
-        "types": [
+                "types": [
             "Flying"
         ],
         "ability": "Aerilate",
@@ -11144,7 +11144,7 @@ const DIGIMON_DB = [
     {
         "id": "192",
         "name": "KoKabuterimon",
-        "types": [
+                "types": [
             "Bug"
         ],
         "ability": "Vital Spirit",
@@ -11189,7 +11189,7 @@ const DIGIMON_DB = [
     {
         "id": "193",
         "name": "Blitzmon",
-        "types": [
+                "types": [
             "Electric",
             "Bug"
         ],
@@ -11243,7 +11243,7 @@ const DIGIMON_DB = [
     {
         "id": "194",
         "name": "RhinoKabuterimon",
-        "types": [
+                "types": [
             "Electric",
             "Bug"
         ],
@@ -11303,7 +11303,7 @@ const DIGIMON_DB = [
     {
         "id": "195",
         "name": "AncientBeetlemon",
-        "types": [
+                "types": [
             "Electric",
             "Bug"
         ],
@@ -11366,7 +11366,7 @@ const DIGIMON_DB = [
     {
         "id": "196",
         "name": "Penmon",
-        "types": [
+                "types": [
             "Ice"
         ],
         "ability": "Slush Rush",
@@ -11419,7 +11419,7 @@ const DIGIMON_DB = [
     {
         "id": "197",
         "name": "Chakmon",
-        "types": [
+                "types": [
             "Ice"
         ],
         "ability": "Slush Rush",
@@ -11478,7 +11478,7 @@ const DIGIMON_DB = [
     {
         "id": "198",
         "name": "Frozomon",
-        "types": [
+                "types": [
             "Ice",
             "Steel"
         ],
@@ -11542,7 +11542,7 @@ const DIGIMON_DB = [
     {
         "id": "199",
         "name": "Megatheurimon",
-        "types": [
+                "types": [
             "Ice"
         ],
         "ability": "Snow Warning",
@@ -11604,7 +11604,7 @@ const DIGIMON_DB = [
     {
         "id": "200",
         "name": "Mojyamon",
-        "types": [
+                "types": [
             "Ice",
             "Ground"
         ],
@@ -11656,7 +11656,7 @@ const DIGIMON_DB = [
     {
         "id": "201",
         "name": "Mammothmon",
-        "types": [
+                "types": [
             "Ice",
             "Ground"
         ],
@@ -11718,7 +11718,7 @@ const DIGIMON_DB = [
     {
         "id": "202",
         "name": "SkullMammothmon",
-        "types": [
+                "types": [
             "Undead",
             "Ice"
         ],
@@ -11781,7 +11781,7 @@ const DIGIMON_DB = [
     {
         "id": "203",
         "name": "Frigimon",
-        "types": [
+                "types": [
             "Ice"
         ],
         "ability": "Ice Body",
@@ -11828,7 +11828,7 @@ const DIGIMON_DB = [
     {
         "id": "204",
         "name": "Polarbearmon",
-        "types": [
+                "types": [
             "Ice"
         ],
         "ability": "Ice Body",
@@ -11887,7 +11887,7 @@ const DIGIMON_DB = [
     {
         "id": "205",
         "name": "Skadimon",
-        "types": [
+                "types": [
             "Ice"
         ],
         "ability": "Ice Body",
@@ -11941,7 +11941,7 @@ const DIGIMON_DB = [
     {
         "id": "206",
         "name": "Goblimon",
-        "types": [
+                "types": [
             "Ground"
         ],
         "ability": "Emergency Exit",
@@ -11992,7 +11992,7 @@ const DIGIMON_DB = [
     {
         "id": "207",
         "name": "Ogremon",
-        "types": [
+                "types": [
             "Ground",
             "Dark"
         ],
@@ -12047,7 +12047,7 @@ const DIGIMON_DB = [
     {
         "id": "208",
         "name": "Rebellimon",
-        "types": [
+                "types": [
             "Steel",
             "Dark"
         ],
@@ -12110,7 +12110,7 @@ const DIGIMON_DB = [
     {
         "id": "209",
         "name": "Titamon",
-        "types": [
+                "types": [
             "Ground",
             "Dark"
         ],
@@ -12173,7 +12173,7 @@ const DIGIMON_DB = [
     {
         "id": "210",
         "name": "Grottemon",
-        "types": [
+                "types": [
             "Rock"
         ],
         "ability": "Sand Stream",
@@ -12228,7 +12228,7 @@ const DIGIMON_DB = [
     {
         "id": "211",
         "name": "Volcamon",
-        "types": [
+                "types": [
             "Ground",
             "Rock"
         ],
@@ -12288,7 +12288,7 @@ const DIGIMON_DB = [
     {
         "id": "212",
         "name": "AncientVolcamon",
-        "types": [
+                "types": [
             "Ground",
             "Rock"
         ],
@@ -12351,7 +12351,7 @@ const DIGIMON_DB = [
     {
         "id": "213",
         "name": "Hagurumon",
-        "types": [
+                "types": [
             "Steel"
         ],
         "ability": "Motor Drive",
@@ -12400,7 +12400,7 @@ const DIGIMON_DB = [
     {
         "id": "214",
         "name": "Mercurymon",
-        "types": [
+                "types": [
             "Steel",
             "Magic"
         ],
@@ -12454,7 +12454,7 @@ const DIGIMON_DB = [
     {
         "id": "215",
         "name": "Wisemon",
-        "types": [
+                "types": [
             "Steel",
             "Magic"
         ],
@@ -12516,7 +12516,7 @@ const DIGIMON_DB = [
     {
         "id": "216",
         "name": "AncientWisemon",
-        "types": [
+                "types": [
             "Steel",
             "Magic"
         ],
@@ -12579,7 +12579,7 @@ const DIGIMON_DB = [
     {
         "id": "217",
         "name": "Machmon",
-        "types": [
+                "types": [
             "Steel"
         ],
         "ability": "Speed Boost",
@@ -12632,7 +12632,7 @@ const DIGIMON_DB = [
     {
         "id": "218",
         "name": "Locomon",
-        "types": [
+                "types": [
             "Steel"
         ],
         "ability": "Speed Boost",
@@ -12693,7 +12693,7 @@ const DIGIMON_DB = [
     {
         "id": "219",
         "name": "GrandLocomon",
-        "types": [
+                "types": [
             "Steel"
         ],
         "ability": "Speed Boost",
@@ -12755,7 +12755,7 @@ const DIGIMON_DB = [
     {
         "id": "220",
         "name": "Sangomon",
-        "types": [
+                "types": [
             "Water",
             "Poison"
         ],
@@ -12809,7 +12809,7 @@ const DIGIMON_DB = [
     {
         "id": "221",
         "name": "Shellmon",
-        "types": [
+                "types": [
             "Water"
         ],
         "ability": "Shell Armor",
@@ -12866,7 +12866,7 @@ const DIGIMON_DB = [
     {
         "id": "222",
         "name": "MarinBullmon",
-        "types": [
+                "types": [
             "Water",
             "Poison"
         ],
@@ -12926,7 +12926,7 @@ const DIGIMON_DB = [
     {
         "id": "223",
         "name": "Ryugumon",
-        "types": [
+                "types": [
             "Water",
             "Holy"
         ],
@@ -12994,7 +12994,7 @@ const DIGIMON_DB = [
     {
         "id": "224",
         "name": "Ranamon",
-        "types": [
+                "types": [
             "Water",
             "Fairy"
         ],
@@ -13050,7 +13050,7 @@ const DIGIMON_DB = [
     {
         "id": "225",
         "name": "Mermaimon",
-        "types": [
+                "types": [
             "Water"
         ],
         "ability": "Drizzle",
@@ -13109,7 +13109,7 @@ const DIGIMON_DB = [
     {
         "id": "226",
         "name": "AncientMermaimon",
-        "types": [
+                "types": [
             "Water",
             "Fairy"
         ],
@@ -13168,7 +13168,7 @@ const DIGIMON_DB = [
     {
         "id": "227",
         "name": "Tobiumon",
-        "types": [
+                "types": [
             "Water",
             "Flying"
         ],
@@ -13220,7 +13220,7 @@ const DIGIMON_DB = [
     {
         "id": "228",
         "name": "Piranimon",
-        "types": [
+                "types": [
             "Water"
         ],
         "ability": "Strong Jaw",
@@ -13283,7 +13283,7 @@ const DIGIMON_DB = [
     {
         "id": "229",
         "name": "MetalPiranimon",
-        "types": [
+                "types": [
             "Water",
             "Steel"
         ],
@@ -13326,7 +13326,7 @@ const DIGIMON_DB = [
     {
         "id": "230",
         "name": "Cthyllamon",
-        "types": [
+                "types": [
             "Water",
             "Undead"
         ],
@@ -13389,7 +13389,7 @@ const DIGIMON_DB = [
     {
         "id": "231",
         "name": "Pixiemon",
-        "types": [
+                "types": [
             "Fairy",
             "Magic"
         ],
@@ -13449,7 +13449,7 @@ const DIGIMON_DB = [
     {
         "id": "232",
         "name": "Venusmon",
-        "types": [
+                "types": [
             "Fairy",
             "Holy"
         ],
@@ -13508,7 +13508,7 @@ const DIGIMON_DB = [
     {
         "id": "233",
         "name": "Numemon",
-        "types": [
+                "types": [
             "Poison"
         ],
         "ability": "Stench",
@@ -13553,7 +13553,7 @@ const DIGIMON_DB = [
     {
         "id": "234",
         "name": "Monzaemon",
-        "types": [
+                "types": [
             "Normal",
             "Fairy"
         ],
@@ -13615,7 +13615,7 @@ const DIGIMON_DB = [
     {
         "id": "235",
         "name": "WaruMonzaemon",
-        "types": [
+                "types": [
             "Normal",
             "Dark"
         ],
@@ -13677,7 +13677,7 @@ const DIGIMON_DB = [
     {
         "id": "236",
         "name": "ShinMonzaemon",
-        "types": [
+                "types": [
             "Fairy",
             "Dark"
         ],
@@ -13748,7 +13748,7 @@ const DIGIMON_DB = [
     {
         "id": "237",
         "name": "Culumon",
-        "types": [
+                "types": [
             "CHAOS"
         ],
         "ability": "No Guard",
@@ -13770,7 +13770,7 @@ const DIGIMON_DB = [
     {
         "id": "238",
         "name": "Liollmon",
-        "types": [
+                "types": [
             "Holy",
             "Dark"
         ],
@@ -13824,7 +13824,7 @@ const DIGIMON_DB = [
     {
         "id": "239",
         "name": "Leomon",
-        "types": [
+                "types": [
             "Fighting"
         ],
         "ability": "Justified",
@@ -13885,7 +13885,7 @@ const DIGIMON_DB = [
     {
         "id": "240",
         "name": "GrapLeomon",
-        "types": [
+                "types": [
             "Fighting",
             "Steel"
         ],
@@ -13959,7 +13959,7 @@ const DIGIMON_DB = [
     {
         "id": "241",
         "name": "HeavyLeomon",
-        "types": [
+                "types": [
             "Fighting",
             "Steel"
         ],
@@ -14022,7 +14022,7 @@ const DIGIMON_DB = [
     {
         "id": "242",
         "name": "Marsmon",
-        "types": [
+                "types": [
             "Fighting",
             "Fire"
         ],
@@ -14085,7 +14085,7 @@ const DIGIMON_DB = [
     {
         "id": "243",
         "name": "BanchoLeomon",
-        "types": [
+                "types": [
             "Fighting",
             "Fire"
         ],
@@ -14157,7 +14157,7 @@ const DIGIMON_DB = [
     {
         "id": "244",
         "name": "Liamon",
-        "types": [
+                "types": [
             "Electric",
             "Holy"
         ],
@@ -14207,7 +14207,7 @@ const DIGIMON_DB = [
     {
         "id": "245",
         "name": "LoaderLeomon",
-        "types": [
+                "types": [
             "Electric",
             "Steel"
         ],
@@ -14269,7 +14269,7 @@ const DIGIMON_DB = [
     {
         "id": "246",
         "name": "SaberLeomon",
-        "types": [
+                "types": [
             "Electric",
             "Holy"
         ],
@@ -14343,7 +14343,7 @@ const DIGIMON_DB = [
     {
         "id": "247",
         "name": "Lowemon",
-        "types": [
+                "types": [
             "Dark"
         ],
         "ability": "Sword of Ruin",
@@ -14398,7 +14398,7 @@ const DIGIMON_DB = [
     {
         "id": "248",
         "name": "Rihimon",
-        "types": [
+                "types": [
             "Dark"
         ],
         "ability": "Beads of Ruin",
@@ -14461,7 +14461,7 @@ const DIGIMON_DB = [
     {
         "id": "249",
         "name": "AncientSphinxmon",
-        "types": [
+                "types": [
             "Dark"
         ],
         "ability": "Beads of Ruin",
@@ -14523,7 +14523,7 @@ const DIGIMON_DB = [
     {
         "id": "250",
         "name": "Pomumon",
-        "types": [
+                "types": [
             "Grass"
         ],
         "ability": "Supersweet Syrup",
@@ -14573,7 +14573,7 @@ const DIGIMON_DB = [
     {
         "id": "251",
         "name": "Parasaurmon",
-        "types": [
+                "types": [
             "Grass"
         ],
         "ability": "Supersweet Syrup",
@@ -14636,7 +14636,7 @@ const DIGIMON_DB = [
     {
         "id": "252",
         "name": "Ajatarmon",
-        "types": [
+                "types": [
             "Grass"
         ],
         "ability": "Iron Barbs",
@@ -14697,7 +14697,7 @@ const DIGIMON_DB = [
     {
         "id": "253",
         "name": "BloomLordmon",
-        "types": [
+                "types": [
             "Grass",
             "Fairy"
         ],
@@ -14756,7 +14756,7 @@ const DIGIMON_DB = [
     {
         "id": "254",
         "name": "Tropiamon",
-        "types": [
+                "types": [
             "Grass",
             "Poison"
         ],
@@ -14819,7 +14819,7 @@ const DIGIMON_DB = [
     {
         "id": "255",
         "name": "Hydramon",
-        "types": [
+                "types": [
             "Grass",
             "Poison"
         ],
@@ -14882,7 +14882,7 @@ const DIGIMON_DB = [
     {
         "id": "256",
         "name": "Arbormon",
-        "types": [
+                "types": [
             "Grass"
         ],
         "ability": "Battle Armor",
@@ -14937,7 +14937,7 @@ const DIGIMON_DB = [
     {
         "id": "257",
         "name": "Entmon",
-        "types": [
+                "types": [
             "Grass",
             "Bug"
         ],
@@ -14997,7 +14997,7 @@ const DIGIMON_DB = [
     {
         "id": "258",
         "name": "AncientTroiamon",
-        "types": [
+                "types": [
             "Grass",
             "Steel"
         ],
@@ -15060,7 +15060,7 @@ const DIGIMON_DB = [
     {
         "id": "259",
         "name": "Blucomon",
-        "types": [
+                "types": [
             "Ice",
             "Dragon"
         ],
@@ -15110,7 +15110,7 @@ const DIGIMON_DB = [
     {
         "id": "260",
         "name": "Paledramon",
-        "types": [
+                "types": [
             "Ice",
             "Dragon"
         ],
@@ -15164,7 +15164,7 @@ const DIGIMON_DB = [
     {
         "id": "261",
         "name": "CrysPaledramon",
-        "types": [
+                "types": [
             "Ice",
             "Dragon"
         ],
@@ -15227,7 +15227,7 @@ const DIGIMON_DB = [
     {
         "id": "262",
         "name": "Hexeblaumon",
-        "types": [
+                "types": [
             "Ice",
             "Magic"
         ],
@@ -15286,7 +15286,7 @@ const DIGIMON_DB = [
     {
         "id": "263",
         "name": "Sorcerimon",
-        "types": [
+                "types": [
             "Ice",
             "Magic"
         ],
@@ -15344,7 +15344,7 @@ const DIGIMON_DB = [
     {
         "id": "264",
         "name": "Panjyamon X",
-        "types": [
+                "types": [
             "Ice",
             "Magic"
         ],
@@ -15406,7 +15406,7 @@ const DIGIMON_DB = [
     {
         "id": "265",
         "name": "FrosVelgrmon",
-        "types": [
+                "types": [
             "Ice",
             "Flying"
         ],
@@ -15465,7 +15465,7 @@ const DIGIMON_DB = [
     {
         "id": "266",
         "name": "Kotemon",
-        "types": [
+                "types": [
             "Fighting"
         ],
         "ability": "Battle Armor",
@@ -15513,7 +15513,7 @@ const DIGIMON_DB = [
     {
         "id": "267",
         "name": "Dinohumon",
-        "types": [
+                "types": [
             "Dragon",
             "Fighting"
         ],
@@ -15568,7 +15568,7 @@ const DIGIMON_DB = [
     {
         "id": "268",
         "name": "Knightmon",
-        "types": [
+                "types": [
             "Fighting",
             "Holy"
         ],
@@ -15628,7 +15628,7 @@ const DIGIMON_DB = [
     {
         "id": "269",
         "name": "LordKnightmon",
-        "types": [
+                "types": [
             "Fighting",
             "Holy"
         ],
@@ -15691,7 +15691,7 @@ const DIGIMON_DB = [
     {
         "id": "270",
         "name": "Craniummon",
-        "types": [
+                "types": [
             "Magic",
             "Holy"
         ],
@@ -15754,7 +15754,7 @@ const DIGIMON_DB = [
     {
         "id": "271",
         "name": "Musyamon",
-        "types": [
+                "types": [
             "Undead",
             "Fighting"
         ],
@@ -15810,7 +15810,7 @@ const DIGIMON_DB = [
     {
         "id": "272",
         "name": "Oboromon",
-        "types": [
+                "types": [
             "Undead",
             "Fighting"
         ],
@@ -15872,7 +15872,7 @@ const DIGIMON_DB = [
     {
         "id": "273",
         "name": "Gaiomon",
-        "types": [
+                "types": [
             "Undead",
             "Fighting"
         ],
@@ -15935,7 +15935,7 @@ const DIGIMON_DB = [
     {
         "id": "274",
         "name": "Bearmon",
-        "types": [
+                "types": [
             "Fighting"
         ],
         "ability": "Hustle",
@@ -15983,7 +15983,7 @@ const DIGIMON_DB = [
     {
         "id": "275",
         "name": "Grizzlymon",
-        "types": [
+                "types": [
             "Ground",
             "Fighting"
         ],
@@ -16047,7 +16047,7 @@ const DIGIMON_DB = [
     {
         "id": "276",
         "name": "GreatGryzzlymon",
-        "types": [
+                "types": [
             "Fighting",
             "Dark"
         ],
@@ -16107,7 +16107,7 @@ const DIGIMON_DB = [
     {
         "id": "277",
         "name": "Callismon",
-        "types": [
+                "types": [
             "Fighting",
             "Dark"
         ],
@@ -16162,7 +16162,7 @@ const DIGIMON_DB = [
     {
         "id": "278",
         "name": "Dorulumon",
-        "types": [
+                "types": [
             "Ground",
             "Steel"
         ],
@@ -16220,7 +16220,7 @@ const DIGIMON_DB = [
     {
         "id": "279",
         "name": "YaegerDorulumon",
-        "types": [
+                "types": [
             "Ground",
             "Steel"
         ],
@@ -16284,7 +16284,7 @@ const DIGIMON_DB = [
     {
         "id": "280",
         "name": "Mercurimon",
-        "types": [
+                "types": [
             "Fighting",
             "Undead"
         ],
@@ -16349,7 +16349,7 @@ const DIGIMON_DB = [
     {
         "id": "281",
         "name": "Duftmon",
-        "types": [
+                "types": [
             "Fighting",
             "Holy"
         ],
@@ -16417,7 +16417,7 @@ const DIGIMON_DB = [
     {
         "id": "282",
         "name": "Mihiramon",
-        "types": [
+                "types": [
             "Ground",
             "Fighting"
         ],
@@ -16479,7 +16479,7 @@ const DIGIMON_DB = [
     {
         "id": "283",
         "name": "Baihumon",
-        "types": [
+                "types": [
             "Steel",
             "Fighting"
         ],
@@ -16544,7 +16544,7 @@ const DIGIMON_DB = [
     {
         "id": "284",
         "name": "Zubamon",
-        "types": [
+                "types": [
             "Steel"
         ],
         "ability": "Sharpness",
@@ -16589,7 +16589,7 @@ const DIGIMON_DB = [
     {
         "id": "285",
         "name": "ZubaEagermon",
-        "types": [
+                "types": [
             "Steel"
         ],
         "ability": "Sharpness",
@@ -16640,7 +16640,7 @@ const DIGIMON_DB = [
     {
         "id": "286",
         "name": "Duramon",
-        "types": [
+                "types": [
             "Steel"
         ],
         "ability": "Sharpness",
@@ -16701,7 +16701,7 @@ const DIGIMON_DB = [
     {
         "id": "287",
         "name": "Durandamon",
-        "types": [
+                "types": [
             "Steel"
         ],
         "ability": "Sharpness",
@@ -16768,7 +16768,7 @@ const DIGIMON_DB = [
     {
         "id": "288",
         "name": "RagnaLoardmon",
-        "types": [
+                "types": [
             "Steel",
             "Fire"
         ],
@@ -16815,7 +16815,7 @@ const DIGIMON_DB = [
     {
         "id": "289",
         "name": "Ludomon",
-        "types": [
+                "types": [
             "Steel"
         ],
         "ability": "Bulletproof",
@@ -16860,7 +16860,7 @@ const DIGIMON_DB = [
     {
         "id": "290",
         "name": "TiaLudomon",
-        "types": [
+                "types": [
             "Steel",
             "Ice"
         ],
@@ -16916,7 +16916,7 @@ const DIGIMON_DB = [
     {
         "id": "291",
         "name": "RaijiLudomon",
-        "types": [
+                "types": [
             "Steel",
             "Electric"
         ],
@@ -16978,7 +16978,7 @@ const DIGIMON_DB = [
     {
         "id": "292",
         "name": "BryweLudramon",
-        "types": [
+                "types": [
             "Steel",
             "Fire"
         ],
@@ -17050,7 +17050,7 @@ const DIGIMON_DB = [
     {
         "id": "293",
         "name": "Dracomon",
-        "types": [
+                "types": [
             "Dragon"
         ],
         "ability": "Adaptability",
@@ -17096,7 +17096,7 @@ const DIGIMON_DB = [
     {
         "id": "294",
         "name": "CoreDramon Blue",
-        "types": [
+                "types": [
             "Dragon",
             "Flying"
         ],
@@ -17152,7 +17152,7 @@ const DIGIMON_DB = [
     {
         "id": "295",
         "name": "Wingdramon",
-        "types": [
+                "types": [
             "Dragon",
             "Flying"
         ],
@@ -17216,7 +17216,7 @@ const DIGIMON_DB = [
     {
         "id": "296",
         "name": "Slayerdramon",
-        "types": [
+                "types": [
             "Dragon",
             "Flying"
         ],
@@ -17284,7 +17284,7 @@ const DIGIMON_DB = [
     {
         "id": "297",
         "name": "Coredramon Green",
-        "types": [
+                "types": [
             "Dragon",
             "Ground"
         ],
@@ -17340,7 +17340,7 @@ const DIGIMON_DB = [
     {
         "id": "298",
         "name": "Groundramon",
-        "types": [
+                "types": [
             "Dragon",
             "Ground"
         ],
@@ -17404,7 +17404,7 @@ const DIGIMON_DB = [
     {
         "id": "299",
         "name": "Breakdramon",
-        "types": [
+                "types": [
             "Dragon",
             "Ground"
         ],
@@ -17476,7 +17476,7 @@ const DIGIMON_DB = [
     {
         "id": "300",
         "name": "Examon",
-        "types": [
+                "types": [
             "Dragon"
         ],
         "ability": "Adaptability",
@@ -17506,7 +17506,7 @@ const DIGIMON_DB = [
     {
         "id": "301",
         "name": "Vorvomon",
-        "types": [
+                "types": [
             "Rock",
             "Fire"
         ],
@@ -17554,7 +17554,7 @@ const DIGIMON_DB = [
     {
         "id": "302",
         "name": "Lavorvomon",
-        "types": [
+                "types": [
             "Rock",
             "Fire"
         ],
@@ -17609,7 +17609,7 @@ const DIGIMON_DB = [
     {
         "id": "303",
         "name": "Lavogaritamon",
-        "types": [
+                "types": [
             "Rock",
             "Fire"
         ],
@@ -17668,7 +17668,7 @@ const DIGIMON_DB = [
     {
         "id": "304",
         "name": "Volcanicdramon",
-        "types": [
+                "types": [
             "Rock",
             "Fire"
         ],
@@ -17731,7 +17731,7 @@ const DIGIMON_DB = [
     {
         "id": "305",
         "name": "Tyrannomon",
-        "types": [
+                "types": [
             "Fire"
         ],
         "ability": "Blaze",
@@ -17793,7 +17793,7 @@ const DIGIMON_DB = [
     {
         "id": "306",
         "name": "MasterTyrannomon",
-        "types": [
+                "types": [
             "Fire",
             "Dragon"
         ],
@@ -17857,7 +17857,7 @@ const DIGIMON_DB = [
     {
         "id": "307",
         "name": "Dinomon",
-        "types": [
+                "types": [
             "Fire",
             "Dragon"
         ],
@@ -17924,7 +17924,7 @@ const DIGIMON_DB = [
     {
         "id": "308",
         "name": "Jazamon",
-        "types": [
+                "types": [
             "Steel",
             "Flying"
         ],
@@ -17971,7 +17971,7 @@ const DIGIMON_DB = [
     {
         "id": "309",
         "name": "Jazardmon",
-        "types": [
+                "types": [
             "Steel",
             "Flying"
         ],
@@ -18025,7 +18025,7 @@ const DIGIMON_DB = [
     {
         "id": "310",
         "name": "Jazarichmon",
-        "types": [
+                "types": [
             "Steel",
             "Flying"
         ],
@@ -18081,7 +18081,7 @@ const DIGIMON_DB = [
     {
         "id": "311",
         "name": "Metallicdramon",
-        "types": [
+                "types": [
             "Steel",
             "Flying"
         ],
@@ -18146,7 +18146,7 @@ const DIGIMON_DB = [
     {
         "id": "312",
         "name": "DarkTyrannomon",
-        "types": [
+                "types": [
             "Fire",
             "Dark"
         ],
@@ -18200,7 +18200,7 @@ const DIGIMON_DB = [
     {
         "id": "313",
         "name": "MetalTyrannomon",
-        "types": [
+                "types": [
             "Steel",
             "Dark"
         ],
@@ -18258,7 +18258,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Mugendramon",
-                "method": "Mechanic Data"
+                "method": "Steel Data"
             }
         ],
         "stage": "Mega",
@@ -18267,7 +18267,7 @@ const DIGIMON_DB = [
     {
         "id": "314",
         "name": "RustTyranomon",
-        "types": [
+                "types": [
             "Steel",
             "Electric"
         ],
@@ -18334,7 +18334,7 @@ const DIGIMON_DB = [
     {
         "id": "315",
         "name": "Mugendramon",
-        "types": [
+                "types": [
             "Steel"
         ],
         "ability": "Supreme Overlord",
@@ -18370,7 +18370,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "MetalTyrannomon",
-                "method": "Mechanic Data"
+                "method": "Steel Data"
             },
             {
                 "name": "Megadramon",
@@ -18393,7 +18393,7 @@ const DIGIMON_DB = [
     {
         "id": "316",
         "name": "Phascomon",
-        "types": [
+                "types": [
             "Dark"
         ],
         "ability": "Comatose",
@@ -18437,7 +18437,7 @@ const DIGIMON_DB = [
     {
         "id": "317",
         "name": "MadLeomon",
-        "types": [
+                "types": [
             "Dark",
             "Undead"
         ],
@@ -18491,7 +18491,7 @@ const DIGIMON_DB = [
     {
         "id": "318",
         "name": "Astamon",
-        "types": [
+                "types": [
             "Dark"
         ],
         "ability": "Steelworker",
@@ -18550,7 +18550,7 @@ const DIGIMON_DB = [
     {
         "id": "319",
         "name": "Belphemon",
-        "types": [
+                "types": [
             "Dark"
         ],
         "ability": "Slow Start",
@@ -18608,7 +18608,7 @@ const DIGIMON_DB = [
     {
         "id": "320",
         "name": "KoDokugumon",
-        "types": [
+                "types": [
             "Bug",
             "Poison"
         ],
@@ -18654,7 +18654,7 @@ const DIGIMON_DB = [
     {
         "id": "321",
         "name": "Dokugumon",
-        "types": [
+                "types": [
             "Bug",
             "Poison"
         ],
@@ -18708,7 +18708,7 @@ const DIGIMON_DB = [
     {
         "id": "322",
         "name": "Archnemon",
-        "types": [
+                "types": [
             "Bug",
             "Poison"
         ],
@@ -18772,7 +18772,7 @@ const DIGIMON_DB = [
     {
         "id": "323",
         "name": "Parasimon",
-        "types": [
+                "types": [
             "Bug",
             "Poison"
         ],
@@ -18827,7 +18827,7 @@ const DIGIMON_DB = [
     {
         "id": "324",
         "name": "Commandramon",
-        "types": [
+                "types": [
             "Steel",
             "Dragon"
         ],
@@ -18877,7 +18877,7 @@ const DIGIMON_DB = [
     {
         "id": "325",
         "name": "Hi-Commandramon",
-        "types": [
+                "types": [
             "Steel",
             "Dragon"
         ],
@@ -18944,7 +18944,7 @@ const DIGIMON_DB = [
     {
         "id": "326",
         "name": "Cargodramon",
-        "types": [
+                "types": [
             "Steel",
             "Dragon"
         ],
@@ -19014,7 +19014,7 @@ const DIGIMON_DB = [
     {
         "id": "327",
         "name": "Ghilliedhumon",
-        "types": [
+                "types": [
             "Dragon",
             "Fairy"
         ],
@@ -19076,7 +19076,7 @@ const DIGIMON_DB = [
     {
         "id": "328",
         "name": "Brigadramon",
-        "types": [
+                "types": [
             "Steel",
             "Dragon"
         ],
@@ -19143,7 +19143,7 @@ const DIGIMON_DB = [
     {
         "id": "329",
         "name": "Sealsdramon",
-        "types": [
+                "types": [
             "Steel",
             "Dragon"
         ],
@@ -19202,7 +19202,7 @@ const DIGIMON_DB = [
     {
         "id": "330",
         "name": "Tankdramon",
-        "types": [
+                "types": [
             "Steel",
             "Dragon"
         ],
@@ -19264,7 +19264,7 @@ const DIGIMON_DB = [
     {
         "id": "331",
         "name": "Darkdramon",
-        "types": [
+                "types": [
             "Steel",
             "Dragon"
         ],
@@ -19336,7 +19336,7 @@ const DIGIMON_DB = [
     {
         "id": "332",
         "name": "Caosmon",
-        "types": [
+                "types": [
             "CHAOS"
         ],
         "ability": "Moody",
@@ -19382,7 +19382,7 @@ const DIGIMON_DB = [
     {
         "id": "333",
         "name": "Dracmon",
-        "types": [
+                "types": [
             "Undead",
             "Dark"
         ],
@@ -19428,7 +19428,7 @@ const DIGIMON_DB = [
     {
         "id": "334",
         "name": "Sangloupmon",
-        "types": [
+                "types": [
             "Dark"
         ],
         "ability": "Intimidate",
@@ -19486,7 +19486,7 @@ const DIGIMON_DB = [
     {
         "id": "335",
         "name": "Matadormon",
-        "types": [
+                "types": [
             "Undead",
             "Dark"
         ],
@@ -19546,7 +19546,7 @@ const DIGIMON_DB = [
     {
         "id": "336",
         "name": "Grandracmon",
-        "types": [
+                "types": [
             "Undead",
             "Dark"
         ],
@@ -19609,7 +19609,7 @@ const DIGIMON_DB = [
     {
         "id": "337",
         "name": "Myotismon",
-        "types": [
+                "types": [
             "Undead",
             "Dark"
         ],
@@ -19669,7 +19669,7 @@ const DIGIMON_DB = [
     {
         "id": "338",
         "name": "VenomMyotismon",
-        "types": [
+                "types": [
             "Undead",
             "Dark"
         ],
@@ -19732,7 +19732,7 @@ const DIGIMON_DB = [
     {
         "id": "339",
         "name": "DemiDevimon",
-        "types": [
+                "types": [
             "Dark",
             "Flying"
         ],
@@ -19782,7 +19782,7 @@ const DIGIMON_DB = [
     {
         "id": "340",
         "name": "Devimon",
-        "types": [
+                "types": [
             "Dark",
             "Flying"
         ],
@@ -19844,7 +19844,7 @@ const DIGIMON_DB = [
     {
         "id": "341",
         "name": "NeoDevimon",
-        "types": [
+                "types": [
             "Dark",
             "Flying"
         ],
@@ -19904,7 +19904,7 @@ const DIGIMON_DB = [
     {
         "id": "342",
         "name": "DoneDevimon",
-        "types": [
+                "types": [
             "Dark",
             "Flying"
         ],
@@ -19963,7 +19963,7 @@ const DIGIMON_DB = [
     {
         "id": "343",
         "name": "Jokermon",
-        "types": [
+                "types": [
             "Dark",
             "Magic"
         ],
@@ -20025,7 +20025,7 @@ const DIGIMON_DB = [
     {
         "id": "344",
         "name": "Piedmon",
-        "types": [
+                "types": [
             "Dark",
             "Magic"
         ],
@@ -20084,7 +20084,7 @@ const DIGIMON_DB = [
     {
         "id": "345",
         "name": "Vilemon",
-        "types": [
+                "types": [
             "Dark"
         ],
         "ability": "Prankster",
@@ -20139,7 +20139,7 @@ const DIGIMON_DB = [
     {
         "id": "346",
         "name": "SkullSatamon",
-        "types": [
+                "types": [
             "Undead",
             "Magic"
         ],
@@ -20199,7 +20199,7 @@ const DIGIMON_DB = [
     {
         "id": "347",
         "name": "Barbamon",
-        "types": [
+                "types": [
             "Undead",
             "Magic"
         ],
@@ -20254,7 +20254,7 @@ const DIGIMON_DB = [
     {
         "id": "348",
         "name": "Gizamon",
-        "types": [
+                "types": [
             "Water"
         ],
         "ability": "Dry Skin",
@@ -20296,7 +20296,7 @@ const DIGIMON_DB = [
     {
         "id": "349",
         "name": "Gesomon",
-        "types": [
+                "types": [
             "Water",
             "Poison"
         ],
@@ -20352,7 +20352,7 @@ const DIGIMON_DB = [
     {
         "id": "350",
         "name": "MarineDevimon",
-        "types": [
+                "types": [
             "Water",
             "Poison"
         ],
@@ -20412,7 +20412,7 @@ const DIGIMON_DB = [
     {
         "id": "351",
         "name": "Leviamon",
-        "types": [
+                "types": [
             "Water",
             "Dark"
         ],
@@ -20475,7 +20475,7 @@ const DIGIMON_DB = [
     {
         "id": "352",
         "name": "Dolphmon",
-        "types": [
+                "types": [
             "Water"
         ],
         "ability": "Storm Drain",
@@ -20528,7 +20528,7 @@ const DIGIMON_DB = [
     {
         "id": "353",
         "name": "Hangyomon",
-        "types": [
+                "types": [
             "Water"
         ],
         "ability": "Storm Drain",
@@ -20587,7 +20587,7 @@ const DIGIMON_DB = [
     {
         "id": "354",
         "name": "Neptunemon",
-        "types": [
+                "types": [
             "Water"
         ],
         "ability": "Drizzle",
@@ -20649,7 +20649,7 @@ const DIGIMON_DB = [
     {
         "id": "355",
         "name": "Betamon",
-        "types": [
+                "types": [
             "Water",
             "Electric"
         ],
@@ -20704,7 +20704,7 @@ const DIGIMON_DB = [
     {
         "id": "356",
         "name": "Seadramon",
-        "types": [
+                "types": [
             "Water",
             "Dragon"
         ],
@@ -20754,7 +20754,7 @@ const DIGIMON_DB = [
     {
         "id": "357",
         "name": "MegaSeadramon",
-        "types": [
+                "types": [
             "Water",
             "Dragon"
         ],
@@ -20814,7 +20814,7 @@ const DIGIMON_DB = [
     {
         "id": "358",
         "name": "MetalSeadramon",
-        "types": [
+                "types": [
             "Water",
             "Steel"
         ],
@@ -20882,7 +20882,7 @@ const DIGIMON_DB = [
     {
         "id": "359",
         "name": "Aegisdramon",
-        "types": [
+                "types": [
             "Water",
             "Steel"
         ],
@@ -20925,7 +20925,7 @@ const DIGIMON_DB = [
     {
         "id": "360",
         "name": "Airdramon",
-        "types": [
+                "types": [
             "Flying",
             "Dragon"
         ],
@@ -20982,7 +20982,7 @@ const DIGIMON_DB = [
     {
         "id": "361",
         "name": "Megadramon",
-        "types": [
+                "types": [
             "Steel",
             "Dragon"
         ],
@@ -21037,7 +21037,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Mugendramon",
-                "method": "Mechanic Data"
+                "method": "Steel Data"
             }
         ],
         "stage": "Ultimate",
@@ -21046,7 +21046,7 @@ const DIGIMON_DB = [
     {
         "id": "362",
         "name": "Sunarizamon",
-        "types": [
+                "types": [
             "Ground"
         ],
         "ability": "Sand Veil",
@@ -21103,7 +21103,7 @@ const DIGIMON_DB = [
     {
         "id": "363",
         "name": "Tortomon",
-        "types": [
+                "types": [
             "Ground"
         ],
         "ability": "Shell Armor",
@@ -21160,7 +21160,7 @@ const DIGIMON_DB = [
     {
         "id": "364",
         "name": "Jagamon",
-        "types": [
+                "types": [
             "Ground",
             "Grass"
         ],
@@ -21220,7 +21220,7 @@ const DIGIMON_DB = [
     {
         "id": "365",
         "name": "Golemon",
-        "types": [
+                "types": [
             "Rock",
             "Ground"
         ],
@@ -21275,7 +21275,7 @@ const DIGIMON_DB = [
     {
         "id": "366",
         "name": "Gogmamon",
-        "types": [
+                "types": [
             "Rock",
             "Ground"
         ],
@@ -21338,7 +21338,7 @@ const DIGIMON_DB = [
     {
         "id": "367",
         "name": "Blastmon",
-        "types": [
+                "types": [
             "Rock",
             "Ground"
         ],
@@ -21399,7 +21399,7 @@ const DIGIMON_DB = [
     {
         "id": "368",
         "name": "Monochromon",
-        "types": [
+                "types": [
             "Ground",
             "Fire"
         ],
@@ -21454,7 +21454,7 @@ const DIGIMON_DB = [
     {
         "id": "369",
         "name": "Triceramon",
-        "types": [
+                "types": [
             "Ground",
             "Dragon"
         ],
@@ -21518,7 +21518,7 @@ const DIGIMON_DB = [
     {
         "id": "370",
         "name": "DinoRexmon",
-        "types": [
+                "types": [
             "Ground",
             "Dragon"
         ],
@@ -21577,7 +21577,7 @@ const DIGIMON_DB = [
     {
         "id": "371",
         "name": "Gammamon",
-        "types": [
+                "types": [
             "Dragon"
         ],
         "ability": "Rock Head",
@@ -21626,7 +21626,7 @@ const DIGIMON_DB = [
     {
         "id": "372",
         "name": "BetelGammamon",
-        "types": [
+                "types": [
             "Dragon",
             "Fire"
         ],
@@ -21677,7 +21677,7 @@ const DIGIMON_DB = [
     {
         "id": "373",
         "name": "Canoweissmon",
-        "types": [
+                "types": [
             "Dragon",
             "Flying"
         ],
@@ -21739,7 +21739,7 @@ const DIGIMON_DB = [
     {
         "id": "374",
         "name": "Siriusmon",
-        "types": [
+                "types": [
             "Dragon",
             "Holy"
         ],
@@ -21803,7 +21803,7 @@ const DIGIMON_DB = [
     {
         "id": "375",
         "name": "GulusGammamon",
-        "types": [
+                "types": [
             "Dragon",
             "Dark"
         ],
@@ -21857,7 +21857,7 @@ const DIGIMON_DB = [
     {
         "id": "376",
         "name": "Regulusmon",
-        "types": [
+                "types": [
             "Dragon",
             "Poison"
         ],
@@ -21919,7 +21919,7 @@ const DIGIMON_DB = [
     {
         "id": "377",
         "name": "Arcturusmon",
-        "types": [
+                "types": [
             "Dragon",
             "Poison"
         ],
@@ -21987,7 +21987,7 @@ const DIGIMON_DB = [
     {
         "id": "378",
         "name": "Proximamon",
-        "types": [
+                "types": [
             "Holy",
             "Dark"
         ],
@@ -22034,7 +22034,7 @@ const DIGIMON_DB = [
     {
         "id": "379",
         "name": "Angoramon",
-        "types": [
+                "types": [
             "Fighting",
             "Flying"
         ],
@@ -22079,7 +22079,7 @@ const DIGIMON_DB = [
     {
         "id": "380",
         "name": "SymbareAngoramon",
-        "types": [
+                "types": [
             "Fighting",
             "Flying"
         ],
@@ -22134,7 +22134,7 @@ const DIGIMON_DB = [
     {
         "id": "381",
         "name": "Lamortmon",
-        "types": [
+                "types": [
             "Fighting",
             "Flying"
         ],
@@ -22196,7 +22196,7 @@ const DIGIMON_DB = [
     {
         "id": "382",
         "name": "Diarbbitmon",
-        "types": [
+                "types": [
             "Fighting",
             "Magic"
         ],
@@ -22255,7 +22255,7 @@ const DIGIMON_DB = [
     {
         "id": "383",
         "name": "Jellymon",
-        "types": [
+                "types": [
             "Electric",
             "Water"
         ],
@@ -22300,7 +22300,7 @@ const DIGIMON_DB = [
     {
         "id": "384",
         "name": "TeslaJellymon",
-        "types": [
+                "types": [
             "Electric",
             "Water"
         ],
@@ -22352,7 +22352,7 @@ const DIGIMON_DB = [
     {
         "id": "385",
         "name": "Thetismon",
-        "types": [
+                "types": [
             "Electric",
             "Water"
         ],
@@ -22412,7 +22412,7 @@ const DIGIMON_DB = [
     {
         "id": "386",
         "name": "Amphimon",
-        "types": [
+                "types": [
             "Steel",
             "Water"
         ],
@@ -22475,7 +22475,7 @@ const DIGIMON_DB = [
     {
         "id": "387",
         "name": "Morphomon",
-        "types": [
+                "types": [
             "Bug",
             "Dark"
         ],
@@ -22522,7 +22522,7 @@ const DIGIMON_DB = [
     {
         "id": "388",
         "name": "Hudiemon",
-        "types": [
+                "types": [
             "Bug",
             "Dark"
         ],
@@ -22581,7 +22581,7 @@ const DIGIMON_DB = [
     {
         "id": "389",
         "name": "FunBeemon",
-        "types": [
+                "types": [
             "Bug"
         ],
         "ability": "Levitate",
@@ -22630,7 +22630,7 @@ const DIGIMON_DB = [
     {
         "id": "390",
         "name": "Waspmon",
-        "types": [
+                "types": [
             "Bug",
             "Steel"
         ],
@@ -22686,7 +22686,7 @@ const DIGIMON_DB = [
     {
         "id": "391",
         "name": "Vespamon",
-        "types": [
+                "types": [
             "Bug",
             "Steel"
         ],
@@ -22746,7 +22746,7 @@ const DIGIMON_DB = [
     {
         "id": "392",
         "name": "TigerVespamon",
-        "types": [
+                "types": [
             "Bug",
             "Steel"
         ],
@@ -22809,7 +22809,7 @@ const DIGIMON_DB = [
     {
         "id": "393",
         "name": "ForgeBeemon",
-        "types": [
+                "types": [
             "Bug",
             "Normal"
         ],
@@ -22864,7 +22864,7 @@ const DIGIMON_DB = [
     {
         "id": "394",
         "name": "CannonBeemon",
-        "types": [
+                "types": [
             "Bug",
             "Steel"
         ],
@@ -22926,7 +22926,7 @@ const DIGIMON_DB = [
     {
         "id": "395",
         "name": "QueenBeemon",
-        "types": [
+                "types": [
             "Bug",
             "Steel"
         ],
@@ -22977,7 +22977,7 @@ const DIGIMON_DB = [
     {
         "id": "396",
         "name": "Herissmon",
-        "types": [
+                "types": [
             "Electric",
             "Poison"
         ],
@@ -23023,7 +23023,7 @@ const DIGIMON_DB = [
     {
         "id": "397",
         "name": "Filmon",
-        "types": [
+                "types": [
             "Electric",
             "Poison"
         ],
@@ -23074,7 +23074,7 @@ const DIGIMON_DB = [
     {
         "id": "398",
         "name": "Stiffilmon",
-        "types": [
+                "types": [
             "Electric",
             "Poison"
         ],
@@ -23130,7 +23130,7 @@ const DIGIMON_DB = [
     {
         "id": "399",
         "name": "Rasenmon Fury Mode",
-        "types": [
+                "types": [
             "Poison",
             "Dark"
         ],
@@ -23166,7 +23166,7 @@ const DIGIMON_DB = [
     {
         "id": "400",
         "name": "Rasenmon True Form",
-        "types": [
+                "types": [
             "Electric",
             "Poison"
         ],
@@ -23213,7 +23213,7 @@ const DIGIMON_DB = [
     {
         "id": "401",
         "name": "Pulsemon",
-        "types": [
+                "types": [
             "Electric"
         ],
         "ability": "Static",
@@ -23259,7 +23259,7 @@ const DIGIMON_DB = [
     {
         "id": "402",
         "name": "Bulkmon",
-        "types": [
+                "types": [
             "Electric",
             "Fighting"
         ],
@@ -23313,7 +23313,7 @@ const DIGIMON_DB = [
     {
         "id": "403",
         "name": "Boutmon",
-        "types": [
+                "types": [
             "Electric",
             "Fighting"
         ],
@@ -23377,7 +23377,7 @@ const DIGIMON_DB = [
     {
         "id": "404",
         "name": "Kazuchimon",
-        "types": [
+                "types": [
             "Electric",
             "Fighting"
         ],
@@ -23445,7 +23445,7 @@ const DIGIMON_DB = [
     {
         "id": "405",
         "name": "Exermon",
-        "types": [
+                "types": [
             "Bug",
             "Magic"
         ],
@@ -23500,7 +23500,7 @@ const DIGIMON_DB = [
     {
         "id": "406",
         "name": "Climbmon",
-        "types": [
+                "types": [
             "Bug",
             "Magic"
         ],
@@ -23558,7 +23558,7 @@ const DIGIMON_DB = [
     {
         "id": "407",
         "name": "Shivamon",
-        "types": [
+                "types": [
             "Bug",
             "Magic"
         ],
@@ -23613,7 +23613,7 @@ const DIGIMON_DB = [
     {
         "id": "408",
         "name": "Shroudmon",
-        "types": [
+                "types": [
             "Dark",
             "Fighting"
         ],
@@ -23676,7 +23676,7 @@ const DIGIMON_DB = [
     {
         "id": "409",
         "name": "Loogamon",
-        "types": [
+                "types": [
             "Magic",
             "Fire"
         ],
@@ -23722,7 +23722,7 @@ const DIGIMON_DB = [
     {
         "id": "410",
         "name": "Loogarmon",
-        "types": [
+                "types": [
             "Magic",
             "Fire"
         ],
@@ -23773,7 +23773,7 @@ const DIGIMON_DB = [
     {
         "id": "411",
         "name": "Helloogarmon",
-        "types": [
+                "types": [
             "Magic",
             "Fire"
         ],
@@ -23805,7 +23805,7 @@ const DIGIMON_DB = [
     {
         "id": "412",
         "name": "Soloogarmon",
-        "types": [
+                "types": [
             "Magic",
             "Fire"
         ],
@@ -23861,7 +23861,7 @@ const DIGIMON_DB = [
     {
         "id": "413",
         "name": "Fenriloogamon",
-        "types": [
+                "types": [
             "Magic",
             "Fire"
         ],
@@ -23929,7 +23929,7 @@ const DIGIMON_DB = [
     {
         "id": "414",
         "name": "Fenriloogamon Takemikazuchi",
-        "types": [
+                "types": [
             "Magic",
             "Electric"
         ],
@@ -23972,7 +23972,7 @@ const DIGIMON_DB = [
     {
         "id": "415",
         "name": "Kudamon",
-        "types": [
+                "types": [
             "Holy"
         ],
         "ability": "Levitate",
@@ -24016,7 +24016,7 @@ const DIGIMON_DB = [
     {
         "id": "416",
         "name": "Reppamon",
-        "types": [
+                "types": [
             "Holy"
         ],
         "ability": "Hyper Cutter",
@@ -24070,7 +24070,7 @@ const DIGIMON_DB = [
     {
         "id": "417",
         "name": "Tyilinmon",
-        "types": [
+                "types": [
             "Holy",
             "Flying"
         ],
@@ -24134,7 +24134,7 @@ const DIGIMON_DB = [
     {
         "id": "418",
         "name": "Mitamamon",
-        "types": [
+                "types": [
             "Holy",
             "Flying"
         ],
@@ -24197,7 +24197,7 @@ const DIGIMON_DB = [
     {
         "id": "419",
         "name": "Sleipmon",
-        "types": [
+                "types": [
             "Holy",
             "Ice"
         ],
@@ -24260,7 +24260,7 @@ const DIGIMON_DB = [
     {
         "id": "420",
         "name": "Ghostmon",
-        "types": [
+                "types": [
             "Undead"
         ],
         "ability": "Levitate",
@@ -24305,7 +24305,7 @@ const DIGIMON_DB = [
     {
         "id": "421",
         "name": "Bakemon",
-        "types": [
+                "types": [
             "Undead"
         ],
         "ability": "Levitate",
@@ -24364,7 +24364,7 @@ const DIGIMON_DB = [
     {
         "id": "422",
         "name": "Phantomon",
-        "types": [
+                "types": [
             "Undead"
         ],
         "ability": "Levitate",
@@ -24425,7 +24425,7 @@ const DIGIMON_DB = [
     {
         "id": "423",
         "name": "Necromon",
-        "types": [
+                "types": [
             "Undead",
             "Magic"
         ],
@@ -24488,7 +24488,7 @@ const DIGIMON_DB = [
     {
         "id": "424",
         "name": "Pumpmon",
-        "types": [
+                "types": [
             "Undead",
             "Grass"
         ],
@@ -24552,7 +24552,7 @@ const DIGIMON_DB = [
     {
         "id": "425",
         "name": "NoblePumpmon",
-        "types": [
+                "types": [
             "Undead",
             "Grass"
         ],
@@ -24615,7 +24615,7 @@ const DIGIMON_DB = [
     {
         "id": "426",
         "name": "Mummymon",
-        "types": [
+                "types": [
             "Undead",
             "Poison"
         ],
@@ -24677,7 +24677,7 @@ const DIGIMON_DB = [
     {
         "id": "427",
         "name": "Pharaohmon",
-        "types": [
+                "types": [
             "Undead",
             "Poison"
         ],
@@ -24732,7 +24732,7 @@ const DIGIMON_DB = [
     {
         "id": "428",
         "name": "Tsukaimon",
-        "types": [
+                "types": [
             "Flying",
             "Dark"
         ],
@@ -24778,7 +24778,7 @@ const DIGIMON_DB = [
     {
         "id": "429",
         "name": "Witchmon",
-        "types": [
+                "types": [
             "Dark",
             "Magic"
         ],
@@ -24840,7 +24840,7 @@ const DIGIMON_DB = [
     {
         "id": "430",
         "name": "LadyDevimon",
-        "types": [
+                "types": [
             "Dark",
             "Poison"
         ],
@@ -24914,7 +24914,7 @@ const DIGIMON_DB = [
     {
         "id": "431",
         "name": "Dianamon",
-        "types": [
+                "types": [
             "Dark",
             "Ice"
         ],
@@ -24986,7 +24986,7 @@ const DIGIMON_DB = [
     {
         "id": "432",
         "name": "Mastemon",
-        "types": [
+                "types": [
             "Holy",
             "Dark"
         ],
@@ -25049,7 +25049,7 @@ const DIGIMON_DB = [
     {
         "id": "433",
         "name": "Bastemon",
-        "types": [
+                "types": [
             "Dark",
             "Fairy"
         ],
@@ -25112,7 +25112,7 @@ const DIGIMON_DB = [
     {
         "id": "434",
         "name": "Lilithmon",
-        "types": [
+                "types": [
             "Dark",
             "Poison"
         ],
@@ -25175,7 +25175,7 @@ const DIGIMON_DB = [
     {
         "id": "435",
         "name": "Labramon",
-        "types": [
+                "types": [
             "Normal"
         ],
         "ability": "Frisbee Fetch",
@@ -25226,7 +25226,7 @@ const DIGIMON_DB = [
     {
         "id": "436",
         "name": "Seasarmon",
-        "types": [
+                "types": [
             "Holy"
         ],
         "ability": "Guard Dog",
@@ -25282,7 +25282,7 @@ const DIGIMON_DB = [
     {
         "id": "437",
         "name": "Caturamon",
-        "types": [
+                "types": [
             "Holy"
         ],
         "ability": "Guard Dog",
@@ -25347,7 +25347,7 @@ const DIGIMON_DB = [
     {
         "id": "438",
         "name": "Erlangmon",
-        "types": [
+                "types": [
             "Holy"
         ],
         "ability": "Illusion",
@@ -25409,7 +25409,7 @@ const DIGIMON_DB = [
     {
         "id": "439",
         "name": "Dobermon",
-        "types": [
+                "types": [
             "Dark"
         ],
         "ability": "Guard Dog",
@@ -25460,7 +25460,7 @@ const DIGIMON_DB = [
     {
         "id": "440",
         "name": "Cerberusmon",
-        "types": [
+                "types": [
             "Dark",
             "Fire"
         ],
@@ -25524,7 +25524,7 @@ const DIGIMON_DB = [
     {
         "id": "441",
         "name": "Anubismon",
-        "types": [
+                "types": [
             "Undead",
             "Holy"
         ],
@@ -25596,7 +25596,7 @@ const DIGIMON_DB = [
     {
         "id": "442",
         "name": "Crabmon",
-        "types": [
+                "types": [
             "Water"
         ],
         "ability": "Hyper Cutter",
@@ -25640,7 +25640,7 @@ const DIGIMON_DB = [
     {
         "id": "443",
         "name": "Ebidramon",
-        "types": [
+                "types": [
             "Water",
             "Dragon"
         ],
@@ -25692,7 +25692,7 @@ const DIGIMON_DB = [
     {
         "id": "444",
         "name": "MarineKimeramon",
-        "types": [
+                "types": [
             "Water",
             "Electric"
         ],
@@ -25752,7 +25752,7 @@ const DIGIMON_DB = [
     {
         "id": "445",
         "name": "Gusokumon",
-        "types": [
+                "types": [
             "Water",
             "Bug"
         ],
@@ -25812,7 +25812,7 @@ const DIGIMON_DB = [
     {
         "id": "446",
         "name": "Regalecusmon",
-        "types": [
+                "types": [
             "Water",
             "Electric"
         ],
@@ -25879,7 +25879,7 @@ const DIGIMON_DB = [
     {
         "id": "447",
         "name": "Monmon",
-        "types": [
+                "types": [
             "Normal"
         ],
         "ability": "Keen Eye",
@@ -25923,7 +25923,7 @@ const DIGIMON_DB = [
     {
         "id": "448",
         "name": "Apemon",
-        "types": [
+                "types": [
             "Fighting",
             "Holy"
         ],
@@ -25977,7 +25977,7 @@ const DIGIMON_DB = [
     {
         "id": "449",
         "name": "Gokuumon",
-        "types": [
+                "types": [
             "Fighting"
         ],
         "ability": "Long Reach",
@@ -26038,7 +26038,7 @@ const DIGIMON_DB = [
     {
         "id": "450",
         "name": "Kamemon",
-        "types": [
+                "types": [
             "Water",
             "Steel"
         ],
@@ -26085,7 +26085,7 @@ const DIGIMON_DB = [
     {
         "id": "451",
         "name": "Gawappamon",
-        "types": [
+                "types": [
             "Water",
             "Steel"
         ],
@@ -26136,7 +26136,7 @@ const DIGIMON_DB = [
     {
         "id": "452",
         "name": "Sagomon",
-        "types": [
+                "types": [
             "Water",
             "Steel"
         ],
@@ -26200,7 +26200,7 @@ const DIGIMON_DB = [
     {
         "id": "453",
         "name": "JumboGamemon",
-        "types": [
+                "types": [
             "Water",
             "Steel"
         ],
@@ -26263,7 +26263,7 @@ const DIGIMON_DB = [
     {
         "id": "454",
         "name": "Tylomon",
-        "types": [
+                "types": [
             "Water"
         ],
         "ability": "Swift Swim",
@@ -26316,7 +26316,7 @@ const DIGIMON_DB = [
     {
         "id": "455",
         "name": "Sandiramon",
-        "types": [
+                "types": [
             "Poison",
             "Holy"
         ],
@@ -26373,7 +26373,7 @@ const DIGIMON_DB = [
     {
         "id": "456",
         "name": "Xuanwumon",
-        "types": [
+                "types": [
             "Grass",
             "Holy"
         ],
@@ -26438,7 +26438,7 @@ const DIGIMON_DB = [
     {
         "id": "457",
         "name": "Kokuwamon",
-        "types": [
+                "types": [
             "Electric"
         ],
         "ability": "Static",
@@ -26483,7 +26483,7 @@ const DIGIMON_DB = [
     {
         "id": "458",
         "name": "Thundermon",
-        "types": [
+                "types": [
             "Electric"
         ],
         "ability": "Magnet Pull",
@@ -26534,7 +26534,7 @@ const DIGIMON_DB = [
     {
         "id": "459",
         "name": "Mamemon",
-        "types": [
+                "types": [
             "Normal",
             "Electric"
         ],
@@ -26600,7 +26600,7 @@ const DIGIMON_DB = [
     {
         "id": "460",
         "name": "BanchoMamemon",
-        "types": [
+                "types": [
             "Fighting",
             "Electric"
         ],
@@ -26663,7 +26663,7 @@ const DIGIMON_DB = [
     {
         "id": "461",
         "name": "MetalMamemon",
-        "types": [
+                "types": [
             "Steel",
             "Electric"
         ],
@@ -26719,7 +26719,7 @@ const DIGIMON_DB = [
     {
         "id": "462",
         "name": "Floramon",
-        "types": [
+                "types": [
             "Grass"
         ],
         "ability": "Effect Store",
@@ -26763,7 +26763,7 @@ const DIGIMON_DB = [
     {
         "id": "463",
         "name": "Woodmon",
-        "types": [
+                "types": [
             "Grass"
         ],
         "ability": "Dry Skin",
@@ -26816,7 +26816,7 @@ const DIGIMON_DB = [
     {
         "id": "464",
         "name": "Oleamon",
-        "types": [
+                "types": [
             "Grass",
             "Poison"
         ],
@@ -26879,7 +26879,7 @@ const DIGIMON_DB = [
     {
         "id": "465",
         "name": "Ceresmon",
-        "types": [
+                "types": [
             "Grass",
             "Ground"
         ],
@@ -26947,7 +26947,7 @@ const DIGIMON_DB = [
     {
         "id": "466",
         "name": "Cherrymon",
-        "types": [
+                "types": [
             "Grass"
         ],
         "ability": "Dry Skin",
@@ -27008,7 +27008,7 @@ const DIGIMON_DB = [
     {
         "id": "467",
         "name": "Pinochimon",
-        "types": [
+                "types": [
             "Grass",
             "Steel"
         ],
@@ -27071,7 +27071,7 @@ const DIGIMON_DB = [
     {
         "id": "468",
         "name": "Keramon",
-        "types": [
+                "types": [
             "Poison",
             "Dark"
         ],
@@ -27116,7 +27116,7 @@ const DIGIMON_DB = [
     {
         "id": "469",
         "name": "Chrysalimon",
-        "types": [
+                "types": [
             "Poison",
             "Dark"
         ],
@@ -27168,7 +27168,7 @@ const DIGIMON_DB = [
     {
         "id": "470",
         "name": "Infermon",
-        "types": [
+                "types": [
             "Poison",
             "Dark"
         ],
@@ -27228,7 +27228,7 @@ const DIGIMON_DB = [
     {
         "id": "471",
         "name": "Diaboromon",
-        "types": [
+                "types": [
             "Poison",
             "Dark"
         ],
@@ -27291,7 +27291,7 @@ const DIGIMON_DB = [
     {
         "id": "472",
         "name": "Chuumon",
-        "types": [
+                "types": [
             "Poison"
         ],
         "ability": "Wimp Out",
@@ -27332,7 +27332,7 @@ const DIGIMON_DB = [
     {
         "id": "473",
         "name": "Sukamon",
-        "types": [
+                "types": [
             "Poison"
         ],
         "ability": "Stench",
@@ -27370,7 +27370,7 @@ const DIGIMON_DB = [
     {
         "id": "474",
         "name": "Etemon",
-        "types": [
+                "types": [
             "Poison",
             "Fairy"
         ],
@@ -27433,7 +27433,7 @@ const DIGIMON_DB = [
     {
         "id": "475",
         "name": "MetalEtemon",
-        "types": [
+                "types": [
             "Poison",
             "Steel"
         ],
@@ -27492,7 +27492,7 @@ const DIGIMON_DB = [
     {
         "id": "476",
         "name": "Pteromon",
-        "types": [
+                "types": [
             "Flying"
         ],
         "ability": "Gale Wings",
@@ -27536,7 +27536,7 @@ const DIGIMON_DB = [
     {
         "id": "477",
         "name": "Galemon",
-        "types": [
+                "types": [
             "Flying"
         ],
         "ability": "Gale Wings",
@@ -27591,7 +27591,7 @@ const DIGIMON_DB = [
     {
         "id": "478",
         "name": "GrandGalemon",
-        "types": [
+                "types": [
             "Flying",
             "Magic"
         ],
@@ -27654,7 +27654,7 @@ const DIGIMON_DB = [
     {
         "id": "479",
         "name": "Zephagamon",
-        "types": [
+                "types": [
             "Flying",
             "Magic"
         ],
@@ -27717,7 +27717,7 @@ const DIGIMON_DB = [
     {
         "id": "480",
         "name": "Shoemon",
-        "types": [
+                "types": [
             "Fairy",
             "Normal"
         ],
@@ -27765,7 +27765,7 @@ const DIGIMON_DB = [
     {
         "id": "481",
         "name": "Shoeshoemon",
-        "types": [
+                "types": [
             "Fairy",
             "Normal"
         ],
@@ -27820,7 +27820,7 @@ const DIGIMON_DB = [
     {
         "id": "482",
         "name": "Chaperomon",
-        "types": [
+                "types": [
             "Fairy",
             "Normal"
         ],
@@ -27886,7 +27886,7 @@ const DIGIMON_DB = [
     {
         "id": "483",
         "name": "Cendrillmon",
-        "types": [
+                "types": [
             "Fairy",
             "Normal"
         ],
@@ -27953,7 +27953,7 @@ const DIGIMON_DB = [
     {
         "id": "484",
         "name": "Elizamon",
-        "types": [
+                "types": [
             "Dragon"
         ],
         "ability": "Regenerator",
@@ -28000,7 +28000,7 @@ const DIGIMON_DB = [
     {
         "id": "485",
         "name": "Dimetromon",
-        "types": [
+                "types": [
             "Dragon"
         ],
         "ability": "Regenerator",
@@ -28053,7 +28053,7 @@ const DIGIMON_DB = [
     {
         "id": "486",
         "name": "Lamiamon",
-        "types": [
+                "types": [
             "Dragon",
             "Poison"
         ],
@@ -28113,7 +28113,7 @@ const DIGIMON_DB = [
     {
         "id": "487",
         "name": "Medusamon",
-        "types": [
+                "types": [
             "Dragon",
             "Poison"
         ],
@@ -28176,7 +28176,7 @@ const DIGIMON_DB = [
     {
         "id": "488",
         "name": "Susanoomon",
-        "types": [
+                "types": [
             "CHAOS"
         ],
         "ability": "Protean",
@@ -28206,7 +28206,7 @@ const DIGIMON_DB = [
     {
         "id": "489",
         "name": "Kimeramon",
-        "types": [
+                "types": [
             "CHAOS"
         ],
         "ability": "Protean",
@@ -28293,7 +28293,7 @@ const DIGIMON_DB = [
     {
         "id": "490",
         "name": "Millenniummon",
-        "types": [
+                "types": [
             "CHAOS"
         ],
         "ability": "Shadow Shield",
@@ -28318,7 +28318,7 @@ const DIGIMON_DB = [
     {
         "id": "491",
         "name": "Shakamon",
-        "types": [
+                "types": [
             "Holy",
             "Magic"
         ],
@@ -28369,7 +28369,7 @@ const DIGIMON_DB = [
     {
         "id": "492",
         "name": "Lucemon",
-        "types": [
+                "types": [
             "Holy"
         ],
         "ability": "Pressure",
@@ -28405,7 +28405,7 @@ const DIGIMON_DB = [
     {
         "id": "493",
         "name": "Lucemon Falldown",
-        "types": [
+                "types": [
             "Holy",
             "Dark"
         ],
@@ -28456,7 +28456,7 @@ const DIGIMON_DB = [
     {
         "id": "494",
         "name": "GraceNovamon",
-        "types": [
+                "types": [
             "CHAOS"
         ],
         "ability": "Neuroforce",
@@ -28502,7 +28502,7 @@ const DIGIMON_DB = [
     {
         "id": "495",
         "name": "Betsumon",
-        "types": [
+                "types": [
             "CHAOS"
         ],
         "ability": "Imposter",
@@ -28527,7 +28527,7 @@ const DIGIMON_DB = [
     {
         "id": "496",
         "name": "LaeusGreymon",
-        "types": [
+                "types": [
             "Fire",
             "Poison"
         ],
@@ -28544,7 +28544,7 @@ const DIGIMON_DB = [
     {
         "id": "497",
         "name": "ZinoGarurumon",
-        "types": [
+                "types": [
             "Ice",
             "Electric"
         ],
@@ -28561,7 +28561,7 @@ const DIGIMON_DB = [
     {
         "id": "498",
         "name": "Nyabootmon",
-        "types": [
+                "types": [
             "Fairy",
             "Normal"
         ],
@@ -28624,7 +28624,7 @@ const DIGIMON_DB = [
     {
         "id": "499",
         "name": "Ariemon",
-        "types": [
+                "types": [
             "Water"
         ],
         "ability": "Dry Skin",
@@ -28690,7 +28690,7 @@ const DIGIMON_DB = [
     {
         "id": "500",
         "name": "Landramon",
-        "types": [
+                "types": [
             "Rock",
             "Ground"
         ],
@@ -28742,7 +28742,7 @@ const DIGIMON_DB = [
     {
         "id": "501",
         "name": "Proganomon",
-        "types": [
+                "types": [
             "Rock",
             "Ground"
         ],
@@ -28802,7 +28802,7 @@ const DIGIMON_DB = [
     {
         "id": "502",
         "name": "Pyramidimon",
-        "types": [
+                "types": [
             "Rock",
             "Ground"
         ],
@@ -28849,7 +28849,7 @@ const DIGIMON_DB = [
     {
         "id": "503",
         "name": "ExTyrannomon",
-        "types": [
+                "types": [
             "Fire",
             "Fairy"
         ],
@@ -28917,7 +28917,7 @@ const DIGIMON_DB = [
     {
         "id": "504",
         "name": "Garummon",
-        "types": [
+                "types": [
             "Holy"
         ],
         "ability": "Speed Boost",
@@ -28968,7 +28968,7 @@ const DIGIMON_DB = [
     {
         "id": "514",
         "name": "Archnemon Disguise",
-        "types": [
+                "types": [
             "Normal"
         ],
         "ability": "",
@@ -29003,7 +29003,7 @@ const DIGIMON_DB = [
     {
         "id": "516",
         "name": "Blizzarmon",
-        "types": [
+                "types": [
             "Ice"
         ],
         "ability": "",
@@ -29029,7 +29029,7 @@ const DIGIMON_DB = [
     {
         "id": "517",
         "name": "Bolgmon",
-        "types": [
+                "types": [
             "Electric",
             "Steel"
         ],
@@ -29056,7 +29056,7 @@ const DIGIMON_DB = [
     {
         "id": "518",
         "name": "Calmaramon",
-        "types": [
+                "types": [
             "Water",
             "Poison"
         ],
@@ -29083,7 +29083,7 @@ const DIGIMON_DB = [
     {
         "id": "519",
         "name": "Ceresmon Medium",
-        "types": [
+                "types": [
             "Grass",
             "Poison"
         ],
@@ -29105,7 +29105,7 @@ const DIGIMON_DB = [
     {
         "id": "520",
         "name": "Duftmon Leopard",
-        "types": [
+                "types": [
             "Ground",
             "Holy"
         ],
@@ -29146,7 +29146,7 @@ const DIGIMON_DB = [
     {
         "id": "522",
         "name": "Gigasmon",
-        "types": [
+                "types": [
             "Ground"
         ],
         "ability": "",
@@ -29215,7 +29215,7 @@ const DIGIMON_DB = [
     {
         "id": "525",
         "name": "KaiserLeomon",
-        "types": [
+                "types": [
             "Dark"
         ],
         "ability": "",
@@ -29241,7 +29241,7 @@ const DIGIMON_DB = [
     {
         "id": "526",
         "name": "LaeusGreymon Rage",
-        "types": [
+                "types": [
             "Fire",
             "Poison"
         ],
@@ -29305,7 +29305,7 @@ const DIGIMON_DB = [
     {
         "id": "529",
         "name": "Petaldramon",
-        "types": [
+                "types": [
             "Grass",
             "Dragon"
         ],
@@ -29393,7 +29393,7 @@ const DIGIMON_DB = [
     {
         "id": "533",
         "name": "Shutumon",
-        "types": [
+                "types": [
             "Flying",
             "Normal"
         ],
@@ -29444,7 +29444,7 @@ const DIGIMON_DB = [
     {
         "id": "535",
         "name": "ZinoGarurumon Rage",
-        "types": [
+                "types": [
             "Ice",
             "Electric"
         ],
@@ -29461,7 +29461,7 @@ const DIGIMON_DB = [
     {
         "id": "536",
         "name": "Meicoomon",
-        "types": [
+                "types": [
             "Chaos"
         ],
         "stage": "Champion",
@@ -29477,7 +29477,7 @@ const DIGIMON_DB = [
     {
         "id": "537",
         "name": "Meicrackmon",
-        "types": [
+                "types": [
             "Chaos"
         ],
         "stage": "Ultimate",
@@ -29502,7 +29502,7 @@ const DIGIMON_DB = [
     {
         "id": "538",
         "name": "Rasielmon",
-        "types": [
+                "types": [
             "Holy"
         ],
         "stage": "Mega",
@@ -29518,7 +29518,7 @@ const DIGIMON_DB = [
     {
         "id": "539",
         "name": "Gaioumon Itto Mode",
-        "types": [
+                "types": [
             "Dragon",
             "Steel"
         ],
@@ -29530,7 +29530,7 @@ const DIGIMON_DB = [
     {
         "id": "540",
         "name": "Coatlmon",
-        "types": [
+                "types": [
             "Light"
         ],
         "stage": "Armor",
@@ -29546,7 +29546,7 @@ const DIGIMON_DB = [
     {
         "id": "541",
         "name": "Sandiramon",
-        "types": [
+                "types": [
             "Earth"
         ],
         "stage": "Ultimate",
@@ -29571,7 +29571,7 @@ const DIGIMON_DB = [
     {
         "id": "542",
         "name": "Minervamon",
-        "types": [
+                "types": [
             "Olympian"
         ],
         "stage": "Mega",
@@ -29587,7 +29587,7 @@ const DIGIMON_DB = [
     {
         "id": "543",
         "name": "Mervamon",
-        "types": [
+                "types": [
             "Olympian"
         ],
         "stage": "Burst Mode",
@@ -29603,8 +29603,8 @@ const DIGIMON_DB = [
     {
         "id": "544",
         "name": "Karatenmon",
-        "types": [
-            "Wind"
+                "types": [
+            "Flying"
         ],
         "stage": "Ultimate",
         "next": [
@@ -29619,8 +29619,8 @@ const DIGIMON_DB = [
     {
         "id": "545",
         "name": "Tengumon",
-        "types": [
-            "Wind",
+                "types": [
+            "Flying",
             "Magic"
         ],
         "stage": "Mega",
@@ -29636,8 +29636,8 @@ const DIGIMON_DB = [
     {
         "id": "546",
         "name": "Seiten Gokuwmon",
-        "types": [
-            "Fighter"
+                "types": [
+            "Fighting"
         ],
         "stage": "Mega",
         "next": [],
@@ -29652,9 +29652,9 @@ const DIGIMON_DB = [
     {
         "id": "547",
         "name": "VictoryGreymon",
-        "types": [
+                "types": [
             "Dragon",
-            "Fighter"
+            "Fighting"
         ],
         "stage": "Mega",
         "next": [],
@@ -29664,9 +29664,9 @@ const DIGIMON_DB = [
     {
         "id": "548",
         "name": "Z'dGarurumon",
-        "types": [
+                "types": [
             "Beast",
-            "Machine"
+            "Steel"
         ],
         "stage": "Mega",
         "next": [],
@@ -29676,7 +29676,7 @@ const DIGIMON_DB = [
     {
         "id": "549",
         "name": "SkullGreymon",
-        "types": [
+                "types": [
             "Undead"
         ],
         "stage": "Ultimate",
@@ -29692,8 +29692,8 @@ const DIGIMON_DB = [
     {
         "id": "550",
         "name": "Metabee",
-        "types": [
-            "Machine"
+                "types": [
+            "Steel"
         ],
         "stage": "Crossover",
         "next": [
@@ -29708,8 +29708,8 @@ const DIGIMON_DB = [
     {
         "id": "551",
         "name": "Rokusho",
-        "types": [
-            "Machine"
+                "types": [
+            "Steel"
         ],
         "stage": "Crossover",
         "next": [
@@ -29724,8 +29724,8 @@ const DIGIMON_DB = [
     {
         "id": "552",
         "name": "Omedamon",
-        "types": [
-            "Machine"
+                "types": [
+            "Steel"
         ],
         "stage": "Ultra",
         "next": [],
@@ -29744,7 +29744,7 @@ const DIGIMON_DB = [
     {
         "id": "553",
         "name": "Cutemon",
-        "types": [
+                "types": [
             "Fairy"
         ],
         "stage": "Rookie",
@@ -29755,8 +29755,8 @@ const DIGIMON_DB = [
     {
         "id": "554",
         "name": "Gokuwmon",
-        "types": [
-            "Fighter"
+                "types": [
+            "Fighting"
         ],
         "stage": "Ultimate",
         "next": [

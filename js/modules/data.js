@@ -88,98 +88,42 @@ function loadData() {
     }
 }
 
-// --- Image Sources & Fallbacks ---
+// --- Image Sources & Path Logic ---
 
-// Direct Fandom Wiki image URLs for Digimon not on official Reference Book
-const FANDOM_DIRECT_IMAGES = {
-    "piddomon": "https://static.wikia.nocookie.net/digimon/images/1/1a/Piddomon_b.jpg",
-    "kingwhamon": "https://static.wikia.nocookie.net/digimon/images/4/45/6-05_Analyzer-06_JP.png",
-    "ancientmegatheriummon": "https://static.wikia.nocookie.net/digimon/images/1/15/AncientMegatheriummon_b.jpg",
-    "megatheurimon": "https://static.wikia.nocookie.net/digimon/images/1/15/AncientMegatheriummon_b.jpg", // Same as AncientMegatheriummon
-    "grapleomon": "https://static.wikia.nocookie.net/digimon/images/1/1f/GrapLeomon_b.jpg",
-    "jagamon": "https://static.wikia.nocookie.net/digimon/images/a/a3/Jagamon_b.jpg",
-    "marinechimairamon": "https://static.wikia.nocookie.net/digimon/images/6/61/MarineChimairamon_b.jpg",
-    "marinekimeramon": "https://static.wikia.nocookie.net/digimon/images/6/61/MarineChimairamon_b.jpg", // Alias
-    "gokuumon": "https://static.wikia.nocookie.net/digimon/images/d/d9/Gokuumon_b.jpg",
-    "chuumon": "https://static.wikia.nocookie.net/digimon/images/9/9a/Chuumon_b.jpg",
-    "extyrannomon": "https://static.wikia.nocookie.net/digimon/images/1/11/ExTyrannomon_b.jpg",
-    "laeusgreymon": "https://static.wikia.nocookie.net/digimon/images/b/ba/LaeusGreymon_b.jpg",
-    "zinogarurumon": "https://static.wikia.nocookie.net/digimon/images/9/98/ZinoGarurumon_b.jpg",
-    "greymon": "https://static.wikia.nocookie.net/digimon/images/5/56/Greymon_b.jpg",
-    "metabee": "https://static.wikia.nocookie.net/digimon/images/c/c0/Metabee_i.png/revision/latest?cb=20221109044519",
-    "rokusho": "https://static.wikia.nocookie.net/digimon/images/a/ad/Rokusho_i.png/revision/latest?cb=20221109045412",
-    "gaioumonittomode": "https://static.wikia.nocookie.net/digimon/images/1/13/Gaiomon_Fierce_Blade_Mode_b.jpg/revision/latest?cb=20210630041844",
-    "gaioumon itto mode": "https://static.wikia.nocookie.net/digimon/images/1/13/Gaiomon_Fierce_Blade_Mode_b.jpg/revision/latest?cb=20210630041844",
-    "pteromon": "https://static.wikia.nocookie.net/digimon/images/2/27/Pteromon_b.jpg/revision/latest?cb=20240119163838",
-};
+// Helper to determine alphabetical group folder
+function getGroupFolder(fileName) {
+    const firstChar = fileName[0].toLowerCase();
+    if (!/[a-z]/.test(firstChar)) return "others";
 
-// Image source configurations - multiple fallbacks for maximum coverage
-const IMAGE_SOURCES = {
-    // Primary: Official Digimon Reference Book (Japanese)
-    digimonNet: (mappedName) => `https://digimon.net/cimages/digimon/${mappedName}.jpg`,
+    const groups = [
+        { start: 'a', end: 'c' },
+        { start: 'd', end: 'f' },
+        { start: 'g', end: 'i' },
+        { start: 'j', end: 'l' },
+        { start: 'm', end: 'o' },
+        { start: 'p', end: 'r' },
+        { start: 's', end: 'u' },
+        { start: 'v', end: 'x' },
+        { start: 'y', end: 'z' }
+    ];
 
-    // Secondary: Fandom Wiki (direct static URLs for specific Digimon)
-    fandomDirect: (name) => {
-        const lowerName = name.toLowerCase().replace(/\s+/g, '');
-        return FANDOM_DIRECT_IMAGES[lowerName] || null;
-    },
-
-    // Tertiary: Digimon API (uses English names)
-    digimonApi: (name) => `https://digimon-api.com/images/digimon_sprites/${encodeURIComponent(name)}.png`,
-
-    // Quaternary: Wikimon (uses English names, various formats)
-    wikimon: (name) => `https://wikimon.net/images/${name.charAt(0).toLowerCase()}/${name.replace(/\s+/g, '_')}.jpg`,
-
-    // Quinary: Digimon API alternate format
-    digimonApiAlt: (name) => `https://digi-api.com/images/digimon/w/${encodeURIComponent(name)}.png`,
-};
-
-// Get the mapped name for official reference book
-function getMappedName(name) {
-    const lowerName = name.toLowerCase();
-
-    // Check the reference map first
-    if (window.REFERENCE_IMAGE_MAP && window.REFERENCE_IMAGE_MAP[lowerName]) {
-        return window.REFERENCE_IMAGE_MAP[lowerName];
-    }
-
-    // Fallback: normalize the name
-    return lowerName
-        .replace(/\s+/g, '')
-        .replace(/[\[\]\(\)]/g, '')
-        .replace(/[^a-z0-9-]/g, '');
+    const group = groups.find(g => firstChar >= g.start && firstChar <= g.end);
+    return group ? `${group.start}-${group.end}` : "others";
 }
 
-// Get primary image URL
+// Helper to get consistent safe filename matching downloader
+function getLocalFileName(name) {
+    return name.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, '') + '.jpg';
+}
+
+// Get primary image URL (Local Only)
 function getImageUrl(name) {
-    const fallbacks = getFallbackUrls(name);
-    return fallbacks[0];
+    const fileName = getLocalFileName(name);
+    const group = getGroupFolder(fileName);
+    return `images/digimon/${group}/${fileName}`;
 }
 
-// Get all fallback URLs for a Digimon
+// Get all fallback URLs for a Digimon (Now only local path)
 function getFallbackUrls(name) {
-    const mappedName = getMappedName(name);
-    const fandomUrl = IMAGE_SOURCES.fandomDirect(name);
-
-    // If explicitly marked as missing in our map, prioritize Fandom images
-    if (mappedName === "PHOTO NOT AVAILABLE") {
-        const urls = [];
-        if (fandomUrl) urls.push(fandomUrl);
-        urls.push(
-            IMAGE_SOURCES.wikimon(name),
-            IMAGE_SOURCES.digimonApi(name),
-            IMAGE_SOURCES.digimonApiAlt(name),
-        );
-        return urls;
-    }
-
-    // Standard fallback chain with Fandom as secondary option
-    const urls = [IMAGE_SOURCES.digimonNet(mappedName)];
-    if (fandomUrl) urls.push(fandomUrl);
-    urls.push(
-        IMAGE_SOURCES.wikimon(name),
-        IMAGE_SOURCES.digimonApi(name),
-        IMAGE_SOURCES.digimonApiAlt(name),
-    );
-    return urls;
+    return [getImageUrl(name)];
 }

@@ -7,15 +7,16 @@ Digimon Guider (Digimon Trials Guide) is a static web application serving as a c
 - **HTML5**: Semantically structured.
 - **CSS3**: Custom styling with variables for theming (red/black/white palette).
 - **JavaScript (Vanilla)**: 
-  - `script.js`: Main application logic (search, filtering, modal handling).
+  - `script.js`: Entry point.
+  - `/js/modules`: Modular logic (`ui.js`, `events.js`, `battle.js`, `data.js`, `utils.js`).
   - `guide_content.js`: Main database/content file containing Digimon data.
   - `locations_data.js`: Data specific to in-game locations.
   - `reference_map.js`: Mapping for image resources.
 
 ## File Structure Conventions
-- **Root**: `index.html`, `AI_CONTEXT.md`, `README.md`, `task.md`.
-- **`/js`**: Application logic (`script.js`).
-- **`/data`**: Data files loaded as scripts (`guide_content.js`, `locations_data.js`, `reference_map.js`, `digimon_stages.csv`).
+- **Root**: `index.html`, `AI_CONTEXT.md`, `README.md`, `sw.js`, `vercel.json`.
+- **`/js`**: Application logic split into modules (`/js/modules/*.js`) and entry point (`script.js`).
+- **`/data`**: Data files including `guide_content.js`, `locations_data.js`, `reference_map.js`, `evo_requirements.js`, `type_chart.js`, `data_drops.js`.
 - **`/css`**: Styling (`styles.css`).
 - **`/assets`**: Images and static assets (`banner.png`, `bg.png`, etc).
 - **`/scripts`**: Utility and build scripts (PowerShell .ps1, NodeJS analysis scripts).

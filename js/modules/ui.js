@@ -231,7 +231,7 @@ function renderList() {
                     class="digimon-profile-image"
                     data-name="${digi.name.replace(/'/g, "\\'")}"
                     onerror="handleImageError(this, '${digi.name.replace(/'/g, "\\'")}');"
-                    loading="lazy"
+                    loading="lazy" draggable="false"
                 />
             </div>
             <div class="digimon-name">${digi.name}</div>
@@ -241,6 +241,20 @@ function renderList() {
             ${evoText}
             ${locHtml}
         `;
+
+        card.setAttribute('draggable', 'true');
+        card.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('digimon-name', digi.name);
+            e.dataTransfer.effectAllowed = 'copy';
+            // Delay adding the class so the browser captures the original look for the ghost image
+            setTimeout(() => {
+                card.classList.add('dragging');
+            }, 0);
+        });
+
+        card.addEventListener('dragend', () => {
+            card.classList.remove('dragging');
+        });
 
         card.onclick = () => window.openDigimonChoice(digi.name);
 
