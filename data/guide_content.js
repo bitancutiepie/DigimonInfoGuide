@@ -98,10 +98,6 @@ const DIGIMON_DB = [
             {
                 "name": "Pegasmon",
                 "method": "Light Data"
-            },
-            {
-                "name": "Shakkoumon",
-                "method": "Lv28"
             }
         ],
         "stage": "Champion",
@@ -386,6 +382,10 @@ const DIGIMON_DB = [
             {
                 "name": "Turuiemon",
                 "method": "Lv20"
+            },
+            {
+                "name": "Wendimon",
+                "method": "Dark Data"
             }
         ],
         "stage": "Rookie",
@@ -436,10 +436,6 @@ const DIGIMON_DB = [
             {
                 "name": "AndiramonDeva",
                 "method": "Lv35"
-            },
-            {
-                "name": "Wendimon",
-                "method": "Dark Data"
             }
         ],
         "stage": "Champion",
@@ -591,7 +587,7 @@ const DIGIMON_DB = [
         ],
         "prev": [
             {
-                "name": "Turuiemon",
+                "name": "Lopmon",
                 "method": "Dark Data"
             }
         ],
@@ -815,10 +811,6 @@ const DIGIMON_DB = [
             {
                 "name": "Nefertimon",
                 "method": "Light Data"
-            },
-            {
-                "name": "Silphymon",
-                "method": "Lv28"
             }
         ],
         "stage": "Champion",
@@ -877,10 +869,6 @@ const DIGIMON_DB = [
             {
                 "name": "Ophanimon",
                 "method": "Lv56"
-            },
-            {
-                "name": "Mastemon",
-                "method": "Jogress"
             }
         ],
         "stage": "Ultimate",
@@ -1718,10 +1706,6 @@ const DIGIMON_DB = [
             {
                 "name": "Kimeramon",
                 "method": "Organic Data"
-            },
-            {
-                "name": "SkullGreymon",
-                "method": "Dark Data"
             }
         ],
         "stage": "Champion",
@@ -1855,11 +1839,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Omegamon",
-                "method": "Jogress"
-            },
-            {
-                "name": "VictoryGreymon",
-                "method": "Subspecies"
+                "method": "MetalGarurumon Jogress"
             }
         ],
         "stage": "Mega",
@@ -1995,7 +1975,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Omegamon Alter S",
-                "method": "Jogress"
+                "method": "CresGarurumon  Jogress"
             }
         ],
         "stage": "Ultimate",
@@ -2036,12 +2016,12 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "MetalGarurumon",
-                "method": "Jogress"
+                "name": "WarGreymon",
+                "method": "MetalGarurumon Jogress"
             },
             {
-                "name": "WarGreymon",
-                "method": "Jogress"
+                "name": "MetalGarurumon",
+                "method": "WarGreymon  Jogress"
             }
         ],
         "next": [],
@@ -2089,7 +2069,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Garurumon",
-                "method": "Lv18  Lv18"
+                "method": "Lv18"
             }
         ],
         "stage": "Rookie",
@@ -2138,12 +2118,12 @@ const DIGIMON_DB = [
         ],
         "prev": [
             {
-                "name": "Strabimon",
-                "method": "Lv18  Lv18"
+                "name": "Gabumon",
+                "method": "Lv18"
             },
             {
-                "name": "Gabumon",
-                "method": "Lv18  Lv18"
+                "name": "Strabimon",
+                "method": "Lv18"
             }
         ],
         "next": [
@@ -2288,11 +2268,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Omegamon",
-                "method": "Jogress"
-            },
-            {
-                "name": "Z'dGarurumon",
-                "method": "Subspecies"
+                "method": "WarGreymon  Jogress"
             }
         ],
         "stage": "Mega",
@@ -2360,7 +2336,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Omegamon Alter S",
-                "method": "Jogress"
+                "method": "BlitzGreymon Jogress"
             }
         ],
         "stage": "Mega",
@@ -2401,12 +2377,12 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "CresGarurumon",
-                "method": "Jogress"
+                "name": "BlitzGreymon",
+                "method": "CresGarurumon  Jogress"
             },
             {
-                "name": "BlitzGreymon",
-                "method": "Jogress"
+                "name": "CresGarurumon",
+                "method": "BlitzGreymon Jogress"
             }
         ],
         "next": [],
@@ -2995,10 +2971,6 @@ const DIGIMON_DB = [
             {
                 "name": "Kimeramon",
                 "method": "Organic Data"
-            },
-            {
-                "name": "Metabee",
-                "method": "AW Data"
             }
         ],
         "stage": "Champion",
@@ -3245,10 +3217,6 @@ const DIGIMON_DB = [
             {
                 "name": "Kimeramon",
                 "method": "Organic Data"
-            },
-            {
-                "name": "Rokusho",
-                "method": "AW Data"
             }
         ],
         "stage": "Champion",
@@ -3614,10 +3582,6 @@ const DIGIMON_DB = [
             {
                 "name": "Rosemon Burst",
                 "method": "Rose Soul"
-            },
-            {
-                "name": "Rafflesimon",
-                "method": "Jogress"
             }
         ],
         "stage": "Mega",
@@ -3659,11 +3623,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Lotusmon",
-                "method": "Jogress"
-            },
-            {
-                "name": "Rosemon",
-                "method": "Jogress"
+                "method": "Rosemon Jogress"
             }
         ],
         "next": [],
@@ -3906,7 +3866,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Rafflesimon",
-                "method": "Jogress"
+                "method": "Rosemon Jogress"
             }
         ],
         "stage": "Mega",
@@ -4313,7 +4273,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Aegisdramon",
-                "method": "Jogress"
+                "method": "Jogress MetalSeadramon"
             }
         ],
         "stage": "Mega",
@@ -5276,10 +5236,6 @@ const DIGIMON_DB = [
             {
                 "name": "Strikedramon",
                 "method": "Lv18"
-            },
-            {
-                "name": "Monochromon",
-                "method": "Fire Data"
             }
         ],
         "stage": "Rookie",
@@ -5502,12 +5458,12 @@ const DIGIMON_DB = [
         "prev": [],
         "next": [
             {
-                "name": "Gargolemon",
-                "method": "Light Data"
-            },
-            {
                 "name": "ExVeemon",
                 "method": "Lv18"
+            },
+            {
+                "name": "Gargolemon",
+                "method": "Light Data"
             },
             {
                 "name": "Lighdramon",
@@ -5574,11 +5530,11 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Paildramon",
-                "method": "Lv28"
+                "method": "Lv28 Stingmon"
             },
             {
                 "name": "Dinobeemon",
-                "method": "Lv28"
+                "method": "Stingmon Lv28"
             }
         ],
         "stage": "Champion",
@@ -5759,17 +5715,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "ExVeemon",
-                "method": "Lv28"
-            },
-            {
-                "name": "Stingmon",
-                "method": "Lv28"
+                "method": "Lv28 Stingmon"
             }
         ],
         "next": [
             {
                 "name": "Imperialdramon Dragon",
-                "method": "Lv52  Lv 52"
+                "method": "Lv52"
             }
         ],
         "stage": "Ultimate",
@@ -5831,11 +5783,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Paildramon",
-                "method": "Lv52  Lv 52"
+                "method": "Lv52"
             },
             {
                 "name": "Dinobeemon",
-                "method": "Lv52  Lv 52"
+                "method": "Lv 52"
             }
         ],
         "next": [
@@ -6183,10 +6135,6 @@ const DIGIMON_DB = [
             {
                 "name": "Stingmon",
                 "method": "Lv18"
-            },
-            {
-                "name": "Coatlmon",
-                "method": "Light Data"
             }
         ],
         "stage": "Rookie",
@@ -6244,16 +6192,8 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "Paildramon",
-                "method": "Lv28"
-            },
-            {
                 "name": "JewelBeemon",
                 "method": "Lv32"
-            },
-            {
-                "name": "Dinobeemon",
-                "method": "Lv28"
             }
         ],
         "stage": "Champion",
@@ -6432,17 +6372,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "ExVeemon",
-                "method": "Lv28"
-            },
-            {
-                "name": "Stingmon",
-                "method": "Lv28"
+                "method": "Stingmon Lv28"
             }
         ],
         "next": [
             {
                 "name": "Imperialdramon Dragon",
-                "method": "Lv52  Lv 52"
+                "method": "Lv 52"
             }
         ],
         "stage": "Ultimate",
@@ -6555,7 +6491,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Shakkoumon",
-                "method": "Lv28"
+                "method": "Lv28 Angemon"
             }
         ],
         "stage": "Champion",
@@ -6736,11 +6672,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Ankylomon",
-                "method": "Lv28"
-            },
-            {
-                "name": "Angemon",
-                "method": "Lv28"
+                "method": "Lv28 Angemon"
             }
         ],
         "next": [
@@ -6923,12 +6855,12 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "KingWhamon",
-                "method": "King's Rock"
-            },
-            {
                 "name": "MarineAngemon",
                 "method": "Lv54"
+            },
+            {
+                "name": "KingWhamon",
+                "method": "King's Rock"
             }
         ],
         "stage": "Champion",
@@ -7167,7 +7099,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "ElDoradimon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             }
         ],
         "stage": "Ultimate",
@@ -7225,17 +7157,17 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Scorpiomon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             },
             {
                 "name": "Jagamon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             }
         ],
         "next": [
             {
                 "name": "Tlalocmon",
-                "method": "Jogress"
+                "method": "SaberLeomon Jogress"
             }
         ],
         "stage": "Mega",
@@ -7273,11 +7205,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "ElDoradimon",
-                "method": "Jogress"
+                "method": "SaberLeomon Jogress"
             },
             {
                 "name": "SaberLeomon",
-                "method": "Jogress"
+                "method": "Jogress ElDoradimon"
             }
         ],
         "next": [],
@@ -7385,11 +7317,11 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Silphymon",
-                "method": "Lv28"
+                "method": "Lv28 Tailmon"
             },
             {
                 "name": "Hippogriffomon",
-                "method": "Lv32  Lv32"
+                "method": "Lv32"
             }
         ],
         "stage": "Champion",
@@ -7445,11 +7377,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Aquilamon",
-                "method": "Lv28"
-            },
-            {
-                "name": "Tailmon",
-                "method": "Lv28"
+                "method": "Lv28 Tailmon"
             }
         ],
         "next": [
@@ -7747,7 +7675,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Peacockmon",
-                "method": "Lv. 32"
+                "method": "Lv32 (Corrected from Peacockmon Lv32)"
             }
         ],
         "stage": "Champion",
@@ -7803,10 +7731,18 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Holsmon",
-                "method": "Lv. 32"
+                "method": "Lv32 (Corrected from Peacockmon Lv32)"
+            },
+            {
+                "name": "Peacockmon",
+                "method": "Holsmon Lv32 (Corrected from  Lv32)"
             }
         ],
         "next": [
+            {
+                "name": "Peacockmon",
+                "method": "Holsmon Lv32 (Corrected from  Lv32)"
+            },
             {
                 "name": "Valdurmon",
                 "method": "Lv54"
@@ -7877,7 +7813,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Chaosmon Valdur Arm",
-                "method": "Jogress"
+                "method": "BanchoLeomon Jogress"
             }
         ],
         "stage": "Mega",
@@ -7917,12 +7853,12 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "BanchoLeomon",
-                "method": "Jogress"
+                "name": "Valdurmon",
+                "method": "BanchoLeomon Jogress"
             },
             {
-                "name": "Valdurmon",
-                "method": "Jogress"
+                "name": "BanchoLeomon",
+                "method": "Jogress Valdurmon"
             }
         ],
         "next": [],
@@ -8405,7 +8341,7 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "Heavy MetalDramon",
+                "name": "HeavyMetalDramon",
                 "method": "Lv54"
             }
         ],
@@ -8465,12 +8401,7 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [],
-        "prev": [
-            {
-                "name": "Loudmon",
-                "method": "Lv54"
-            }
-        ],
+        "prev": [],
         "next": [],
         "stage": "Mega",
         "cardLevel": 6
@@ -8943,7 +8874,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Alphamon Ouryuken",
-                "method": "Jogress"
+                "method": "Jogress Ouryumon"
             }
         ],
         "stage": "Mega",
@@ -9021,11 +8952,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Alphamon",
-                "method": "Jogress"
+                "method": "Jogress Ouryumon"
             },
             {
                 "name": "Ouryumon",
-                "method": "Jogress"
+                "method": "Alphamon Jogress"
             }
         ],
         "next": [],
@@ -9247,7 +9178,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Alphamon Ouryuken",
-                "method": "Jogress"
+                "method": "Alphamon Jogress"
             }
         ],
         "stage": "Mega",
@@ -9476,7 +9407,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "MirageGaogamon Burst",
-                "method": "MIrage Soul"
+                "method": "Mirage Soul"
             }
         ],
         "stage": "Mega",
@@ -9577,10 +9508,6 @@ const DIGIMON_DB = [
             {
                 "name": "Yatagaramon",
                 "method": "Lv32"
-            },
-            {
-                "name": "Karatenmon",
-                "method": "Wind Data"
             }
         ],
         "stage": "Champion",
@@ -9755,12 +9682,12 @@ const DIGIMON_DB = [
         "prev": [],
         "next": [
             {
-                "name": "Agnimon",
-                "method": "Fire Data"
-            },
-            {
                 "name": "Meramon",
                 "method": "Lv18"
+            },
+            {
+                "name": "Agnimon",
+                "method": "Fire Data"
             }
         ],
         "stage": "Hybrid",
@@ -9815,12 +9742,16 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "Vritamon",
-                "method": "Salamander Break  Flame Storm"
+                "name": "Aldamon",
+                "method": "Lv32"
             },
             {
-                "name": "Aldamon",
-                "method": "Lv32 Vritramon Lv32"
+                "name": "Vritamon",
+                "method": "Salamander Break"
+            },
+            {
+                "name": "Vritamon",
+                "method": "Flame Storm"
             }
         ],
         "stage": "Hybrid",
@@ -9874,7 +9805,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Agnimon",
-                "method": "Lv32 Vritramon Lv32"
+                "method": "Lv32"
+            },
+            {
+                "name": "Vritamon",
+                "method": "Lv32"
             }
         ],
         "next": [
@@ -9948,7 +9883,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Susanoomon",
-                "method": "Jogress"
+                "method": "Jogress AncientGarurumon"
             }
         ],
         "stage": "Mega",
@@ -10078,12 +10013,12 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "Gankoomon",
-                "method": "Auspicious Armor"
-            },
-            {
                 "name": "Apollomon",
                 "method": "Lv54"
+            },
+            {
+                "name": "Gankoomon",
+                "method": "Auspicious Armor"
             }
         ],
         "stage": "Ultimate",
@@ -10206,7 +10141,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "GraceNovamon",
-                "method": "Jogress"
+                "method": "Jogress Dianamon"
             }
         ],
         "stage": "Mega",
@@ -10372,7 +10307,11 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Garurumon",
-                "method": "Lv18  Lv18"
+                "method": "Lv18"
+            },
+            {
+                "name": "Wolfmon",
+                "method": "likely )"
             },
             {
                 "name": "Wolfmon",
@@ -10424,17 +10363,29 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Strabimon",
-                "method": "Light Data"
+                "method": "likely )"
+            },
+            {
+                "name": "Wolfmon",
+                "method": "Light Data (Note: Base form seems to be missing"
             }
         ],
         "next": [
             {
-                "name": "Garummon",
-                "method": "Wolf Kendo  Lupine Laser"
+                "name": "Wolfmon",
+                "method": "Light Data (Note: Base form seems to be missing"
             },
             {
                 "name": "Beowolfmon",
-                "method": "Lv32  Lv32"
+                "method": "Lv32"
+            },
+            {
+                "name": "Garummon",
+                "method": "Wolf Kendo"
+            },
+            {
+                "name": "Garummon",
+                "method": "Lupine Laser"
             }
         ],
         "stage": "Hybrid",
@@ -10487,12 +10438,12 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Garummon",
-                "method": "Lv32  Lv32"
+                "name": "Wolfmon",
+                "method": "Lv32"
             },
             {
-                "name": "Wolfmon",
-                "method": "Lv32  Lv32"
+                "name": "Garummon",
+                "method": "Lv32"
             }
         ],
         "next": [
@@ -10502,7 +10453,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Takutoumon",
-                "method": "Auspicioius Armor"
+                "method": "Auspicious Armor"
             }
         ],
         "stage": "Hybrid",
@@ -10570,7 +10521,11 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Susanoomon",
-                "method": "Jogress"
+                "method": "AncientGreymon Jogress"
+            },
+            {
+                "name": "Susanoomon",
+                "method": "Jogress AncientGreymon"
             }
         ],
         "stage": "Mega",
@@ -10632,7 +10587,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Beowolfmon",
-                "method": "Auspicioius Armor"
+                "method": "Auspicious Armor"
             }
         ],
         "next": [],
@@ -10679,12 +10634,12 @@ const DIGIMON_DB = [
         "prev": [],
         "next": [
             {
-                "name": "Fairymon",
-                "method": "Wind Data"
-            },
-            {
                 "name": "Darcmon",
                 "method": "Lv18"
+            },
+            {
+                "name": "Fairymon",
+                "method": "Wind Data"
             }
         ],
         "stage": "Rookie",
@@ -10731,12 +10686,16 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "Shutumon",
-                "method": "Brezzo Petalo  Plasma Talon"
+                "name": "JetSilphymon",
+                "method": "Lv32"
             },
             {
-                "name": "JetSilphymon",
-                "method": "Lv32 Shutumon Lv32"
+                "name": "Shutumon",
+                "method": "Brezzo Petalo"
+            },
+            {
+                "name": "Shutumon",
+                "method": "Plasma Talon"
             }
         ],
         "stage": "Hybrid",
@@ -10790,11 +10749,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Fairymon",
-                "method": "Lv32 Shutumon Lv32"
+                "method": "Lv32"
             },
             {
                 "name": "Shutumon",
-                "method": "Lv. 32"
+                "method": "Lv32"
             }
         ],
         "next": [
@@ -10916,7 +10875,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Hippogriffomon",
-                "method": "Lv32  Lv32"
+                "method": "Lv32"
             }
         ],
         "stage": "Champion",
@@ -10974,11 +10933,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Aquilamon",
-                "method": "Lv32  Lv32"
+                "method": "Lv32"
             },
             {
                 "name": "Darcmon",
-                "method": "Lv32  Lv32"
+                "method": "Lv32"
             }
         ],
         "next": [
@@ -10987,12 +10946,12 @@ const DIGIMON_DB = [
                 "method": "Lv54 Female"
             },
             {
-                "name": "Murmukusmon",
-                "method": "Sachet"
-            },
-            {
                 "name": "Griffomon",
                 "method": "Lv54 Male"
+            },
+            {
+                "name": "Murmukusmon",
+                "method": "Sachet"
             }
         ],
         "stage": "Ultimate",
@@ -11271,11 +11230,11 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Bolgmon",
-                "method": "Thor Hammer  Electro Cannon"
+                "method": "Thor Hammer"
             },
             {
-                "name": "RhinoKabuterimon",
-                "method": "Lv. 32"
+                "name": "Bolgmon",
+                "method": "Electro Cannon"
             }
         ],
         "stage": "Hybrid",
@@ -11328,12 +11287,8 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Blitzmon",
-                "method": "Lv. 32"
-            },
-            {
                 "name": "Bolgmon",
-                "method": "Lv. 32"
+                "method": "Lv32"
             }
         ],
         "next": [
@@ -11446,16 +11401,16 @@ const DIGIMON_DB = [
         "prev": [],
         "next": [
             {
-                "name": "Chakmon",
-                "method": "Ice Data"
-            },
-            {
                 "name": "Mojyamon",
                 "method": "Lv18 Male"
             },
             {
                 "name": "Frigimon",
                 "method": "Lv18 Female"
+            },
+            {
+                "name": "Chakmon",
+                "method": "Ice Data"
             }
         ],
         "stage": "Rookie",
@@ -11505,12 +11460,16 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "Blizzarmon",
-                "method": "Snow Bomber  Avalanche Step"
+                "name": "Frozomon",
+                "method": "Lv32"
             },
             {
-                "name": "Frozomon",
-                "method": "Lv32 Blizzarmon Lv32"
+                "name": "Blizzarmon",
+                "method": "Snow Bomber"
+            },
+            {
+                "name": "Blizzarmon",
+                "method": "Avalanche Step"
             }
         ],
         "stage": "Hybrid",
@@ -11564,11 +11523,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Chakmon",
-                "method": "Lv32 Blizzarmon Lv32"
+                "method": "Lv32"
             },
             {
                 "name": "Blizzarmon",
-                "method": "Lv. 32"
+                "method": "Lv32"
             }
         ],
         "next": [
@@ -12256,11 +12215,11 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Gigasmon",
-                "method": "Grotte Hammer  Quagmire Twist"
+                "method": "Grotte Hammer"
             },
             {
-                "name": "Volcamon",
-                "method": "Lv. 32"
+                "name": "Gigasmon",
+                "method": "Quagmire Twist"
             }
         ],
         "stage": "Hybrid",
@@ -12313,12 +12272,8 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Grottemon",
-                "method": "Lv. 32"
-            },
-            {
                 "name": "Gigasmon",
-                "method": "Lv. 32"
+                "method": "Lv32"
             }
         ],
         "next": [
@@ -12431,12 +12386,12 @@ const DIGIMON_DB = [
         "prev": [],
         "next": [
             {
-                "name": "Mercurymon",
-                "method": "Metal Data"
-            },
-            {
                 "name": "Machmon",
                 "method": "Lv18"
+            },
+            {
+                "name": "Mercurymon",
+                "method": "Metal Data"
             }
         ],
         "stage": "Rookie",
@@ -12840,12 +12795,12 @@ const DIGIMON_DB = [
                 "method": "Lv18 Lowkey"
             },
             {
-                "name": "Ranamon",
-                "method": "Water Data"
-            },
-            {
                 "name": "Tobiumon",
                 "method": "Lv18 Amped"
+            },
+            {
+                "name": "Ranamon",
+                "method": "Water Data"
             }
         ],
         "stage": "Rookie",
@@ -12962,7 +12917,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Ariemon",
-                "method": "Lunar Scale  Water Data"
+                "method": "Lunar Scale"
             }
         ],
         "stage": "Ultimate",
@@ -13030,7 +12985,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Ariemon",
-                "method": "Lunar Scale  Water Data"
+                "method": "Water Data"
             }
         ],
         "stage": "Mega",
@@ -13082,11 +13037,11 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Calmaramon",
-                "method": "Jealousy Rain  Titanic Charge"
+                "method": "Jealousy Rain"
             },
             {
-                "name": "Mermaimon",
-                "method": "Lv. 32"
+                "name": "Calmaramon",
+                "method": "Titanic Charge"
             }
         ],
         "stage": "Hybrid",
@@ -13138,12 +13093,8 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Ranamon",
-                "method": "Lv. 32"
-            },
-            {
                 "name": "Calmaramon",
-                "method": "Lv. 32"
+                "method": "Lv32"
             }
         ],
         "next": [
@@ -13651,11 +13602,11 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "ShinMonzaemon",
-                "method": "Lv54  Lv54  Night Daze"
+                "method": "Lv54"
             },
             {
                 "name": "ExTyrannomon",
-                "method": "Fire Data  Cute Plush"
+                "method": "Fire Data"
             }
         ],
         "stage": "Ultimate",
@@ -13717,7 +13668,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "ShinMonzaemon",
-                "method": "Lv54  Lv54  Night Daze"
+                "method": "Lv54"
             }
         ],
         "stage": "Champion",
@@ -13778,16 +13729,16 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
+                "name": "Monzaemon",
+                "method": "Lv54"
+            },
+            {
                 "name": "WaruMonzaemon",
-                "method": "Lv54  Lv54  Night Daze"
+                "method": "Lv54"
             },
             {
                 "name": "ExTyrannomon",
-                "method": "Lv54  Lv54  Night Daze"
-            },
-            {
-                "name": "Monzaemon",
-                "method": "Lv54  Lv54  Night Daze"
+                "method": "Night Daze"
             }
         ],
         "next": [],
@@ -13855,6 +13806,10 @@ const DIGIMON_DB = [
         "prev": [],
         "next": [
             {
+                "name": "Leomon",
+                "method": "Lv18 Amped (Assumption"
+            },
+            {
                 "name": "Liamon",
                 "method": "Lv18 Lowkey"
             },
@@ -13900,11 +13855,24 @@ const DIGIMON_DB = [
         "locations": [
             "Route 103 (Part 2)"
         ],
-        "prev": [],
+        "prev": [
+            {
+                "name": "Liollmon",
+                "method": "Lv18 Amped (Assumption"
+            },
+            {
+                "name": "Leomon",
+                "method": "base form is )"
+            }
+        ],
         "next": [
             {
+                "name": "Leomon",
+                "method": "base form is )"
+            },
+            {
                 "name": "GrapLeomon",
-                "method": "Lv32 Gryzzlimon Hammer Rush"
+                "method": "Lv32"
             },
             {
                 "name": "SaberLeomon",
@@ -13964,7 +13932,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Leomon",
-                "method": "Lv32 Gryzzlimon Hammer Rush"
+                "method": "Lv32"
+            },
+            {
+                "name": "Grizzlymon",
+                "method": "Hammer Rush"
             }
         ],
         "next": [
@@ -13973,12 +13945,12 @@ const DIGIMON_DB = [
                 "method": "LV54"
             },
             {
-                "name": "Marsmon",
-                "method": "Swords Dance"
-            },
-            {
                 "name": "BanchoLeomon",
                 "method": "Gakuren"
+            },
+            {
+                "name": "Marsmon",
+                "method": "Swords Dance"
             }
         ],
         "stage": "Mega",
@@ -14172,11 +14144,11 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Chaosmon Valdur Arm",
-                "method": "Jogress"
+                "method": "Jogress Valdurmon"
             },
             {
                 "name": "Caosmon",
-                "method": "Jogress"
+                "method": "Jogress Darkdramon"
             }
         ],
         "stage": "Ultimate",
@@ -14362,7 +14334,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Tlalocmon",
-                "method": "Jogress"
+                "method": "Jogress ElDoradimon"
             }
         ],
         "stage": "Mega",
@@ -14412,12 +14384,12 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "KaiserLeomon",
-                "method": "Shadow Meteor"
+                "name": "Rihimon",
+                "method": "Lv32"
             },
             {
-                "name": "Rihimon",
-                "method": "Lv32 KaiserLeomon Lv32"
+                "name": "KaiserLeomon",
+                "method": "Shadow Meteor"
             }
         ],
         "stage": "Champion",
@@ -14470,11 +14442,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Lowemon",
-                "method": "Lv32 KaiserLeomon Lv32"
+                "method": "Lv32"
             },
             {
                 "name": "KaiserLeomon",
-                "method": "Jogress Lowemon"
+                "method": "Lv32"
             }
         ],
         "next": [
@@ -14952,11 +14924,11 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Petaldramon",
-                "method": "Blockage Seed Arbormor Leaf Cyclone"
+                "method": "Blockage Seed"
             },
             {
-                "name": "Entmon",
-                "method": "Lv32   Lv32"
+                "name": "Petaldramon",
+                "method": "Leaf Cyclone"
             }
         ],
         "stage": "Hybrid",
@@ -15009,16 +14981,8 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Arbormon",
-                "method": "Lv32   Lv32"
-            },
-            {
-                "name": "Paledramon",
-                "method": "Lv32   Lv32"
-            },
-            {
                 "name": "Petaldramon",
-                "method": "Jogress Arbormon"
+                "method": "Arbormon Lv32"
             }
         ],
         "next": [
@@ -15189,10 +15153,6 @@ const DIGIMON_DB = [
             }
         ],
         "next": [
-            {
-                "name": "Entmon",
-                "method": "Lv32   Lv32"
-            },
             {
                 "name": "CrysPaledramon",
                 "method": "Lv32"
@@ -16071,6 +16031,14 @@ const DIGIMON_DB = [
             {
                 "name": "GreatGryzzlymon",
                 "method": "Lv. 32"
+            },
+            {
+                "name": "GrapLeomon",
+                "method": "Hammer Rush"
+            },
+            {
+                "name": "GreatGryzzlymon",
+                "method": "Lv32"
             }
         ],
         "stage": "Champion",
@@ -16238,12 +16206,12 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "YaegerDorulumon",
-                "method": "King's Shield"
-            },
-            {
                 "name": "Mihiramon",
                 "method": "Lv32"
+            },
+            {
+                "name": "YaegerDorulumon",
+                "method": "King's Shield"
             }
         ],
         "stage": "Champion",
@@ -16302,12 +16270,12 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "Mercurimon",
-                "method": "Lv54"
-            },
-            {
                 "name": "Duftmon",
                 "method": "Malicious Armor"
+            },
+            {
+                "name": "Mercurimon",
+                "method": "Lv54"
             }
         ],
         "stage": "Ultimate",
@@ -16791,7 +16759,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "RagnaLoardmon",
-                "method": "Jogress"
+                "method": "Jogress BryweLudramon"
             }
         ],
         "stage": "Mega",
@@ -16832,12 +16800,12 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "BryweLudramon",
-                "method": "Jogress"
+                "name": "Durandamon",
+                "method": "Jogress BryweLudramon"
             },
             {
-                "name": "Durandamon",
-                "method": "Jogress"
+                "name": "BryweLudramon",
+                "method": "Durandamon Jogress"
             }
         ],
         "next": [],
@@ -16935,6 +16903,10 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "RaijiLudomon",
+                "method": "Lv32 (Corrected from RiaLudomon)"
+            },
+            {
+                "name": "RaijiLudomon",
                 "method": "Lv32"
             }
         ],
@@ -16991,7 +16963,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "TiaLudomon",
-                "method": "Lv32"
+                "method": "Lv32 (Corrected from RiaLudomon)"
             }
         ],
         "next": [
@@ -17065,7 +17037,11 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "RagnaLoardmon",
-                "method": "Jogress"
+                "method": "Durandamon Jogress"
+            },
+            {
+                "name": "RagnaLoardmon",
+                "method": "Jogress Durandamon"
             }
         ],
         "stage": "Mega",
@@ -17299,7 +17275,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Examon",
-                "method": "Jogress"
+                "method": "Jogress Breakdramon"
             }
         ],
         "stage": "Mega",
@@ -17487,7 +17463,11 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Examon",
-                "method": "Jogress"
+                "method": "Slayerdramon Jogress"
+            },
+            {
+                "name": "Examon",
+                "method": "Jogress Slayerdramon"
             }
         ],
         "stage": "Mega",
@@ -17512,11 +17492,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Slayerdramon",
-                "method": "Jogress"
+                "method": "Jogress Breakdramon"
             },
             {
                 "name": "Breakdramon",
-                "method": "Jogress"
+                "method": "Slayerdramon Jogress"
             }
         ],
         "next": [],
@@ -17790,7 +17770,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Betamon",
-                "method": "Lv18 Attack > Defense"
+                "method": "Attack > Defense"
             }
         ],
         "next": [
@@ -17804,7 +17784,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "ExTyrannomon",
-                "method": "Fire Data  Cute Plush"
+                "method": "Cute Plush"
             }
         ],
         "stage": "Champion",
@@ -17868,7 +17848,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Dinomon",
-                "method": "Lv54  Dragon Pulse"
+                "method": "Lv54"
             }
         ],
         "stage": "Ultimate",
@@ -17930,11 +17910,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "MasterTyrannomon",
-                "method": "Lv54  Dragon Pulse"
+                "method": "Lv54"
             },
             {
                 "name": "ExTyrannomon",
-                "method": "Lv54  Dragon Pulse"
+                "method": "Dragon Pulse"
             }
         ],
         "next": [],
@@ -18274,11 +18254,11 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "RustTyranomon",
-                "method": "Lv54  Thunder Cloud"
+                "method": "Lv54"
             },
             {
                 "name": "Mugendramon",
-                "method": "Mechanic Data  Lv70  Mechanic Data  Lv70"
+                "method": "Mechanic Data"
             }
         ],
         "stage": "Mega",
@@ -18340,11 +18320,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "MetalTyrannomon",
-                "method": "Lv54  Thunder Cloud"
+                "method": "Lv54"
             },
             {
                 "name": "ExTyrannomon",
-                "method": "Lv54  Thunder Cloud"
+                "method": "Thunder Cloud"
             }
         ],
         "next": [],
@@ -18390,28 +18370,28 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "MetalTyrannomon",
-                "method": "Mechanic Data  Lv70  Mechanic Data  Lv70"
-            },
-            {
-                "name": "MetalMamemon",
-                "method": "Mechanic Data  Lv70  Mechanic Data  Lv70"
+                "method": "Mechanic Data"
             },
             {
                 "name": "Megadramon",
-                "method": "Mechanic Data  Lv70  Mechanic Data  Lv70"
+                "method": "Lv70"
+            },
+            {
+                "name": "MetalMamemon",
+                "method": "Lv70"
             }
         ],
         "next": [
             {
                 "name": "Millenniummon",
-                "method": "Jogress"
+                "method": "Jogress Kimeramon"
             }
         ],
         "stage": "Mega",
         "cardLevel": 6
     },
     {
-        "id": "315",
+        "id": "316",
         "name": "Phascomon",
         "types": [
             "Dark"
@@ -18455,7 +18435,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "316",
+        "id": "317",
         "name": "MadLeomon",
         "types": [
             "Dark",
@@ -18509,7 +18489,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "317",
+        "id": "318",
         "name": "Astamon",
         "types": [
             "Dark"
@@ -18568,7 +18548,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "318",
+        "id": "319",
         "name": "Belphemon",
         "types": [
             "Dark"
@@ -18626,7 +18606,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "319",
+        "id": "320",
         "name": "KoDokugumon",
         "types": [
             "Bug",
@@ -18672,7 +18652,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "320",
+        "id": "321",
         "name": "Dokugumon",
         "types": [
             "Bug",
@@ -18726,7 +18706,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "321",
+        "id": "322",
         "name": "Archnemon",
         "types": [
             "Bug",
@@ -18772,12 +18752,12 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Hudiemon",
-                "method": "Lv30"
-            },
-            {
                 "name": "Dokugumon",
                 "method": "Jogress Hudiemon"
+            },
+            {
+                "name": "Hudiemon",
+                "method": "Lv30"
             }
         ],
         "next": [
@@ -18790,7 +18770,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "322",
+        "id": "323",
         "name": "Parasimon",
         "types": [
             "Bug",
@@ -18845,7 +18825,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "323",
+        "id": "324",
         "name": "Commandramon",
         "types": [
             "Steel",
@@ -18883,19 +18863,19 @@ const DIGIMON_DB = [
         "prev": [],
         "next": [
             {
-                "name": "Sealsdramon",
-                "method": "Lv18 Amped"
+                "name": "Hi-Commandramon",
+                "method": "Lv18 Lowkey (Corrected"
             },
             {
-                "name": "Hi-Commandramon",
-                "method": "Low Key) or Sealsdramon (Amped"
+                "name": "Sealsdramon",
+                "method": "Lv18 Amped"
             }
         ],
         "stage": "Rookie",
         "cardLevel": 3
     },
     {
-        "id": "324",
+        "id": "325",
         "name": "Hi-Commandramon",
         "types": [
             "Steel",
@@ -18941,20 +18921,28 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Commandramon",
-                "method": "Low Key) or Sealsdramon (Amped"
+                "method": "Lv18 Lowkey (Corrected"
+            },
+            {
+                "name": "Hi-Commandramon",
+                "method": "original was  lv18)"
             }
         ],
         "next": [
             {
+                "name": "Hi-Commandramon",
+                "method": "original was  lv18)"
+            },
+            {
                 "name": "Cargodramon",
-                "method": "Lv. 32"
+                "method": "Lv32 (Corrected"
             }
         ],
         "stage": "Champion",
         "cardLevel": 4
     },
     {
-        "id": "325",
+        "id": "326",
         "name": "Cargodramon",
         "types": [
             "Steel",
@@ -19003,20 +18991,28 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Hi-Commandramon",
-                "method": "Lv. 32"
+                "method": "Lv32 (Corrected"
+            },
+            {
+                "name": "Cargodramon",
+                "method": "original was  lv32)"
             }
         ],
         "next": [
             {
+                "name": "Cargodramon",
+                "method": "original was  lv32)"
+            },
+            {
                 "name": "Brigadramon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "326",
+        "id": "327",
         "name": "Ghilliedhumon",
         "types": [
             "Dragon",
@@ -19067,18 +19063,18 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Brigadramon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             },
             {
                 "name": "Darkdramon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "327",
+        "id": "328",
         "name": "Brigadramon",
         "types": [
             "Steel",
@@ -19132,12 +19128,12 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Ghilliedhumon",
-                "method": "Lv54  Lv54"
+                "name": "Cargodramon",
+                "method": "Lv54"
             },
             {
-                "name": "Cargodramon",
-                "method": "Lv54  Lv54"
+                "name": "Ghilliedhumon",
+                "method": "Lv54"
             }
         ],
         "next": [],
@@ -19145,7 +19141,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "328",
+        "id": "329",
         "name": "Sealsdramon",
         "types": [
             "Steel",
@@ -19204,7 +19200,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "329",
+        "id": "330",
         "name": "Tankdramon",
         "types": [
             "Steel",
@@ -19259,14 +19255,14 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Darkdramon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "330",
+        "id": "331",
         "name": "Darkdramon",
         "types": [
             "Steel",
@@ -19321,24 +19317,24 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Ghilliedhumon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             },
             {
                 "name": "Tankdramon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             }
         ],
         "next": [
             {
                 "name": "Caosmon",
-                "method": "Jogress"
+                "method": "BanchoLeomon Jogress"
             }
         ],
         "stage": "Mega",
         "cardLevel": 6
     },
     {
-        "id": "331",
+        "id": "332",
         "name": "Caosmon",
         "types": [
             "CHAOS"
@@ -19372,11 +19368,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "BanchoLeomon",
-                "method": "Jogress"
+                "method": "Jogress Darkdramon"
             },
             {
                 "name": "Darkdramon",
-                "method": "Jogress"
+                "method": "BanchoLeomon Jogress"
             }
         ],
         "next": [],
@@ -19384,7 +19380,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "332",
+        "id": "333",
         "name": "Dracmon",
         "types": [
             "Undead",
@@ -19430,7 +19426,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "333",
+        "id": "334",
         "name": "Sangloupmon",
         "types": [
             "Dark"
@@ -19488,7 +19484,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "334",
+        "id": "335",
         "name": "Matadormon",
         "types": [
             "Undead",
@@ -19548,7 +19544,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "335",
+        "id": "336",
         "name": "Grandracmon",
         "types": [
             "Undead",
@@ -19611,7 +19607,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "336",
+        "id": "337",
         "name": "Myotismon",
         "types": [
             "Undead",
@@ -19671,7 +19667,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "337",
+        "id": "338",
         "name": "VenomMyotismon",
         "types": [
             "Undead",
@@ -19734,7 +19730,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "338",
+        "id": "339",
         "name": "DemiDevimon",
         "types": [
             "Dark",
@@ -19784,7 +19780,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "339",
+        "id": "340",
         "name": "Devimon",
         "types": [
             "Dark",
@@ -19846,7 +19842,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "340",
+        "id": "341",
         "name": "NeoDevimon",
         "types": [
             "Dark",
@@ -19906,7 +19902,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "341",
+        "id": "342",
         "name": "DoneDevimon",
         "types": [
             "Dark",
@@ -19965,7 +19961,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "342",
+        "id": "343",
         "name": "Jokermon",
         "types": [
             "Dark",
@@ -20027,7 +20023,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "343",
+        "id": "344",
         "name": "Piedmon",
         "types": [
             "Dark",
@@ -20086,7 +20082,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "344",
+        "id": "345",
         "name": "Vilemon",
         "types": [
             "Dark"
@@ -20141,7 +20137,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "345",
+        "id": "346",
         "name": "SkullSatamon",
         "types": [
             "Undead",
@@ -20201,7 +20197,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "346",
+        "id": "347",
         "name": "Barbamon",
         "types": [
             "Undead",
@@ -20256,7 +20252,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "347",
+        "id": "348",
         "name": "Gizamon",
         "types": [
             "Water"
@@ -20298,7 +20294,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "348",
+        "id": "349",
         "name": "Gesomon",
         "types": [
             "Water",
@@ -20347,14 +20343,14 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Dolphmon",
-                "method": "Lv18"
+                "method": "Lv18 (This appears to be a branching evolution at the same level)"
             }
         ],
         "stage": "Champion",
         "cardLevel": 4
     },
     {
-        "id": "349",
+        "id": "350",
         "name": "MarineDevimon",
         "types": [
             "Water",
@@ -20414,7 +20410,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "350",
+        "id": "351",
         "name": "Leviamon",
         "types": [
             "Water",
@@ -20477,7 +20473,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "351",
+        "id": "352",
         "name": "Dolphmon",
         "types": [
             "Water"
@@ -20517,7 +20513,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Gesomon",
-                "method": "Lv18"
+                "method": "Lv18 (This appears to be a branching evolution at the same level)"
             }
         ],
         "next": [
@@ -20530,7 +20526,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "352",
+        "id": "353",
         "name": "Hangyomon",
         "types": [
             "Water"
@@ -20589,7 +20585,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "353",
+        "id": "354",
         "name": "Neptunemon",
         "types": [
             "Water"
@@ -20651,7 +20647,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "354",
+        "id": "355",
         "name": "Betamon",
         "types": [
             "Water",
@@ -20690,23 +20686,23 @@ const DIGIMON_DB = [
         "prev": [],
         "next": [
             {
-                "name": "Tyrannomon",
-                "method": "Lv18 Attack > Defense"
-            },
-            {
                 "name": "Seadramon",
-                "method": "Lv18 Defense > Attack"
+                "method": "Defense > Attack"
             },
             {
                 "name": "Airdramon",
-                "method": "Lv18 Attack = Defense"
+                "method": "Attack = Defense"
+            },
+            {
+                "name": "Tyrannomon",
+                "method": "Attack > Defense"
             }
         ],
         "stage": "Rookie",
         "cardLevel": 3
     },
     {
-        "id": "355",
+        "id": "356",
         "name": "Seadramon",
         "types": [
             "Water",
@@ -20743,7 +20739,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Betamon",
-                "method": "Lv18 Defense > Attack"
+                "method": "Defense > Attack"
             }
         ],
         "next": [
@@ -20756,7 +20752,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "356",
+        "id": "357",
         "name": "MegaSeadramon",
         "types": [
             "Water",
@@ -20816,7 +20812,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "357",
+        "id": "358",
         "name": "MetalSeadramon",
         "types": [
             "Water",
@@ -20877,14 +20873,14 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Aegisdramon",
-                "method": "Jogress"
+                "method": "Plesiomon Jogress"
             }
         ],
         "stage": "Mega",
         "cardLevel": 6
     },
     {
-        "id": "358",
+        "id": "359",
         "name": "Aegisdramon",
         "types": [
             "Water",
@@ -20914,12 +20910,12 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "MetalSeadramon",
-                "method": "Jogress"
+                "name": "Plesiomon",
+                "method": "Jogress MetalSeadramon"
             },
             {
-                "name": "Plesiomon",
-                "method": "Jogress"
+                "name": "MetalSeadramon",
+                "method": "Plesiomon Jogress"
             }
         ],
         "next": [],
@@ -20927,7 +20923,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "359",
+        "id": "360",
         "name": "Airdramon",
         "types": [
             "Flying",
@@ -20967,7 +20963,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Betamon",
-                "method": "Lv18 Attack = Defense"
+                "method": "Attack = Defense"
             }
         ],
         "next": [
@@ -20984,7 +20980,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "360",
+        "id": "361",
         "name": "Megadramon",
         "types": [
             "Steel",
@@ -21037,14 +21033,18 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Mugendramon",
-                "method": "Mechanic Data  Lv70  Mechanic Data  Lv70"
+                "method": "Lv70"
+            },
+            {
+                "name": "Mugendramon",
+                "method": "Mechanic Data"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "361",
+        "id": "362",
         "name": "Sunarizamon",
         "types": [
             "Ground"
@@ -21085,23 +21085,23 @@ const DIGIMON_DB = [
         "prev": [],
         "next": [
             {
-                "name": "Tortomon",
-                "method": "Withdraw"
+                "name": "Landramon",
+                "method": "Lv18"
             },
             {
                 "name": "Golemon",
                 "method": "Earth Data"
             },
             {
-                "name": "Landramon",
-                "method": "Lv18"
+                "name": "Tortomon",
+                "method": "Withdraw"
             }
         ],
         "stage": "Rookie",
         "cardLevel": 3
     },
     {
-        "id": "362",
+        "id": "363",
         "name": "Tortomon",
         "types": [
             "Ground"
@@ -21158,7 +21158,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "363",
+        "id": "364",
         "name": "Jagamon",
         "types": [
             "Ground",
@@ -21211,14 +21211,14 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "ElDoradimon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "364",
+        "id": "365",
         "name": "Golemon",
         "types": [
             "Rock",
@@ -21273,7 +21273,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "365",
+        "id": "366",
         "name": "Gogmamon",
         "types": [
             "Rock",
@@ -21336,7 +21336,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "366",
+        "id": "367",
         "name": "Blastmon",
         "types": [
             "Rock",
@@ -21397,7 +21397,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "367",
+        "id": "368",
         "name": "Monochromon",
         "types": [
             "Ground",
@@ -21437,12 +21437,7 @@ const DIGIMON_DB = [
             "Route 111",
             "Magma Hideout"
         ],
-        "prev": [
-            {
-                "name": "Monodramon",
-                "method": "Fire Data"
-            }
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Triceramon",
@@ -21457,7 +21452,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "368",
+        "id": "369",
         "name": "Triceramon",
         "types": [
             "Ground",
@@ -21521,7 +21516,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "369",
+        "id": "370",
         "name": "DinoRexmon",
         "types": [
             "Ground",
@@ -21580,7 +21575,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "370",
+        "id": "371",
         "name": "Gammamon",
         "types": [
             "Dragon"
@@ -21629,7 +21624,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "371",
+        "id": "372",
         "name": "BetelGammamon",
         "types": [
             "Dragon",
@@ -21680,7 +21675,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "372",
+        "id": "373",
         "name": "Canoweissmon",
         "types": [
             "Dragon",
@@ -21742,7 +21737,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "373",
+        "id": "374",
         "name": "Siriusmon",
         "types": [
             "Dragon",
@@ -21799,14 +21794,14 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Proximamon",
-                "method": "Jogress"
+                "method": "Jogress Arcturusmon"
             }
         ],
         "stage": "Mega",
         "cardLevel": 6
     },
     {
-        "id": "374",
+        "id": "375",
         "name": "GulusGammamon",
         "types": [
             "Dragon",
@@ -21860,7 +21855,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "375",
+        "id": "376",
         "name": "Regulusmon",
         "types": [
             "Dragon",
@@ -21922,7 +21917,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "376",
+        "id": "377",
         "name": "Arcturusmon",
         "types": [
             "Dragon",
@@ -21983,14 +21978,14 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Proximamon",
-                "method": "Jogress"
+                "method": "Siriusmon Jogress"
             }
         ],
         "stage": "Mega",
         "cardLevel": 6
     },
     {
-        "id": "377",
+        "id": "378",
         "name": "Proximamon",
         "types": [
             "Holy",
@@ -22024,12 +22019,12 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Arcturusmon",
-                "method": "Jogress"
+                "name": "Siriusmon",
+                "method": "Jogress Arcturusmon"
             },
             {
-                "name": "Siriusmon",
-                "method": "Jogress"
+                "name": "Arcturusmon",
+                "method": "Siriusmon Jogress"
             }
         ],
         "next": [],
@@ -22037,7 +22032,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "378",
+        "id": "379",
         "name": "Angoramon",
         "types": [
             "Fighting",
@@ -22082,7 +22077,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "379",
+        "id": "380",
         "name": "SymbareAngoramon",
         "types": [
             "Fighting",
@@ -22137,7 +22132,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "380",
+        "id": "381",
         "name": "Lamortmon",
         "types": [
             "Fighting",
@@ -22199,7 +22194,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "381",
+        "id": "382",
         "name": "Diarbbitmon",
         "types": [
             "Fighting",
@@ -22258,7 +22253,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "382",
+        "id": "383",
         "name": "Jellymon",
         "types": [
             "Electric",
@@ -22303,7 +22298,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "383",
+        "id": "384",
         "name": "TeslaJellymon",
         "types": [
             "Electric",
@@ -22355,7 +22350,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "384",
+        "id": "385",
         "name": "Thetismon",
         "types": [
             "Electric",
@@ -22415,7 +22410,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "385",
+        "id": "386",
         "name": "Amphimon",
         "types": [
             "Steel",
@@ -22478,7 +22473,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "386",
+        "id": "387",
         "name": "Morphomon",
         "types": [
             "Bug",
@@ -22525,7 +22520,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "387",
+        "id": "388",
         "name": "Hudiemon",
         "types": [
             "Bug",
@@ -22577,14 +22572,14 @@ const DIGIMON_DB = [
             },
             {
                 "name": "LadyDevimon",
-                "method": "Lv32 Lowkey  Lv30"
+                "method": "Lv30"
             }
         ],
         "stage": "Champion",
         "cardLevel": 4
     },
     {
-        "id": "388",
+        "id": "389",
         "name": "FunBeemon",
         "types": [
             "Bug"
@@ -22633,7 +22628,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "389",
+        "id": "390",
         "name": "Waspmon",
         "types": [
             "Bug",
@@ -22689,7 +22684,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "390",
+        "id": "391",
         "name": "Vespamon",
         "types": [
             "Bug",
@@ -22749,7 +22744,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "391",
+        "id": "392",
         "name": "TigerVespamon",
         "types": [
             "Bug",
@@ -22812,7 +22807,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "392",
+        "id": "393",
         "name": "ForgeBeemon",
         "types": [
             "Bug",
@@ -22867,7 +22862,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "393",
+        "id": "394",
         "name": "CannonBeemon",
         "types": [
             "Bug",
@@ -22929,7 +22924,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "394",
+        "id": "395",
         "name": "QueenBeemon",
         "types": [
             "Bug",
@@ -22980,7 +22975,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "395",
+        "id": "396",
         "name": "Herissmon",
         "types": [
             "Electric",
@@ -23026,7 +23021,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "396",
+        "id": "397",
         "name": "Filmon",
         "types": [
             "Electric",
@@ -23077,7 +23072,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "397",
+        "id": "398",
         "name": "Stiffilmon",
         "types": [
             "Electric",
@@ -23133,7 +23128,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "398",
+        "id": "399",
         "name": "Rasenmon Fury Mode",
         "types": [
             "Poison",
@@ -23169,7 +23164,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "399",
+        "id": "400",
         "name": "Rasenmon True Form",
         "types": [
             "Electric",
@@ -23216,7 +23211,7 @@ const DIGIMON_DB = [
         "cardLevel": 7
     },
     {
-        "id": "400",
+        "id": "401",
         "name": "Pulsemon",
         "types": [
             "Electric"
@@ -23262,7 +23257,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "401",
+        "id": "402",
         "name": "Bulkmon",
         "types": [
             "Electric",
@@ -23316,7 +23311,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "402",
+        "id": "403",
         "name": "Boutmon",
         "types": [
             "Electric",
@@ -23380,7 +23375,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "403",
+        "id": "404",
         "name": "Kazuchimon",
         "types": [
             "Electric",
@@ -23441,14 +23436,14 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Fenriloogamon Takemikazuchi",
-                "method": "Jogress"
+                "method": "Fenriloogamon Jogress"
             }
         ],
         "stage": "Mega",
         "cardLevel": 6
     },
     {
-        "id": "404",
+        "id": "405",
         "name": "Exermon",
         "types": [
             "Bug",
@@ -23503,7 +23498,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "405",
+        "id": "406",
         "name": "Climbmon",
         "types": [
             "Bug",
@@ -23561,7 +23556,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "406",
+        "id": "407",
         "name": "Shivamon",
         "types": [
             "Bug",
@@ -23616,7 +23611,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "407",
+        "id": "408",
         "name": "Shroudmon",
         "types": [
             "Dark",
@@ -23679,7 +23674,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "408",
+        "id": "409",
         "name": "Loogamon",
         "types": [
             "Magic",
@@ -23725,7 +23720,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "409",
+        "id": "410",
         "name": "Loogarmon",
         "types": [
             "Magic",
@@ -23776,7 +23771,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "410",
+        "id": "411",
         "name": "Helloogarmon",
         "types": [
             "Magic",
@@ -23808,7 +23803,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "411",
+        "id": "412",
         "name": "Soloogarmon",
         "types": [
             "Magic",
@@ -23864,7 +23859,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "412",
+        "id": "413",
         "name": "Fenriloogamon",
         "types": [
             "Magic",
@@ -23925,14 +23920,14 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Fenriloogamon Takemikazuchi",
-                "method": "Jogress"
+                "method": "Jogress Kazuchimon"
             }
         ],
         "stage": "Mega",
         "cardLevel": 6
     },
     {
-        "id": "413",
+        "id": "414",
         "name": "Fenriloogamon Takemikazuchi",
         "types": [
             "Magic",
@@ -23962,12 +23957,12 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Fenriloogamon",
-                "method": "Jogress"
+                "name": "Kazuchimon",
+                "method": "Fenriloogamon Jogress"
             },
             {
-                "name": "Kazuchimon",
-                "method": "Jogress"
+                "name": "Fenriloogamon",
+                "method": "Jogress Kazuchimon"
             }
         ],
         "next": [],
@@ -23975,7 +23970,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "414",
+        "id": "415",
         "name": "Kudamon",
         "types": [
             "Holy"
@@ -24019,7 +24014,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "415",
+        "id": "416",
         "name": "Reppamon",
         "types": [
             "Holy"
@@ -24073,7 +24068,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "416",
+        "id": "417",
         "name": "Tyilinmon",
         "types": [
             "Holy",
@@ -24137,7 +24132,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "417",
+        "id": "418",
         "name": "Mitamamon",
         "types": [
             "Holy",
@@ -24200,7 +24195,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "418",
+        "id": "419",
         "name": "Sleipmon",
         "types": [
             "Holy",
@@ -24263,7 +24258,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "419",
+        "id": "420",
         "name": "Ghostmon",
         "types": [
             "Undead"
@@ -24308,7 +24303,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "420",
+        "id": "421",
         "name": "Bakemon",
         "types": [
             "Undead"
@@ -24367,7 +24362,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "421",
+        "id": "422",
         "name": "Phantomon",
         "types": [
             "Undead"
@@ -24428,7 +24423,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "422",
+        "id": "423",
         "name": "Necromon",
         "types": [
             "Undead",
@@ -24491,7 +24486,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "423",
+        "id": "424",
         "name": "Pumpmon",
         "types": [
             "Undead",
@@ -24544,6 +24539,10 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "NoblePumpmon",
+                "method": "Lv50 (Corrected from Pumpkinmon)"
+            },
+            {
+                "name": "NoblePumpmon",
                 "method": "Lv50"
             }
         ],
@@ -24551,7 +24550,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "424",
+        "id": "425",
         "name": "NoblePumpmon",
         "types": [
             "Undead",
@@ -24606,7 +24605,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Pumpmon",
-                "method": "Lv50"
+                "method": "Lv50 (Corrected from Pumpkinmon)"
             }
         ],
         "next": [],
@@ -24614,7 +24613,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "425",
+        "id": "426",
         "name": "Mummymon",
         "types": [
             "Undead",
@@ -24676,7 +24675,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "426",
+        "id": "427",
         "name": "Pharaohmon",
         "types": [
             "Undead",
@@ -24731,7 +24730,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "427",
+        "id": "428",
         "name": "Tsukaimon",
         "types": [
             "Flying",
@@ -24777,7 +24776,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "428",
+        "id": "429",
         "name": "Witchmon",
         "types": [
             "Dark",
@@ -24828,7 +24827,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "LadyDevimon",
-                "method": "Lv32 Lowkey  Lv30"
+                "method": "Lv32 Lowkey"
             },
             {
                 "name": "Bastemon",
@@ -24839,7 +24838,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "429",
+        "id": "430",
         "name": "LadyDevimon",
         "types": [
             "Dark",
@@ -24888,32 +24887,32 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Hudiemon",
-                "method": "Lv32 Lowkey  Lv30"
+                "method": "Lv30"
             },
             {
                 "name": "Witchmon",
-                "method": "Lv32 Lowkey  Lv30"
+                "method": "Lv32 Lowkey"
             }
         ],
         "next": [
+            {
+                "name": "Lilithmon",
+                "method": "Lv54"
+            },
             {
                 "name": "Dianamon",
                 "method": "Lunar Scale"
             },
             {
                 "name": "Mastemon",
-                "method": "Jogress"
-            },
-            {
-                "name": "Lilithmon",
-                "method": "Lv54  Lv54"
+                "method": "Angewomon Jogress"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "430",
+        "id": "431",
         "name": "Dianamon",
         "types": [
             "Dark",
@@ -24974,14 +24973,18 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "GraceNovamon",
-                "method": "Jogress"
+                "method": "Apollomon Jogress"
+            },
+            {
+                "name": "GraceNovamon",
+                "method": "Jogress Apollomon"
             }
         ],
         "stage": "Mega",
         "cardLevel": 6
     },
     {
-        "id": "431",
+        "id": "432",
         "name": "Mastemon",
         "types": [
             "Holy",
@@ -25036,11 +25039,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "LadyDevimon",
-                "method": "Jogress"
-            },
-            {
-                "name": "Angewomon",
-                "method": "Jogress"
+                "method": "Angewomon Jogress"
             }
         ],
         "next": [],
@@ -25048,7 +25047,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "432",
+        "id": "433",
         "name": "Bastemon",
         "types": [
             "Dark",
@@ -25104,14 +25103,14 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Lilithmon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "433",
+        "id": "434",
         "name": "Lilithmon",
         "types": [
             "Dark",
@@ -25162,11 +25161,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "LadyDevimon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             },
             {
                 "name": "Bastemon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             }
         ],
         "next": [],
@@ -25174,7 +25173,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "434",
+        "id": "435",
         "name": "Labramon",
         "types": [
             "Normal"
@@ -25225,7 +25224,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "435",
+        "id": "436",
         "name": "Seasarmon",
         "types": [
             "Holy"
@@ -25281,7 +25280,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "436",
+        "id": "437",
         "name": "Caturamon",
         "types": [
             "Holy"
@@ -25335,14 +25334,18 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Erlangmon",
-                "method": "Lv54"
+                "method": "Lv54 (Corrected from Canturamon)"
+            },
+            {
+                "name": "Erlangmon",
+                "method": "Evolution"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "437",
+        "id": "438",
         "name": "Erlangmon",
         "types": [
             "Holy"
@@ -25396,7 +25399,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Caturamon",
-                "method": "Lv54"
+                "method": "Lv54 (Corrected from Canturamon)"
             }
         ],
         "next": [],
@@ -25404,7 +25407,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "438",
+        "id": "439",
         "name": "Dobermon",
         "types": [
             "Dark"
@@ -25455,7 +25458,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "439",
+        "id": "440",
         "name": "Cerberusmon",
         "types": [
             "Dark",
@@ -25508,14 +25511,18 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Anubismon",
-                "method": "Lv. 54"
+                "method": "as Anubismon doesn't evolve from itself. Assuming it evolves from )"
+            },
+            {
+                "name": "Anubismon",
+                "method": "Lv54"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "440",
+        "id": "441",
         "name": "Anubismon",
         "types": [
             "Undead",
@@ -25570,15 +25577,24 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Cerberusmon",
-                "method": "Lv. 54"
+                "method": "as Anubismon doesn't evolve from itself. Assuming it evolves from )"
+            },
+            {
+                "name": "Anubismon",
+                "method": "Lv54 (This seems to be a typo in the original file"
             }
         ],
-        "next": [],
+        "next": [
+            {
+                "name": "Anubismon",
+                "method": "Lv54 (This seems to be a typo in the original file"
+            }
+        ],
         "stage": "Mega",
         "cardLevel": 6
     },
     {
-        "id": "441",
+        "id": "442",
         "name": "Crabmon",
         "types": [
             "Water"
@@ -25622,7 +25638,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "442",
+        "id": "443",
         "name": "Ebidramon",
         "types": [
             "Water",
@@ -25662,19 +25678,19 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "MarineKimeramon",
-                "method": "Water Data"
-            },
-            {
                 "name": "Gusokumon",
                 "method": "Lv32"
+            },
+            {
+                "name": "MarineKimeramon",
+                "method": "Water Data"
             }
         ],
         "stage": "Champion",
         "cardLevel": 4
     },
     {
-        "id": "443",
+        "id": "444",
         "name": "MarineKimeramon",
         "types": [
             "Water",
@@ -25727,14 +25743,14 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Regalecusmon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "444",
+        "id": "445",
         "name": "Gusokumon",
         "types": [
             "Water",
@@ -25787,14 +25803,14 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Regalecusmon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "445",
+        "id": "446",
         "name": "Regalecusmon",
         "types": [
             "Water",
@@ -25849,11 +25865,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "MarineKimeramon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             },
             {
                 "name": "Gusokumon",
-                "method": "Lv54  Lv54"
+                "method": "Lv54"
             }
         ],
         "next": [],
@@ -25861,7 +25877,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "446",
+        "id": "447",
         "name": "Monmon",
         "types": [
             "Normal"
@@ -25905,7 +25921,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "447",
+        "id": "448",
         "name": "Apemon",
         "types": [
             "Fighting",
@@ -25959,7 +25975,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "448",
+        "id": "449",
         "name": "Gokuumon",
         "types": [
             "Fighting"
@@ -26013,14 +26029,14 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Shakamon",
-                "method": "Jogress"
+                "method": "Jogress Sagomon"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "449",
+        "id": "450",
         "name": "Kamemon",
         "types": [
             "Water",
@@ -26067,7 +26083,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "450",
+        "id": "451",
         "name": "Gawappamon",
         "types": [
             "Water",
@@ -26118,7 +26134,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "451",
+        "id": "452",
         "name": "Sagomon",
         "types": [
             "Water",
@@ -26175,14 +26191,14 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Shakamon",
-                "method": "Jogress"
+                "method": "Jogress Gokuumon"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "452",
+        "id": "453",
         "name": "JumboGamemon",
         "types": [
             "Water",
@@ -26245,7 +26261,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "453",
+        "id": "454",
         "name": "Tylomon",
         "types": [
             "Water"
@@ -26298,7 +26314,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "454",
+        "id": "455",
         "name": "Sandiramon",
         "types": [
             "Poison",
@@ -26344,12 +26360,7 @@ const DIGIMON_DB = [
         "locations": [
             "Mirage Tower (Fossil)"
         ],
-        "prev": [
-            {
-                "name": "Tylomon",
-                "method": "Lv32"
-            }
-        ],
+        "prev": [],
         "next": [
             {
                 "name": "Xuanwumon",
@@ -26360,7 +26371,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "455",
+        "id": "456",
         "name": "Xuanwumon",
         "types": [
             "Grass",
@@ -26425,7 +26436,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "456",
+        "id": "457",
         "name": "Kokuwamon",
         "types": [
             "Electric"
@@ -26470,7 +26481,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "457",
+        "id": "458",
         "name": "Thundermon",
         "types": [
             "Electric"
@@ -26521,7 +26532,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "458",
+        "id": "459",
         "name": "Mamemon",
         "types": [
             "Normal",
@@ -26587,7 +26598,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "459",
+        "id": "460",
         "name": "BanchoMamemon",
         "types": [
             "Fighting",
@@ -26650,7 +26661,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "460",
+        "id": "461",
         "name": "MetalMamemon",
         "types": [
             "Steel",
@@ -26699,14 +26710,14 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Mugendramon",
-                "method": "Mechanic Data  Lv70  Mechanic Data  Lv70"
+                "method": "Lv70"
             }
         ],
         "stage": "Mega",
         "cardLevel": 6
     },
     {
-        "id": "461",
+        "id": "462",
         "name": "Floramon",
         "types": [
             "Grass"
@@ -26750,7 +26761,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "462",
+        "id": "463",
         "name": "Woodmon",
         "types": [
             "Grass"
@@ -26803,7 +26814,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "463",
+        "id": "464",
         "name": "Oleamon",
         "types": [
             "Grass",
@@ -26866,7 +26877,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "464",
+        "id": "465",
         "name": "Ceresmon",
         "types": [
             "Grass",
@@ -26934,7 +26945,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "465",
+        "id": "466",
         "name": "Cherrymon",
         "types": [
             "Grass"
@@ -26995,7 +27006,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "466",
+        "id": "467",
         "name": "Pinochimon",
         "types": [
             "Grass",
@@ -27058,7 +27069,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "467",
+        "id": "468",
         "name": "Keramon",
         "types": [
             "Poison",
@@ -27103,7 +27114,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "468",
+        "id": "469",
         "name": "Chrysalimon",
         "types": [
             "Poison",
@@ -27155,7 +27166,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "469",
+        "id": "470",
         "name": "Infermon",
         "types": [
             "Poison",
@@ -27215,7 +27226,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "470",
+        "id": "471",
         "name": "Diaboromon",
         "types": [
             "Poison",
@@ -27278,7 +27289,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "471",
+        "id": "472",
         "name": "Chuumon",
         "types": [
             "Poison"
@@ -27319,7 +27330,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "472",
+        "id": "473",
         "name": "Sukamon",
         "types": [
             "Poison"
@@ -27357,7 +27368,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "473",
+        "id": "474",
         "name": "Etemon",
         "types": [
             "Poison",
@@ -27420,7 +27431,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "474",
+        "id": "475",
         "name": "MetalEtemon",
         "types": [
             "Poison",
@@ -27479,7 +27490,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "475",
+        "id": "476",
         "name": "Pteromon",
         "types": [
             "Flying"
@@ -27523,7 +27534,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "476",
+        "id": "477",
         "name": "Galemon",
         "types": [
             "Flying"
@@ -27578,7 +27589,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "477",
+        "id": "478",
         "name": "GrandGalemon",
         "types": [
             "Flying",
@@ -27641,7 +27652,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "478",
+        "id": "479",
         "name": "Zephagamon",
         "types": [
             "Flying",
@@ -27704,7 +27715,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "479",
+        "id": "480",
         "name": "Shoemon",
         "types": [
             "Fairy",
@@ -27752,7 +27763,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "480",
+        "id": "481",
         "name": "Shoeshoemon",
         "types": [
             "Fairy",
@@ -27800,14 +27811,14 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Chaperomon",
-                "method": "Lov32"
+                "method": "Lv32"
             }
         ],
         "stage": "Champion",
         "cardLevel": 4
     },
     {
-        "id": "481",
+        "id": "482",
         "name": "Chaperomon",
         "types": [
             "Fairy",
@@ -27856,7 +27867,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Shoeshoemon",
-                "method": "Lov32"
+                "method": "Lv32"
             }
         ],
         "next": [
@@ -27873,7 +27884,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "482",
+        "id": "483",
         "name": "Cendrillmon",
         "types": [
             "Fairy",
@@ -27940,7 +27951,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "483",
+        "id": "484",
         "name": "Elizamon",
         "types": [
             "Dragon"
@@ -27987,7 +27998,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "484",
+        "id": "485",
         "name": "Dimetromon",
         "types": [
             "Dragon"
@@ -28040,7 +28051,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "485",
+        "id": "486",
         "name": "Lamiamon",
         "types": [
             "Dragon",
@@ -28100,7 +28111,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "486",
+        "id": "487",
         "name": "Medusamon",
         "types": [
             "Dragon",
@@ -28163,7 +28174,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "487",
+        "id": "488",
         "name": "Susanoomon",
         "types": [
             "CHAOS"
@@ -28180,12 +28191,12 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "AncientGarurumon",
-                "method": "Jogress"
+                "name": "AncientGreymon",
+                "method": "Jogress AncientGarurumon"
             },
             {
-                "name": "AncientGreymon",
-                "method": "Jogress"
+                "name": "AncientGarurumon",
+                "method": "AncientGreymon Jogress"
             }
         ],
         "next": [],
@@ -28238,11 +28249,7 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Kabuterimon",
-                "method": "Organic Data"
-            },
-            {
-                "name": "Monochromon",
+                "name": "Greymon",
                 "method": "Organic Data"
             },
             {
@@ -28250,7 +28257,15 @@ const DIGIMON_DB = [
                 "method": "Organic Data"
             },
             {
+                "name": "Kabuterimon",
+                "method": "Organic Data"
+            },
+            {
                 "name": "Kuwagamon",
+                "method": "Organic Data"
+            },
+            {
+                "name": "Devimon",
                 "method": "Organic Data"
             },
             {
@@ -28258,18 +28273,18 @@ const DIGIMON_DB = [
                 "method": "Organic Data"
             },
             {
-                "name": "Greymon",
-                "method": "Organic Data"
-            },
-            {
-                "name": "Devimon",
+                "name": "Monochromon",
                 "method": "Organic Data"
             }
         ],
         "next": [
             {
                 "name": "Millenniummon",
-                "method": "Jogress"
+                "method": "Mugendramon Jogress"
+            },
+            {
+                "name": "Millenniummon",
+                "method": "Jogress Mugendramon"
             }
         ],
         "stage": "Ultimate",
@@ -28289,11 +28304,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Mugendramon",
-                "method": "Jogress"
+                "method": "Jogress Kimeramon"
             },
             {
                 "name": "Kimeramon",
-                "method": "Jogress"
+                "method": "Mugendramon Jogress"
             }
         ],
         "next": [],
@@ -28340,11 +28355,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Gokuumon",
-                "method": "Jogress"
+                "method": "Jogress Sagomon"
             },
             {
                 "name": "Sagomon",
-                "method": "Jogress"
+                "method": "Jogress Gokuumon"
             }
         ],
         "next": [],
@@ -28473,11 +28488,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Apollomon",
-                "method": "Jogress"
+                "method": "Jogress Dianamon"
             },
             {
                 "name": "Dianamon",
-                "method": "Jogress"
+                "method": "Apollomon Jogress"
             }
         ],
         "next": [],
@@ -28510,7 +28525,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "505",
+        "id": "496",
         "name": "LaeusGreymon",
         "types": [
             "Fire",
@@ -28527,7 +28542,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "506",
+        "id": "497",
         "name": "ZinoGarurumon",
         "types": [
             "Ice",
@@ -28544,7 +28559,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "507",
+        "id": "498",
         "name": "Nyabootmon",
         "types": [
             "Fairy",
@@ -28607,7 +28622,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "508",
+        "id": "499",
         "name": "Ariemon",
         "types": [
             "Water"
@@ -28661,11 +28676,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "MarinBullmon",
-                "method": "Lunar Scale  Water Data"
+                "method": "Lunar Scale"
             },
             {
                 "name": "Ryugumon",
-                "method": "Lunar Scale  Water Data"
+                "method": "Water Data"
             }
         ],
         "next": [],
@@ -28673,7 +28688,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "509",
+        "id": "500",
         "name": "Landramon",
         "types": [
             "Rock",
@@ -28725,7 +28740,7 @@ const DIGIMON_DB = [
         "cardLevel": 4
     },
     {
-        "id": "510",
+        "id": "501",
         "name": "Proganomon",
         "types": [
             "Rock",
@@ -28785,7 +28800,7 @@ const DIGIMON_DB = [
         "cardLevel": 5
     },
     {
-        "id": "511",
+        "id": "502",
         "name": "Pyramidimon",
         "types": [
             "Rock",
@@ -28832,7 +28847,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "512",
+        "id": "503",
         "name": "ExTyrannomon",
         "types": [
             "Fire",
@@ -28874,33 +28889,33 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Tyrannomon",
-                "method": "Fire Data  Cute Plush"
+                "name": "Monzaemon",
+                "method": "Fire Data"
             },
             {
-                "name": "Monzaemon",
-                "method": "Fire Data  Cute Plush"
+                "name": "Tyrannomon",
+                "method": "Cute Plush"
             }
         ],
         "next": [
             {
                 "name": "ShinMonzaemon",
-                "method": "Lv54  Lv54  Night Daze"
+                "method": "Night Daze"
             },
             {
                 "name": "Dinomon",
-                "method": "Lv54  Dragon Pulse"
+                "method": "Dragon Pulse"
             },
             {
                 "name": "RustTyranomon",
-                "method": "Lv54  Thunder Cloud"
+                "method": "Thunder Cloud"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "513",
+        "id": "504",
         "name": "Garummon",
         "types": [
             "Holy"
@@ -28938,20 +28953,20 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Wolfmon",
-                "method": "Wolf Kendo  Lupine Laser"
+                "method": "Wolf Kendo"
             }
         ],
         "next": [
             {
                 "name": "Beowolfmon",
-                "method": "Lv32  Lv32"
+                "method": "Lv32"
             }
         ],
         "stage": "Hybrid",
         "cardLevel": 4
     },
     {
-        "id": "",
+        "id": "514",
         "name": "Archnemon Disguise",
         "types": [
             "Normal"
@@ -28967,7 +28982,7 @@ const DIGIMON_DB = [
         "cardLevel": 3
     },
     {
-        "id": "",
+        "id": "515",
         "name": "Beelzebumon Blast",
         "types": [],
         "ability": "",
@@ -28986,7 +29001,7 @@ const DIGIMON_DB = [
         "cardLevel": 7
     },
     {
-        "id": "",
+        "id": "516",
         "name": "Blizzarmon",
         "types": [
             "Ice"
@@ -28999,20 +29014,20 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Chakmon",
-                "method": "Snow Bomber  Avalanche Step"
+                "method": "Snow Bomber"
             }
         ],
         "next": [
             {
                 "name": "Frozomon",
-                "method": "Lv. 32"
+                "method": "Lv32"
             }
         ],
         "stage": "Hybrid",
         "cardLevel": 4
     },
     {
-        "id": "",
+        "id": "517",
         "name": "Bolgmon",
         "types": [
             "Electric",
@@ -29026,20 +29041,20 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Blitzmon",
-                "method": "Thor Hammer  Electro Cannon"
+                "method": "Thor Hammer"
             }
         ],
         "next": [
             {
                 "name": "RhinoKabuterimon",
-                "method": "Lv. 32"
+                "method": "Lv32"
             }
         ],
         "stage": "Hybrid",
         "cardLevel": 4
     },
     {
-        "id": "",
+        "id": "518",
         "name": "Calmaramon",
         "types": [
             "Water",
@@ -29053,20 +29068,20 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Ranamon",
-                "method": "Jealousy Rain  Titanic Charge"
+                "method": "Jealousy Rain"
             }
         ],
         "next": [
             {
                 "name": "Mermaimon",
-                "method": "Lv. 32"
+                "method": "Lv32"
             }
         ],
         "stage": "Hybrid",
         "cardLevel": 4
     },
     {
-        "id": "",
+        "id": "519",
         "name": "Ceresmon Medium",
         "types": [
             "Grass",
@@ -29088,7 +29103,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "",
+        "id": "520",
         "name": "Duftmon Leopard",
         "types": [
             "Ground",
@@ -29110,7 +29125,7 @@ const DIGIMON_DB = [
         "cardLevel": 7
     },
     {
-        "id": "",
+        "id": "521",
         "name": "Dukemon Crimson",
         "types": [],
         "ability": "",
@@ -29129,7 +29144,7 @@ const DIGIMON_DB = [
         "cardLevel": 7
     },
     {
-        "id": "",
+        "id": "522",
         "name": "Gigasmon",
         "types": [
             "Ground"
@@ -29142,20 +29157,20 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Grottemon",
-                "method": "Grotte Hammer  Quagmire Twist"
+                "method": "Grotte Hammer"
             }
         ],
         "next": [
             {
                 "name": "Volcamon",
-                "method": "Lv. 32"
+                "method": "Lv32"
             }
         ],
         "stage": "Hybrid",
         "cardLevel": 4
     },
     {
-        "id": "",
+        "id": "523",
         "name": "Imperialdramon Fighter",
         "types": [],
         "ability": "",
@@ -29169,12 +29184,17 @@ const DIGIMON_DB = [
                 "method": "Positron Laser"
             }
         ],
-        "next": [],
+        "next": [
+            {
+                "name": "Imperialdramon Paladin",
+                "method": "Omega Data"
+            }
+        ],
         "stage": "Ultra",
         "cardLevel": 7
     },
     {
-        "id": "",
+        "id": "524",
         "name": "Imperialdramon Paladin",
         "types": [],
         "ability": "",
@@ -29182,13 +29202,18 @@ const DIGIMON_DB = [
         "evoMove": "",
         "moves": [],
         "locations": [],
-        "prev": [],
+        "prev": [
+            {
+                "name": "Imperialdramon Fighter",
+                "method": "Omega Data"
+            }
+        ],
         "next": [],
         "stage": "Ultra",
         "cardLevel": 7
     },
     {
-        "id": "",
+        "id": "525",
         "name": "KaiserLeomon",
         "types": [
             "Dark"
@@ -29207,14 +29232,14 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Rihimon",
-                "method": "Jogress Lowemon"
+                "method": "Lv32"
             }
         ],
         "stage": "Ultimate",
         "cardLevel": 5
     },
     {
-        "id": "",
+        "id": "526",
         "name": "LaeusGreymon Rage",
         "types": [
             "Fire",
@@ -29231,7 +29256,7 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "",
+        "id": "527",
         "name": "Magnamon X",
         "types": [],
         "ability": "",
@@ -29243,14 +29268,23 @@ const DIGIMON_DB = [
             {
                 "name": "Magnamon",
                 "method": "X Antibody"
+            },
+            {
+                "name": "Magnamon X",
+                "method": "Antibody"
             }
         ],
-        "next": [],
+        "next": [
+            {
+                "name": "Magnamon X",
+                "method": "Antibody"
+            }
+        ],
         "stage": "Champion",
         "cardLevel": 4
     },
     {
-        "id": "",
+        "id": "528",
         "name": "MirageGaogamon Burst",
         "types": [],
         "ability": "",
@@ -29261,7 +29295,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "MirageGaogamon",
-                "method": "MIrage Soul"
+                "method": "Mirage Soul"
             }
         ],
         "next": [],
@@ -29269,7 +29303,7 @@ const DIGIMON_DB = [
         "cardLevel": 7
     },
     {
-        "id": "",
+        "id": "529",
         "name": "Petaldramon",
         "types": [
             "Grass",
@@ -29283,20 +29317,24 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Arbormon",
-                "method": "Blockage Seed Arbormor Leaf Cyclone"
+                "method": "Blockage Seed"
             }
         ],
         "next": [
             {
                 "name": "Entmon",
-                "method": "Jogress Arbormon"
+                "method": "Arbormon Lv32"
+            },
+            {
+                "name": "Entmon",
+                "method": "Lv32 Arbormon"
             }
         ],
         "stage": "Hybrid",
         "cardLevel": 4
     },
     {
-        "id": "",
+        "id": "530",
         "name": "Ravemon Burst",
         "types": [],
         "ability": "",
@@ -29315,7 +29353,7 @@ const DIGIMON_DB = [
         "cardLevel": 7
     },
     {
-        "id": "",
+        "id": "531",
         "name": "Rosemon Burst",
         "types": [],
         "ability": "",
@@ -29334,7 +29372,7 @@ const DIGIMON_DB = [
         "cardLevel": 7
     },
     {
-        "id": "",
+        "id": "532",
         "name": "ShineGreymon Burst",
         "types": [],
         "ability": "",
@@ -29353,7 +29391,7 @@ const DIGIMON_DB = [
         "cardLevel": 7
     },
     {
-        "id": "",
+        "id": "533",
         "name": "Shutumon",
         "types": [
             "Flying",
@@ -29367,20 +29405,20 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Fairymon",
-                "method": "Brezzo Petalo  Plasma Talon"
+                "method": "Brezzo Petalo"
             }
         ],
         "next": [
             {
                 "name": "JetSilphymon",
-                "method": "Lv. 32"
+                "method": "Lv32"
             }
         ],
         "stage": "Hybrid",
         "cardLevel": 4
     },
     {
-        "id": "",
+        "id": "534",
         "name": "Vritamon",
         "types": [],
         "ability": "",
@@ -29391,15 +29429,20 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Agnimon",
-                "method": "Salamander Break  Flame Storm"
+                "method": "Salamander Break"
             }
         ],
-        "next": [],
+        "next": [
+            {
+                "name": "Aldamon",
+                "method": "Lv32"
+            }
+        ],
         "stage": "Hybrid",
         "cardLevel": 4
     },
     {
-        "id": "",
+        "id": "535",
         "name": "ZinoGarurumon Rage",
         "types": [
             "Ice",
@@ -29416,173 +29459,312 @@ const DIGIMON_DB = [
         "cardLevel": 6
     },
     {
-        "id": "600",
+        "id": "536",
         "name": "Meicoomon",
-        "types": ["Chaos"],
+        "types": [
+            "Chaos"
+        ],
         "stage": "Champion",
-        "next": [{ "name": "Meicrackmon", "method": "Lv28" }],
+        "next": [
+            {
+                "name": "Meicrackmon",
+                "method": "Lv28"
+            }
+        ],
         "prev": [],
         "cardLevel": 4
     },
     {
-        "id": "601",
+        "id": "537",
         "name": "Meicrackmon",
-        "types": ["Chaos"],
+        "types": [
+            "Chaos"
+        ],
         "stage": "Ultimate",
-        "next": [{ "name": "Rasielmon", "method": "Lv50" }, { "name": "Raguelmon", "method": "Darkness" }],
-        "prev": [{ "name": "Meicoomon", "method": "Lv28" }],
+        "next": [
+            {
+                "name": "Rasielmon",
+                "method": "Lv50"
+            },
+            {
+                "name": "Raguelmon",
+                "method": "Darkness"
+            }
+        ],
+        "prev": [
+            {
+                "name": "Meicoomon",
+                "method": "Lv28"
+            }
+        ],
         "cardLevel": 5
     },
     {
-        "id": "602",
+        "id": "538",
         "name": "Rasielmon",
-        "types": ["Holy"],
+        "types": [
+            "Holy"
+        ],
         "stage": "Mega",
         "next": [],
-        "prev": [{ "name": "Meicrackmon", "method": "Lv50" }],
+        "prev": [
+            {
+                "name": "Meicrackmon",
+                "method": "Lv50"
+            }
+        ],
         "cardLevel": 6
     },
     {
-        "id": "603",
+        "id": "539",
         "name": "Gaioumon Itto Mode",
-        "types": ["Dragon", "Steel"],
+        "types": [
+            "Dragon",
+            "Steel"
+        ],
         "stage": "Burst Mode",
         "next": [],
-        "prev": [{ "name": "Gaioumon", "method": "Tenrin-Ittoryu" }],
+        "prev": [],
         "cardLevel": 7
     },
     {
-        "id": "604",
+        "id": "540",
         "name": "Coatlmon",
-        "types": ["Light"],
+        "types": [
+            "Light"
+        ],
         "stage": "Armor",
-        "next": [{ "name": "Sandiramon", "method": "Lv50" }],
-        "prev": [{ "name": "Wormmon", "method": "Light Data" }],
+        "next": [
+            {
+                "name": "Sandiramon",
+                "method": "Lv50"
+            }
+        ],
+        "prev": [],
         "cardLevel": 4
     },
     {
-        "id": "605",
+        "id": "541",
         "name": "Sandiramon",
-        "types": ["Earth"],
+        "types": [
+            "Earth"
+        ],
         "stage": "Ultimate",
-        "next": [{ "name": "Minervamon", "method": "Lv72" }],
-        "prev": [{ "name": "Coatlmon", "method": "Lv50" }],
+        "next": [
+            {
+                "name": "Xuanwumon",
+                "method": "Genku Core"
+            }
+        ],
+        "prev": [
+            {
+                "name": "Tylomon",
+                "method": "Lv32"
+            },
+            {
+                "name": "Coatlmon",
+                "method": "Lv50"
+            }
+        ],
         "cardLevel": 5
     },
     {
-        "id": "606",
+        "id": "542",
         "name": "Minervamon",
-        "types": ["Olympian"],
+        "types": [
+            "Olympian"
+        ],
         "stage": "Mega",
-        "next": [{ "name": "Mervamon", "method": "Burst" }],
-        "prev": [{ "name": "Sandiramon", "method": "Lv72" }],
+        "next": [
+            {
+                "name": "Mervamon",
+                "method": "Burst"
+            }
+        ],
+        "prev": [],
         "cardLevel": 6
     },
     {
-        "id": "607",
+        "id": "543",
         "name": "Mervamon",
-        "types": ["Olympian"],
+        "types": [
+            "Olympian"
+        ],
         "stage": "Burst Mode",
         "next": [],
-        "prev": [{ "name": "Minervamon", "method": "Burst" }],
+        "prev": [
+            {
+                "name": "Minervamon",
+                "method": "Burst"
+            }
+        ],
         "cardLevel": 7
     },
     {
-        "id": "608",
+        "id": "544",
         "name": "Karatenmon",
-        "types": ["Wind"],
+        "types": [
+            "Wind"
+        ],
         "stage": "Ultimate",
-        "next": [{ "name": "Tengumon", "method": "Evolution" }],
-        "prev": [{ "name": "Peckmon", "method": "Wind Data" }],
+        "next": [
+            {
+                "name": "Tengumon",
+                "method": "Evolution"
+            }
+        ],
+        "prev": [],
         "cardLevel": 5
     },
     {
-        "id": "609",
+        "id": "545",
         "name": "Tengumon",
-        "types": ["Wind", "Magic"],
+        "types": [
+            "Wind",
+            "Magic"
+        ],
         "stage": "Mega",
         "next": [],
-        "prev": [{ "name": "Karatenmon", "method": "Evolution" }],
+        "prev": [
+            {
+                "name": "Karatenmon",
+                "method": "Evolution"
+            }
+        ],
         "cardLevel": 6
     },
     {
-        "id": "610",
+        "id": "546",
         "name": "Seiten Gokuwmon",
-        "types": ["Fighter"],
+        "types": [
+            "Fighter"
+        ],
         "stage": "Mega",
         "next": [],
-        "prev": [{ "name": "Gokuwmon", "method": "Evolution" }],
+        "prev": [
+            {
+                "name": "Gokuwmon",
+                "method": "Evolution"
+            }
+        ],
         "cardLevel": 6
     },
     {
-        "id": "611",
+        "id": "547",
         "name": "VictoryGreymon",
-        "types": ["Dragon", "Fighter"],
+        "types": [
+            "Dragon",
+            "Fighter"
+        ],
         "stage": "Mega",
         "next": [],
-        "prev": [{ "name": "WarGreymon", "method": "Subspecies" }],
+        "prev": [],
         "cardLevel": 6
     },
     {
-        "id": "612",
+        "id": "548",
         "name": "Z'dGarurumon",
-        "types": ["Beast", "Machine"],
+        "types": [
+            "Beast",
+            "Machine"
+        ],
         "stage": "Mega",
         "next": [],
-        "prev": [{ "name": "MetalGarurumon", "method": "Subspecies" }],
+        "prev": [],
         "cardLevel": 6
     },
     {
-        "id": "613",
+        "id": "549",
         "name": "SkullGreymon",
-        "types": ["Undead"],
+        "types": [
+            "Undead"
+        ],
         "stage": "Ultimate",
-        "next": [{ "name": "G-Erosion SkullGreymon", "method": "G-Cells" }],
-        "prev": [{ "name": "Greymon", "method": "Dark Data" }],
+        "next": [
+            {
+                "name": "G-Erosion SkullGreymon",
+                "method": "G-Cells"
+            }
+        ],
+        "prev": [],
         "cardLevel": 5
     },
     {
-        "id": "614",
+        "id": "550",
         "name": "Metabee",
-        "types": ["Machine"],
+        "types": [
+            "Machine"
+        ],
         "stage": "Crossover",
-        "next": [{ "name": "Omedamon", "method": "Jogress" }],
-        "prev": [{ "name": "Kabuterimon", "method": "AW Data" }],
+        "next": [
+            {
+                "name": "Omedamon",
+                "method": "Jogress"
+            }
+        ],
+        "prev": [],
         "cardLevel": 4
     },
     {
-        "id": "615",
+        "id": "551",
         "name": "Rokusho",
-        "types": ["Machine"],
+        "types": [
+            "Machine"
+        ],
         "stage": "Crossover",
-        "next": [{ "name": "Omedamon", "method": "Jogress" }],
-        "prev": [{ "name": "Kuwagamon", "method": "AW Data" }],
+        "next": [
+            {
+                "name": "Omedamon",
+                "method": "Jogress"
+            }
+        ],
+        "prev": [],
         "cardLevel": 4
     },
     {
-        "id": "616",
+        "id": "552",
         "name": "Omedamon",
-        "types": ["Machine"],
+        "types": [
+            "Machine"
+        ],
         "stage": "Ultra",
         "next": [],
-        "prev": [{ "name": "Metabee", "method": "Jogress" }, { "name": "Rokusho", "method": "Jogress" }],
+        "prev": [
+            {
+                "name": "Metabee",
+                "method": "Jogress"
+            },
+            {
+                "name": "Rokusho",
+                "method": "Jogress"
+            }
+        ],
         "cardLevel": 7
     },
     {
-        "id": "617",
+        "id": "553",
         "name": "Cutemon",
-        "types": ["Fairy"],
+        "types": [
+            "Fairy"
+        ],
         "stage": "Rookie",
         "next": [],
         "prev": [],
         "cardLevel": 3
     },
     {
-        "id": "618",
+        "id": "554",
         "name": "Gokuwmon",
-        "types": ["Fighter"],
+        "types": [
+            "Fighter"
+        ],
         "stage": "Ultimate",
-        "next": [{ "name": "Seiten Gokuwmon", "method": "Evolution" }],
+        "next": [
+            {
+                "name": "Seiten Gokuwmon",
+                "method": "Evolution"
+            }
+        ],
         "prev": [],
         "cardLevel": 5
     }

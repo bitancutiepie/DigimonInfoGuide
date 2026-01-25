@@ -164,6 +164,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Data Drops Modal
+    const dataDropsModal = document.getElementById('dataDropsModal');
+    const viewDataDropsBtn = document.getElementById('viewDataDropsBtn');
+    const closeDataDropsModal = document.getElementById('closeDataDropsModal');
+
+    if (viewDataDropsBtn) {
+        viewDataDropsBtn.addEventListener('click', () => {
+            if (window.openDataDropsModal) window.openDataDropsModal();
+        });
+    }
+
+    if (closeDataDropsModal && dataDropsModal) {
+        closeDataDropsModal.addEventListener('click', () => dataDropsModal.classList.add('hidden'));
+    }
+
     // Team Modal Logic
     const teamModal = document.getElementById('teamModal');
     const teamBtn = document.getElementById('teamPlannerBtn');
@@ -249,7 +264,36 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === locationsModal) locationsModal.classList.add('hidden');
         if (e.target === locationDetailModal) locationDetailModal.classList.add('hidden');
         if (e.target === teamModal) teamModal.classList.add('hidden');
+        if (e.target === dataDropsModal) dataDropsModal.classList.add('hidden');
+        if (e.target === document.getElementById('debugEvoModal')) {
+            document.getElementById('debugEvoModal').classList.add('hidden');
+        }
     });
+
+    // Hidden Debug Feature trigger
+    const mainBanner = document.getElementById('mainBanner');
+    let bannerClicks = 0;
+    let bannerClickTimer = null;
+
+    if (mainBanner) {
+        mainBanner.addEventListener('click', () => {
+            bannerClicks++;
+            clearTimeout(bannerClickTimer);
+            bannerClickTimer = setTimeout(() => { bannerClicks = 0; }, 2000); // Reset after 2s of inactivity
+
+            if (bannerClicks === 5) {
+                bannerClicks = 0;
+                if (window.openDebugEvoModal) window.openDebugEvoModal();
+            }
+        });
+    }
+
+    // Debug Modal Close
+    const closeDebugEvoBtn = document.getElementById('closeDebugEvoBtn');
+    const debugEvoModal = document.getElementById('debugEvoModal');
+    if (closeDebugEvoBtn && debugEvoModal) {
+        closeDebugEvoBtn.addEventListener('click', () => debugEvoModal.classList.add('hidden'));
+    }
 
     // Type Chart Toggle
     const toggleTypeChart = document.getElementById('toggleTypeChart');
@@ -422,6 +466,14 @@ document.addEventListener('DOMContentLoaded', () => {
         navLocs.addEventListener('click', () => {
             const locsBtn = document.getElementById('viewLocationsBtn');
             if (locsBtn) locsBtn.click();
+        });
+    }
+
+    const navDrops = document.getElementById('navDrops');
+    if (navDrops) {
+        navDrops.addEventListener('click', () => {
+            const dropsBtn = document.getElementById('viewDataDropsBtn');
+            if (dropsBtn) dropsBtn.click();
         });
     }
 

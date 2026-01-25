@@ -9,6 +9,7 @@
         content="Ultimate evolution and location guide for Digimon Trials. Find your favorit Digimon, their evolution paths, and where to catch them.">
     <meta name="keywords" content="Digimon, Digimon Trials, Evolution Guide, Digimon Locations, Type Chart">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modules/data_drops.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -30,8 +31,8 @@
 
     <div class="app-container">
         <header class="main-header">
-            <img src="assets/banner.png" alt="Digimon Info Guide - For the Game Digimon Trials" class="banner-image"
-                loading="lazy">
+            <img src="assets/banner.png" id="mainBanner" alt="Digimon Info Guide - For the Game Digimon Trials"
+                class="banner-image" loading="lazy">
             <div class="filter-wrapper">
                 <div class="search-row">
                     <div class="input-group">
@@ -209,6 +210,17 @@
                             </polygon>
                         </svg>
                         Show Favorites
+                    </button>
+                    <button id="viewDataDropsBtn" class="filter-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                        Data Drops
                     </button>
                     <button id="findMissingImagesBtn" class="filter-btn" title="Find Digimon with missing images">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -438,6 +450,17 @@
                 </svg>
                 <span>Locs</span>
             </button>
+            <button class="nav-item" id="navDrops" title="Data Drops">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                    </path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                <span>Drops</span>
+            </button>
         </nav>
         <!-- Choice Modal (New Navigation) -->
         <div id="choiceModal" class="modal hidden choice-modal">
@@ -617,10 +640,49 @@
         </div>
 
     </div>
+    </div>
+    </div>
+
+    <!-- Data Drops Modal -->
+    <div id="dataDropsModal" class="modal hidden">
+        <div class="modal-content data-drops-modal-content">
+            <span class="close-modal" id="closeDataDropsModal">&times;</span>
+            <div class="modal-header">
+                <h2>Data Drops (Before Crest 1)</h2>
+            </div>
+            <div id="dataDropsContent" class="data-drops-content">
+                <!-- Dynamic Data Drops -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Debug Evolution Checker Modal -->
+    <div id="debugEvoModal" class="modal hidden">
+        <div class="modal-content debug-modal-content" style="max-width: 900px;">
+            <span class="close-modal" id="closeDebugEvoBtn">&times;</span>
+            <div class="modal-header">
+                <h2>Evolution Database Checker</h2>
+            </div>
+            <div class="debug-search-wrapper" style="margin-bottom: 1rem; display: flex; gap: 1rem;">
+                <input type="text" id="debugEvoSearch" placeholder="Filter by Digimon name..."
+                    style="flex: 1; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card-bg); color: var(--text-primary);">
+                <button id="exportDebugEvoBtn" class="patch-done-btn" style="width: auto; padding: 0 1.5rem; margin: 0;"
+                    onclick="exportDebugEvoList()">Export
+                    TXT</button>
+            </div>
+            <div id="debugEvoList" class="debug-evo-list"
+                style="max-height: 60vh; overflow-y: auto; background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border);">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    </div>
 
     <!-- JS Modules (Order Matters) -->
     <script src="data/reference_map.js"></script>
     <script src="data/locations_data.js"></script>
+    <script src="data/data_drops.js"></script>
     <script src="data/guide_content.js"></script>
     <script src="data/type_chart.js"></script>
     <script src="data/evo_requirements.js"></script>

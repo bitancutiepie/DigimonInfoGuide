@@ -257,5 +257,34 @@ window.EVO_REQUIREMENTS = {
     "Lowkey": {
         type: "Trait",
         description: "Requires a Lowkey status or personality."
+    },
+    // New Moves from format
+    "Wolf Kendo": {
+        type: "Move",
+        description: "Must know the move Wolf Kendo."
+    },
+    "Lupine Laser": {
+        type: "Move",
+        description: "Must know the move Lupine Laser."
+    },
+    "Salamander Break": {
+        type: "Move",
+        description: "Must know the move Salamander Break."
+    },
+    "Flame Storm": {
+        type: "Move",
+        description: "Must know the move Flame Storm."
+    },
+    "King's Shield": {
+        type: "Item",
+        description: "A royal shield used for defensive evolutions."
+    },
+    "G-Cells": {
+        type: "Item",
+        description: "Special cells from a giant monster that cause mutation."
+    },
+    "Tenrin-Ittoryu": {
+        type: "Move",
+        description: "Must master the Tenrin-Ittoryu kenjutsu style."
     }
 };

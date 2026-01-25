@@ -106,6 +106,10 @@ const FANDOM_DIRECT_IMAGES = {
     "laeusgreymon": "https://static.wikia.nocookie.net/digimon/images/b/ba/LaeusGreymon_b.jpg",
     "zinogarurumon": "https://static.wikia.nocookie.net/digimon/images/9/98/ZinoGarurumon_b.jpg",
     "greymon": "https://static.wikia.nocookie.net/digimon/images/5/56/Greymon_b.jpg",
+    "metabee": "https://static.wikia.nocookie.net/digimon/images/c/c0/Metabee_i.png/revision/latest?cb=20221109044519",
+    "rokusho": "https://static.wikia.nocookie.net/digimon/images/a/ad/Rokusho_i.png/revision/latest?cb=20221109045412",
+    "gaioumonittomode": "https://static.wikia.nocookie.net/digimon/images/1/13/Gaiomon_Fierce_Blade_Mode_b.jpg/revision/latest?cb=20210630041844",
+    "gaioumon itto mode": "https://static.wikia.nocookie.net/digimon/images/1/13/Gaiomon_Fierce_Blade_Mode_b.jpg/revision/latest?cb=20210630041844",
 };
 
 // Image source configurations - multiple fallbacks for maximum coverage

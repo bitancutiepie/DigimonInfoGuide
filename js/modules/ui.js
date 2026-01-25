@@ -450,6 +450,7 @@ function closeAllModals() {
     const patchModal = document.getElementById('patchNotesModal');
     const gameNewsModal = document.getElementById('gameNewsModal');
     const battleModal = document.getElementById('battleModal');
+    const dataDropsModal = document.getElementById('dataDropsModal');
 
     if (detailModal) detailModal.classList.add('hidden');
     if (typeModal) typeModal.classList.add('hidden');
@@ -457,9 +458,10 @@ function closeAllModals() {
     if (locationDetailModal) locationDetailModal.classList.add('hidden');
     if (teamModal) teamModal.classList.add('hidden');
     if (patchModal) patchModal.classList.add('hidden');
-    if (patchModal) patchModal.classList.add('hidden');
     if (gameNewsModal) gameNewsModal.classList.add('hidden');
     if (battleModal) battleModal.classList.add('hidden');
+    if (dataDropsModal) dataDropsModal.classList.add('hidden');
+    if (document.getElementById('debugEvoModal')) document.getElementById('debugEvoModal').classList.add('hidden');
 
     modalHistory = [];
 }
@@ -488,6 +490,24 @@ function getRequirementDisplay(method) {
     }
 
     if (req) {
+        // Handle DATA redirection first (Case-insensitive type check)
+        const typeStr = req.type ? req.type.toUpperCase() : '';
+        if (typeStr === 'DATA') {
+            const lowerMethod = cleanMethod.toLowerCase();
+            const dropKey = window.DATA_DROPS ? Object.keys(window.DATA_DROPS).find(k => k.toLowerCase() === lowerMethod) : null;
+
+            if (dropKey) {
+                return {
+                    html: `<span class="req-type-badge data">Data</span> <span class="req-name data-redirect" style="text-decoration: underline;">${cleanMethod}</span>`,
+                    text: cleanMethod,
+                    type: 'DATA',
+                    description: req.description || `View drops for ${cleanMethod}`,
+                    isRedirect: true,
+                    redirectValue: dropKey
+                };
+            }
+        }
+
         const prefix = req.type ? `<span class="req-type-badge ${req.type.toLowerCase()}">${req.type}</span> ` : '';
 
         return {
@@ -509,9 +529,15 @@ function getRequirementDisplay(method) {
 function renderRequirementBadge(method) {
     const info = getRequirementDisplay(method);
     const tooltip = info.description ? `title="${info.description}"` : '';
-    const clickable = `onclick="event.stopPropagation(); copyToClipboard('${info.text}')"`;
 
-    return `<span class="evo-card-method clickable-method" ${tooltip} ${clickable} style="cursor: pointer;">${info.html}</span>`;
+    let clickable = '';
+    if (info.isRedirect) {
+        clickable = `onclick="event.stopPropagation(); openDataDropsModal('${info.redirectValue}')"`;
+    } else {
+        clickable = `onclick="event.stopPropagation(); copyToClipboard('${info.text}')"`;
+    }
+
+    return `<span class="evo-card-method clickable-method ${info.isRedirect ? 'data-redirect-badge' : ''}" ${tooltip} ${clickable} style="cursor: pointer;">${info.html}</span>`;
 }
 
 // --- Evolution Tree Logic ---
@@ -1011,3 +1037,174 @@ function showLocationDetails(locationName) {
 
     locationDetailModal.classList.remove('hidden');
 }
+
+// --- Debug Evolution Checker ---
+function openDebugEvoModal() {
+    const modal = document.getElementById('debugEvoModal');
+    if (!modal) return;
+
+    modal.classList.remove('hidden');
+    renderDebugEvoList();
+
+    // Add real-time filtering
+    const searchInput = document.getElementById('debugEvoSearch');
+    if (searchInput) {
+        searchInput.value = '';
+        searchInput.oninput = () => renderDebugEvoList(searchInput.value);
+    }
+}
+
+function renderDebugEvoList(filter = '') {
+    const container = document.getElementById('debugEvoList');
+    if (!container) return;
+
+    // Use global DIGIMON_DB directly (it's declared with const so not on window)
+    const db = (typeof DIGIMON_DB !== 'undefined') ? DIGIMON_DB : [];
+    const lowerFilter = filter.toLowerCase();
+
+    const filteredDb = db.filter(d => d.name.toLowerCase().includes(lowerFilter));
+
+    if (filteredDb.length === 0) {
+        container.innerHTML = '<div style="padding: 2rem; text-align: center; color: var(--text-secondary);">No Digimon matches your search.</div>';
+        return;
+    }
+
+    let html = `
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+            <thead>
+                <tr style="background: rgba(255,255,255,0.05); text-align: left; border-bottom: 2px solid var(--border);">
+                    <th style="padding: 1rem;">ID</th>
+                    <th style="padding: 1rem;">Digimon</th>
+                    <th style="padding: 1rem;">Next Evolutions</th>
+                </tr>
+            </thead>
+            <tbody>
+    `;
+
+    filteredDb.forEach(d => {
+        const nextEvos = d.next && d.next.length > 0
+            ? d.next.map(n => `
+                <div style="margin-bottom: 0.3rem;">
+                    <span style="color: var(--accent);">→</span> ${n.name} 
+                    <span style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; margin-left: 4px;">
+                        ${n.method || 'No method'}
+                    </span>
+                </div>
+            `).join('')
+            : '<span style="color: var(--text-secondary); font-style: italic;">No evolutions</span>';
+
+        html += `
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 0.8rem; color: var(--text-secondary); width: 60px;">#${d.id}</td>
+                <td style="padding: 0.8rem; font-weight: 600;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <img src="${getImageUrl ? getImageUrl(d.name) : ''}" style="width: 24px; height: 24px; object-fit: contain;" onerror="this.src='assets/placeholder.png'">
+                        ${d.name}
+                    </div>
+                </td>
+                <td style="padding: 0.8rem;">${nextEvos}</td>
+            </tr>
+        `;
+    });
+
+    html += '</tbody></table>';
+    container.innerHTML = html;
+}
+
+function exportDebugEvoList() {
+    // Use global DIGIMON_DB directly
+    const db = (typeof DIGIMON_DB !== 'undefined') ? DIGIMON_DB : [];
+    if (db.length === 0) {
+        showToast('Database not found or empty.');
+        return;
+    }
+
+    let text = "Digimon Evolution Database Export\n";
+    text += "Generated on: " + new Date().toLocaleString() + "\n";
+    text += "=".repeat(40) + "\n\n";
+
+    db.forEach(d => {
+        text += `${d.name} (ID: ${d.id})\n`;
+        if (d.next && d.next.length > 0) {
+            d.next.forEach(n => {
+                text += `  → ${n.name}: ${n.method || 'Evolution'}\n`;
+            });
+        } else {
+            text += "  (No further evolutions)\n";
+        }
+        text += "\n";
+    });
+
+    const blob = new Blob([text], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'evolution_database_check.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    if (typeof showToast === 'function') showToast('Evolution list exported!');
+}
+
+// --- Data Drops Logic ---
+function openDataDropsModal(highlightData = null) {
+    const modal = document.getElementById('dataDropsModal');
+    if (!modal) return;
+
+    closeAllModals();
+    modal.classList.remove('hidden');
+    renderDataDropsList(highlightData);
+}
+
+function renderDataDropsList(highlightData = null) {
+    const container = document.getElementById('dataDropsContent');
+    if (!container) return;
+
+    if (!window.DATA_DROPS) {
+        container.innerHTML = '<p>Data drops information not loaded.</p>';
+        return;
+    }
+
+    let html = '<div class="data-drops-grid">';
+
+    for (const [dataType, droppers] of Object.entries(window.DATA_DROPS)) {
+        const isHighlighted = highlightData && highlightData.toLowerCase() === dataType.toLowerCase();
+        html += `
+            <div class="data-drop-card ${isHighlighted ? 'highlighted-drop' : ''}">
+                <div class="drop-header">
+                    <span class="req-type-badge data">Data</span>
+                    <h3>${dataType}</h3>
+                </div>
+                <div class="droppers-list">
+                    ${droppers.map(name => {
+            const cleanName = name.split(' (')[0]; // Handle (Rare), (Later)
+            return `
+                            <div class="dropper-item" onclick="openDigimonDetail('${cleanName.replace(/'/g, "\\'")}')">
+                                <img src="${getImageUrl(cleanName)}" onerror="this.src='assets/placeholder.png'" loading="lazy">
+                                <span>${name}</span>
+                            </div>
+                        `;
+        }).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    html += '</div>';
+    container.innerHTML = html;
+
+    if (highlightData) {
+        setTimeout(() => {
+            const el = container.querySelector('.highlighted-drop');
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300);
+    }
+}
+
+// Global exposure
+window.openDebugEvoModal = openDebugEvoModal;
+window.exportDebugEvoList = exportDebugEvoList;
+window.openDataDropsModal = openDataDropsModal;
+window.renderDataDropsList = renderDataDropsList;

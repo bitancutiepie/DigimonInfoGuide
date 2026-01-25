@@ -1,0 +1,1992 @@
+Of course. Here is the data from your file, formatted into a structured markdown document. The evolutions have been categorized to be easily parsable.
+
+Digimon Evolution Guide
+Patamon
+
+Level Up
+
+Angemon: Patamon Lv20
+
+HolyAngemon: Angemon Lv35
+
+Seraphimon: HolyAngemon Lv56
+
+Item/Data
+
+Pegasmon: Angemon Light Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+HolyAngemon Priest: Pegasmon Lv35
+
+Goddramon: HolyAngemon Lv80
+
+Lopmon
+
+Level Up
+
+Turuiemon: Lopmon Lv20
+
+AndiramonDeva: Turuiemon Lv35
+
+Cherubimon: AndiramonDeva Lv56
+
+Andiramon: Wendimon Lv35
+
+Cherubimon Evil: Andiramon Lv56
+
+Item/Data
+
+Wendimon: Tururiemon Dark Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Salamon
+
+Level Up
+
+Tailmon: Salamon Lv20
+
+Angewomon: Tailmon Lv35
+
+Ophanimon: Angewomon Lv56
+
+Kyukimon: Nefertimon Lv35
+
+HolyDramon: Kyukimon Lv80
+
+Item/Data
+
+Nefertimon: Tailmon Light Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Gazimon
+
+Level Up
+
+Devidramon: Gazimon Lv18
+
+Orochimon: Devidramon Lv32
+
+Nidhoggmon: Orochimon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Luxmon
+
+Level Up
+
+Piddomon: Luxmon Lv18
+
+ArkhaiAngemon: Piddomon Lv30
+
+ClavisAngemon: ArkhaiAngemon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Veemon
+
+Level Up
+
+ExVeemon: Veemon Lv18
+
+AeroVeedramon: ExVeemon Lv32
+
+UlforceVeedramon: AeroVeedramon Lv54
+
+Majiramon: Lighdramon Lv32
+
+Qinglongmon: Majiramon Lv70
+
+Magnamon: Fladramon Lv32
+
+Item/Data
+
+Gargolemon: Veemon Light Data
+
+Lighdramon: Veemon Thunder Data
+
+Fladramon: Veemon Fire Data
+
+Magnamon X: Magnamon X Antibody
+
+Imperialdramon Fighter: Imperialdramon Dragon Positron Laser
+
+Imperialdramon Paladin: Imperialdramon Fighter Omega Data
+
+Jogress/Fusion
+
+Paildramon: ExVeemon Lv28 Stingmon
+
+Imperialdramon Dragon: Paildramon Lv52 or Dinobeemon Lv 52
+
+Trait/Special Condition
+
+Manticoremon: Gargolemon Lv34
+
+Agumon
+
+Level Up
+
+Greymon: Agumon Lv18
+
+MetalGreymon: Greymon Lv 32
+
+WarGreymon: MetalGreymon Lv54
+
+Item/Data
+
+ShineGreymon: MetalGreymon Auspicious Armor
+
+ShineGreymon Burst: ShineGreymon Shine Soul
+
+Jogress/Fusion
+
+Omegamon: WarGreymon MetalGarurumon Jogress
+
+Trait/Special Condition
+
+BlitzGreymon: Metal Greymon Lv New Mauvile
+
+Gabumon
+
+Level Up
+
+Garurumon: Gabumon Lv18 or Strabimon Lv18
+
+WereGarurumon: Garurumon Lv32
+
+MetalGarurumon: WereGarurumon LV54
+
+Item/Data
+
+CresGarurumon: WereGarurumon Auspicious Armor
+
+Jogress/Fusion
+
+Omegamon Alter S: CresGarurumon BlitzGreymon Jogress
+
+Trait/Special Condition
+
+None
+
+Piyomon
+
+Level Up
+
+Birdramon: Piyomon Lv18
+
+Garudamon: Birdramon Lv32
+
+Hououmon: Garudamon Lv54
+
+Huankunmon: Xiquemon Lv32
+
+Xiangpengmon: Huankunmon Lv52
+
+Item/Data
+
+Zhuqiaomon: Garudamon Zuzaku Core
+
+Xiquemon: Piyomon Water Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Tentomon
+
+Level Up
+
+Kabuterimon: Tentomon Lv18 Lowkey
+
+AtlurKabuterimon: Kabuterimon Lv32
+
+HerculesKabuterimon: AtlurKabuterimon Lv54
+
+Kuwagamon: Tentomon Lv18 Amped
+
+Okuwamon: Kuwagamon Lv32
+
+GranKuwagamon: Okuwamon Lv54
+
+Item/Data
+
+TyrantKabuterimon: AtlurKabuterimon Sachet
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Palmon
+
+Level Up
+
+Togemon: Palmon Lv18 Amped
+
+Lilimon: Togemon Lv32
+
+Rosemon: Lilimon Lv54
+
+Sunflowmon: Palmon lv18 Lowkey
+
+Lilamon: Sunflowmon Lv32 Female
+
+Lotusmon: Lilamon Lv54
+
+Blossomon: Sunflowmon Lv32 Male
+
+Zamielmon: Blossomon Lv54
+
+Item/Data
+
+Rosemon Burst: Rosemon Rose Soul
+
+BanchoLilimon: Lilimon Gakuren
+
+Jogress/Fusion
+
+Rafflesimon: Lotusmon Rosemon Jogress
+
+Trait/Special Condition
+
+None
+
+Gomamon
+
+Level Up
+
+Ikkakumon: Gomamon Lv18
+
+Zudomon: Ikkakumon Lv32
+
+Vikemon: Zudomon Lv54
+
+Item/Data
+
+Plesiomon: Zudomon King's Rock
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Terriermon
+
+Level Up
+
+Gargomon: Terriermon LV18
+
+Rapidmon: Gargomon Lv32
+
+SaintGargomon: Rapidmon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Guilmon
+
+Level Up
+
+Growmon: Guilmon LV18
+
+MegaloGrowmon: Growmon LV32
+
+Dukemon: MegaloGrowmon Lv54
+
+Item/Data
+
+Dukemon Crimson: Dukemon Grani
+
+Megidramon: Dukemon Dark Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Renamon
+
+Level Up
+
+Kyubimon: Renamon Lv18
+
+Taomon: Kyubimon Lv32
+
+Sakuyamon: Taomon Lv54
+
+Sekkamon: Tenkomon Lv32
+
+Yukinamon: Sekkamon Lv54
+
+Item/Data
+
+Tenkomon: Renamon Ice Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Monodramon
+
+Level Up
+
+Strikedramon: Monodramon Lv18
+
+Cyberdramon: Strikedramon LV32
+
+Justimon: Cyberdramon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+Triceramon: Monochromon Lv32
+
+Wormmon
+
+Level Up
+
+Stingmon: Wormmon Lv18
+
+JewelBeemon: Stingmon Lv32
+
+Item/Data
+
+BanchoStingmon: JewelBeemon Gakuren
+
+Jogress/Fusion
+
+Dinobeemon: Stingmon Lv28 ExVeemon
+
+Trait/Special Condition
+
+None
+
+Armadimon
+
+Level Up
+
+Ankylomon: Armadimon Lv18
+
+Brachiomon: Ankylomon Lv32
+
+UltimateBrachiomon: Brachiomon Lv54
+
+Whamon: Submarimon Lv32
+
+MarineAngemon: Whamon Lv54
+
+Scorpiomon: Digmon Lv32
+
+Item/Data
+
+Submarimon: Armadimon Water Data
+
+KingWhamon: Whamon King's Rock
+
+Digmon: Armadimon Earth Data
+
+Jogress/Fusion
+
+Shakkoumon: Ankylomon Lv28 Angemon
+
+SlashAngemon: Shakkoumon Lv 52
+
+ElDoradimon: Scorpiomon Lv54 or Jagamon Lv54
+
+Trait/Special Condition
+
+None
+
+Hawkmon
+
+Level Up
+
+Aquilamon: Hawkmon Lv18
+
+Valkyrimon: Silphymon Lv54
+
+Fumamon: Shurimon Lv32
+
+Tactimon: Fumamon Lv54
+
+Peacockmon: Holsmon Lv32 (Corrected from Peacockmon Lv32)
+
+Valdurmon: Peacockmon Lv54
+
+Item/Data
+
+Shurimon: Hawkmon Wood Data
+
+Holsmon: Hawkmon Wind Data
+
+Jogress/Fusion
+
+Silphymon: Aquilamon Lv28 Tailmon
+
+Chaosmon Valdur Arm: BanchoLeomon Jogress Valdurmon
+
+Trait/Special Condition
+
+None
+
+Impmon
+
+Level Up
+
+Wizarmon: Impmon Lv18
+
+Baalmon: Wizarmon Lv32 Amped
+
+Beelzebumon: Baalmon Lv54
+
+Mystimon: Wizarmon Lv32 Lowkey
+
+Dynasmon: Mystimon Lv54
+
+Loudmon: Punkmon Lv32
+
+HeavyMetalDramon: Loudmon Lv54
+
+Item/Data
+
+Beelzebumon Blast: Beelzebumon Toy Gun
+
+Punkmon: Impmon Dark Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+DORUmon
+
+Level Up
+
+DORUgamon: DORUmon LV18
+
+Doruguremon: DORUgamon Lv32
+
+DORUgoramon: DORUguremon LV54
+
+DexDORUguremon: DexDORUgamon Lv32
+
+DexDORUgoramon: DexDORUguremon LV54
+
+Item/Data
+
+DexDORUgamon: DORUmon Dark Data
+
+Alphamon: DORUguremon Auspicious Armor
+
+Jogress/Fusion
+
+Alphamon Ouryuken: Alphamon Jogress Ouryumon
+
+Trait/Special Condition
+
+None
+
+Ryudamon
+
+Level Up
+
+Ginryumon: Ryudamon Lv18
+
+Hisyaryumon: Ginryumon Lv32
+
+Ouryumon: Hisyaryumon LV54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Gaomon
+
+Level Up
+
+Gaogamon: Gaomon Lv18
+
+MachGaogamon: Gaogamon Lv30
+
+MirageGaogamon: MachGaogamon LV54
+
+Item/Data
+
+MirageGaogamon Burst: MirageGaogamon Mirage Soul
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Falcomon
+
+Level Up
+
+Peckmon: Falcomon Lv18
+
+Yatagaramon: Peckmon Lv32
+
+Ravemon: Yatagaramon Lv54
+
+Item/Data
+
+Ravemon Burst: Ravemon Raven Soul
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Flamon
+
+Level Up
+
+Meramon: Flamon Lv18
+
+Asuramon: Meramon Lv32 Amped
+
+Apollomon: Asuramon Lv54
+
+DeathMeramon: Meramon Lv30 Lowkey
+
+Demon: DeathMeramon Lv54
+
+Item/Data
+
+Agnimon: Flamon Fire Data
+
+Gankoomon: Asuramon Auspicious Armor
+
+Jogress/Fusion
+
+Aldamon: Agnimon Lv32 or Vritramon Lv32
+
+AncientGreymon: Aldamon Lv54
+
+Trait/Special Condition
+
+Vritamon: Agnimon Salamander Break or Agnimon Flame Storm
+
+Strabimon
+
+Level Up
+
+None
+
+Item/Data
+
+Wolfmon: Wolfmon Light Data (Note: Base form seems to be missing, likely Strabimon)
+
+Jogress/Fusion
+
+Beowolfmon: Wolfmon Lv32 or Garummon Lv32
+
+AncientGarurumon: Beowolfmon Lv54
+
+Trait/Special Condition
+
+Garummon: Wolfmon Wolf Kendo or Wolfmon Lupine Laser
+
+Takutoumon: Beowolfmon Auspicious Armor
+
+Tinkermon
+
+Level Up
+
+Darcmon: Tinkermon Lv18
+
+LovelyAngemon: Hippogriffomon Lv54 Female
+
+Griffomon: Hippogriffomon Lv54 Male
+
+Item/Data
+
+Fairymon: Tinkermon Wind Data
+
+Murmukusmon: Hippogriffomon Sachet
+
+Jogress/Fusion
+
+JetSilphymon: Fairymon Lv32 or Shutumon Lv32
+
+AncientIrismon: JetSilphymon Lv54
+
+Hippogriffomon: Aquilamon Lv32 or Darcmon Lv32
+
+Trait/Special Condition
+
+Shutumon: Fairymon Brezzo Petalo or Fairymon Plasma Talon
+
+KoKabuterimon
+
+Level Up
+
+None
+
+Item/Data
+
+Blitzmon: KoKabuterimon Thunder Data
+
+Jogress/Fusion
+
+RhinoKabuterimon: Bolgmon Lv32
+
+AncientBeetlemon: RhinoKabuterimon Lv54
+
+Trait/Special Condition
+
+Bolgmon: Blitzmon Thor Hammer or Blitzmon Electro Cannon
+
+Penmon
+
+Level Up
+
+Mojyamon: Penmon Lv18 Male
+
+Mammothmon: Mojyamon Lv32
+
+SkullMammothmon: Mammothmon Lv54
+
+Frigimon: Penmon Lv18 Female
+
+Polarbearmon: Frigimon Lv32
+
+Skadimon: Polarbearmon Lv54
+
+Item/Data
+
+Chakmon: Penmon Ice Data
+
+Jogress/Fusion
+
+Frozomon: Chakmon Lv32 or Blizzarmon Lv32
+
+Megatheurimon: Frozomon Lv54
+
+Trait/Special Condition
+
+Blizzarmon: Chakmon Snow Bomber or Chakmon Avalanche Step
+
+Goblimon
+
+Level Up
+
+Ogremon: Goblimon Lv18
+
+Rebellimon: Ogremon Lv32
+
+Titamon: Rebellimon Lv54
+
+Item/Data
+
+Grottemon: Goblimon Earth Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+Gigasmon: Grottemon Grotte Hammer or Grottemon Quagmire Twist
+
+Volcamon: Gigasmon Lv32
+
+AncientVolcamon: Volcamon Lv54
+
+Hagurumon
+
+Level Up
+
+Machmon: Hagurumon Lv18
+
+Locomon: Machmon Lv32
+
+GrandLocomon: Locomon Lv54
+
+Wisemon: Mercurymon Lv32
+
+AncientWisemon: Wisemon Lv54
+
+Item/Data
+
+Mercurymon: Hagurumon Metal Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Sangomon
+
+Level Up
+
+Shellmon: Sangomon Lv18 Lowkey
+
+MarinBullmon: Shellmon Lv32
+
+Ryugumon: MarinBullmon Lv54
+
+Tobiumon: Sangomon Lv18 Amped
+
+Piranimon: Tobiumon Lv32
+
+MetalPiranimon: Piranimon Lv54
+
+Mermaimon: Calmaramon Lv32
+
+AncientMermaimon: Mermaimon Lv54
+
+Item/Data
+
+Ranamon: Sangomon Water Data
+
+Cthyllamon: Piranimon Unholy Heart
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+Calmaramon: Ranamon Jealousy Rain or Ranamon Titanic Charge
+
+Shellmon
+
+Level Up
+
+Venusmon: Pixiemon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+Pixiemon: Shellmon Teleport
+
+Numemon
+
+Level Up
+
+None
+
+Item/Data
+
+Monzaemon: Numemon Cute Plush
+
+WaruMonzaemon: Numemon Evil Plush
+
+Jogress/Fusion
+
+ShinMonzaemon: Monzaemon Lv54 or WaruMonzaemon Lv54 or ExTyrannomon Night Daze
+
+Trait/Special Condition
+
+None
+
+Liollmon
+
+Level Up
+
+Leomon: Liollmon Lv18 Amped (Assumption, base form is Leomon)
+
+GrapLeomon: Leomon Lv32 or Gryzzlimon Hammer Rush
+
+HeavyLeomon: GrapLeomon LV54
+
+Liamon: Liollmon Lv18 Lowkey
+
+LoaderLeomon: Liamon Lv32
+
+SaberLeomon: Loader Leomon Lv54
+
+Item/Data
+
+BanchoLeomon: GrapLeomon Gakuren
+
+Lowemon: Liollmon Dark Data
+
+Jogress/Fusion
+
+Rihimon: Lowemon Lv32 or KaiserLeomon Lv32
+
+AncientSphinxmon: Rihimon Lv54
+
+Trait/Special Condition
+
+Marsmon: GrapLeomon Swords Dance
+
+KaiserLeomon: Lowemon Shadow Meteor
+
+Pomumon
+
+Level Up
+
+Parasaurmon: Pomumon Lv18
+
+Ajatarmon: Parasaurmon Lv18 Amped
+
+BloomLordmon: Ajatarmon Lv54
+
+Tropiamon: Parasaurmon Lv18 Lowkey
+
+Hydramon: Tropiamon Lv54
+
+Item/Data
+
+Arbormon: Pomumon Wood Data
+
+Jogress/Fusion
+
+Entmon: Arbormon Lv32 Petaldramon or Petaldramon Lv32 Arbormon
+
+AncientTroiamon: Entmon Lv54
+
+Trait/Special Condition
+
+Petaldramon: Arbormon Blockage Seed or Arbormor Leaf Cyclone
+
+Blucomon
+
+Level Up
+
+Paledramon: Blucomon Lv18
+
+CrysPaledramon: Paledramon Lv32
+
+Hexeblaumon: CrysPaledramon Lv54
+
+Panjyamon X: Sorcerimon Lv32
+
+FrosVelgrmon: Panjyamon X Lv54
+
+Item/Data
+
+Sorcerimon: Blucomon Ice Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Kotemon
+
+Level Up
+
+Dinohumon: Kotemon Lv18 Amped
+
+Knightmon: Dinohumon Lv32
+
+LordKnightmon: Knightmon Lv54
+
+Musyamon: Kotemon Lv18 Lowkey
+
+Oboromon: Musyamon Lv32
+
+Gaiomon: Oboromon Lv54
+
+Item/Data
+
+Craniummon: Knightmon Malicious Armor
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Bearmon
+
+Level Up
+
+Grizzlymon: Bearmon Lv18 Amped
+
+GreatGryzzlymon: Gryzzlimon Lv18 Amped
+
+Callismon: GreatGryzzlymon Lv54
+
+Dorulumon: Bearmon Lv18 Lowkey
+
+Mihiramon: Dorulumon Lv32
+
+Baihumon: Mihiramon Biakko Core
+
+Item/Data
+
+YaegerDorulumon: Dorulumon King's Shield
+
+Duftmon: YaegerDorulumon Malicious Armor
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+Mercurimon: YaegerDorulumon Lv54
+
+Duftmon Leopard: Duftmon Vulcan Crush
+
+Zubamon
+
+Level Up
+
+ZubaEagermon: Zubamon Lv18
+
+Duramon: ZubaEagermon Lv32
+
+Durandamon: Duramon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+RagnaLoardmon: Durandamon Jogress BryweLudramon
+
+Trait/Special Condition
+
+None
+
+Ludomon
+
+Level Up
+
+TiaLudomon: Ludomon Lv18
+
+RaijiLudomon: TiaLudomon Lv32 (Corrected from RiaLudomon)
+
+BryweLudramon: RaijiLudomon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Dracomon
+
+Level Up
+
+CoreDramon Blue: Dracomon Lv18 Lowkey
+
+Wingdramon: CoreDramon Blue Lv32
+
+Slayerdramon: Wingdramon Lv54
+
+Coredramon Green: Dracomon Lv18 Amped
+
+Groundramon: Coredramon Green Lv32
+
+Breakdramon: Groundramon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+Examon: Slayerdramon Jogress Breakdramon
+
+Trait/Special Condition
+
+None
+
+Vorvomon
+
+Level Up
+
+Lavorvomon: Vorvomon Lv18
+
+Lavogaritamon: Lavorvomon Lv32
+
+Volcanicdramon: Lavogaritamon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Betamon
+
+Level Up
+
+MasterTyrannomon: Tyrannomon Lv32
+
+MegaSeadramon: Seadramon Lv32
+
+MetalSeadramon: MegaSeadramon Lv54
+
+Megadramon: Airdramon Lv32
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+Dinomon: MasterTyrannomon Lv54 or ExTyrannomon Dragon Pulse
+
+Aegisdramon: Plesiomon Jogress MetalSeadramon
+
+Trait/Special Condition
+
+Tyrannomon: Betamon Lv18 Attack > Defense
+
+Seadramon: Betamon Lv18 Defense > Attack
+
+Airdramon: Betamon Lv18 Attack = Defense
+
+Jazamon
+
+Level Up
+
+Jazardmon: Jazamon Lv18
+
+Jazarichmon: Jazardmon Lv32
+
+Metallicdramon: Jazarichmon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Tyrannomon
+
+Level Up
+
+MetalTyrannomon: DarkTyrannomon Lv32
+
+Item/Data
+
+DarkTyrannomon: Tyrannomon Dark Data
+
+Jogress/Fusion
+
+RustTyranomon: MetalTyrannomon Lv54 or ExTyrannomon Thunder Cloud
+
+Trait/Special Condition
+
+None
+
+Phascomon
+
+Level Up
+
+MadLeomon: Phascomon Lv18
+
+Astamon: MadLeomon Lv32
+
+Belphemon: Astamon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+KoDokugumon
+
+Level Up
+
+Dokugumon: KoDokugumon Lv18
+
+Archnemon: Hudiemon Lv30
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Commandramon
+
+Level Up
+
+Hi-Commandramon: Commandramon Lv18 Lowkey (Corrected, original was Hi-Commandramon lv18)
+
+Cargodramon: Hi-Commandramon Lv32 (Corrected, original was Cargodramon lv32)
+
+Sealsdramon: Commandramon Lv18 Amped
+
+Tankdramon: Sealsdramon Lv32
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+Brigadramon: Cargodramon Lv54 or Ghilliedhumon Lv54
+
+Darkdramon: Tankdramon Lv54 or Ghilliedhumon Lv54
+
+Caosmon: BanchoLeomon Jogress Darkdramon
+
+Trait/Special Condition
+
+None
+
+Dracmon
+
+Level Up
+
+Sangloupmon: Dracmon Lv18
+
+Matadormon: Sangloupmon Lv32 Amped
+
+Grandracmon: Matadormon Lv54
+
+Myotismon: Sangloupmon Lv32 Lowkey
+
+VenomMyotismon: Myotismon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+DemiDevimon
+
+Level Up
+
+Devimon: DemiDevimon Lv18
+
+NeoDevimon: Devimon Lv32 Amped
+
+DoneDevimon: NeoDevimon Lv54
+
+Jokermon: Devimon Lv32 Lowkey
+
+Piedmon: Jokermon Lv32
+
+SkullSatamon: Vilemon Lv32
+
+Barbamon: SkullSatamon Lv54
+
+Item/Data
+
+Vilemon: DemiDevimon Dark Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Gizamon
+
+Level Up
+
+Gesomon: Gizamon Lv18
+
+MarineDevimon: Gesomon Lv32
+
+Leviamon: MarineDevimon Lv54
+
+Hangyomon: Dolphmon Lv32
+
+Neptunemon: Hangyomon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+Dolphmon: Gesomon Lv18 (This appears to be a branching evolution at the same level)
+
+Sunarizamon
+
+Level Up
+
+Jagamon: Tortomon Lv32
+
+Gogmamon: Golemon Lv32
+
+Blastmon: Gogmamon Lv54
+
+Landramon: Sunarizamon Lv18
+
+Proganomon: Landramon Lv32
+
+Pyramidimon: Proganomon Lv54
+
+Item/Data
+
+Golemon: Sunarizamon Earth Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+Tortomon: Sunarizamon Withdraw
+
+Gammamon
+
+Level Up
+
+BetelGammamon: Gammamon Lv18
+
+Canoweissmon: BetelGammamon Lv32
+
+Siriusmon: Canoweissmon Lv54
+
+GulusGammamon: Gammamon Lv18
+
+Regulusmon: GulusGammamon Lv42
+
+Arcturusmon: Regulusmon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+Proximamon: Siriusmon Jogress Arcturusmon
+
+Trait/Special Condition
+
+None
+
+Angoramon
+
+Level Up
+
+SymbareAngoramon: Angoramon Lv18
+
+Lamortmon: SymbareAngoramon Lv32
+
+Diarbbitmon: Lamortmon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Jellymon
+
+Level Up
+
+TeslaJellymon: Jellymon Lv18
+
+Thetismon: TeslaJellymon Lv32
+
+Amphimon: Thetismon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Morphomon
+
+Level Up
+
+Hudiemon: Morphomon Lv18
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+FunBeemon
+
+Level Up
+
+Waspmon: FunBeemon Lv18 Male
+
+Vespamon: Waspmon Lv32
+
+TigerVespamon: Vespamon Lv54
+
+ForgeBeemon: FunBeemon Lv18 Female
+
+CannonBeemon: ForgeBeemon Lv32
+
+QueenBeemon: CannonBeemon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Herissmon
+
+Level Up
+
+Filmon: Herissmon Lv18
+
+Stiffilmon: Filmon Lv32
+
+Rasenmon Fury Mode: Stiffilmon Lv50
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+Rasenmon True Form: Rasenmon Fury Mode Friendship
+
+Pulsemon
+
+Level Up
+
+Boutmon: Bulkmon Lv32
+
+Kazuchimon: Boutmon Lv54
+
+Climbmon: Exermon Lv32
+
+Shivamon: Climbmon Lv54
+
+Item/Data
+
+Shroudmon: Boutmon Malicious Armor
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+Bulkmon: Pulsemon Work Up
+
+Exermon: Pulsemon Meditate
+
+Loogamon
+
+Level Up
+
+Loogarmon: Loogamon Lv18
+
+Helloogarmon: Loogarmon Lv32
+
+Fenriloogamon: Soloogarmon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+Fenriloogamon Takemikazuchi: Fenriloogamon Jogress Kazuchimon
+
+Trait/Special Condition
+
+Soloogarmon: Helloogarmon Friendship
+
+Kudamon
+
+Level Up
+
+Reppamon: Kudamon Lv18
+
+Tyilinmon: Reppamon Lv32
+
+Mitamamon: Tyilinmon Lv54
+
+Item/Data
+
+Sleipmon: Tyilinmon Auspicious Armor
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Ghostmon
+
+Level Up
+
+Bakemon: Ghostmon Lv18
+
+Phantomon: Bakemon Lv32
+
+Necromon: Phantomon Lv54
+
+NoblePumpmon: Pumpmon Lv50 (Corrected from Pumpkinmon)
+
+Pharaohmon: Mummymon Lv54
+
+Item/Data
+
+Pumpmon: Bakemon Wood Data
+
+Mummymon: Bakemon Dark Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Tsukaimon
+
+Level Up
+
+Witchmon: Tsukaimon Lv18
+
+LadyDevimon: Witchmon Lv32 Lowkey or Hudiemon Lv30
+
+Lilithmon: LadyDevimon Lv54 or Bastemon Lv54
+
+Item/Data
+
+Dianamon: LadyDevimon Lunar Scale
+
+Jogress/Fusion
+
+Mastemon: Angewomon Jogress LadyDevimon
+
+Trait/Special Condition
+
+Bastemon: Witchmon Lv32 Amped
+
+Labramon
+
+Level Up
+
+Seasarmon: Labramon Lv18 Lowkey
+
+Caturamon: Seasarmon Lv32
+
+Erlangmon: Caturamon Lv54 (Corrected from Canturamon)
+
+Dobermon: Labramon Lv18 Amped
+
+Cerberusmon: Dobermon Lv32
+
+Anubismon: Anubismon Lv54 (This seems to be a typo in the original file, as Anubismon doesn't evolve from itself. Assuming it evolves from Cerberusmon)
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Crabmon
+
+Level Up
+
+Ebidramon: Crabmon Lv18
+
+Gusokumon: Ebidramon Lv32
+
+Item/Data
+
+MarineKimeramon: Ebidramon Water Data
+
+Jogress/Fusion
+
+Regalecusmon: MarineKimeramon Lv54 or Gusokumon Lv54
+
+Trait/Special Condition
+
+None
+
+Monmon
+
+Level Up
+
+Apemon: Monmon Lv18
+
+Gokuumon: Apemon Lv32
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Kamemon
+
+Level Up
+
+Gawappamon: Kamemon Lv18
+
+Sagomon: Gawappamon Lv32
+
+JumboGamemon: Sagomon Lv54
+
+Sandiramon: Tylomon Lv32
+
+Item/Data
+
+Tylomon: Kamemon Water Data
+
+Xuanwumon: Sandiramon Genku Core
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Kokuwamon
+
+Level Up
+
+Thundermon: Kokuwamon Lv18
+
+Mamemon: Thundermon Lv34
+
+BanchoMamemon: Mamemon Lv54
+
+Item/Data
+
+MetalMamemon: Mamemon Metal Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Floramon
+
+Level Up
+
+Woodmon: Floramon Lv18
+
+Oleamon: Woodmon Lv32 Female
+
+Ceresmon: Oleamon Lv54
+
+Cherrymon: Woodmon Lv32 Male
+
+Pinochimon: Cherrymon Lv54
+
+Item/Data
+
+Ceresmon Medium: Ceresmon Famis
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Keramon
+
+Level Up
+
+Chrysalimon: Keramon Lv18
+
+Infermon: Chrysalimon Lv32
+
+Diaboromon: Infermon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Chuumon
+
+Level Up
+
+Sukamon: Chuumon Lv18
+
+Etemon: Sukamon Lv32
+
+MetalEtemon: Etemon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Pteromon
+
+Level Up
+
+Galemon: Pteromon Lv18
+
+GrandGalemon: Galemon Lv32
+
+Zephagamon: GrandGalemon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Shoemon
+
+Level Up
+
+Shoeshoemon: Shoemon Lv18
+
+Chaperomon: Shoeshoemon Lv32
+
+Cendrillmon: Chaperomon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Elizamon
+
+Level Up
+
+Dimetromon: Elizamon Lv18
+
+Lamiamon: Dimetromon Lv32
+
+Medusamon: Lamiamon Lv54
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Lucemon
+
+Level Up
+
+Lucemon Falldown: Lucemon Lv30
+
+Item/Data
+
+None
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Sukamon
+
+Level Up
+
+None
+
+Item/Data
+
+Betsumon: Sukamon Cute Plush
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Chaperomon
+
+Level Up
+
+None
+
+Item/Data
+
+Nyabootmon: Chaperomon Gakuren
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+MarinBullmon
+
+Level Up
+
+None
+
+Item/Data
+
+Ariemon: MarinBullmon Lunar Scale or Ryugumon Water Data
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Monzaemon
+
+Level Up
+
+None
+
+Item/Data
+
+ExTyrannomon: Monzaemon Fire Data or Tyrannomon Cute Plush
+
+Jogress/Fusion
+
+None
+
+Trait/Special Condition
+
+None
+
+Multi-Digimon Fusions (Jogress)
+
+Susanoomon: AncientGreymon Jogress AncientGarurumon
+
+Mugendramon: MetalTyrannomon Mechanic Data or Megadramon Lv70 or Megadramon Mechanic Data or MetalMamemon Lv70
+
+Kimeramon: Greymon Organic Data, Garurumon Organic Data, Kabuterimon Organic Data, Airdramon Organic Data, Kuwagamon Organic Data, Monochromon Organic Data, Devimon Organic Data
+
+Millenniummon: Mugendramon Jogress Kimeramon
+
+Shakamon: Gokuumon Jogress Sagomon
+
+GraceNovamon: Apollomon Jogress Dianamon
+
+Tlalocmon: SaberLeomon Jogress ElDoradimon

@@ -1,0 +1,99 @@
+/* Data Drops Modal Styling */
+.data-drops-modal-content {
+    max-width: 1000px;
+    width: 95%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.data-drops-content {
+    padding: 1rem;
+}
+
+.data-drops-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.data-drop-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.data-drop-card.highlighted-drop {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
+    transform: scale(1.03);
+    animation: dropPulse 1.5s infinite alternate;
+}
+
+@keyframes dropPulse {
+    from {
+        box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    to {
+        box-shadow: 0 0 25px var(--accent-glow);
+    }
+}
+
+.drop-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.drop-header h3 {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.droppers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dropper-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.03);
+    transition: background 0.2s;
+}
+
+.dropper-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.dropper-item img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.dropper-item span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Redirection Helper Style */
+.data-redirect:hover {
+    color: var(--accent-light) !important;
+    text-shadow: 0 0 5px var(--accent-glow);
+}
