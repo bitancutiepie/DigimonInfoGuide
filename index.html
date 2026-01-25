@@ -324,15 +324,20 @@
             <div class="modal-content patch-notes-content">
                 <div class="patch-header">
                     <h2>Latest Updates</h2>
-                    <span class="patch-version">v1.3.0</span>
+                    <span class="patch-version">v1.3.1</span>
                 </div>
                 <div class="patch-body">
                     <ul class="patch-list">
-                        <li><strong>Team Planner:</strong> Build and analyze your ultimate Digimon team.</li>
-                        <li><strong>Level Filters:</strong> Filter by Stage (Rookie to Ultra) and Card Level.</li>
-                        <li><strong>Mobile Optimization:</strong> New bottom navigation bar for seamless mobile
-                            browsing.</li>
-                        <li><strong>UX Refinement:</strong> Improved modal management to prevent screen stacking.</li>
+                        <li><strong>New: Battle Analyzer!</strong> Analyze matchups, team roles (Ace/Tank), and get
+                            strategic advice.</li>
+                        <li><strong>Fixed Duplicate Text:</strong> Resolved issue where "Organic Data" and other text
+                            appeared multiple times.</li>
+                        <li><strong>Locations Restored:</strong> The Locations feature is back with improved styling and
+                            grid view.</li>
+                        <li><strong>Evolution Tree:</strong> Restored full interactivity, zooming, and detailed
+                            evolution paths.</li>
+                        <li><strong>Data Cleanup:</strong> Corrected database errors for cleaner Digimon profiles.</li>
+                        <li><strong>Performance:</strong> Smoother loading for images and modal transitions.</li>
                     </ul>
                 </div>
                 <button id="closePatchBtn" class="patch-done-btn">Got it!</button>
@@ -508,10 +513,19 @@
 
     </div>
 
+    <!-- JS Modules (Order Matters) -->
     <script src="data/reference_map.js"></script>
     <script src="data/locations_data.js"></script>
     <script src="data/guide_content.js"></script>
     <script src="data/type_chart.js"></script>
+
+    <!-- App Modules -->
+    <script src="js/modules/state.js"></script>
+    <script src="js/modules/utils.js"></script>
+    <script src="js/modules/data.js"></script>
+    <script src="js/modules/ui.js"></script>
+    <script src="js/modules/battle.js"></script>
+    <script src="js/modules/events.js"></script>
     <script src="js/script.js"></script>
 </body>
 

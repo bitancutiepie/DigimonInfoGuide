@@ -1,0 +1,149 @@
+@keyframes evoPopIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px) scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+}
+
+@keyframes rotateRing {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateRingBack {
+    from {
+        transform: translateX(-50%) rotate(360deg);
+    }
+
+    to {
+        transform: translateX(-50%) rotate(0deg);
+    }
+}
+
+@keyframes pulseCoreDigital {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(0.9);
+        box-shadow: 0 0 20px #00f2ff;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 0 0 60px #00f2ff;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+/* Splash Screen utilizing animations */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #0f2530 0%, #000 100%);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease, visibility 0.8s;
+}
+
+.splash-screen.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.splash-content {
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+}
+
+.digi-ring-outer {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #008a90;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: rotateRingBack 4s linear infinite;
+    opacity: 0.5;
+}
+
+.digi-ring {
+    width: 150px;
+    height: 150px;
+    border: 4px solid #00f2ff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: rotateRing 2s linear infinite;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+}
+
+.digi-core {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background: #00f2ff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 40px #00f2ff;
+    animation: pulseCoreDigital 1.5s ease-in-out infinite;
+}
+
+.splash-title {
+    margin-top: 2.5rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    font-family: var(--font-heading);
+    color: #fff;
+    text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff;
+    text-align: center;
+    font-weight: 700;
+}
+
+.creator-tag {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #008a90;
+    letter-spacing: 0.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}

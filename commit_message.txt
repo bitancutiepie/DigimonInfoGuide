@@ -1,0 +1,19 @@
+feat: Modularize codebase, redesign UI, and fix data/logic bugs
+
+**Refactoring**
+- Split monolithic `styles.css` into modular CSS files (`modules/base.css`, `components.css`, `modals.css`, etc.).
+- Split `script.js` into functional JS modules (`modules/state.js`, `ui.js`, `events.js`, etc.).
+
+**Features & UI**
+- **Type Chart**: Upgraded to a detailed dashboard showing offensive/defensive matchups and a grid layout.
+- **Team Planner**: Redesigned with a "Trading Card" aesthetic and a stats analysis dashboard.
+- **Back-to-Top**: Replaced standard button with an animated Biyomon GIF sticker (positioned bottom-left).
+- **Sci-Fi Stylization**: Implemented hexagonal, glowing close buttons and custom scrollbars.
+- **Battle Analyzer**: Added to Patch Notes list.
+- **UX**: Improved "No Results" search state with a reset button.
+
+**Bug Fixes**
+- **Data Integrity**: Resolved infinite evolution loop by correcting stages for SaberLeomon (Mega) and Mercurymon (Hybrid).
+- **Evo Tree**: Fixed functionality of the close button in the evolution tree modal.
+- **Duplicate Text**: Fixed repeated text issues in database entries.
+- **Mobile**: Fixed CSS media query syntax error affecting desktop visibility of UI elements.

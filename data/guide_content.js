@@ -1717,7 +1717,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Kimeramon",
-                "method": "Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data"
+                "method": "Organic Data"
             }
         ],
         "stage": "Champion",
@@ -2145,7 +2145,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Kimeramon",
-                "method": "Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data"
+                "method": "Organic Data"
             }
         ],
         "stage": "Champion",
@@ -2982,7 +2982,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Kimeramon",
-                "method": "Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data"
+                "method": "Organic Data"
             }
         ],
         "stage": "Champion",
@@ -3228,7 +3228,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Kimeramon",
-                "method": "Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data"
+                "method": "Organic Data"
             }
         ],
         "stage": "Champion",
@@ -12465,8 +12465,8 @@ const DIGIMON_DB = [
                 "method": "Lv32"
             }
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Hybrid",
+        "cardLevel": 4
     },
     {
         "id": "215",
@@ -14337,8 +14337,8 @@ const DIGIMON_DB = [
                 "method": "Jogress"
             }
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Mega",
+        "cardLevel": 6
     },
     {
         "id": "247",
@@ -19811,7 +19811,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Kimeramon",
-                "method": "Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data"
+                "method": "Organic Data"
             }
         ],
         "stage": "Champion",
@@ -20949,7 +20949,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Kimeramon",
-                "method": "Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data"
+                "method": "Organic Data"
             }
         ],
         "stage": "Champion",
@@ -21422,7 +21422,7 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Kimeramon",
-                "method": "Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data"
+                "method": "Organic Data"
             }
         ],
         "stage": "Champion",
@@ -28211,31 +28211,31 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Kabuterimon",
-                "method": "Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data"
+                "method": "Organic Data"
             },
             {
                 "name": "Monochromon",
-                "method": "Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data"
+                "method": "Organic Data"
             },
             {
                 "name": "Garurumon",
-                "method": "Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data"
+                "method": "Organic Data"
             },
             {
                 "name": "Kuwagamon",
-                "method": "Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data"
+                "method": "Organic Data"
             },
             {
                 "name": "Airdramon",
-                "method": "Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data"
+                "method": "Organic Data"
             },
             {
                 "name": "Greymon",
-                "method": "Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data"
+                "method": "Organic Data"
             },
             {
                 "name": "Devimon",
-                "method": "Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data  Organic Data"
+                "method": "Organic Data"
             }
         ],
         "next": [

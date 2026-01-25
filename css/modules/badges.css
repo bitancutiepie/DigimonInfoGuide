@@ -1,0 +1,214 @@
+/* Stage Badges */
+.stage-badge {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #fff;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 0.6rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Glassy Stage Colors */
+.stage-rookie {
+    background: rgba(76, 161, 175, 0.3);
+    border-color: rgba(76, 161, 175, 0.6);
+    box-shadow: 0 0 10px rgba(76, 161, 175, 0.2);
+}
+
+.stage-champion {
+    background: rgba(52, 152, 219, 0.3);
+    border-color: rgba(52, 152, 219, 0.6);
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+}
+
+.stage-ultimate {
+    background: rgba(231, 76, 60, 0.3);
+    border-color: rgba(231, 76, 60, 0.6);
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.2);
+}
+
+.stage-mega {
+    background: rgba(142, 68, 173, 0.3);
+    border-color: rgba(142, 68, 173, 0.6);
+    box-shadow: 0 0 10px rgba(142, 68, 173, 0.2);
+}
+
+.stage-ultra {
+    background: rgba(241, 196, 15, 0.3);
+    border-color: rgba(241, 196, 15, 0.6);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.2);
+}
+
+.stage-ultra\+ {
+    background: rgba(44, 62, 80, 0.6);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    box-shadow: 0 0 12px rgba(0, 242, 255, 0.3);
+}
+
+/* Type Badge Colors - Flat */
+.type-badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #111;
+}
+
+.type-badge.type-fire {
+    background: var(--type-fire);
+}
+
+.type-badge.type-water {
+    background: var(--type-water);
+}
+
+.type-badge.type-ice {
+    background: var(--type-ice);
+}
+
+.type-badge.type-ground {
+    background: var(--type-ground);
+}
+
+.type-badge.type-rock {
+    background: var(--type-rock);
+}
+
+.type-badge.type-electric {
+    background: var(--type-electric);
+}
+
+.type-badge.type-holy {
+    background: var(--type-holy);
+    color: #333;
+}
+
+.type-badge.type-dark {
+    background: var(--type-dark);
+    color: #fff;
+}
+
+.type-badge.type-chaos {
+    background: linear-gradient(45deg, #ff00ff, #800080);
+    color: #fff;
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.4);
+}
+
+.type-badge.type-fighting {
+    background: var(--type-fighting);
+    color: #fff;
+}
+
+.type-badge.type-steel {
+    background: var(--type-steel);
+}
+
+.type-badge.type-bug {
+    background: var(--type-bug);
+}
+
+.type-badge.type-poison {
+    background: var(--type-poison);
+    color: #fff;
+}
+
+.type-badge.type-undead {
+    background: var(--type-undead);
+    color: #fff;
+}
+
+.type-badge.type-dragon {
+    background: var(--type-dragon);
+    color: #fff;
+}
+
+.type-badge.type-fairy {
+    background: var(--type-fairy);
+}
+
+.type-badge.type-magic {
+    background: var(--type-magic);
+}
+
+.type-badge.type-normal {
+    background: var(--type-normal);
+}
+
+.type-badge.type-mystery {
+    background: var(--type-mystery);
+    color: #fff;
+}
+
+.type-badge.type-grass {
+    background: var(--type-grass);
+}
+
+.type-badge.type-flying {
+    background: var(--type-flying);
+}
+
+.type-badge.type-unknown {
+    background: #333;
+    color: var(--text-secondary);
+}
+
+/* Ability Badges */
+.ability-badge {
+    font-size: 0.75rem;
+    background: rgba(100, 100, 100, 0.3);
+    color: var(--text-primary);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+}
+
+.ability-badge.hidden-ability {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--border);
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Location Badge */
+.location-badge {
+    color: var(--text-primary);
+    background: rgba(100, 200, 255, 0.1);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.type-pill {
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.type-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 255, 0.3);
+    border-color: #00f2ff;
+    filter: brightness(1.2);
+}
