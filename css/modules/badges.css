@@ -212,3 +212,51 @@
     border-color: #00f2ff;
     filter: brightness(1.2);
 }
+
+/* Requirement Type Badges */
+.req-type-badge {
+    display: inline-block;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 4px;
+    vertical-align: middle;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.req-type-badge.item {
+    background: #e67e22;
+    color: #fff;
+}
+
+.req-type-badge.move {
+    background: #3498db;
+    color: #fff;
+}
+
+.req-type-badge.level {
+    background: #2ecc71;
+    color: #fff;
+}
+
+.req-type-badge.data {
+    background: #9b59b6;
+    color: #fff;
+}
+
+.req-type-badge.trait {
+    background: #f1c40f;
+    color: #333;
+}
+
+.req-name {
+    font-weight: 500;
+    color: var(--accent);
+}
+
+.clickable-method:hover .req-name {
+    text-decoration: underline;
+}

@@ -472,6 +472,48 @@ window.goBackInHistory = () => {
     }
 };
 
+// --- Requirement Helpers ---
+function getRequirementDisplay(method) {
+    if (!method) return { text: 'No info', type: null, description: null };
+
+    // Clean exact matches first
+    let cleanMethod = method.trim();
+    let req = window.EVO_REQUIREMENTS ? window.EVO_REQUIREMENTS[cleanMethod] : null;
+
+    // Try case-insensitive and partial if not found
+    if (!req && window.EVO_REQUIREMENTS) {
+        const lowerMethod = cleanMethod.toLowerCase();
+        const key = Object.keys(window.EVO_REQUIREMENTS).find(k => k.toLowerCase() === lowerMethod);
+        if (key) req = window.EVO_REQUIREMENTS[key];
+    }
+
+    if (req) {
+        const prefix = req.type ? `<span class="req-type-badge ${req.type.toLowerCase()}">${req.type}</span> ` : '';
+
+        return {
+            html: `${prefix}<span class="req-name">${cleanMethod}</span>`,
+            text: cleanMethod,
+            type: req.type,
+            description: req.description
+        };
+    }
+
+    // Default formatting (Lv, with, etc)
+    if (cleanMethod.toLowerCase().startsWith('lv')) {
+        return { html: `<span class="req-type-badge level">Level</span> <span class="req-name">${cleanMethod}</span>`, text: cleanMethod };
+    }
+
+    return { html: `<span class="req-name">${cleanMethod}</span>`, text: cleanMethod };
+}
+
+function renderRequirementBadge(method) {
+    const info = getRequirementDisplay(method);
+    const tooltip = info.description ? `title="${info.description}"` : '';
+    const clickable = `onclick="event.stopPropagation(); copyToClipboard('${info.text}')"`;
+
+    return `<span class="evo-card-method clickable-method" ${tooltip} ${clickable} style="cursor: pointer;">${info.html}</span>`;
+}
+
 // --- Evolution Tree Logic ---
 function renderEvoTree(node) {
     if (!node) return '';
@@ -496,7 +538,7 @@ function renderEvoTree(node) {
         <div class="evo-item ${node.children.length > 0 ? 'has-children' : ''}">
             <div class="evo-node-container">
                 <div class="evo-node-block">
-                    ${methodBadge}
+                    ${node.method ? `<div class="evo-method-label">${renderRequirementBadge(node.method)}</div>` : ''}
                     <div class="evo-card-h" onclick="openDigimonDetail('${node.name.replace(/'/g, "\\'")}')">
                         <div class="evo-hover-preview">
                             <img 
@@ -741,7 +783,7 @@ window.openDigimonDetail = (name, isBackAction = false) => {
                     ${renderStageBadge(p.name)}
                 </div>
                 <span class="evo-card-arrow">→</span>
-                <span class="evo-card-method clickable-method" onclick="event.stopPropagation(); copyToClipboard('${p.method || 'No info'}')" title="Click to copy">${p.method || 'No info in Discord'}</span>
+                ${renderRequirementBadge(p.method)}
             </div>
         `).join('') + '</div>';
     } else {
@@ -762,7 +804,7 @@ window.openDigimonDetail = (name, isBackAction = false) => {
                         loading="lazy"
                     />
                 </div>
-                <span class="evo-card-method clickable-method" onclick="event.stopPropagation(); copyToClipboard('${n.method || 'No info'}')" title="Click to copy">${n.method || 'No info in Discord'}</span>
+                ${renderRequirementBadge(n.method)}
                 <span class="evo-card-arrow">→</span>
                 <div style="display:flex; flex-direction:column; align-items:center;">
                     <div class="evo-profile-image-container" style="margin-bottom:0.25rem;">
