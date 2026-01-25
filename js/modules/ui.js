@@ -296,6 +296,106 @@ window.toggleTeam = (name) => {
     }
 };
 
+window.validateRandomCounts = () => {
+    const inputs = document.querySelectorAll('.rnd-count-input');
+    const autoFill = document.getElementById('rndAutoFill').checked;
+    let total = 0;
+
+    inputs.forEach(input => {
+        let val = parseInt(input.value) || 0;
+        if (val < 0) val = 0;
+        if (total + val > 6) {
+            val = 6 - total;
+        }
+        input.value = val;
+        total += val;
+    });
+
+    const display = document.getElementById('rndTotalDisplay');
+    if (display) {
+        display.textContent = `${total}/6 ${autoFill && total < 6 ? '(+ Fill)' : ''}`;
+    }
+};
+
+window.randomizeTeam = () => {
+    const inputs = document.querySelectorAll('.rnd-count-input');
+    const autoFill = document.getElementById('rndAutoFill').checked;
+    const newTeam = [];
+    const usedNames = new Set(); // Avoid potential duplicates if logic allows multiple methods
+
+    // 1. Process explicit counts
+    inputs.forEach(input => {
+        const count = parseInt(input.value) || 0;
+        const stage = input.getAttribute('data-stage');
+
+        if (count > 0) {
+            // Filter pool for this stage
+            let stagePool = [];
+            digimonMap.forEach(d => {
+                if (d.stage === stage && !usedNames.has(d.name)) {
+                    stagePool.push(d.name);
+                }
+            });
+
+            // Shuffle stage pool
+            for (let i = stagePool.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [stagePool[i], stagePool[j]] = [stagePool[j], stagePool[i]];
+            }
+
+            // Take needed count
+            const toTake = Math.min(count, stagePool.length);
+            for (let k = 0; k < toTake; k++) {
+                newTeam.push(stagePool[k]);
+                usedNames.add(stagePool[k]);
+            }
+        }
+    });
+
+    // 2. Auto-fill remaining if requested
+    if (autoFill && newTeam.length < 6) {
+        const needed = 6 - newTeam.length;
+        let globalPool = [];
+        // Pool of ANY stage (optionally we could respect only non-zero counters, but usually autofill implies random anything)
+        // Let's assume autofill means ANY stage acceptable
+        digimonMap.forEach(d => {
+            if (d.stage && !usedNames.has(d.name)) {
+                globalPool.push(d.name);
+            }
+        });
+
+        // Shuffle global pool
+        for (let i = globalPool.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [globalPool[i], globalPool[j]] = [globalPool[j], globalPool[i]];
+        }
+
+        const toTake = Math.min(needed, globalPool.length);
+        for (let k = 0; k < toTake; k++) {
+            newTeam.push(globalPool[k]);
+            usedNames.add(globalPool[k]); // strictly not needed as loop ends, but good practice
+        }
+    }
+
+    if (newTeam.length === 0) {
+        alert("Could not generate a team. Check your filters.");
+        return;
+    }
+
+    // 3. Save and Render
+    saveTeam(newTeam);
+    renderList(); // Update main list icons
+    renderTeamModal(); // Update modal grid
+    renderFloatingTeam(); // Update widget
+
+    // 4. Feedback
+    if (window.showToast) {
+        window.showToast(`Generated random team of ${newTeam.length}!`);
+    } else {
+        alert(`Generated random team of ${newTeam.length}!`);
+    }
+};
+
 window.toggleFavorite = (name) => {
     let favs = getFavorites();
     if (favs.includes(name)) {
@@ -486,7 +586,18 @@ function renderTeamModal() {
     });
     typeStatHtml += `</div></div>`;
 
-    stats.innerHTML = tacticalHtml + weaknessGroupHtml + coverageGroupHtml + typeStatHtml;
+    // Wrap all stats in a collapsible container
+    const fullStatsHtml = tacticalHtml + weaknessGroupHtml + coverageGroupHtml + typeStatHtml;
+
+    stats.innerHTML = `
+        <button class="analysis-toggle-btn" onclick="document.getElementById('teamAnalysisDetails').classList.toggle('hidden'); this.classList.toggle('active');">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Show Team Analysis
+        </button>
+        <div id="teamAnalysisDetails" class="team-analysis-content hidden">
+            ${fullStatsHtml}
+        </div>
+    `;
 }
 
 // --- Choice Modal Logic ---
