@@ -1,3 +1,15 @@
+const hasImmediateDataEvo = (digi) => getImmediateDataMethods(digi).length > 0;
+
+const getImmediateDataMethods = (digi) => {
+    if (!digi || !digi.next) return [];
+    return digi.next
+        .filter(n => {
+            const req = window.EVO_REQUIREMENTS && window.EVO_REQUIREMENTS[n.method];
+            return req && req.type === 'Data';
+        })
+        .map(n => n.method);
+};
+
 // --- Main List Rendering ---
 function renderList() {
     const listContainer = document.getElementById('digimonList');
@@ -17,7 +29,7 @@ function renderList() {
     const stageFilterValue = stageFilter ? stageFilter.value.trim() : '';
     const currentSort = sortOrder ? sortOrder.value : 'dex_asc';
 
-    const isSearching = nameFilter.length > 0 || locFilter.length > 0 || typeFilterValue.length > 0 || stageFilterValue.length > 0;
+    const isSearching = nameFilter.length > 0 || locFilter.length > 0 || typeFilterValue.length > 0 || stageFilterValue.length > 0 || isShowingDataEvos;
 
     let displayList = [];
     let totalCount = 0;
@@ -41,7 +53,15 @@ function renderList() {
                 matchesStage = digi.stage === stageFilterValue;
             }
 
-            if (matchesName && matchesLoc && matchesType && matchesStage) {
+            let matchesData = true;
+            if (isShowingDataEvos) {
+                matchesData = digi.next && digi.next.some(n => {
+                    const req = window.EVO_REQUIREMENTS && window.EVO_REQUIREMENTS[n.method];
+                    return req && req.type === 'Data';
+                });
+            }
+
+            if (matchesName && matchesLoc && matchesType && matchesStage && matchesData) {
                 displayList.push(digi);
             }
         });
@@ -68,6 +88,14 @@ function renderList() {
                 const levelA = a.cardLevel || 0;
                 const levelB = b.cardLevel || 0;
                 return levelA - levelB || a.name.localeCompare(b.name);
+            });
+        } else if (currentSort === 'data_evo') {
+            displayList.sort((a, b) => {
+                const hasA = hasImmediateDataEvo(a);
+                const hasB = hasImmediateDataEvo(b);
+                if (hasA && !hasB) return -1;
+                if (!hasA && hasB) return 1;
+                return a.name.localeCompare(b.name);
             });
         }
 
@@ -97,6 +125,14 @@ function renderList() {
                 const levelA = a.cardLevel || 0;
                 const levelB = b.cardLevel || 0;
                 return levelA - levelB || a.name.localeCompare(b.name);
+            });
+        } else if (currentSort === 'data_evo') {
+            displayList.sort((a, b) => {
+                const hasA = hasImmediateDataEvo(a);
+                const hasB = hasImmediateDataEvo(b);
+                if (hasA && !hasB) return -1;
+                if (!hasA && hasB) return 1;
+                return a.name.localeCompare(b.name);
             });
         }
         totalCount = baseForms.length;
@@ -166,9 +202,26 @@ function renderList() {
         const stageClass = digi.stage ? stageColorClass(digi.stage) : '';
         const stageHtml = stageText ? `<span class="stage-badge ${stageClass}">${stageText}</span>` : '';
 
+        // Data Evo Section (Compact & Informative)
+        let dataEvoHtml = '';
+        const dataMethods = getImmediateDataMethods(digi);
+        if (dataMethods.length > 0) {
+            const types = [...new Set(dataMethods)].map(m => m.replace(' Data', ''));
+            dataEvoHtml = `
+                <div class="data-evo-compact" title="Can evolve via Data items">
+                    <span class="data-prefix">Evolves via:</span>
+                    <div class="data-tag-row">
+                        ${types.map(t => `<span class="data-tag">${t}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
         const imageUrl = getImageUrl(digi.name);
 
         card.innerHTML = `
+            <div class="card-scanline"></div>
+            <div class="dex-id-badge">#${digi.id || '??'}</div>
             <div class="team-icon ${teamClass}" onclick="event.stopPropagation(); toggleTeam('${digi.name.replace(/'/g, "\\'")}')" title="Add to Team">${teamIconSvg}</div>
             <div class="fav-icon ${favClass}" onclick="event.stopPropagation(); toggleFavorite('${digi.name.replace(/'/g, "\\'")}')">★</div>
             <div class="digimon-profile-image-container">
@@ -182,8 +235,9 @@ function renderList() {
                 />
             </div>
             <div class="digimon-name">${digi.name}</div>
-            ${stageHtml}
             <div class="digimon-types">${renderTypeBadges(digi.types)}</div>
+            ${stageHtml}
+            ${dataEvoHtml}
             ${evoText}
             ${locHtml}
         `;
@@ -262,7 +316,9 @@ function renderFloatingTeam() {
             const d = digimonMap.get(name); // State dependency, accessible
             slot.className = 'ft-slot filled';
             slot.innerHTML = `
-                <button class="ft-remove-btn" onclick="event.stopPropagation(); toggleTeam('${name.replace(/'/g, "\\'")}')">×</button>
+                <button class="ft-remove-btn" onclick="event.stopPropagation(); toggleTeam('${name.replace(/'/g, "\\'")}')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
                 <div class="ft-profile-image-container">
                     <img 
                         src="${getImageUrl(name)}" 
@@ -277,7 +333,7 @@ function renderFloatingTeam() {
             slot.onclick = () => window.openDigimonDetail(name);
         } else {
             slot.className = 'ft-slot empty';
-            slot.innerHTML = '+';
+            slot.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.3;"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>`;
         }
         grid.appendChild(slot);
     }
@@ -295,14 +351,28 @@ function renderTeamModal() {
 
     if (team.length === 0) {
         grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; color:rgba(255,255,255,0.5);">Your team is empty. Add Digimon from the main list.</div>';
-        return;
     }
+
+    // Clear Search in Modal
+    const teamSearchInput = document.querySelector('#teamModal .shared-digi-search');
+    if (teamSearchInput) {
+        teamSearchInput.value = '';
+        const res = document.getElementById('teamSearchResults');
+        if (res) res.innerHTML = '';
+    }
+
+    // SVGs for Team Icons
+    const iconShield = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`;
+    const iconSword = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"></polyline><line x1="13" y1="19" x2="19" y2="13"></line><line x1="16" y1="16" x2="20" y2="20"></line><line x1="19" y1="21" x2="21" y2="19"></line></svg>`;
+    const iconZap = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>`;
+    const iconWarning = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>`;
 
     // Stats Analysis
     let typeCounts = {};
     let stageCounts = {};
-    let totalLevels = 0;
-    let count = 0;
+    let offensiveCoverage = new Set();
+    let teamWeaknesses = {};
+    let powerScore = 0;
 
     team.forEach(name => {
         const d = digimonMap.get(name);
@@ -313,7 +383,9 @@ function renderTeamModal() {
         card.className = 'team-member-card';
         const imageUrl = getImageUrl(name);
         card.innerHTML = `
-            <button class="team-remove-btn" onclick="toggleTeam('${name.replace(/'/g, "\\'")}')">×</button>
+            <button class="team-remove-btn" onclick="toggleTeam('${name.replace(/'/g, "\\'")}')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
             <div class="digimon-profile-image-container" style="width: 70px; height: 70px; margin: 0 auto 0.5rem; border-width: 2px;">
                 <img 
                     src="${imageUrl}" 
@@ -325,25 +397,70 @@ function renderTeamModal() {
                 />
             </div>
             <div class="digimon-name" style="font-size: 0.9rem;">${d.name}</div>
-            ${renderStageBadge(d.name)}
-            <div class="digimon-types" style="justify-content:center;">${renderTypeBadges(d.types)}</div>
+            ${renderTypeBadges(d.types)}
+            <div style="margin-top:0.5rem;">${renderStageBadge(d.name)}</div>
         `;
         card.onclick = () => window.openDigimonDetail(name);
         grid.appendChild(card);
 
         // Analysis Data
-        if (d.types) d.types.forEach(t => typeCounts[t] = (typeCounts[t] || 0) + 1);
-        if (d.stage) stageCounts[d.stage] = (stageCounts[d.stage] || 0) + 1;
-        if (d.cardLevel) {
-            totalLevels += d.cardLevel;
-            count++;
+        if (d.types) {
+            d.types.forEach(t => {
+                typeCounts[t] = (typeCounts[t] || 0) + 1;
+
+                // Track weaknesses and coverage if chart exists
+                if (window.TYPE_CHART && window.TYPE_CHART[t]) {
+                    const chart = window.TYPE_CHART[t];
+                    if (chart.strong) chart.strong.forEach(s => offensiveCoverage.add(s));
+                    if (chart.weak) chart.weak.forEach(w => teamWeaknesses[w] = (teamWeaknesses[w] || 0) + 1);
+                }
+            });
+        }
+        if (d.stage) {
+            stageCounts[d.stage] = (stageCounts[d.stage] || 0) + 1;
+            // Power Score Calculation
+            const stageOrder = ["Baby", "In-Training", "Rookie", "Champion", "Ultimate", "Mega", "Ultra"];
+            powerScore += (stageOrder.indexOf(d.stage) + 1) * 10;
         }
     });
 
-    // Render Stats
-    // 1. Type Distribution
+    // Tactical Dashboard
+    const totalMembers = team.length || 1;
+    const avgScore = Math.floor(powerScore / totalMembers);
+
+    // Sort weaknesses to show most dangerous
+    const sortedWeak = Object.entries(teamWeaknesses).sort((a, b) => b[1] - a[1]).slice(0, 5);
+    const sortedCoverage = Array.from(offensiveCoverage).sort();
+
+    let tacticalHtml = `
+        <div class="team-tactical-row">
+            <div class="team-tactical-badge">${iconZap} Power Score: ${avgScore}</div>
+            <div class="team-tactical-badge">${iconShield} Defense Check: ${sortedWeak.length > 3 ? 'Gaps Detected' : 'Solid'}</div>
+            <div class="team-tactical-badge">${iconSword} Coverage: ${offensiveCoverage.size} Types</div>
+        </div>
+    `;
+
+    // 1. Weakness Group
+    let weaknessGroupHtml = `<div class="stat-group">
+        <div class="stat-title"><span>${iconWarning} Team Weaknesses</span></div>
+        <div class="coverage-pills">
+            ${sortedWeak.map(([type, count]) => `<span class="coverage-pill weak">${type} x${count}</span>`).join('')}
+            ${sortedWeak.length === 0 ? '<span style="font-size:0.7rem; opacity:0.5;">No critical weaknesses identified.</span>' : ''}
+        </div>
+    </div>`;
+
+    // 2. Coverage Group
+    let coverageGroupHtml = `<div class="stat-group">
+        <div class="stat-title"><span>${iconSword} Offensive Coverage</span></div>
+        <div class="coverage-pills">
+            ${sortedCoverage.map(type => `<span class="coverage-pill resists">${type}</span>`).join('')}
+            ${sortedCoverage.length === 0 ? '<span style="font-size:0.7rem; opacity:0.5;">Add attackers to see coverage.</span>' : ''}
+        </div>
+    </div>`;
+
+    // 3. Type Distribution
     const sortedTypes = Object.entries(typeCounts).sort((a, b) => b[1] - a[1]);
-    let typeStatHtml = `<div class="stat-group"><div class="stat-title">Type Distribution</div><div class="stat-bars">`;
+    let typeStatHtml = `<div class="stat-group"><div class="stat-title">Type Balance</div><div class="stat-bars">`;
     sortedTypes.forEach(([type, c]) => {
         const percent = (c / team.length) * 100;
         typeStatHtml += `
@@ -355,21 +472,7 @@ function renderTeamModal() {
     });
     typeStatHtml += `</div></div>`;
 
-    // 2. Stage Distribution
-    const sortedStages = Object.entries(stageCounts).sort((a, b) => b[1] - a[1]);
-    let stageStatHtml = `<div class="stat-group"><div class="stat-title">Stage Balance</div><div class="stat-bars">`;
-    sortedStages.forEach(([stage, c]) => {
-        const percent = (c / team.length) * 100;
-        stageStatHtml += `
-            <div class="stat-bar-item">
-                <div class="stat-bar-label">${stage}</div>
-                <div class="stat-bar-track"><div class="stat-bar-fill ${stageColorClass(stage)}" style="width:${percent}%"></div></div>
-                <div class="stat-value">${c}</div>
-            </div>`;
-    });
-    stageStatHtml += `</div></div>`;
-
-    stats.innerHTML = typeStatHtml + stageStatHtml;
+    stats.innerHTML = tacticalHtml + weaknessGroupHtml + coverageGroupHtml + typeStatHtml;
 }
 
 // --- Choice Modal Logic ---
@@ -407,6 +510,13 @@ window.openChoiceModal = function (name) {
     }
 
     choiceModal.classList.remove('hidden');
+
+    // Clear Search in Modal
+    const choiceSearchInput = document.getElementById('choiceSearchInput');
+    if (choiceSearchInput) {
+        choiceSearchInput.value = '';
+        renderChoiceSearchResults();
+    }
 
     // Rebind onclicks for this specific digimon
     document.getElementById('btnChoiceEvo').onclick = () => {
@@ -462,6 +572,9 @@ function closeAllModals() {
     if (battleModal) battleModal.classList.add('hidden');
     if (dataDropsModal) dataDropsModal.classList.add('hidden');
     if (document.getElementById('debugEvoModal')) document.getElementById('debugEvoModal').classList.add('hidden');
+
+    const detailModalSearch = document.getElementById('detailModalSearch');
+    if (detailModalSearch) detailModalSearch.style.display = 'none';
 
     modalHistory = [];
 }
@@ -609,6 +722,15 @@ window.openEvoTree = (nameOrObj) => {
     const detailModal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
     if (!detailModal || !modalBody) return;
+
+    const detailModalSearch = document.getElementById('detailModalSearch');
+    if (detailModalSearch) {
+        detailModalSearch.style.display = 'block';
+        const input = detailModalSearch.querySelector('input');
+        if (input) input.value = '';
+        const res = document.getElementById('detailSearchResults');
+        if (res) res.innerHTML = '';
+    }
 
     modalBody.innerHTML = `
         <div class="modal-header">
@@ -874,6 +996,15 @@ window.openDigimonDetail = (name, isBackAction = false) => {
     const detailModal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
     if (!detailModal || !modalBody) return;
+
+    const detailModalSearch = document.getElementById('detailModalSearch');
+    if (detailModalSearch) {
+        detailModalSearch.style.display = 'block';
+        const input = detailModalSearch.querySelector('input');
+        if (input) input.value = '';
+        const res = document.getElementById('detailSearchResults');
+        if (res) res.innerHTML = '';
+    }
 
     modalBody.innerHTML = `
         <div class="modal-nav-bar">${backBtnHtml}</div>
@@ -1203,8 +1334,47 @@ function renderDataDropsList(highlightData = null) {
     }
 }
 
+// --- Shared Modal Quick Search Logic ---
+function renderSharedSearchResult(inputEl) {
+    if (!inputEl) return;
+    const resultsId = inputEl.getAttribute('data-results');
+    const container = document.getElementById(resultsId);
+    if (!container) return;
+
+    const query = inputEl.value.trim().toLowerCase();
+    if (!query) {
+        container.innerHTML = '';
+        return;
+    }
+
+    const matches = Array.from(digimonMap.values())
+        .filter(d => d.name.toLowerCase().includes(query))
+        .slice(0, 12);
+
+    if (matches.length === 0) {
+        container.innerHTML = `<div style="text-align:center; padding: 0.5rem; font-size: 0.8rem; color: var(--text-secondary);">No results</div>`;
+        return;
+    }
+
+    container.innerHTML = matches.map(d => `
+        <div class="choice-search-item" onclick="window.openDigimonChoice('${d.name.replace(/'/g, "\\'")}')">
+            <img src="${getImageUrl(d.name)}" class="csi-img" onerror="handleImageError(this, '${d.name.replace(/'/g, "\\'")}');" loading="lazy">
+            <span class="csi-name">${d.name}</span>
+            <span class="csi-sub">${d.stage || ''}</span>
+        </div>
+    `).join('');
+}
+
+function renderChoiceSearchResults() {
+    const input = document.getElementById('choiceSearchInput');
+    renderSharedSearchResult(input);
+}
+
+
 // Global exposure
 window.openDebugEvoModal = openDebugEvoModal;
 window.exportDebugEvoList = exportDebugEvoList;
 window.openDataDropsModal = openDataDropsModal;
 window.renderDataDropsList = renderDataDropsList;
+window.renderChoiceSearchResults = renderChoiceSearchResults;
+window.renderSharedSearchResult = renderSharedSearchResult;

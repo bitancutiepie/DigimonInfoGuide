@@ -133,6 +133,7 @@
                             <option value="evo_count">Sort: Evo Count</option>
                             <option value="stage_asc">Sort: Stage (Rookie → Mega)</option>
                             <option value="card_asc">Sort: Card Level (3-7)</option>
+                            <option value="data_evo">Sort: Data Evolutions First</option>
                         </select>
                         <span class="select-arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
@@ -209,7 +210,23 @@
                                 points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
                             </polygon>
                         </svg>
-                        Show Favorites
+                        Favorites
+                    </button>
+                    <button id="showDataEvosBtn" class="filter-btn" title="Show Digimon that evolve using Data items">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                            <rect x="9" y="9" width="6" height="6"></rect>
+                            <line x1="9" y1="1" x2="9" y2="4"></line>
+                            <line x1="15" y1="1" x2="15" y2="4"></line>
+                            <line x1="9" y1="20" x2="9" y2="23"></line>
+                            <line x1="15" y1="20" x2="15" y2="23"></line>
+                            <line x1="20" y1="9" x2="23" y2="9"></line>
+                            <line x1="20" y1="15" x2="23" y2="15"></line>
+                            <line x1="1" y1="9" x2="4" y2="9"></line>
+                            <line x1="1" y1="15" x2="4" y2="15"></line>
+                        </svg>
+                        Data Evos
                     </button>
                     <button id="viewDataDropsBtn" class="filter-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -267,6 +284,25 @@
         <div id="detailModal" class="modal hidden">
             <div class="modal-content">
                 <span class="close-modal">&times;</span>
+                <div class="choice-search-section" id="detailModalSearch">
+                    <div class="choice-search-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <span>Find other Digimon</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="shared-digi-search" data-results="detailSearchResults"
+                            placeholder="Quick find..." autocomplete="off">
+                        <button type="button" class="clear-input-btn hidden"
+                            onclick="const i = this.previousElementSibling; i.value = ''; this.classList.add('hidden'); window.renderSharedSearchResult(i);">
+                            &times;
+                        </button>
+                    </div>
+                    <div id="detailSearchResults" class="choice-search-results"></div>
+                </div>
                 <div id="modalBody">
                     <!-- Dynamic Content -->
                 </div>
@@ -324,6 +360,26 @@
                     <h2>Team Planner <span style="font-size:0.8em; opacity:0.7; font-weight:normal;">(Max 6)</span></h2>
                 </div>
 
+                <div class="choice-search-section">
+                    <div class="choice-search-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <span>Find other Digimon</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="shared-digi-search" data-results="teamSearchResults"
+                            placeholder="Quick find..." autocomplete="off">
+                        <button type="button" class="clear-input-btn hidden"
+                            onclick="const i = this.previousElementSibling; i.value = ''; this.classList.add('hidden'); window.renderSharedSearchResult(i);">
+                            &times;
+                        </button>
+                    </div>
+                    <div id="teamSearchResults" class="choice-search-results"></div>
+                </div>
+
                 <div id="teamStats" class="team-stats">
                     <!-- Analysis Stats will go here -->
                 </div>
@@ -336,7 +392,6 @@
 
                 <div class="team-actions">
                     <button id="clearTeamBtn" class="reset-all-btn">Clear Team</button>
-                    <!-- Potential optimized suggestions or sharing -->
                 </div>
             </div>
         </div>
@@ -349,19 +404,119 @@
                     <span class="patch-version">v1.3.2</span>
                 </div>
                 <div class="patch-body">
+                    <h3 class="patch-subheader">What's New!</h3>
+                    <ul class="patch-list" style="margin-bottom: 2.5rem;">
+                        <li>
+                            <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg> Cooler Cards</strong>
+                            Cards look better and glow! No more laggy lines.
+                        </li>
+                        <li>
+                            <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                </svg> Digimon Numbers</strong>
+                            Every Digimon has a special number on its card now!
+                        </li>
+                        <li>
+                            <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"></polyline>
+                                    <line x1="13" y1="19" x2="19" y2="13"></line>
+                                    <line x1="16" y1="16" x2="20" y2="20"></line>
+                                    <line x1="19" y1="21" x2="21" y2="19"></line>
+                                </svg> Helpful Team</strong>
+                            The team maker now tells you if your team is super strong!
+                        </li>
+                        <li>
+                            <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg> Battle Tips</strong>
+                            We added better tips and neat icons to help you win fights!
+                        </li>
+                        <li>
+                            <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg> Fast Search</strong>
+                            Finding Digimon is now much faster and easier to use.
+                        </li>
+                    </ul>
+
+                    <h3 class="patch-subheader">What this site can do</h3>
                     <ul class="patch-list">
-                        <li><strong>New: Evolution Requirements!</strong> Requirements (Items, Moves, Data, Traits) now
-                            have color-coded badges and descriptions.</li>
-                        <li><strong>New: Battle Analyzer!</strong> Analyze matchups, team roles (Ace/Tank), and get
-                            strategic advice.</li>
-                        <li><strong>Fixed Duplicate Text:</strong> Resolved issue where "Organic Data" and other text
-                            appeared multiple times.</li>
-                        <li><strong>Locations Restored:</strong> The Locations feature is back with improved styling and
-                            grid view.</li>
-                        <li><strong>Evolution Tree:</strong> Restored full interactivity, zooming, and detailed
-                            evolution paths.</li>
-                        <li><strong>Data Cleanup:</strong> Corrected database errors for cleaner Digimon profiles.</li>
-                        <li><strong>Performance:</strong> Smoother loading for images and modal transitions.</li>
+                        <li>
+                            <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg> Digi-Finder</strong>
+                            Search for any Digimon and see their cool powers!
+                        </li>
+                        <li>
+                            <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                                    <path d="M18 13l-1.5-7.5L4 2l3.5 11.5L13 18l5-5z"></path>
+                                    <path d="M2 2l5 5"></path>
+                                    <path d="M9.5 7.5L4.5 2.5"></path>
+                                </svg> Growth Trees</strong>
+                            See exactly how your Digimon grow and turn into bigger friends!
+                        </li>
+                        <li>
+                            <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg> Team Maker</strong>
+                            Pick your favorites and put them together into an awesome team!
+                        </li>
+                        <li>
+                            <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"></polyline>
+                                    <line x1="13" y1="19" x2="19" y2="13"></line>
+                                </svg> Fight Helper</strong>
+                            Not sure who to pick? We tell you who is best in a fight!
+                        </li>
+                        <li>
+                            <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg> Hiding Places</strong>
+                            See exactly where all the Digimon are hiding in the game!
+                        </li>
+                        <li>
+                            <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                    </path>
+                                </svg> Evo Guide</strong>
+                            Find out which special items you need to make your Digimon grow bigger!
+                        </li>
                     </ul>
                 </div>
                 <button id="closePatchBtn" class="patch-done-btn">Got it!</button>
@@ -466,6 +621,26 @@
         <div id="choiceModal" class="modal hidden choice-modal">
             <div class="modal-content choice-modal-content">
                 <span class="close-modal" id="closeChoiceModal">&times;</span>
+                <div class="choice-search-section">
+                    <div class="choice-search-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <span>Find other Digimon</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="choiceSearchInput" class="shared-digi-search"
+                            data-results="choiceSearchResults" placeholder="Quick find..." autocomplete="off">
+                        <button type="button" class="clear-input-btn hidden" id="clearChoiceSearchBtn"
+                            onclick="const i = document.getElementById('choiceSearchInput'); i.value = ''; this.classList.add('hidden'); window.renderSharedSearchResult(i);">
+                            &times;
+                        </button>
+                    </div>
+                    <div id="choiceSearchResults" class="choice-search-results"></div>
+                </div>
+
                 <div class="choice-header">
                     <div class="digimon-profile-image-container choice-icon-container">
                         <img id="choiceIcon" src="" alt="" class="digimon-profile-image">
@@ -555,18 +730,17 @@
                                     <path d="M3 5h4"></path>
                                     <path d="M17 19h4"></path>
                                 </svg>
-                                <h3>New Digimon</h3>
+                                <h3>New Digimon & Evolutions</h3>
                             </div>
                             <ul class="compact-list">
-                                <li><strong>Meicoomon Line:</strong> Full line added (7 Digimon) under Cycling Road.
-                                </li>
+                                <li><strong>Meicoomon Line:</strong> Full line (7 Digimon) added to Cycling Road.</li>
                                 <li><strong>Gaioumon Itto Mode:</strong> Gaioumon + Tenrin-Ittoryu kenjutsu.</li>
                                 <li><strong>Minervamon & Mervamon:</strong> Wormmon + Light Data → Coatlmon → Sandiramon
                                     → Minervamon → Mervamon.</li>
                                 <li><strong>Tengumon Line:</strong> Peckmon + Wind Data → Karatenmon → Tengumon.</li>
-                                <li><strong>Seiten Gokuwmon:</strong> Gokuwmon Evolution.</li>
+                                <li><strong>Seiten Gokuwmon:</strong> New evolution for Gokuwmon.</li>
                                 <li><strong>Subspecies:</strong> VictoryGreymon & Z'dGarurumon added.</li>
-                                <li><strong>SkullGreymon:</strong> Greymon + Dark Data.</li>
+                                <li><strong>SkullGreymon:</strong> Greymon + Dark Data evolution path.</li>
                             </ul>
                         </section>
                         <section class="patch-section">
@@ -576,12 +750,12 @@
                                     stroke-linejoin="round" class="section-icon">
                                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
                                 </svg>
-                                <h3>Crossover</h3>
+                                <h3>Special Units & Crossovers</h3>
                             </div>
                             <ul class="compact-list">
-                                <li><strong>Medabots:</strong> Kabuterimon/Kuwagamon + AW Data → Metabee/Rokusho.
-                                    Jogress to Omedamon.</li>
-                                <li><strong>Kaiju:</strong> SkullGreymon + G-Cells → G-Erosion Mode.</li>
+                                <li><strong>Medabots:</strong> Kabuterimon/Kuwagamon + AW Data → Metabee/Rokusho
+                                    (Jogress to Omedamon).</li>
+                                <li><strong>Kaiju Series:</strong> SkullGreymon + G-Cells → G-Erosion Mode.</li>
                             </ul>
                         </section>
                         <section class="patch-section">
@@ -592,33 +766,15 @@
                                     <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"></polyline>
                                     <line x1="13" y1="19" x2="19" y2="13"></line>
                                     <line x1="16" y1="22" x2="22" y2="16"></line>
-                                    <polyline points="9.5 17.5 21 6 21 3 18 3 6.5 14.5"></polyline>
-                                    <line x1="11" y1="19" x2="5" y2="13"></line>
-                                    <line x1="8" y1="22" x2="2" y2="16"></line>
                                 </svg>
-                                <h3>Gameplay</h3>
+                                <h3>Gameplay & Map Updates</h3>
                             </div>
                             <ul class="compact-list">
                                 <li><strong>"Cloud" Item:</strong> Available at Battle Frontier Mart (Expensive).</li>
                                 <li><strong>Jogress Encounters:</strong> Catchable in BF Cave without "Cloud" item (Low
                                     rate).</li>
-                                <li><strong>Shiny Digimon:</strong> Encounter rate increased.</li>
-                            </ul>
-                        </section>
-                        <section class="patch-section">
-                            <div class="section-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="section-icon">
-                                    <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
-                                    <line x1="8" y1="2" x2="8" y2="18"></line>
-                                    <line x1="16" y1="6" x2="16" y2="22"></line>
-                                </svg>
-                                <h3>Map Updates</h3>
-                            </div>
-                            <ul class="compact-list">
-                                <li><strong>Culumon Cave:</strong> Added Cutemon.</li>
-                                <li><strong>Safari Zone:</strong> Roster updated.</li>
+                                <li><strong>Shiny Logic:</strong> Overall encounter rate increased.</li>
+                                <li><strong>Map Updates:</strong> Safari Zone and Culumon Cave rosters refreshed.</li>
                             </ul>
                         </section>
                     </div>
@@ -633,6 +789,26 @@
                 <div class="modal-header">
                     <h2>Battle Pocket Helper</h2>
                 </div>
+                <div class="choice-search-section">
+                    <div class="choice-search-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <span>Find other Digimon</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="shared-digi-search" data-results="battleSearchResults"
+                            placeholder="Quick find..." autocomplete="off">
+                        <button type="button" class="clear-input-btn hidden"
+                            onclick="const i = this.previousElementSibling; i.value = ''; this.classList.add('hidden'); window.renderSharedSearchResult(i);">
+                            &times;
+                        </button>
+                    </div>
+                    <div id="battleSearchResults" class="choice-search-results"></div>
+                </div>
+
                 <div id="battleContent" class="battle-content">
                     <!-- Dynamic Battle Analysis -->
                 </div>

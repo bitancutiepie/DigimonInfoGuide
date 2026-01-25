@@ -519,6 +519,62 @@
     align-items: center;
 }
 
+/* Tactical Badges for Team */
+.team-tactical-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.team-tactical-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.team-tactical-badge svg {
+    color: var(--accent);
+}
+
+.coverage-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+.coverage-pill {
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+}
+
+.coverage-pill.weak {
+    border-color: rgba(255, 77, 77, 0.5);
+    color: #ff8e8e;
+    background: rgba(255, 77, 77, 0.1);
+}
+
+.coverage-pill.resists {
+    border-color: rgba(79, 172, 254, 0.5);
+    color: #80d8ff;
+    background: rgba(79, 172, 254, 0.1);
+}
+
+
 .stat-bars {
     display: flex;
     flex-direction: column;
@@ -827,45 +883,98 @@
     font-size: 0.8rem;
 }
 
-/* Patch List Revamp */
+.patch-subheader {
+    font-family: var(--font-heading);
+    color: var(--accent);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 1.5rem 0 1rem;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.patch-subheader::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0, 242, 255, 0.3), transparent);
+}
+
+
+/* Patch List Revamp - Tactical Cards */
 .patch-list {
     list-style: none;
     margin-bottom: 2rem;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
 }
 
 .patch-list li {
-    background: rgba(255, 255, 255, 0.05);
-    border-left: 3px solid var(--accent);
-    padding: 1rem;
-    border-radius: 0 8px 8px 0;
-    font-size: 0.95rem;
+    background: rgba(15, 37, 48, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 242, 255, 0.15);
+    padding: 1.25rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
     color: var(--text-secondary);
     line-height: 1.5;
-    transition: all 0.2s ease;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow: hidden;
+}
+
+/* Tactical Corner for Patch Cards */
+.patch-list li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--accent);
+    border-left: none;
+    border-bottom: none;
+    opacity: 0.4;
+    transition: all 0.3s ease;
 }
 
 .patch-list li:hover {
-    background: rgba(0, 242, 255, 0.08);
-    transform: translateX(5px);
+    background: rgba(20, 56, 69, 0.82);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 242, 255, 0.1);
     color: #fff;
 }
 
-.patch-list li strong {
-    display: block;
-    color: var(--accent);
-    font-family: var(--font-heading);
-    font-size: 1.05rem;
-    margin-bottom: 0.2rem;
-    letter-spacing: 0.5px;
+.patch-list li:hover::after {
+    opacity: 1;
+    width: 25px;
+    height: 25px;
 }
 
-.patch-list li::before {
-    display: none;
+.patch-list li strong {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
+
+.patch-list li strong svg {
+    flex-shrink: 0;
+}
+
 
 .patch-done-btn {
     width: 100%;
@@ -1323,6 +1432,132 @@
     color: var(--text-secondary);
     font-style: italic;
 }
+
+/* Battle Babysitting QOL */
+.tactical-advice {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    border-left: 3px solid #555;
+    color: var(--text-secondary);
+}
+
+.advice-safe {
+    border-color: #4caf50;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.advice-danger {
+    border-color: #f44336;
+    background: rgba(244, 67, 54, 0.1);
+}
+
+.advice-caution {
+    border-color: #ff9800;
+    background: rgba(255, 152, 0, 0.1);
+}
+
+.advice-title {
+    display: block;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+.advice-safe .advice-title {
+    color: #81c784;
+}
+
+.advice-danger .advice-title {
+    color: #ef9a9a;
+}
+
+.advice-caution .advice-title {
+    color: #ffb74d;
+}
+
+.tactical-matchups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.tactical-tag {
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tag-offensive {
+    border-color: rgba(255, 107, 107, 0.4);
+    color: #ff8e8e;
+}
+
+.tag-defensive {
+    border-color: rgba(79, 172, 254, 0.4);
+    color: #80d8ff;
+}
+
+.tag-warning {
+    border-color: rgba(255, 77, 77, 0.6);
+    color: #ff5252;
+    background: rgba(255, 77, 77, 0.1);
+}
+
+/* Role Badge Updates */
+.role-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    margin-top: 4px;
+    text-transform: uppercase;
+}
+
+.role-ace {
+    background: rgba(0, 242, 255, 0.2);
+    color: #00f2ff;
+    border: 1px solid #00f2ff;
+}
+
+.role-striker {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+}
+
+.role-tank {
+    background: rgba(79, 172, 254, 0.2);
+    color: #4facfe;
+    border: 1px solid #4facfe;
+}
+
+.role-risky {
+    background: rgba(255, 77, 77, 0.2);
+    color: #ff4d4d;
+    border: 1px solid #ff4d4d;
+}
+
+.role-neutral {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+}
+
 
 @media (max-width: 600px) {
     .battle-header-info {

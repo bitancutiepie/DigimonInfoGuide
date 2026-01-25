@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const clearTypeBtn = document.getElementById('clearTypeBtn');
     const clearStageBtn = document.getElementById('clearStageBtn');
     const backToTopBtn = document.getElementById('backToTop');
+    const showDataEvosBtn = document.getElementById('showDataEvosBtn');
 
     // Clear Button Helper
     function updateClearButton(inputId, btnId, isSelect = false) {
@@ -76,6 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
             renderList();
         });
     }
+    if (showDataEvosBtn) {
+        showDataEvosBtn.addEventListener('click', () => {
+            isShowingDataEvos = !isShowingDataEvos;
+            showDataEvosBtn.classList.toggle('active', isShowingDataEvos);
+            renderList();
+        });
+    }
     if (resetAllBtn) {
         resetAllBtn.addEventListener('click', () => {
             if (searchInput) { searchInput.value = ''; updateClearButton('searchInput', 'clearNameBtn'); }
@@ -84,7 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (stageFilter) { stageFilter.selectedIndex = 0; updateClearButton('stageFilter', 'clearStageBtn', true); }
             if (sortOrder) sortOrder.value = 'dex_asc'; // Default
             isShowingFavorites = false;
+            isShowingDataEvos = false;
             if (showFavsBtn) showFavsBtn.classList.remove('active');
+            if (showDataEvosBtn) showDataEvosBtn.classList.remove('active');
             renderList();
         });
     }
@@ -163,6 +173,31 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.target === gameNewsModal) gameNewsModal.classList.add('hidden');
         });
     }
+
+    // Shared Modal Quick Search
+    document.addEventListener('input', (e) => {
+        if (e.target.classList.contains('shared-digi-search')) {
+            if (window.renderSharedSearchResult) window.renderSharedSearchResult(e.target);
+            const clearBtn = e.target.nextElementSibling;
+            if (clearBtn && clearBtn.classList.contains('clear-input-btn')) {
+                if (e.target.value) clearBtn.classList.remove('hidden');
+                else clearBtn.classList.add('hidden');
+            }
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.target.classList.contains('shared-digi-search')) {
+            if (e.key === 'Enter') {
+                const resultsId = e.target.getAttribute('data-results');
+                const results = document.getElementById(resultsId);
+                if (results) {
+                    const firstResult = results.querySelector('.choice-search-item');
+                    if (firstResult) firstResult.click();
+                }
+            }
+        }
+    });
 
     // Data Drops Modal
     const dataDropsModal = document.getElementById('dataDropsModal');
@@ -265,6 +300,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === locationDetailModal) locationDetailModal.classList.add('hidden');
         if (e.target === teamModal) teamModal.classList.add('hidden');
         if (e.target === dataDropsModal) dataDropsModal.classList.add('hidden');
+        if (e.target === document.getElementById('choiceModal')) {
+            document.getElementById('choiceModal').classList.add('hidden');
+        }
         if (e.target === document.getElementById('debugEvoModal')) {
             document.getElementById('debugEvoModal').classList.add('hidden');
         }
