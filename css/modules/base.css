@@ -10,8 +10,8 @@ html {
 
 body {
     background-color: var(--bg-color);
-    background-image: url('../../assets/bg.png');
-    /* Adjusted path for module */
+    background-image: url('../assets/bg.png');
+    /* Note: Path relative to bundle.css location */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
