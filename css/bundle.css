@@ -2513,6 +2513,45 @@ body::before {
     transform: scale(1.1);
 }
 
+.ft-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.ft-control-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-secondary);
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    padding: 0;
+}
+
+.ft-control-btn:hover {
+    background: rgba(0, 242, 255, 0.1);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.collapse-icon {
+    transition: transform 0.3s;
+}
+
+.floating-team-widget.collapsed .ft-grid {
+    display: none;
+}
+
+.floating-team-widget.collapsed .collapse-icon {
+    transform: rotate(180deg);
+}
+
+
 /* Modal Team Button */
 .modal-team-btn {
     background: transparent;
