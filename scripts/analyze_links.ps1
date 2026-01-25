@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Continue"
 
-$content = Get-Content 'd:\DigimonGuider\guide_content.js' -Raw
+$content = Get-Content 'd:\DigimonGuider\data\guide_content.js' -Raw
 # Split by { "id":
 $chunks = $content -split '(?:\r?\n|^)\s*\{\s*"id":'
 
@@ -81,6 +81,7 @@ foreach ($name in $dbMap.Keys) {
     }
 }
 
-$issues | Sort-Object -Unique | Out-File 'd:\DigimonGuider\internal_issues.txt' -Encoding UTF8
+$issues | Sort-Object -Unique | Out-File 'd:\DigimonGuider\docs\internal_issues.txt' -Encoding UTF8
 Write-Host "Found $($issues.Count) internal inconsistency issues."
 $issues | Select-Object -First 20
+

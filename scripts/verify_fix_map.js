@@ -3,8 +3,9 @@ const fs = require('fs');
 const http = require('https');
 const { exec } = require('child_process');
 
+const path = require('path');
 // Read reference map
-let mapContent = fs.readFileSync('reference_map.js', 'utf8');
+let mapContent = fs.readFileSync(path.join(__dirname, '../data/reference_map.js'), 'utf8');
 global.window = {};
 eval(mapContent);
 const map = window.REFERENCE_IMAGE_MAP;

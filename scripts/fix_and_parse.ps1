@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-$content = Get-Content 'd:\DigimonGuider\guide_content.js' -Raw
+$content = Get-Content 'd:\DigimonGuider\data\guide_content.js' -Raw
 # Remove single line comments
 $content = $content -replace '//.*', ''
 # Remove block comments (simple version, might break if strings contain */)
@@ -23,3 +23,4 @@ catch {
     # Print the first few chars to see what's wrong
     Write-Host "Start of content: $($content.Substring(0, 100))"
 }
+

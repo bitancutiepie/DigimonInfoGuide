@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 
 try {
-    $content = Get-Content 'd:\DigimonGuider\guide_content.js' -Raw
+    $content = Get-Content 'd:\DigimonGuider\data\guide_content.js' -Raw
     # Remove the variable assignment and semicolon
     $jsonC = $content -replace '^const DIGIMON_DB =', '' -replace ';$', ''
     $data = $jsonC | ConvertFrom-Json
@@ -57,3 +57,4 @@ $data | Select-Object -First 5 | ForEach-Object {
     Write-Host "$($_.name) - $($_.stage)"
     if ($_.next) { Write-Host "  Next: $($_.next.name -join ', ')" }
 }
+

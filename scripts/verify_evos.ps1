@@ -7,7 +7,7 @@ $csvContent = Get-Content 'd:\DigimonGuider\reference\Evo Notes.xlsx - Notes Exp
 $referenceList = $csvContent | ConvertFrom-Csv -Header "Name", "EvolutionRaw"
 
 # 2. Read DB
-$dbContent = Get-Content 'd:\DigimonGuider\guide_content.js' -Raw
+$dbContent = Get-Content 'd:\DigimonGuider\data\guide_content.js' -Raw
 
 # Helper to normalize strings (remove extra spaces)
 function Normalize-String($s) {
@@ -138,6 +138,7 @@ foreach ($row in $referenceList) {
     }
 }
 
-$issues | Out-File 'd:\DigimonGuider\evo_issues.txt' -Encoding UTF8
+$issues | Out-File 'd:\DigimonGuider\docs\evo_issues.txt' -Encoding UTF8
 Write-Host "Found $($issues.Count) issues. Saved to evo_issues.txt"
 $issues | Select-Object -First 20
+

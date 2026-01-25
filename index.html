@@ -8,7 +8,7 @@
     <meta name="description"
         content="Ultimate evolution and location guide for Digimon Trials. Find your favorit Digimon, their evolution paths, and where to catch them.">
     <meta name="keywords" content="Digimon, Digimon Trials, Evolution Guide, Digimon Locations, Type Chart">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -30,7 +30,7 @@
 
     <div class="app-container">
         <header class="main-header">
-            <img src="banner.png" alt="Digimon Info Guide - For the Game Digimon Trials" class="banner-image"
+            <img src="assets/banner.png" alt="Digimon Info Guide - For the Game Digimon Trials" class="banner-image"
                 loading="lazy">
             <div class="filter-wrapper">
                 <div class="search-row">
@@ -422,12 +422,97 @@
                 <span>Locs</span>
             </button>
         </nav>
+        <!-- Choice Modal (New Navigation) -->
+        <div id="choiceModal" class="modal hidden choice-modal">
+            <div class="modal-content choice-modal-content">
+                <span class="close-modal" id="closeChoiceModal">&times;</span>
+                <div class="choice-header">
+                    <div class="digimon-profile-image-container choice-icon-container">
+                        <img id="choiceIcon" src="" alt="" class="digimon-profile-image">
+                    </div>
+                    <h2 id="choiceName">DIGIMON</h2>
+                    <p class="choice-subtitle">Select Action</p>
+                </div>
+                <div class="choice-grid">
+                    <div class="choice-card" id="btnChoiceEvo">
+                        <div class="choice-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                        </div>
+                        <h3>Evolution</h3>
+                        <p>View Line</p>
+                    </div>
+                    <div class="choice-card" id="btnChoiceDetail">
+                        <div class="choice-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                        </div>
+                        <h3>Data</h3>
+                        <p>Stats & Info</p>
+                    </div>
+                    <div class="choice-card" id="btnChoiceTeam">
+                        <div class="choice-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 id="txtChoiceTeam">Team</h3>
+                        <p>Add/Remove</p>
+                    </div>
+                    <div class="choice-card" id="btnChoiceBattle">
+                        <div class="choice-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Battle</h3>
+                        <p>Analyze</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Battle Analysis Modal -->
+        <div id="battleModal" class="modal hidden">
+            <div class="modal-content battle-modal-content">
+                <span class="close-modal" id="closeBattleModal">&times;</span>
+                <div class="modal-header">
+                    <h2>Battle Pocket Helper</h2>
+                </div>
+                <div id="battleContent" class="battle-content">
+                    <!-- Dynamic Battle Analysis -->
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <script src="reference_map.js"></script>
-    <script src="locations_data.js"></script>
-    <script src="guide_content.js"></script>
-    <script src="script.js"></script>
+    <script src="data/reference_map.js"></script>
+    <script src="data/locations_data.js"></script>
+    <script src="data/guide_content.js"></script>
+    <script src="data/type_chart.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-$content = Get-Content 'd:\DigimonGuider\guide_content.js' -Raw
+$content = Get-Content 'd:\DigimonGuider\data\guide_content.js' -Raw
 # Extract name and stage
 # We assume the format is somewhat consistent
 $digimonList = @()
@@ -14,3 +14,4 @@ foreach ($match in $matches) {
 $digimonList | Format-Table -AutoSize
 $digimonList | Export-Csv -Path 'd:\DigimonGuider\digimon_stages.csv' -NoTypeInformation
 Write-Host "Extracted $($digimonList.Count) Digimon."
+

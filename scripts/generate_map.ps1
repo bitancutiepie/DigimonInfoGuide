@@ -26,3 +26,4 @@ foreach ($f in $files) {
 
 $json = $map | ConvertTo-Json -Depth 2
 "window.LOCAL_IMAGE_MAP = $json;" | Set-Content "d:\DigimonGuider\image_map.js" -Encoding UTF8
+
