@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const clearStageBtn = document.getElementById('clearStageBtn');
     const backToTopBtn = document.getElementById('backToTop');
     const showDataEvosBtn = document.getElementById('showDataEvosBtn');
+    const showJogressBtn = document.getElementById('showJogressBtn');
 
     // Clear Button Helper
     function updateClearButton(inputId, btnId, isSelect = false) {
@@ -112,6 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
             renderList();
         });
     }
+    if (showJogressBtn) {
+        showJogressBtn.addEventListener('click', () => {
+            if (typeof isShowingJogress === 'undefined') window.isShowingJogress = false;
+            window.isShowingJogress = !window.isShowingJogress;
+            showJogressBtn.classList.toggle('active', window.isShowingJogress);
+            renderList();
+        });
+    }
     if (resetAllBtn) {
         resetAllBtn.addEventListener('click', () => {
             if (searchInput) { searchInput.value = ''; updateClearButton('searchInput', 'clearNameBtn'); }
@@ -121,8 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (sortOrder) sortOrder.value = 'dex_asc'; // Default
             isShowingFavorites = false;
             isShowingDataEvos = false;
+            window.isShowingJogress = false;
             if (showFavsBtn) showFavsBtn.classList.remove('active');
             if (showDataEvosBtn) showDataEvosBtn.classList.remove('active');
+            if (showJogressBtn) showJogressBtn.classList.remove('active');
             renderList();
         });
     }
@@ -697,5 +708,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 target.classList.remove('drag-over');
             }
         });
+    });
+    // --- Navigation & Redirection Support ---
+
+    // 1. Initial Deep Link Check
+    if (window.location.hash) {
+        const hashName = decodeURIComponent(window.location.hash.substring(1));
+        // Small delay to ensure data is loaded
+        setTimeout(() => {
+            if (typeof digimonMap !== 'undefined' && digimonMap.has(hashName)) {
+                window.openDigimonDetail(hashName);
+            }
+        }, 500);
+    }
+
+    // 2. Native Hash Navigation
+    window.addEventListener('hashchange', () => {
+        const hash = window.location.hash;
+        if (!hash || hash === '#') {
+            if (window.closeAllModals) window.closeAllModals();
+        } else {
+            const name = decodeURIComponent(hash.substring(1));
+            const detailModal = document.getElementById('detailModal');
+            if (typeof digimonMap !== 'undefined' && digimonMap.has(name)) {
+                // Only open if not already the current modal to avoid loops
+                if (!detailModal || detailModal.classList.contains('hidden')) {
+                    window.openDigimonDetail(name);
+                }
+            }
+        }
     });
 });

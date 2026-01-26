@@ -59,3 +59,8 @@ body::before {
     background: var(--accent);
     border-color: transparent;
 }
+
+/* Visibility Utilities */
+.hidden {
+    display: none !important;
+}

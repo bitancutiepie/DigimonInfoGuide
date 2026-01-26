@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
 
+
+/* --- SOURCE: css/modules/variables.css --- */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
 :root {
     --bg-color: #0a1a1f;
     --card-bg: #0f2530;
@@ -40,6 +44,7 @@
     --accent-glow: rgba(0, 242, 255, 0.4);
 }
 
+/* --- SOURCE: css/modules/base.css --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -53,7 +58,7 @@ html {
 body {
     background-color: var(--bg-color);
     background-image: url('../assets/bg.png');
-    /* Adjusted path for module */
+    /* Note: Path relative to bundle.css location */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -102,6 +107,12 @@ body::before {
     border-color: transparent;
 }
 
+/* Visibility Utilities */
+.hidden {
+    display: none !important;
+}
+
+/* --- SOURCE: css/modules/layout.css --- */
 .app-container {
     max-width: 1600px;
     margin: 0 auto;
@@ -113,7 +124,34 @@ body::before {
 /* Header */
 .main-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 100;
+}
+
+.filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(15, 37, 48, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 242, 255, 0.1);
+    position: sticky;
+    top: 1rem;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-wrapper:focus-within {
+    background: rgba(15, 37, 48, 0.95);
+    border-color: var(--accent);
+    box-shadow: 0 15px 40px rgba(0, 242, 255, 0.15);
 }
 
 .banner-image {
@@ -167,15 +205,49 @@ body::before {
     }
 
     .modal-content {
-        padding: 1.5rem;
+        padding: 1.25rem;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .filter-wrapper {
+        top: 0;
+        border-radius: 0 0 16px 16px;
+        padding: 1rem;
+        margin: 0 -0.5rem 1rem -0.5rem;
     }
 
     /* Hide redundant floating elements on mobile */
-    .floating-team-widget,
     .back-to-top,
     .floating-btn {
         display: none !important;
     }
+
+    .floating-team-widget {
+        bottom: 85px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 95% !important;
+        max-width: 400px !important;
+        z-index: 1500 !important;
+    }
+
+    .ft-slot {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    .ft-grid {
+        gap: 0.5rem !important;
+        padding: 0.75rem !important;
+    }
+
+    .ft-remove-btn {
+        opacity: 1 !important;
+        transform: translate(0, 0) !important;
+    }
+
+
+
 
     /* Padding for navbar */
     .app-container {
@@ -249,6 +321,7 @@ body::before {
     display: none;
 }
 
+/* --- SOURCE: css/modules/components.css --- */
 /* Filter Section */
 .filter-wrapper {
     display: flex;
@@ -559,9 +632,9 @@ body::before {
 .back-to-top {
     position: fixed;
     bottom: 2rem;
-    left: 2rem;
-    width: 50px;
-    height: 50px;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
     background: var(--accent);
     color: #000;
     border: none;
@@ -572,56 +645,27 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0, 242, 255, 0.4);
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
     opacity: 1;
     visibility: visible;
+    border: 3px solid rgba(255, 255, 255, 0.2);
 }
 
 .back-to-top:hover {
-    transform: translateY(-5px) scale(1.1);
-    background: var(--accent-hover);
-    box-shadow: 0 6px 20px rgba(0, 242, 255, 0.6);
+    transform: translateY(-8px) scale(1.1);
+    background: #00f2ff;
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.6);
 }
 
 .back-to-top.hidden {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px);
+    transform: translateY(40px);
 }
 
-/* Drag & Drop Feedback */
-.digimon-card {
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-drag: element;
-}
-
-.digimon-card:active {
-    cursor: grabbing;
-}
-
-.digimon-card.dragging {
-    opacity: 0.3 !important;
-}
-
-.digimon-card.dragging * {
-    pointer-events: none !important;
-}
-
-.floating-team-widget.drag-over,
-.modal-content.team-modal-content.drag-over {
-    background: rgba(0, 242, 255, 0.2) !important;
-    box-shadow: 0 0 30px var(--accent), inset 0 0 15px var(--accent) !important;
-    border-color: var(--accent) !important;
-}
-
-.floating-team-widget.drag-over *,
-.modal-content.team-modal-content.drag-over * {
-    pointer-events: none !important;
-}
-
+/* Toast System */
 .toast {
     visibility: hidden;
     min-width: 250px;
@@ -845,6 +889,7 @@ body::before {
     background: transparent;
 }
 
+/* --- SOURCE: css/modules/cards.css --- */
 /* Card Design - Glassmorphism */
 .digimon-card {
     background: rgba(15, 37, 48, 0.4);
@@ -1389,6 +1434,7 @@ body::before {
     text-shadow: 0 0 5px #f8d030;
 }
 
+/* --- SOURCE: css/modules/badges.css --- */
 /* Stage Badges */
 .stage-badge {
     display: inline-block;
@@ -1700,6 +1746,7 @@ body::before {
     text-shadow: 0 0 4px #d291ff;
 }
 
+/* --- SOURCE: css/modules/modals.css --- */
 /* Unordered Modal Styles */
 .modal {
     position: fixed;
@@ -2100,28 +2147,30 @@ body::before {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 1.5rem;
     min-height: 200px;
+    align-items: start;
 }
 
 
 /* Team Member Card - Trading Card Style */
 .team-member-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(15, 37, 48, 0.6);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 242, 255, 0.15);
     border-radius: 12px;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
     position: relative;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s ease;
     cursor: pointer;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 100%;
+    height: auto;
+    min-height: 320px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -2342,7 +2391,18 @@ body::before {
     backdrop-filter: blur(8px);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
+
+.floating-team-widget.minimized .ft-grid {
+    display: none;
+}
+
+.floating-team-widget.minimized {
+    border-bottom: none;
+    border-radius: 12px;
+}
+
 
 .floating-team-widget.hidden {
     display: none;
@@ -2350,16 +2410,51 @@ body::before {
 
 .ft-header {
     background: rgba(0, 242, 255, 0.1);
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    user-select: none;
 }
 
-.ft-header:hover {
+.ft-header:active {
     background: rgba(0, 242, 255, 0.2);
+}
+
+.ft-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.ft-control-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ft-control-btn:hover {
+    background: rgba(0, 242, 255, 0.2);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.floating-team-widget.minimized .collapse-icon {
+    transform: rotate(180deg);
+}
+
+.collapse-icon {
+    transition: transform 0.3s;
 }
 
 .ft-title {
@@ -2368,7 +2463,11 @@ body::before {
     font-size: 0.9rem;
     color: var(--accent);
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
+
 
 .ft-grid {
     display: flex;
@@ -2512,45 +2611,6 @@ body::before {
     text-shadow: 0 0 8px var(--accent);
     transform: scale(1.1);
 }
-
-.ft-controls {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.ft-control-btn {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--text-secondary);
-    width: 24px;
-    height: 24px;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
-    padding: 0;
-}
-
-.ft-control-btn:hover {
-    background: rgba(0, 242, 255, 0.1);
-    color: var(--accent);
-    border-color: var(--accent);
-}
-
-.collapse-icon {
-    transition: transform 0.3s;
-}
-
-.floating-team-widget.collapsed .ft-grid {
-    display: none;
-}
-
-.floating-team-widget.collapsed .collapse-icon {
-    transform: rotate(180deg);
-}
-
 
 /* Modal Team Button */
 .modal-team-btn {
@@ -2738,12 +2798,206 @@ body::before {
     box-shadow: 0 4px 12px rgba(255, 153, 51, 0.3);
 }
 
-/* Type Chart Modal */
-#typeList {
+/* Evolution Tracker Styles */
+.evo-tracker {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 242, 255, 0.1);
+    width: 100%;
+}
+
+.evo-tracker-title {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+    font-weight: 800;
+    opacity: 0.8;
+}
+
+.evo-tracker-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.evo-tracker-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    position: relative;
+    padding: 6px;
+    border-radius: 6px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+    width: 45px;
+}
+
+.evo-tracker-item:hover {
+    background: rgba(0, 242, 255, 0.1) !important;
+    border-color: var(--accent) !important;
+    transform: translateX(5px);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+.evo-tracker-item:active {
+    transform: scale(0.98);
+}
+
+.evo-tracker-item.active {
+    border-color: var(--accent);
+    background: rgba(0, 242, 255, 0.15);
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+}
+
+.evo-tracker-item.goal {
+    border-color: #ffcc00 !important;
+    background: rgba(255, 204, 0, 0.1) !important;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.1) inset;
+}
+
+.evo-tracker-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: grayscale(1) contrast(0.8);
+    opacity: 0.4;
+    transition: all 0.3s ease;
+}
+
+.evo-tracker-item.active .evo-tracker-img,
+.evo-tracker-item.goal .evo-tracker-img {
+    filter: grayscale(0) contrast(1);
+    opacity: 1;
+}
+
+.evo-tracker-item.goal .evo-tracker-img {
+    filter: drop-shadow(0 0 5px rgba(255, 204, 0, 0.5));
+}
+
+.evo-tracker-arrow {
+    font-size: 0.7rem;
+    color: rgba(0, 242, 255, 0.2);
+    font-weight: bold;
+    margin: 0 -2px;
+}
+
+.evo-tracker-name {
+    font-size: 0.5rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.evo-tracker-item.active .evo-tracker-name {
+    color: #fff;
+    font-weight: bold;
+}
+
+.evo-tracker-item.goal .evo-tracker-name {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.evo-tracker-arrow {
+    opacity: 0.2;
+    font-size: 0.8rem;
+}
+
+/* Path Picker Styles - More Tightly Contained */
+.path-picker {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: rgba(10, 20, 25, 0.95);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    animation: fadeIn 0.2s ease-out;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.path-picker-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 0.5rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 0.5rem 0.2rem;
+    scrollbar-width: thin;
+}
+
+.path-target-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    min-width: 0;
+    /* Prevents overflow */
+}
+
+.path-target-item:hover {
+    background: rgba(0, 242, 255, 0.15);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.path-target-item.active {
+    background: rgba(0, 242, 255, 0.2);
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+}
+
+.path-target-item img {
+    width: 40px !important;
+    height: 40px !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.path-target-item span {
+    font-size: 0.5rem;
+    color: var(--text-secondary);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Goal Badge */
+.goal-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ffcc00;
+    color: #000;
+    font-size: 0.5rem;
+    font-weight: 800;
+    padding: 1px 4px;
+    border-radius: 4px;
+    text-transform: uppercase;
 }
 
 .type-results-container {
@@ -3597,6 +3851,7 @@ body::before {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* --- SOURCE: css/modules/animations.css --- */
 @keyframes evoPopIn {
     0% {
         opacity: 0;
@@ -3747,6 +4002,7 @@ body::before {
     text-transform: uppercase;
 }
 
+/* --- SOURCE: css/modules/data_drops.css --- */
 /* Data Drops Modal Styling */
 .data-drops-modal-content {
     max-width: 1000px;

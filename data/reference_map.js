@@ -32,6 +32,7 @@ window.REFERENCE_IMAGE_MAP = {
     "arkhaiangemon": "arkhaiangemon",
     "seraphimon": "seraphimon",
     "ophanimon": "ofanimon",
+    "ophanimon falldown": "ofanimonfalldownmode",
     "salamon": "plotmon",
     "tailmon": "tailmon",
     "angewomon": "angewomon",
@@ -86,6 +87,8 @@ window.REFERENCE_IMAGE_MAP = {
     "ancientgreymon": "ancientgreymon",
     "aldamon": "aldamon",
     "blitzgreymon": "blitzgreymon",
+    "skullgreymon": "skullgreymon",
+    "skullgreymon g-erosion": "PHOTO NOT AVAILABLE",
 
     // === Gabumon/Garurumon Line ===
     "gabumon": "gabumon",
@@ -361,6 +364,7 @@ window.REFERENCE_IMAGE_MAP = {
     "goblimon": "goburimon",
     "gogmamon": "gogmamon",
     "gokuumon": "gokuumon", // User Verified
+    "seiten gokuumon": "PHOTO NOT AVAILABLE",
     "golemon": "golemon",
     "gracenovamon": "gracenovamon",
     "grandgalemon": "grandgalemon",
@@ -429,6 +433,7 @@ window.REFERENCE_IMAGE_MAP = {
     "marinekimeramon": "marinekimeramon", // User Verified
     "marsmon": "marsmon",
     "mastemon": "mastemon",
+    "meicrackmon vicious": "meicrackmonviciousmode",
     "mastertyrannomon": "mastertyranomon",
     "matadormon": "matadrmon",
     "medusamon": "medusamon",
@@ -461,6 +466,7 @@ window.REFERENCE_IMAGE_MAP = {
     "okuwamon": "okuwamon",
     "oleamon": "oleamon",
     "orochimon": "orochimon",
+    "ordinemon": "ordinemon",
     "ouryumon": "ouryumon",
     "paledramon": "paledramon",
     "panjyamon x": "panjyamon_x",

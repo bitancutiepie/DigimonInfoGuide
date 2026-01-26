@@ -118,8 +118,18 @@ function renderStageBadge(digiName) {
 
 // --- Tree Helpers ---
 // Build full evolution tree from a starting point
-function buildEvoTree(startDigi, visited = new Set()) {
+// Build full evolution tree from a starting point
+function buildEvoTree(startDigi, visited = null) {
+    if (!visited) visited = new Set();
+
     if (!startDigi || visited.has(startDigi.name)) return null;
+
+    // Clone visited for this path to avoid cross-branch pollution 
+    // BUT for cycle detection we generally want shared visited in a DFS path.
+    // However, if A -> B and A -> C, and C -> B, we might want B to appear twice?
+    // Standard cycle detection: visited set for current recursion stack.
+    // For a tree visualizer, we usually stop if we see a node again to prevent infinite rendering.
+
     visited.add(startDigi.name);
 
     const node = {
@@ -132,7 +142,11 @@ function buildEvoTree(startDigi, visited = new Set()) {
         startDigi.next.forEach(nextEvo => {
             const nextDigi = digimonMap.get(nextEvo.name);
             if (nextDigi) {
-                const childNode = buildEvoTree(nextDigi, visited);
+                // Pass a new set for branches if we want to allow the same node in different branches
+                // BUT to prevent infinite loops (A->B->A), we must track ancestors.
+                // Best approach for preventing stack overflow: pass a COPY of visited (ancestors)
+                const branchVisited = new Set(visited);
+                const childNode = buildEvoTree(nextDigi, branchVisited);
                 if (childNode) {
                     childNode.method = nextEvo.method || '???';
                     node.children.push(childNode);

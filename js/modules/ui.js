@@ -1,3 +1,4 @@
+window.isShowingJogress = false;
 const hasImmediateDataEvo = (digi) => getImmediateDataMethods(digi).length > 0;
 
 const getImmediateDataMethods = (digi) => {
@@ -8,6 +9,26 @@ const getImmediateDataMethods = (digi) => {
             return req && req.type === 'Data';
         })
         .map(n => n.method);
+};
+
+const getJogressInfo = (digi) => {
+    if (!digi || !digi.next) return null;
+    const jogressEvos = digi.next.filter(n => n.method && n.method.toLowerCase().includes('jogress'));
+    if (jogressEvos.length === 0) return null;
+
+    return jogressEvos.map(evo => {
+        let text = evo.method;
+        let partner = "Database in progress";
+        const lower = text.toLowerCase();
+
+        if (lower.startsWith('jogress ')) {
+            partner = text.substring(8).trim();
+        } else if (lower.endsWith(' jogress')) {
+            partner = text.substring(0, text.length - 8).trim();
+        }
+
+        return { target: evo.name, partner: partner };
+    });
 };
 
 // --- Main List Rendering ---
@@ -29,7 +50,7 @@ function renderList() {
     const stageFilterValue = stageFilter ? stageFilter.value.trim() : '';
     const currentSort = sortOrder ? sortOrder.value : 'dex_asc';
 
-    const isSearching = nameFilter.length > 0 || locFilter.length > 0 || typeFilterValue.length > 0 || stageFilterValue.length > 0 || isShowingDataEvos;
+    const isSearching = nameFilter.length > 0 || locFilter.length > 0 || typeFilterValue.length > 0 || stageFilterValue.length > 0 || isShowingDataEvos || isShowingJogress;
 
     let displayList = [];
     let totalCount = 0;
@@ -61,7 +82,12 @@ function renderList() {
                 });
             }
 
-            if (matchesName && matchesLoc && matchesType && matchesStage && matchesData) {
+            let matchesJogress = true;
+            if (isShowingJogress) {
+                matchesJogress = digi.next && digi.next.some(n => n.method && n.method.toLowerCase().includes('jogress'));
+            }
+
+            if (matchesName && matchesLoc && matchesType && matchesStage && matchesData && matchesJogress) {
                 displayList.push(digi);
             }
         });
@@ -182,7 +208,7 @@ function renderList() {
         card.setAttribute('aria-label', `View ${digi.name} evolution line`);
 
         // Count evolutions for this base form
-        const evoCount = isSearching ? 0 : countTreeNodes(buildEvoTree(digi, new Set())) - 1;
+        const evoCount = isSearching ? 0 : countTreeNodes(buildEvoTree(digi)) - 1;
         const evoText = isSearching ? '' : (evoCount > 0 ? `<div class="evo-count">${evoCount} evolution${evoCount > 1 ? 's' : ''}</div>` : '');
 
         // Locations preview (small badge if filtered)
@@ -217,6 +243,19 @@ function renderList() {
             `;
         }
 
+        // Jogress Info
+        let jogressHtml = '';
+        if (isShowingJogress) {
+            const jogressDetails = getJogressInfo(digi);
+            if (jogressDetails) {
+                jogressHtml = `<div style="margin-top:0.5rem; font-size:0.75rem; background:rgba(255, 165, 0, 0.1); border:1px solid rgba(255, 165, 0, 0.3); padding:6px; border-radius:6px; color:#ffcc00; text-align:left;">`;
+                jogressDetails.forEach(info => {
+                    jogressHtml += `<div style="margin-bottom:2px;">To <strong>${info.target}</strong>: <br><span style="opacity:0.8;">+ ${info.partner}</span></div>`;
+                });
+                jogressHtml += `</div>`;
+            }
+        }
+
         const imageUrl = getImageUrl(digi.name);
 
         card.innerHTML = `
@@ -238,6 +277,7 @@ function renderList() {
             <div class="digimon-types">${renderTypeBadges(digi.types)}</div>
             ${stageHtml}
             ${dataEvoHtml}
+            ${jogressHtml}
             ${evoText}
             ${locHtml}
         `;
@@ -492,31 +532,6 @@ function renderTeamModal() {
         const d = digimonMap.get(name);
         if (!d) return;
 
-        // Render Card
-        const card = document.createElement('div');
-        card.className = 'team-member-card';
-        const imageUrl = getImageUrl(name);
-        card.innerHTML = `
-            <button class="team-remove-btn" onclick="toggleTeam('${name.replace(/'/g, "\\'")}')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            </button>
-            <div class="digimon-profile-image-container" style="width: 70px; height: 70px; margin: 0 auto 0.5rem; border-width: 2px;">
-                <img 
-                    src="${imageUrl}" 
-                    alt="${d.name}" 
-                    class="digimon-profile-image"
-                    data-name="${name.replace(/'/g, "\\'")}"
-                    onerror="handleImageError(this, '${name.replace(/'/g, "\\'")}');"
-                    loading="lazy"
-                />
-            </div>
-            <div class="digimon-name" style="font-size: 0.9rem;">${d.name}</div>
-            ${renderTypeBadges(d.types)}
-            <div style="margin-top:0.5rem;">${renderStageBadge(d.name)}</div>
-        `;
-        card.onclick = () => window.openDigimonDetail(name);
-        grid.appendChild(card);
-
         // Analysis Data
         if (d.types) {
             d.types.forEach(t => {
@@ -598,7 +613,193 @@ function renderTeamModal() {
             ${fullStatsHtml}
         </div>
     `;
+
+    // Team Cards with Tracker
+    team.forEach(name => {
+        const d = digimonMap.get(name);
+        if (!d) return;
+
+        // Render Card
+        const card = document.createElement('div');
+        card.className = 'team-member-card';
+        const imageUrl = getImageUrl(name);
+        const goals = getTeamGoals();
+        const goal = goals[name];
+
+        card.innerHTML = `
+            <button class="team-remove-btn" onclick="event.stopPropagation(); toggleTeam('${name.replace(/'/g, "\\'")}')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="digimon-profile-image-container" style="width: 90px; height: 90px; margin: 0 auto 0.75rem; border-width: 2px;">
+                <img 
+                    src="${imageUrl}" 
+                    alt="${d.name}" 
+                    class="digimon-profile-image"
+                    data-name="${name.replace(/'/g, "\\'")}"
+                    onerror="handleImageError(this, '${name.replace(/'/g, "\\'")}');"
+                    loading="lazy"
+                />
+            </div>
+            <div class="digimon-name" style="font-size: 1.1rem; margin-bottom: 0.5rem;">${d.name}</div>
+            ${renderTypeBadges(d.types)}
+            <div style="margin-top:1rem; display:flex; flex-direction:column; gap:0.6rem; align-items:center; width:100%;">
+                ${renderStageBadge(d.name)}
+                <button class="action-btn-primary" style="padding: 12px; font-size: 0.8rem; width: 100%; border-radius: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;" 
+                        onclick="event.stopPropagation(); window.togglePathPicker('${name.replace(/'/g, "\\'")}')">
+                    ${goal ? 'Change Roadmap' : 'Set Evolution Goal'}
+                </button>
+            </div>
+            
+            <div id="pathPicker-${name.replace(/\s+/g, '-').replace(/'/g, '-')}" class="path-picker hidden" onclick="event.stopPropagation()">
+                <div class="evo-tracker-title" style="text-align:center; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(0,242,255,0.1); margin-bottom: 0.5rem;">Select Target</div>
+                <div class="path-picker-grid">
+                    ${getPossibleTargets(name).map(t => `
+                        <div class="path-target-item ${t === goal ? 'active' : ''}" 
+                             onclick="window.setTeamGoal('${name.replace(/'/g, "\\'")}', '${t.replace(/'/g, "\\'")}')"
+                             title="${t}">
+                            <img src="${getImageUrl(t)}" onerror="handleImageError(this, '${t.replace(/'/g, "\\'")}')">
+                            <span>${t}</span>
+                        </div>
+                    `).join('')}
+                </div>
+                <button class="ft-control-btn" style="width:100%; margin-top:0.75rem; height:32px; font-size:0.7rem; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:6px; cursor:pointer;" onclick="window.togglePathPicker('${name.replace(/'/g, "\\'")}')">CLOSE SELECTOR</button>
+            </div>
+
+            ${goal ? renderTeamMemberTracker(name, goal) : ''}
+        `;
+        card.onclick = () => window.openDigimonDetail(name);
+        grid.appendChild(card);
+    });
 }
+
+window.togglePathPicker = (name) => {
+    // Generate the same ID used in the template
+    const idSuffix = name.replace(/\s+/g, '-').replace(/'/g, '-');
+    const el = document.getElementById(`pathPicker-${idSuffix}`);
+    if (el) {
+        el.classList.toggle('hidden');
+    } else {
+        console.warn('Could not find picker for:', name, idSuffix);
+    }
+};
+
+function getPossibleTargets(name) {
+    const digi = digimonMap.get(name);
+    if (!digi) return [];
+
+    const targets = new Set();
+    const visited = new Set(); // Fix infinite recursion
+
+    const findFinals = (d) => {
+        if (!d) return;
+
+        // Protection against cycles (A -> B -> A)
+        if (visited.has(d.name)) return;
+        visited.add(d.name);
+
+        if (!d.next || d.next.length === 0) {
+            if (d.name !== name) targets.add(d.name);
+            return;
+        }
+        if (d.name !== name && (d.stage === 'Ultimate' || d.stage === 'Mega' || d.stage === 'Ultra')) {
+            targets.add(d.name);
+        }
+
+        d.next.forEach(n => {
+            const nextDigi = digimonMap.get(n.name);
+            if (nextDigi) findFinals(nextDigi);
+        });
+    };
+    findFinals(digi);
+    return Array.from(targets).sort();
+}
+
+function renderTeamMemberTracker(name, goal) {
+    const pathItems = getEvoPathItems(name, goal);
+    if (!pathItems || pathItems.length < 1) return '';
+
+    let html = `
+        <div class="evo-tracker" style="padding: 1rem; border-style: solid; border-width: 1px;">
+            <div class="evo-tracker-title" style="margin-bottom:1.5rem; font-size: 0.75rem; color: #fff; letter-spacing: 2px;">EVOLUTION ROADMAP</div>
+            <div style="display:flex; flex-direction:column; gap:1rem; align-items:center; width:100%;">
+    `;
+
+    pathItems.forEach((item, idx) => {
+        const isCurrent = item.name === name;
+        const isGoal = item.name === goal;
+        const img = getImageUrl(item.name);
+        const activeClass = isCurrent ? 'active' : '';
+        const goalClass = isGoal ? 'goal' : '';
+
+        // Requirement if this isn't the first item
+        if (idx > 0) {
+            html += `
+                <div style="display:flex; flex-direction:column; align-items:center; gap:0.4rem; width: 100%; padding: 0 10px;">
+                    <div class="evo-tracker-arrow" style="opacity:0.8; font-size:1.2rem; color:var(--accent);">↓</div>
+                    <div style="font-size:0.65rem; color:#000; font-weight:900; text-transform:uppercase; letter-spacing:1px; background:var(--accent); padding:4px 10px; border-radius:4px; box-shadow: 0 0 10px rgba(0,242,255,0.3); max-width: 100%; word-break: break-word; text-align: center; line-height: 1.2;">
+                        ${item.method}
+                    </div>
+                </div>
+            `;
+        }
+
+        html += `
+            <div class="evo-tracker-item ${activeClass} ${goalClass}" 
+                 style="width:100%; display:flex; flex-direction:row; align-items:center; gap:0.75rem; padding:12px; background:rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius:10px; min-width: 0; cursor: pointer;"
+                 onclick="event.stopPropagation(); window.openDigimonDetail('${item.name.replace(/'/g, "\\'")}')"
+                 title="View Details for ${item.name}">
+                <img src="${img}" class="evo-tracker-img" style="width:40px; height:40px; flex-shrink: 0; opacity:1; filter:drop-shadow(0 0 5px rgba(0,0,0,0.5));" onerror="this.src='assets/appLogo.png'">
+                <div style="text-align:left; flex:1; min-width: 0;">
+                    <div style="font-size:0.8rem; font-weight:800; color:#fff; text-transform: uppercase; letter-spacing: 0.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.name}</div>
+                    <div style="margin-top:2px; display: flex;">${renderStageBadge(item.name, true)}</div>
+                </div>
+                ${isGoal ? '<div class="goal-badge" style="position:static; margin-left:4px; font-size: 0.55rem; padding: 2px 4px; flex-shrink: 0;">TARGET</div>' : ''}
+            </div>
+        `;
+    });
+
+    html += `
+            </div>
+            <button class="reset-all-btn" style="margin-top:1.5rem; font-size:0.65rem; padding: 0.6rem 1rem; width: 100%; border-radius:8px; font-weight: 700;" onclick="event.stopPropagation(); window.setTeamGoal('${name.replace(/'/g, "\\'")}', null)">CANCEL TRACKING</button>
+        </div>
+    `;
+    return html;
+}
+
+window.setTeamGoal = (memberName, goalName) => {
+    const goals = getTeamGoals();
+    if (!goalName || goals[memberName] === goalName) {
+        delete goals[memberName];
+    } else {
+        goals[memberName] = goalName;
+    }
+    saveTeamGoals(goals);
+    renderTeamModal();
+};
+
+function getEvoPathItems(start, target) {
+    const queue = [[{ name: start, method: null }]];
+    const visited = new Set();
+
+    while (queue.length > 0) {
+        const path = queue.shift();
+        const lastItem = path[path.length - 1];
+
+        if (lastItem.name === target) return path;
+
+        if (!visited.has(lastItem.name)) {
+            visited.add(lastItem.name);
+            const digi = digimonMap.get(lastItem.name);
+            if (digi && digi.next) {
+                for (const nextEvo of digi.next) {
+                    queue.push([...path, { name: nextEvo.name, method: nextEvo.method }]);
+                }
+            }
+        }
+    }
+    return null;
+}
+
 
 // --- Choice Modal Logic ---
 window.openChoiceModal = function (name) {
@@ -702,6 +903,11 @@ function closeAllModals() {
     if (detailModalSearch) detailModalSearch.style.display = 'none';
 
     modalHistory = [];
+
+    // Clear hash without trigger hashchange event loop if possible
+    if (window.location.hash) {
+        history.replaceState(null, null, ' ');
+    }
 }
 
 window.goBackInHistory = () => {
@@ -990,6 +1196,11 @@ window.openDigimonDetail = (name, isBackAction = false) => {
     // History management
     if (!isBackAction && (modalHistory.length === 0 || modalHistory[modalHistory.length - 1] !== name)) {
         modalHistory.push(name);
+    }
+
+    // Redirection Support: Update URL Hash
+    if (!isBackAction) {
+        window.location.hash = encodeURIComponent(name);
     }
 
     const typesHtml = renderTypeBadges(digi.types);
@@ -1435,7 +1646,7 @@ function renderDataDropsList(highlightData = null) {
                 </div>
                 <div class="droppers-list">
                     ${droppers.map(name => {
-            const cleanName = name.split(' (')[0]; // Handle (Rare), (Later)
+            const cleanName = name.split(' (')[0];
             return `
                             <div class="dropper-item" onclick="openDigimonDetail('${cleanName.replace(/'/g, "\\'")}')">
                                 <img src="${getImageUrl(cleanName)}" onerror="this.src='assets/placeholder.png'" loading="lazy">

@@ -15,6 +15,14 @@ function saveTeam(team) {
     localStorage.setItem('digimon_team', JSON.stringify(team));
 }
 
+function getTeamGoals() {
+    return JSON.parse(localStorage.getItem('digimon_team_goals')) || {};
+}
+
+function saveTeamGoals(goals) {
+    localStorage.setItem('digimon_team_goals', JSON.stringify(goals));
+}
+
 // --- Data Loading ---
 function loadData() {
     if (typeof DIGIMON_DB === 'undefined') {
