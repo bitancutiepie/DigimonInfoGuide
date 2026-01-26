@@ -404,6 +404,13 @@
     align-items: start;
 }
 
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 0.75rem;
+    }
+}
+
 
 /* Team Member Card - Trading Card Style */
 .team-member-card {
@@ -425,6 +432,13 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 600px) {
+    .team-member-card {
+        padding: 1rem 0.75rem;
+        min-height: 280px;
+    }
+}
+
 .team-member-card::before {
     content: '';
     position: absolute;
@@ -441,6 +455,13 @@
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 10px 25px rgba(0, 242, 255, 0.2);
     background: rgba(255, 255, 255, 0.06);
+    z-index: 10;
+    /* Bring hovered card above others */
+}
+
+/* Ensure card is on top when showing the evolution hover card */
+.team-member-card:has(.evo-tracker-item:hover) {
+    z-index: 100;
 }
 
 .team-remove-btn {
@@ -496,6 +517,13 @@
     border-radius: 16px;
     border: 1px solid rgba(0, 242, 255, 0.1);
     box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .team-stats {
+        padding: 1rem;
+        gap: 1rem;
+    }
 }
 
 .stat-group {
@@ -1089,6 +1117,8 @@
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid transparent;
     width: 45px;
+    overflow: visible !important;
+    /* Allow hover card to show */
 }
 
 .evo-tracker-item:hover {
@@ -1096,6 +1126,7 @@
     border-color: var(--accent) !important;
     transform: translateX(5px);
     box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+    z-index: 50;
 }
 
 .evo-tracker-item:active {
@@ -1159,9 +1190,149 @@
     font-weight: bold;
 }
 
-.evo-tracker-arrow {
-    opacity: 0.2;
-    font-size: 0.8rem;
+/* Hover Card for Evolution Roadmap */
+.evo-hover-card {
+    position: absolute;
+    left: calc(100% + 15px);
+    top: 50%;
+    transform: translateY(-50%) translateX(10px);
+    width: 220px;
+    background: rgba(10, 26, 31, 0.98);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 12px;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 242, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+/* Responsive adjustment for hover card */
+@media (max-width: 1100px) {
+
+    /* If the screen is not wide enough, pop it to the left instead of right */
+    /* This applies when the roadmap is near the right edge of modal */
+    .team-member-card:nth-child(even) .evo-hover-card {
+        left: auto;
+        right: calc(100% + 15px);
+        transform: translateY(-50%) translateX(-10px);
+    }
+
+    .team-member-card:nth-child(even) .evo-hover-card::before {
+        left: auto;
+        right: -8px;
+        border-width: 8px 0 8px 8px;
+        border-color: transparent transparent transparent var(--accent);
+    }
+
+    .team-member-card:nth-child(even) .evo-tracker-item:hover .evo-hover-card {
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .evo-hover-card {
+        /* On very small mobile, show floating at bottom of card context */
+        left: 0 !important;
+        right: 0 !important;
+        top: 100% !important;
+        width: 100% !important;
+        transform: translateY(10px) !important;
+        margin-top: 5px;
+    }
+
+    .evo-hover-card::before {
+        display: none;
+    }
+
+    .evo-tracker-item:hover .evo-hover-card {
+        opacity: 1;
+        transform: translateY(0) !important;
+    }
+}
+
+
+/* Base hover definition moved before media queries if needed, but actually it's already handled above or is redundant here */
+
+.hover-card-header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+
+.hover-card-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(0, 242, 255, 0.2));
+}
+
+.hover-card-title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.hover-card-name {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: #fff;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.hover-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hover-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.info-row {
+    font-size: 0.7rem;
+    color: #fff;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-row span {
+    color: var(--accent);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 1px;
+    opacity: 0.8;
+}
+
+.hover-card-types {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-top: 2px;
+}
+
+.hover-card-types .type-badge {
+    font-size: 0.55rem;
+    padding: 1px 6px;
 }
 
 /* Path Picker Styles - More Tightly Contained */
@@ -1186,6 +1357,12 @@
     overflow-y: auto;
     padding: 0.5rem 0.2rem;
     scrollbar-width: thin;
+}
+
+@media (max-width: 480px) {
+    .path-picker-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .path-target-item {
@@ -1301,6 +1478,12 @@
 }
 
 /* Choice Modal Redesign */
+/* --- Choice Modal Specific Styling --- */
+.choice-modal {
+    z-index: 3000 !important;
+    /* Always on top of other modals */
+}
+
 .choice-modal-content {
     max-width: 700px;
     background: radial-gradient(circle at center, #0f2530 0%, #050d11 100%);

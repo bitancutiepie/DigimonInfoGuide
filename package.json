@@ -1,0 +1,15 @@
+{
+  "name": "digimonguider",
+  "version": "1.0.0",
+  "description": "Digimon Evolution Guide",
+  "main": "index.js",
+  "scripts": {
+    "regen:css": "python execution/restore_css.py",
+    "regen:js": "python execution/bundle_js.py",
+    "build": "npm run regen:css && npm run regen:js && tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch": "npm run regen:css && npm run regen:js && tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

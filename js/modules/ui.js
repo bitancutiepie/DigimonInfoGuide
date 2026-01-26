@@ -730,6 +730,7 @@ function renderTeamMemberTracker(name, goal) {
         const img = getImageUrl(item.name);
         const activeClass = isCurrent ? 'active' : '';
         const goalClass = isGoal ? 'goal' : '';
+        const itemObj = digimonMap.get(item.name);
 
         // Requirement if this isn't the first item
         if (idx > 0) {
@@ -746,14 +747,32 @@ function renderTeamMemberTracker(name, goal) {
         html += `
             <div class="evo-tracker-item ${activeClass} ${goalClass}" 
                  style="width:100%; display:flex; flex-direction:row; align-items:center; gap:0.75rem; padding:12px; background:rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius:10px; min-width: 0; cursor: pointer;"
-                 onclick="event.stopPropagation(); window.openDigimonDetail('${item.name.replace(/'/g, "\\'")}')"
-                 title="View Details for ${item.name}">
+                 onclick="event.stopPropagation(); window.openDigimonDetail('${item.name.replace(/'/g, "\\'")}')">
                 <img src="${img}" class="evo-tracker-img" style="width:40px; height:40px; flex-shrink: 0; opacity:1; filter:drop-shadow(0 0 5px rgba(0,0,0,0.5));" onerror="this.src='assets/appLogo.png'">
                 <div style="text-align:left; flex:1; min-width: 0;">
                     <div style="font-size:0.8rem; font-weight:800; color:#fff; text-transform: uppercase; letter-spacing: 0.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.name}</div>
                     <div style="margin-top:2px; display: flex;">${renderStageBadge(item.name, true)}</div>
                 </div>
                 ${isGoal ? '<div class="goal-badge" style="position:static; margin-left:4px; font-size: 0.55rem; padding: 2px 4px; flex-shrink: 0;">TARGET</div>' : ''}
+
+                <!-- Mini Card Pop-up -->
+                <div class="evo-hover-card">
+                    <div class="hover-card-header">
+                        <img src="${img}" class="hover-card-img" onerror="this.src='assets/appLogo.png'">
+                        <div class="hover-card-title">
+                            <div class="hover-card-name">${item.name}</div>
+                            ${renderStageBadge(item.name)}
+                        </div>
+                    </div>
+                    <div class="hover-card-body">
+                        <div class="hover-card-types">${renderTypeBadges(itemObj?.types)}</div>
+                        <div class="hover-card-info">
+                            ${itemObj?.ability ? `<div class="info-row"><span>Ability</span>${itemObj.ability}</div>` : ''}
+                            ${itemObj?.hiddenAbility ? `<div class="info-row"><span>Hidden Ability</span>${itemObj.hiddenAbility}</div>` : ''}
+                            ${itemObj?.evoMove ? `<div class="info-row"><span>Signature Move</span>${itemObj.evoMove}</div>` : ''}
+                        </div>
+                    </div>
+                </div>
             </div>
         `;
     });
@@ -1680,15 +1699,6 @@ function renderSharedSearchResult(inputEl) {
     const query = inputEl.value.trim().toLowerCase();
     if (!query) {
         container.innerHTML = '';
-        return;
-    }
-
-    const matches = Array.from(digimonMap.values())
-        .filter(d => d.name.toLowerCase().includes(query))
-        .slice(0, 12);
-
-    if (matches.length === 0) {
-        container.innerHTML = `<div style="text-align:center; padding: 0.5rem; font-size: 0.8rem; color: var(--text-secondary);">No results</div>`;
         return;
     }
 
