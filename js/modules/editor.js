@@ -55,6 +55,7 @@ function renderEditorList(filter = '') {
             <thead>
                 <tr style="background: rgba(255,255,255,0.05); text-align: left; border-bottom: 2px solid var(--border);">
                     <th style="padding: 1rem;">Digimon</th>
+                    <th style="padding: 1rem;">Evolves From (Prev)</th>
                     <th style="padding: 1rem;">Evolutions (Next)</th>
                     <th style="padding: 1rem;">Actions</th>
                 </tr>
@@ -64,9 +65,19 @@ function renderEditorList(filter = '') {
 
     filteredDb.forEach(d => {
         const isModified = modifiedDigimon.has(d.name);
+
+        const prevEvos = d.prev && d.prev.length > 0
+            ? d.prev.map((n, idx) => `
+                <div class="editor-evo-row" style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.03); padding: 4px 8px; border-radius: 6px; opacity: 0.8;">
+                    <span style="color: var(--text-secondary); width: 100px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.7rem;">${n.name}</span>
+                    <span style="font-size: 0.6rem; color: var(--text-secondary); flex: 1;">${n.method || 'Unknown'}</span>
+                </div>
+            `).join('')
+            : '<span style="color: var(--text-secondary); font-style: italic; opacity: 0.3;">Base Stage</span>';
+
         const nextEvos = d.next && d.next.length > 0
             ? d.next.map((n, idx) => `
-                <div class="editor-evo-row" style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(0,0,0,0.2); padding: 4px 8px; border-radius: 6px;">
+                <div class="editor-evo-row" style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(0,0,255,0.05); padding: 4px 8px; border-radius: 6px; border: 1px solid rgba(0, 242, 255, 0.1);">
                     <span style="color: var(--accent); font-weight: bold;">→</span> 
                     <span style="color:#fff; font-weight:bold; width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${n.name}</span>
                     <input type="text" value="${n.method || ''}" placeholder="Requirement..." 
@@ -80,16 +91,17 @@ function renderEditorList(filter = '') {
 
         html += `
             <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); ${isModified ? 'background: rgba(0, 242, 255, 0.03);' : ''}">
-                <td style="padding: 0.8rem; font-weight: 600; width: 180px; vertical-align: top;">
+                <td style="padding: 0.8rem; font-weight: 600; width: 160px; vertical-align: top;">
                     <div style="display: flex; align-items: center; gap: 0.5rem;">
                         <img src="${getImageUrl(d.name)}" style="width: 32px; height: 32px; object-fit: contain;" onerror="this.src='assets/appLogo.png'">
                         <span>${d.name} ${isModified ? '<small style="color: var(--accent); display: block; font-size: 0.6rem;">MODIFIED</small>' : ''}</span>
                     </div>
                 </td>
+                <td style="padding: 0.8rem; vertical-align: top; width: 200px;">${prevEvos}</td>
                 <td style="padding: 0.8rem; vertical-align: top;">${nextEvos}</td>
                 <td style="padding: 0.8rem; width: 140px; vertical-align: top;">
                     <button onclick="startAddEvolution('${d.name.replace(/'/g, "\\'")}')" 
-                        class="patch-done-btn" style="padding: 0.5rem; font-size: 0.75rem; margin: 0; width: 100%; border: 1px dashed var(--accent); background: transparent; color: var(--accent);">+ Add Evolution</button>
+                        class="patch-done-btn" style="padding: 0.5rem; font-size: 0.75rem; margin: 0; width: 100%; border: 1px dashed var(--accent); background: transparent; color: var(--accent);">+ Add Next</button>
                     <button onclick="window.openDigimonDetail('${d.name.replace(/'/g, "\\'")}')" 
                         style="margin-top: 5px; padding: 0.5rem; font-size: 0.7rem; background: transparent; border: 1px solid rgba(255,255,255,0.1); color: var(--text-secondary); width: 100%; border-radius: 4px; cursor: pointer;">View Profile</button>
                 </td>
@@ -165,7 +177,7 @@ function renderEditorChoiceResults(filter = '') {
     const query = filter.trim().toLowerCase();
     const matches = Array.from(digimonMap.values())
         .filter(d => d.name.toLowerCase().includes(query))
-        .slice(0, 16);
+        .slice(0, 50);
 
     if (matches.length === 0) {
         container.innerHTML = `<div style="text-align:center; padding: 2rem; font-size: 0.9rem; color: var(--text-secondary); grid-column: 1/-1;">No Digimon found</div>`;
@@ -217,8 +229,9 @@ function exportDatabaseJSON() {
         <div style="padding:1rem; text-align:center;">
             <p style="margin-bottom:1.5rem; font-family:var(--font-heading); color:var(--accent);">You have ${modifiedDigimon.size} modified entries.</p>
             <div style="display:grid; gap:10px;">
-                <button id="exportOnlyEdits" class="patch-done-btn" style="margin:0;">Export ONLY Edits (Patch)</button>
-                <button id="exportFullDB" class="confirm-btn no" style="width:100%; border:1px solid rgba(255,255,255,0.1);">Export FULL Database</button>
+                <button id="exportOnlyEdits" class="patch-done-btn" style="margin:0;">Download ONLY Edits (Patch)</button>
+                <button id="copyEditsToClipboard" class="patch-done-btn" style="margin:0; background: rgba(0, 242, 255, 0.1); color: var(--accent); border: 1px solid var(--accent);">Copy Edits to Clipboard</button>
+                <button id="exportFullDB" class="confirm-btn no" style="width:100%; border:1px solid rgba(255,255,255,0.1);">Download FULL Database</button>
             </div>
         </div>
     `;
@@ -236,6 +249,20 @@ function exportDatabaseJSON() {
         const json = JSON.stringify(edits, null, 4);
         downloadFile(`const EDITED_DIGIMON = ${json};`, 'edits_patch.js');
         resetConfirmModal();
+    };
+
+    document.getElementById('copyEditsToClipboard').onclick = async () => {
+        const edits = Array.from(modifiedDigimon).map(name => digimonMap.get(name));
+        const json = JSON.stringify(edits, null, 4);
+        const text = `const EDITED_DIGIMON = ${json};`;
+        try {
+            await navigator.clipboard.writeText(text);
+            showToast("Copied patch to clipboard!");
+            resetConfirmModal();
+        } catch (err) {
+            console.error("Failed to copy:", err);
+            showToast("Failed to copy to clipboard.");
+        }
     };
 
     document.getElementById('exportFullDB').onclick = () => {
@@ -275,3 +302,31 @@ window.removeEvolution = removeEvolution;
 window.startAddEvolution = startAddEvolution;
 window.exportDatabaseJSON = exportDatabaseJSON;
 window.renderEditorChoiceResults = renderEditorChoiceResults;
+
+function createNewDigimon() {
+    const name = prompt("Enter Name of the new Digimon:");
+    if (!name) return;
+    const cleanName = name.trim();
+    if (digimonMap.has(cleanName)) {
+        showToast("Digimon already exists in database!");
+        return;
+    }
+
+    const nextId = (Math.max(...Array.from(digimonMap.values()).map(d => parseInt(d.id || 0))) + 1).toString();
+    const newEntry = {
+        id: nextId,
+        name: cleanName,
+        types: ["Dark"], // Default
+        stage: "Rookie", // Default
+        next: [],
+        prev: []
+    };
+
+    digimonMap.set(cleanName, newEntry);
+    modifiedDigimon.add(cleanName);
+    renderEditorList(cleanName);
+    showToast(`Created new entry: ${cleanName}`);
+}
+
+window.startCreateNewDigimon = createNewDigimon;
+

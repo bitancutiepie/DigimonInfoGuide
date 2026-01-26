@@ -2,7 +2,7 @@ import os
 
 # Configuration
 SOURCE_DIR = 'js/modules'
-OUTPUT_FILE = 'dist/bundle.js'
+OUTPUT_FILE = 'js/bundle.js'
 ENTRY_POINT = 'js/script.js'
 
 # Data dependencies from data/ folder

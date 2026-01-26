@@ -745,8 +745,8 @@ function renderTeamMemberTracker(name, goal) {
         }
 
         html += `
-            <div class="evo-tracker-item ${activeClass} ${goalClass}" 
-                 style="width:100%; display:flex; flex-direction:row; align-items:center; gap:0.75rem; padding:12px; background:rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius:10px; min-width: 0; cursor: pointer;"
+             <div class="evo-tracker-item ${activeClass} ${goalClass}" 
+                  style="width:100%; display:flex; flex-direction:row; align-items:center; gap:0.75rem; padding:12px; background:rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius:10px; min-width: 0; cursor: pointer; position: relative; overflow: visible !important;"
                  onclick="event.stopPropagation(); window.openDigimonDetail('${item.name.replace(/'/g, "\\'")}')">
                 <img src="${img}" class="evo-tracker-img" style="width:40px; height:40px; flex-shrink: 0; opacity:1; filter:drop-shadow(0 0 5px rgba(0,0,0,0.5));" onerror="this.src='assets/appLogo.png'">
                 <div style="text-align:left; flex:1; min-width: 0;">
@@ -1701,6 +1701,10 @@ function renderSharedSearchResult(inputEl) {
         container.innerHTML = '';
         return;
     }
+
+    const matches = Array.from(digimonMap.values())
+        .filter(d => d.name.toLowerCase().includes(query))
+        .slice(0, 50);
 
     container.innerHTML = matches.map(d => `
         <div class="choice-search-item" onclick="window.openDigimonChoice('${d.name.replace(/'/g, "\\'")}')">

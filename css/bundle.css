@@ -3194,9 +3194,9 @@ body::before {
 /* Hover Card for Evolution Roadmap */
 .evo-hover-card {
     position: absolute;
-    left: calc(100% + 15px);
-    top: 50%;
-    transform: translateY(-50%) translateX(10px);
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%) translateY(10px);
     width: 220px;
     background: rgba(10, 26, 31, 0.98);
     backdrop-filter: blur(15px);
@@ -3215,28 +3215,12 @@ body::before {
     text-align: left;
 }
 
-/* Responsive adjustment for hover card */
-@media (max-width: 1100px) {
-
-    /* If the screen is not wide enough, pop it to the left instead of right */
-    /* This applies when the roadmap is near the right edge of modal */
-    .team-member-card:nth-child(even) .evo-hover-card {
-        left: auto;
-        right: calc(100% + 15px);
-        transform: translateY(-50%) translateX(-10px);
-    }
-
-    .team-member-card:nth-child(even) .evo-hover-card::before {
-        left: auto;
-        right: -8px;
-        border-width: 8px 0 8px 8px;
-        border-color: transparent transparent transparent var(--accent);
-    }
-
-    .team-member-card:nth-child(even) .evo-tracker-item:hover .evo-hover-card {
-        transform: translateY(-50%) translateX(0);
-    }
+.evo-tracker-item:hover .evo-hover-card {
+    opacity: 1;
+    transform: translateX(-50%) translateY(5px);
+    pointer-events: auto;
 }
+
 
 @media (max-width: 600px) {
     .evo-hover-card {
@@ -3249,15 +3233,12 @@ body::before {
         margin-top: 5px;
     }
 
-    .evo-hover-card::before {
-        display: none;
-    }
-
     .evo-tracker-item:hover .evo-hover-card {
         opacity: 1;
         transform: translateY(0) !important;
     }
 }
+
 
 
 /* Base hover definition moved before media queries if needed, but actually it's already handled above or is redundant here */
