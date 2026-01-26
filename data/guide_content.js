@@ -1,4 +1,3 @@
-// Perfectly Formatted Digimon Data
 const DIGIMON_DB = [
     {
         "id": "1",
@@ -32,7 +31,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "20",
-                "move": "Air Cutter"
+                "move": "Wind Cutter"
             }
         ],
         "locations": [
@@ -46,14 +45,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "2",
         "name": "Angemon",
         "types": [
-            "Holy",
-            "Flying"
+            "Flying",
+            "Holy"
         ],
         "ability": "Justified",
         "hiddenAbility": "Purifying Salt",
@@ -101,14 +101,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "3",
         "name": "HolyAngemon",
         "types": [
-            "Holy",
-            "Flying"
+            "Flying",
+            "Holy"
         ],
         "ability": "Justified",
         "hiddenAbility": "Purifying Salt",
@@ -150,6 +151,10 @@ const DIGIMON_DB = [
             {
                 "name": "Angemon",
                 "method": "Lv35"
+            },
+            {
+                "name": "HolyAngemon Priest",
+                "method": "Lv80"
             }
         ],
         "next": [
@@ -163,14 +168,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "4",
         "name": "Seraphimon",
         "types": [
-            "Holy",
-            "Flying"
+            "Flying",
+            "Holy"
         ],
         "ability": "Justified",
         "hiddenAbility": "Purifying Salt",
@@ -218,14 +224,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "5",
         "name": "Pegasmon",
         "types": [
-            "Holy",
-            "Flying"
+            "Flying",
+            "Holy"
         ],
         "ability": "Run Away",
         "hiddenAbility": "Justified",
@@ -263,15 +270,16 @@ const DIGIMON_DB = [
                 "method": "Lv35"
             }
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "6",
         "name": "HolyAngemon Priest",
         "types": [
-            "Holy",
-            "Flying"
+            "Flying",
+            "Holy"
         ],
         "ability": "Healer",
         "hiddenAbility": "Justified",
@@ -313,16 +321,22 @@ const DIGIMON_DB = [
                 "method": "Lv35"
             }
         ],
-        "next": [],
-        "stage": "Champion",
-        "cardLevel": 4
+        "next": [
+            {
+                "name": "HolyAngemon",
+                "method": "Lv80"
+            }
+        ],
+        "stage": "Mega",
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "7",
         "name": "Goddramon",
         "types": [
-            "Holy",
-            "Dragon"
+            "Dragon",
+            "Holy"
         ],
         "ability": "Parental Bond",
         "hiddenAbility": "Justified",
@@ -337,7 +351,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "8",
@@ -385,7 +400,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "9",
@@ -439,7 +455,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "10",
@@ -497,14 +514,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "11",
         "name": "Cherubimon",
         "types": [
-            "Holy",
-            "Fighting"
+            "Fighting",
+            "Holy"
         ],
         "ability": "Tough Claws",
         "hiddenAbility": "Speed Boost",
@@ -552,7 +570,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "12",
@@ -597,8 +616,9 @@ const DIGIMON_DB = [
                 "method": "Lv35"
             }
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "13",
@@ -657,8 +677,9 @@ const DIGIMON_DB = [
                 "method": "Lv56"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Mega",
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "14",
@@ -712,8 +733,9 @@ const DIGIMON_DB = [
             }
         ],
         "next": [],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Ultra",
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
         "id": "15",
@@ -761,7 +783,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "16",
@@ -814,14 +837,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "17",
         "name": "Angewomon",
         "types": [
-            "Holy",
-            "Fairy"
+            "Fairy",
+            "Holy"
         ],
         "ability": "Hospitality",
         "hiddenAbility": "Magic Bounce",
@@ -872,18 +896,19 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Mastemon",
-                "method": "Jogress w/ LadyDevimon"
+                "method": "Jogress LadyDevimon"
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "18",
         "name": "Ophanimon",
         "types": [
-            "Holy",
-            "Fairy"
+            "Fairy",
+            "Holy"
         ],
         "ability": "Hospitality",
         "hiddenAbility": "Magic Bounce",
@@ -929,16 +954,22 @@ const DIGIMON_DB = [
                 "method": "Lv56"
             }
         ],
-        "next": [],
+        "next": [
+            {
+                "name": "Ophanimon Falldown",
+                "method": "Dark Data"
+            }
+        ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "19",
         "name": "Nefertimon",
         "types": [
-            "Holy",
-            "Flying"
+            "Flying",
+            "Holy"
         ],
         "ability": "Magic Bounce",
         "hiddenAbility": "Regenerator",
@@ -981,15 +1012,16 @@ const DIGIMON_DB = [
                 "method": "Lv35"
             }
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "20",
         "name": "Kyukimon",
         "types": [
-            "Holy",
-            "Flying"
+            "Flying",
+            "Holy"
         ],
         "ability": "Magic Bounce",
         "hiddenAbility": "Regenerator",
@@ -1039,15 +1071,16 @@ const DIGIMON_DB = [
                 "method": "Lv80"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Mega",
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "21",
         "name": "HolyDramon",
         "types": [
-            "Holy",
-            "Dragon"
+            "Dragon",
+            "Holy"
         ],
         "ability": "Magic Bounce",
         "hiddenAbility": "Regenerator",
@@ -1061,8 +1094,9 @@ const DIGIMON_DB = [
             }
         ],
         "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultra",
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
         "id": "22",
@@ -1107,7 +1141,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "23",
@@ -1146,9 +1181,9 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 111",
+            "Magma Hideout",
             "Mt Pyre",
-            "Magma Hideout"
+            "Route 111"
         ],
         "prev": [
             {
@@ -1163,7 +1198,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "24",
@@ -1221,7 +1257,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "25",
@@ -1280,7 +1317,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "26",
@@ -1322,14 +1360,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "27",
         "name": "Piddomon",
         "types": [
-            "Holy",
-            "Fire"
+            "Fire",
+            "Holy"
         ],
         "ability": "Blaze",
         "hiddenAbility": "Justified",
@@ -1373,14 +1412,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "28",
         "name": "ArkhaiAngemon",
         "types": [
-            "Holy",
-            "Fire"
+            "Fire",
+            "Holy"
         ],
         "ability": "Blaze",
         "hiddenAbility": "Justified",
@@ -1436,17 +1476,22 @@ const DIGIMON_DB = [
             {
                 "name": "ClavisAngemon",
                 "method": "Lv54"
+            },
+            {
+                "name": "Gargolemon",
+                "method": "Empty Slot"
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "29",
         "name": "ClavisAngemon",
         "types": [
-            "Holy",
-            "Fire"
+            "Fire",
+            "Holy"
         ],
         "ability": "Blaze",
         "hiddenAbility": "Justified",
@@ -1500,14 +1545,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "30",
         "name": "Gargolemon",
         "types": [
-            "Holy",
-            "Dragon"
+            "Dragon",
+            "Holy"
         ],
         "ability": "Sturdy",
         "hiddenAbility": "",
@@ -1544,6 +1590,10 @@ const DIGIMON_DB = [
         ],
         "prev": [
             {
+                "name": "ArkhaiAngemon",
+                "method": "Empty Slot"
+            },
+            {
                 "name": "Veemon",
                 "method": "Light Data"
             }
@@ -1555,14 +1605,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "31",
         "name": "Manticoremon",
         "types": [
-            "Holy",
-            "Dragon"
+            "Dragon",
+            "Holy"
         ],
         "ability": "No Guard",
         "hiddenAbility": "",
@@ -1608,7 +1659,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "32",
@@ -1634,7 +1686,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "15",
-                "move": "Rock Smash"
+                "move": "Rock Breaker"
             },
             {
                 "level": "18",
@@ -1642,10 +1694,10 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Granite Cave",
             "Route 101",
             "Route 102",
-            "Route 104",
-            "Granite Cave"
+            "Route 104"
         ],
         "prev": [],
         "next": [
@@ -1655,7 +1707,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "33",
@@ -1701,22 +1754,27 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "MetalGreymon",
-                "method": "Lv32"
+                "method": "Lv 32"
             },
             {
                 "name": "Kimeramon",
                 "method": "Organic Data"
+            },
+            {
+                "name": "SkullGreymon",
+                "method": "Dark Data"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "34",
         "name": "MetalGreymon",
         "types": [
-            "Steel",
-            "Fire"
+            "Fire",
+            "Steel"
         ],
         "ability": "Blaze",
         "hiddenAbility": "Solar Power",
@@ -1761,7 +1819,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Greymon",
-                "method": "Lv32"
+                "method": "Lv 32"
             }
         ],
         "next": [
@@ -1772,21 +1830,18 @@ const DIGIMON_DB = [
             {
                 "name": "ShineGreymon",
                 "method": "Auspicious Armor"
-            },
-            {
-                "name": "BlitzGreymon",
-                "method": "LvNew Mauvile (Location/Item)"
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "35",
         "name": "WarGreymon",
         "types": [
-            "Fire",
-            "Dragon"
+            "Dragon",
+            "Fire"
         ],
         "ability": "Blaze",
         "hiddenAbility": "Solar Power",
@@ -1843,11 +1898,12 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Omegamon",
-                "method": "Jogress w/ MetalGarurumon"
+                "method": "MetalGarurumon Jogress"
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "36",
@@ -1908,21 +1964,17 @@ const DIGIMON_DB = [
                 "method": "Auspicious Armor"
             }
         ],
-        "next": [
-            {
-                "name": "ShineGreymon Burst",
-                "method": "Shine Soul"
-            }
-        ],
+        "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "37",
         "name": "BlitzGreymon",
         "types": [
-            "Steel",
-            "Electric"
+            "Electric",
+            "Steel"
         ],
         "ability": "Lightning Rod",
         "hiddenAbility": "Electric Surge",
@@ -1972,13 +2024,18 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "MetalGreymon",
-                "method": "LvNew Mauvile (Location/Item)"
+                "name": "Metal",
+                "method": "Greymon"
+            },
+            {
+                "name": "Lv",
+                "method": "New Mauvile"
             }
         ],
         "next": [],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "38",
@@ -2016,12 +2073,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "WarGreymon",
-                "method": "Jogress w/ MetalGarurumon"
+                "method": "MetalGarurumon Jogress"
             }
         ],
         "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultra",
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
         "id": "39",
@@ -2048,7 +2106,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "15",
-                "move": "Rock Smash"
+                "move": "Rock Breaker"
             },
             {
                 "level": "18",
@@ -2065,14 +2123,11 @@ const DIGIMON_DB = [
             {
                 "name": "Garurumon",
                 "method": "Lv18"
-            },
-            {
-                "name": "Strabimon",
-                "method": "Lv18"
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "40",
@@ -2111,13 +2166,17 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Gabumon Crest",
             "Route 110 (Guardian)",
-            "Route 117",
-            "Gabumon Crest"
+            "Route 117"
         ],
         "prev": [
             {
                 "name": "Gabumon",
+                "method": "Lv18"
+            },
+            {
+                "name": "Strabimon",
                 "method": "Lv18"
             }
         ],
@@ -2132,14 +2191,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "41",
         "name": "WereGarurumon",
         "types": [
-            "Ice",
-            "Fighting"
+            "Fighting",
+            "Ice"
         ],
         "ability": "Fur Coat",
         "hiddenAbility": "Snow Cloak",
@@ -2191,7 +2251,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "MetalGarurumon",
-                "method": "Lv54"
+                "method": "LV54"
             },
             {
                 "name": "CresGarurumon",
@@ -2199,7 +2259,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "42",
@@ -2257,19 +2318,20 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "WereGarurumon",
-                "method": "Lv54"
+                "method": "LV54"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "43",
         "name": "CresGarurumon",
         "types": [
-            "Ice",
-            "Fighting"
+            "Fighting",
+            "Ice"
         ],
         "ability": "Intrepid Sword",
         "hiddenAbility": "Sharpness",
@@ -2326,18 +2388,19 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Omegamon Alter S",
-                "method": "Jogress w/ BlitzGreymon"
+                "method": "BlitzGreymon Jogress"
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "44",
         "name": "Omegamon Alter S",
         "types": [
-            "Fighting",
-            "Electric"
+            "Electric",
+            "Fighting"
         ],
         "ability": "Speed Boost",
         "hiddenAbility": "",
@@ -2368,12 +2431,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "CresGarurumon",
-                "method": "Jogress w/ BlitzGreymon"
+                "method": "BlitzGreymon Jogress"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "45",
@@ -2407,10 +2471,10 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 103",
-            "Route 104",
+            "Biyomon Crest",
             "Jagged Pass",
-            "Biyomon Crest"
+            "Route 103",
+            "Route 104"
         ],
         "prev": [],
         "next": [
@@ -2424,7 +2488,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "46",
@@ -2463,10 +2528,10 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Jagged Pass",
             "Route 103",
             "Route 110",
-            "Route 112",
-            "Jagged Pass"
+            "Route 112"
         ],
         "prev": [
             {
@@ -2481,7 +2546,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "47",
@@ -2545,7 +2611,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "48",
@@ -2608,7 +2675,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "49",
@@ -2673,14 +2741,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "50",
         "name": "Xiquemon",
         "types": [
-            "Water",
-            "Flying"
+            "Flying",
+            "Water"
         ],
         "ability": "Swift Swim",
         "hiddenAbility": "Gale Wings",
@@ -2712,11 +2781,11 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Biyomon Crest",
             "Route 103",
             "Route 104",
             "Route 110",
-            "Route 116",
-            "Biyomon Crest"
+            "Route 116"
         ],
         "prev": [
             {
@@ -2731,14 +2800,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "51",
         "name": "Huankunmon",
         "types": [
-            "Water",
-            "Flying"
+            "Flying",
+            "Water"
         ],
         "ability": "Swift Swim",
         "hiddenAbility": "Gale Wings",
@@ -2787,14 +2857,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "52",
         "name": "Xiangpengmon",
         "types": [
-            "Water",
-            "Flying"
+            "Flying",
+            "Water"
         ],
         "ability": "Drizzle",
         "hiddenAbility": "Delta Stream",
@@ -2850,7 +2921,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "53",
@@ -2885,23 +2957,24 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Petalburg Woods",
             "Route 102",
-            "Route 104",
-            "Petalburg Woods"
+            "Route 104"
         ],
         "prev": [],
         "next": [
             {
                 "name": "Kabuterimon",
-                "method": "Lv18 (Lowkey Personality)"
+                "method": "Lv18 Lowkey"
             },
             {
                 "name": "Kuwagamon",
-                "method": "Lv18 (Amped Personality)"
+                "method": "Lv18 Amped"
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "54",
@@ -2940,13 +3013,13 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Tentomon Crest",
-            "Old Mauville"
+            "Old Mauville",
+            "Tentomon Crest"
         ],
         "prev": [
             {
                 "name": "Tentomon",
-                "method": "Lv18 (Lowkey Personality)"
+                "method": "Lv18 Lowkey"
             }
         ],
         "next": [
@@ -2957,10 +3030,15 @@ const DIGIMON_DB = [
             {
                 "name": "Kimeramon",
                 "method": "Organic Data"
+            },
+            {
+                "name": "Metabee",
+                "method": "AW Data"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "55",
@@ -3026,7 +3104,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "56",
@@ -3085,7 +3164,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "57",
@@ -3148,7 +3228,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "58",
@@ -3192,7 +3273,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Tentomon",
-                "method": "Lv18 (Amped Personality)"
+                "method": "Lv18 Amped"
             }
         ],
         "next": [
@@ -3203,10 +3284,15 @@ const DIGIMON_DB = [
             {
                 "name": "Kimeramon",
                 "method": "Organic Data"
+            },
+            {
+                "name": "Rokusho",
+                "method": "AW Data"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "59",
@@ -3253,8 +3339,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Victory Road F1",
-            "F3"
+            "F3",
+            "Victory Road F1"
         ],
         "prev": [
             {
@@ -3269,7 +3355,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "60",
@@ -3334,7 +3421,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "61",
@@ -3369,23 +3457,24 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Petalburg Woods",
             "Route 102",
-            "Route 104",
-            "Petalburg Woods"
+            "Route 104"
         ],
         "prev": [],
         "next": [
             {
                 "name": "Togemon",
-                "method": "Lv18 (Amped Personality)"
+                "method": "Lv18 Amped"
             },
             {
                 "name": "Sunflowmon",
-                "method": "Lv18 (Lowkey Personality)"
+                "method": "lv18 Lowkey"
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "62",
@@ -3429,7 +3518,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Palmon",
-                "method": "Lv18 (Amped Personality)"
+                "method": "Lv18 Amped"
             }
         ],
         "next": [
@@ -3439,14 +3528,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "63",
         "name": "Lilimon",
         "types": [
-            "Grass",
-            "Fairy"
+            "Fairy",
+            "Grass"
         ],
         "ability": "Flower Veil",
         "hiddenAbility": "Grassy Surge",
@@ -3503,7 +3593,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "64",
@@ -3564,21 +3655,17 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "next": [
-            {
-                "name": "Rosemon Burst",
-                "method": "Rose Soul"
-            }
-        ],
+        "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "65",
         "name": "Rafflesimon",
         "types": [
-            "Grass",
-            "Fairy"
+            "Fairy",
+            "Grass"
         ],
         "ability": "Misty Surge",
         "hiddenAbility": "Grassy Surge",
@@ -3609,19 +3696,20 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Lotusmon",
-                "method": "Jogress w/ Rosemon"
+                "method": "Rosemon Jogress"
             }
         ],
         "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultra",
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
         "id": "66",
         "name": "BanchoLilimon",
         "types": [
-            "Grass",
-            "Fighting"
+            "Fighting",
+            "Grass"
         ],
         "ability": "Justified",
         "hiddenAbility": "Grassy Surge",
@@ -3677,14 +3765,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "67",
         "name": "Sunflowmon",
         "types": [
-            "Grass",
-            "Flying"
+            "Flying",
+            "Grass"
         ],
         "ability": "Clorophyll",
         "hiddenAbility": "Solar Power",
@@ -3719,21 +3808,22 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Palmon",
-                "method": "Lv18 (Lowkey Personality)"
+                "method": "lv18 Lowkey"
             }
         ],
         "next": [
             {
                 "name": "Lilamon",
-                "method": "Lv32"
+                "method": "Lv32 Female"
             },
             {
                 "name": "Blossomon",
-                "method": "Lv32"
+                "method": "Lv32 Male"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "68",
@@ -3782,7 +3872,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Sunflowmon",
-                "method": "Lv32"
+                "method": "Lv32 Female"
             }
         ],
         "next": [
@@ -3792,7 +3882,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "69",
@@ -3852,11 +3943,12 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Rafflesimon",
-                "method": "Jogress w/ Rosemon"
+                "method": "Rosemon Jogress"
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "70",
@@ -3901,7 +3993,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Sunflowmon",
-                "method": "Lv32"
+                "method": "Lv32 Male"
             }
         ],
         "next": [
@@ -3911,14 +4003,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "71",
         "name": "Zamielmon",
         "types": [
-            "Grass",
-            "Fairy"
+            "Fairy",
+            "Grass"
         ],
         "ability": "Super Luck",
         "hiddenAbility": "Solar Power",
@@ -3973,8 +4066,9 @@ const DIGIMON_DB = [
             }
         ],
         "next": [],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Mega",
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "72",
@@ -4012,21 +4106,17 @@ const DIGIMON_DB = [
             "Shoal Cave"
         ],
         "prev": [],
-        "next": [
-            {
-                "name": "Ikkakumon",
-                "method": "Lv18"
-            }
-        ],
+        "next": [],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "73",
         "name": "Ikkakumon",
         "types": [
-            "Water",
-            "Ice"
+            "Ice",
+            "Water"
         ],
         "ability": "Thick Fat",
         "hiddenAbility": "Intimidate",
@@ -4062,7 +4152,7 @@ const DIGIMON_DB = [
         ],
         "prev": [
             {
-                "name": "Gomamon",
+                "name": "Gomgamon",
                 "method": "Lv18"
             }
         ],
@@ -4073,14 +4163,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "74",
         "name": "Zudomon",
         "types": [
-            "Water",
-            "Ice"
+            "Ice",
+            "Water"
         ],
         "ability": "Galvanize",
         "hiddenAbility": "Intimidate",
@@ -4137,14 +4228,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "75",
         "name": "Vikemon",
         "types": [
-            "Water",
-            "Ice"
+            "Ice",
+            "Water"
         ],
         "ability": "Snow Warning",
         "hiddenAbility": "Intimidate",
@@ -4196,7 +4288,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "76",
@@ -4259,11 +4352,12 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Aegisdramon",
-                "method": "Jogress w/ MetalSeadramon"
+                "method": "Jogress MetalSeadramon"
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "77",
@@ -4289,7 +4383,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "15",
-                "move": "Rock Smash"
+                "move": "Rock Breaker"
             },
             {
                 "level": "18",
@@ -4304,11 +4398,12 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Gargomon",
-                "method": "Lv18"
+                "method": "LV18"
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "78",
@@ -4346,14 +4441,14 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 103",
             "110 (Guardian)",
+            "Route 103",
             "Route 117"
         ],
         "prev": [
             {
                 "name": "Terriermon",
-                "method": "Lv18"
+                "method": "LV18"
             }
         ],
         "next": [
@@ -4363,7 +4458,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "79",
@@ -4424,14 +4520,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "80",
         "name": "SaintGargomon",
         "types": [
-            "Steel",
-            "Fighting"
+            "Fighting",
+            "Steel"
         ],
         "ability": "Speed Boost",
         "hiddenAbility": "Mega Launcher",
@@ -4487,14 +4584,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "81",
         "name": "Guilmon",
         "types": [
-            "Fire",
-            "Dark"
+            "Dark",
+            "Fire"
         ],
         "ability": "Berserk",
         "hiddenAbility": "Sheer Force",
@@ -4502,7 +4600,7 @@ const DIGIMON_DB = [
         "moves": [
             {
                 "level": "6",
-                "move": "Rock Smash"
+                "move": "Rock Breaker"
             },
             {
                 "level": "9",
@@ -4528,18 +4626,19 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Growmon",
-                "method": "Lv18"
+                "method": "LV18"
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "82",
         "name": "Growmon",
         "types": [
-            "Fire",
-            "Dark"
+            "Dark",
+            "Fire"
         ],
         "ability": "Berserk",
         "hiddenAbility": "Sheer Force",
@@ -4577,17 +4676,18 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Guilmon",
-                "method": "Lv18"
+                "method": "LV18"
             }
         ],
         "next": [
             {
                 "name": "MegaloGrowmon",
-                "method": "Lv32"
+                "method": "LV32"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "83",
@@ -4618,7 +4718,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "44",
-                "move": "Bitter Blade"
+                "move": "Flame Blade"
             },
             {
                 "level": "47",
@@ -4637,7 +4737,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Growmon",
-                "method": "Lv32"
+                "method": "LV32"
             }
         ],
         "next": [
@@ -4647,14 +4747,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "84",
         "name": "Dukemon",
         "types": [
-            "Fire",
-            "Fighting"
+            "Fighting",
+            "Fire"
         ],
         "ability": "Dauntless Shield",
         "hiddenAbility": "Justified",
@@ -4710,16 +4811,13 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "Dukemon Crimson",
-                "method": "Grani"
-            },
-            {
                 "name": "Megidramon",
                 "method": "Dark Data"
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "85",
@@ -4781,8 +4879,9 @@ const DIGIMON_DB = [
             }
         ],
         "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultra",
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
         "id": "86",
@@ -4831,14 +4930,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "87",
         "name": "Kyubimon",
         "types": [
-            "Magic",
-            "Fire"
+            "Fire",
+            "Magic"
         ],
         "ability": "Inner Focus",
         "hiddenAbility": "Magic Guard",
@@ -4870,9 +4970,9 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 110 (Guardian)",
             "Gabumon Crest",
-            "Mirage Tower"
+            "Mirage Tower",
+            "Route 110 (Guardian)"
         ],
         "prev": [
             {
@@ -4887,14 +4987,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "88",
         "name": "Taomon",
         "types": [
-            "Magic",
-            "Fighting"
+            "Fighting",
+            "Magic"
         ],
         "ability": "Magic Bounce",
         "hiddenAbility": "Magic Guard",
@@ -4949,14 +5050,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "89",
         "name": "Sakuyamon",
         "types": [
-            "Magic",
-            "Fighting"
+            "Fighting",
+            "Magic"
         ],
         "ability": "Magic Bounce",
         "hiddenAbility": "Magic Guard",
@@ -5008,14 +5110,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "90",
         "name": "Tenkomon",
         "types": [
-            "Ice",
-            "Fairy"
+            "Fairy",
+            "Ice"
         ],
         "ability": "Snow Cloak",
         "hiddenAbility": "Slush Rush",
@@ -5062,14 +5165,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "91",
         "name": "Sekkamon",
         "types": [
-            "Ice",
-            "Fairy"
+            "Fairy",
+            "Ice"
         ],
         "ability": "Snow Cloak",
         "hiddenAbility": "Slush Rush",
@@ -5122,14 +5226,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "92",
         "name": "Yukinamon",
         "types": [
-            "Ice",
-            "Fairy"
+            "Fairy",
+            "Ice"
         ],
         "ability": "Snow Cloak",
         "hiddenAbility": "Slush Rush",
@@ -5181,7 +5286,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "93",
@@ -5195,7 +5301,7 @@ const DIGIMON_DB = [
         "moves": [
             {
                 "level": "6",
-                "move": "Rock Smash"
+                "move": "Rock Breaker"
             },
             {
                 "level": "9",
@@ -5229,7 +5335,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "94",
@@ -5267,9 +5374,9 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Meteor Falls",
             "Route 111",
-            "Route 113",
-            "Meteor Falls"
+            "Route 113"
         ],
         "prev": [
             {
@@ -5280,11 +5387,12 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Cyberdramon",
-                "method": "Lv32"
+                "method": "LV32"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "95",
@@ -5334,7 +5442,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Strikedramon",
-                "method": "Lv32"
+                "method": "LV32"
             }
         ],
         "next": [
@@ -5344,7 +5452,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "96",
@@ -5407,7 +5516,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "97",
@@ -5417,7 +5527,7 @@ const DIGIMON_DB = [
         ],
         "ability": "Rock Head",
         "hiddenAbility": "Adaptability",
-        "evoMove": "Tackle",
+        "evoMove": "Sonic Jab",
         "moves": [
             {
                 "level": "6",
@@ -5433,7 +5543,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "15",
-                "move": "Rock Smash"
+                "move": "Rock Breaker"
             },
             {
                 "level": "18",
@@ -5465,7 +5575,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "98",
@@ -5520,11 +5631,12 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Paildramon",
-                "method": "Lv28 + Stingmon"
+                "method": "Lv28 Stingmon"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "99",
@@ -5586,7 +5698,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "100",
@@ -5649,14 +5762,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "101",
         "name": "Paildramon",
         "types": [
-            "Dragon",
-            "Bug"
+            "Bug",
+            "Dragon"
         ],
         "ability": "Battle Armor",
         "hiddenAbility": "Speed Boost",
@@ -5701,7 +5815,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "ExVeemon",
-                "method": "Lv28 + Stingmon"
+                "method": "Lv28 Stingmon"
             }
         ],
         "next": [
@@ -5711,14 +5825,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "102",
         "name": "Imperialdramon Dragon",
         "types": [
-            "Dragon",
-            "Bug"
+            "Bug",
+            "Dragon"
         ],
         "ability": "Mega Launcher",
         "hiddenAbility": "Tough Claws",
@@ -5773,17 +5888,13 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Dinobeemon",
-                "method": "Lv52"
+                "method": "Lv 52"
             }
         ],
-        "next": [
-            {
-                "name": "Imperialdramon Fighter",
-                "method": "Positron Laser"
-            }
-        ],
+        "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "103",
@@ -5837,7 +5948,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "104",
@@ -5897,14 +6009,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "105",
         "name": "Qinglongmon",
         "types": [
-            "Electric",
-            "Dragon"
+            "Dragon",
+            "Electric"
         ],
         "ability": "Hadron Engine",
         "hiddenAbility": "Dragon's Maw",
@@ -5936,7 +6049,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "106",
@@ -5990,7 +6104,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "107",
@@ -6069,14 +6184,10 @@ const DIGIMON_DB = [
                 "method": "Lv32"
             }
         ],
-        "next": [
-            {
-                "name": "Magnamon X",
-                "method": "X Antibody"
-            }
-        ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "next": [],
+        "stage": "Ultimate",
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "108",
@@ -6111,10 +6222,10 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Petalburg Woods",
             "Route 102",
             "Route 103",
-            "Route 104",
-            "Petalburg Woods"
+            "Route 104"
         ],
         "prev": [],
         "next": [
@@ -6124,7 +6235,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "109",
@@ -6167,8 +6279,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Tentomon Crest",
-            "Route 110"
+            "Route 110",
+            "Tentomon Crest"
         ],
         "prev": [
             {
@@ -6183,11 +6295,12 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Dinobeemon",
-                "method": "Lv28 + ExVeemon"
+                "method": "Lv28 ExVeemon"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "110",
@@ -6247,7 +6360,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "111",
@@ -6310,7 +6424,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "112",
@@ -6362,17 +6477,18 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Stingmon",
-                "method": "Lv28 + ExVeemon"
+                "method": "Lv28 ExVeemon"
             }
         ],
         "next": [
             {
                 "name": "Imperialdramon Dragon",
-                "method": "Lv52"
+                "method": "Lv 52"
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "113",
@@ -6394,7 +6510,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "12",
-                "move": "Rock Smash"
+                "move": "Rock Breaker"
             },
             {
                 "level": "15",
@@ -6426,7 +6542,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "114",
@@ -6481,11 +6598,12 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Shakkoumon",
-                "method": "Lv28 + Angemon"
+                "method": "Lv28 Angemon"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "115",
@@ -6548,7 +6666,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "116",
@@ -6613,14 +6732,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "117",
         "name": "Shakkoumon",
         "types": [
-            "Steel",
-            "Holy"
+            "Holy",
+            "Steel"
         ],
         "ability": "Levitate",
         "hiddenAbility": "",
@@ -6662,24 +6782,25 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Ankylomon",
-                "method": "Lv28 + Angemon"
+                "method": "Lv28 Angemon"
             }
         ],
         "next": [
             {
                 "name": "SlashAngemon",
-                "method": "Lv52"
+                "method": "Lv 52"
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "118",
         "name": "SlashAngemon",
         "types": [
-            "Steel",
-            "Holy"
+            "Holy",
+            "Steel"
         ],
         "ability": "Sharpness",
         "hiddenAbility": "",
@@ -6734,12 +6855,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Shakkoumon",
-                "method": "Lv52"
+                "method": "Lv 52"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "119",
@@ -6791,7 +6913,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "120",
@@ -6853,15 +6976,16 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "121",
         "name": "KingWhamon",
         "types": [
-            "Water",
-            "Ground"
+            "Ground",
+            "Water"
         ],
         "ability": "Storm Drain",
         "hiddenAbility": "Marvel Scale",
@@ -6912,8 +7036,9 @@ const DIGIMON_DB = [
             }
         ],
         "next": [],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Mega",
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "122",
@@ -6975,15 +7100,16 @@ const DIGIMON_DB = [
             }
         ],
         "next": [],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Mega",
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "123",
         "name": "Digmon",
         "types": [
-            "Ground",
-            "Bug"
+            "Bug",
+            "Ground"
         ],
         "ability": "Sturdy",
         "hiddenAbility": "Marvel Scale",
@@ -7031,14 +7157,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "124",
         "name": "Scorpiomon",
         "types": [
-            "Ground",
-            "Bug"
+            "Bug",
+            "Ground"
         ],
         "ability": "Sturdy",
         "hiddenAbility": "Marvel Scale",
@@ -7093,14 +7220,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "125",
         "name": "ElDoradimon",
         "types": [
-            "Ground",
-            "Grass"
+            "Grass",
+            "Ground"
         ],
         "ability": "Solid Rock",
         "hiddenAbility": "Sap Sipper",
@@ -7154,14 +7282,10 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "next": [
-            {
-                "name": "Tlalocmon",
-                "method": "Jogress w/ SaberLeomon"
-            }
-        ],
+        "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "126",
@@ -7194,13 +7318,14 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "ElDoradimon",
-                "method": "Jogress w/ SaberLeomon"
+                "name": "SaberLeomon",
+                "method": "Jogress ElDoradimon"
             }
         ],
         "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultimate",
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "127",
@@ -7234,8 +7359,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 103",
-            "Petalburg Woods"
+            "Petalburg Woods",
+            "Route 103"
         ],
         "prev": [],
         "next": [
@@ -7253,7 +7378,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "128",
@@ -7291,8 +7417,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 111",
-            "112 (Part 2)"
+            "112 (Part 2)",
+            "Route 111"
         ],
         "prev": [
             {
@@ -7303,7 +7429,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Silphymon",
-                "method": "Lv28 + Tailmon"
+                "method": "Lv28 Tailmon"
             },
             {
                 "name": "Hippogriffomon",
@@ -7311,7 +7437,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "129",
@@ -7363,7 +7490,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Aquilamon",
-                "method": "Lv28 + Tailmon"
+                "method": "Lv28 Tailmon"
             }
         ],
         "next": [
@@ -7373,7 +7500,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "130",
@@ -7438,7 +7566,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "131",
@@ -7490,7 +7619,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "132",
@@ -7533,7 +7663,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "53",
-                "move": "Bitter Blade"
+                "move": "Flame Blade"
             }
         ],
         "locations": [],
@@ -7550,7 +7680,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "133",
@@ -7613,14 +7744,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "134",
         "name": "Holsmon",
         "types": [
-            "Flying",
-            "Fairy"
+            "Fairy",
+            "Flying"
         ],
         "ability": "Soul Heart",
         "hiddenAbility": "Friend Guard",
@@ -7658,14 +7790,10 @@ const DIGIMON_DB = [
                 "method": "Wind Data"
             }
         ],
-        "next": [
-            {
-                "name": "Peacockmon",
-                "method": "Lv32"
-            }
-        ],
+        "next": [],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "135",
@@ -7716,18 +7844,23 @@ const DIGIMON_DB = [
         ],
         "prev": [
             {
-                "name": "Holsmon",
+                "name": "Peacockmon",
                 "method": "Lv32"
             }
         ],
         "next": [
             {
+                "name": "Peacockmon",
+                "method": "Lv32"
+            },
+            {
                 "name": "Valdurmon",
                 "method": "Lv54"
             }
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "136",
@@ -7788,20 +7921,16 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "next": [
-            {
-                "name": "Chaosmon Valdur Arm",
-                "method": "Jogress w/ BanchoLeomon"
-            }
-        ],
+        "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "137",
         "name": "Chaosmon Valdur Arm",
         "types": [
-            "CHAOS"
+            "Chaos"
         ],
         "ability": "Moody",
         "hiddenAbility": "",
@@ -7831,13 +7960,14 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Valdurmon",
-                "method": "Jogress w/ BanchoLeomon"
+                "name": "BanchoLeomon",
+                "method": "Jogress Valdurmon"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "138",
@@ -7890,7 +8020,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "139",
@@ -7929,10 +8060,10 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Mirage Tower",
             "Route 103 (Part 2)",
             "Route 110",
-            "Route 111",
-            "Mirage Tower"
+            "Route 111"
         ],
         "prev": [
             {
@@ -7943,22 +8074,23 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Baalmon",
-                "method": "Lv32"
+                "method": "Lv32 Amped"
             },
             {
                 "name": "Mystimon",
-                "method": "Lv32"
+                "method": "Lv32 Lowkey"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "140",
         "name": "Baalmon",
         "types": [
-            "Magic",
-            "Dark"
+            "Dark",
+            "Magic"
         ],
         "ability": "Magic Guard",
         "hiddenAbility": "Magic Bounce",
@@ -8001,7 +8133,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Wizarmon",
-                "method": "Lv32"
+                "method": "Lv32 Amped"
             }
         ],
         "next": [
@@ -8011,7 +8143,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "141",
@@ -8072,21 +8205,17 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "next": [
-            {
-                "name": "Beelzebumon Blast",
-                "method": "Toy Gun"
-            }
-        ],
+        "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "142",
         "name": "Mystimon",
         "types": [
-            "Magic",
-            "Fire"
+            "Fire",
+            "Magic"
         ],
         "ability": "Long Reach",
         "hiddenAbility": "Magic Bounce",
@@ -8131,7 +8260,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Wizarmon",
-                "method": "Lv32"
+                "method": "Lv32 Lowkey"
             }
         ],
         "next": [
@@ -8141,14 +8270,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "143",
         "name": "Dynasmon",
         "types": [
-            "Magic",
-            "Dragon"
+            "Dragon",
+            "Magic"
         ],
         "ability": "Neuroforce",
         "hiddenAbility": "Magic Bounce",
@@ -8204,7 +8334,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "144",
@@ -8243,9 +8374,9 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Granite Cave",
             "Route 103 (Part 2)",
-            "Route 110",
-            "Granite Cave"
+            "Route 110"
         ],
         "prev": [
             {
@@ -8260,7 +8391,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "145",
@@ -8313,9 +8445,15 @@ const DIGIMON_DB = [
                 "method": "Lv32"
             }
         ],
-        "next": [],
+        "next": [
+            {
+                "name": "Heavy MetalDramon",
+                "method": "Lv54"
+            }
+        ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "146",
@@ -8370,10 +8508,16 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [],
-        "prev": [],
+        "prev": [
+            {
+                "name": "Loudmon",
+                "method": "Lv54"
+            }
+        ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "147",
@@ -8413,7 +8557,7 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "DORUgamon",
-                "method": "Lv18"
+                "method": "LV18"
             },
             {
                 "name": "DexDORUgamon",
@@ -8421,7 +8565,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "148",
@@ -8460,14 +8605,14 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Jagged Pass",
             "Route 110",
-            "Route 111",
-            "Jagged Pass"
+            "Route 111"
         ],
         "prev": [
             {
                 "name": "DORUmon",
-                "method": "Lv18"
+                "method": "LV18"
             }
         ],
         "next": [
@@ -8477,7 +8622,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "149",
@@ -8530,18 +8676,10 @@ const DIGIMON_DB = [
                 "method": "Lv32"
             }
         ],
-        "next": [
-            {
-                "name": "DORUgoramon",
-                "method": "Lv54"
-            },
-            {
-                "name": "Alphamon",
-                "method": "Auspicious Armor"
-            }
-        ],
+        "next": [],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "150",
@@ -8598,13 +8736,14 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Doruguremon",
-                "method": "Lv54"
+                "name": "DORUguremon",
+                "method": "LV54"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "151",
@@ -8658,7 +8797,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "152",
@@ -8717,11 +8857,12 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "DexDORUgoramon",
-                "method": "Lv54"
+                "method": "LV54"
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "153",
@@ -8775,12 +8916,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "DexDORUguremon",
-                "method": "Lv54"
+                "method": "LV54"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "154",
@@ -8836,25 +8978,26 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Doruguremon",
+                "name": "DORUguremon",
                 "method": "Auspicious Armor"
             }
         ],
         "next": [
             {
                 "name": "Alphamon Ouryuken",
-                "method": "Jogress w/ Ouryumon"
+                "method": "Jogress Ouryumon"
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "155",
         "name": "Alphamon Ouryuken",
         "types": [
-            "Steel",
-            "Dragon"
+            "Dragon",
+            "Steel"
         ],
         "ability": "Anticipation",
         "hiddenAbility": "Multiscale",
@@ -8921,12 +9064,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Alphamon",
-                "method": "Jogress w/ Ouryumon"
+                "method": "Jogress Ouryumon"
             }
         ],
         "next": [],
         "stage": "Ultra",
-        "cardLevel": 7
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
         "id": "156",
@@ -8970,14 +9114,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "157",
         "name": "Ginryumon",
         "types": [
-            "Fighting",
-            "Dragon"
+            "Dragon",
+            "Fighting"
         ],
         "ability": "Sharpness",
         "hiddenAbility": "Inner Focus",
@@ -9021,14 +9166,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "158",
         "name": "Hisyaryumon",
         "types": [
-            "Fighting",
-            "Dragon"
+            "Dragon",
+            "Fighting"
         ],
         "ability": "Sharpness",
         "hiddenAbility": "Inner Focus",
@@ -9077,18 +9223,19 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Ouryumon",
-                "method": "Lv54"
+                "method": "LV54"
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "159",
         "name": "Ouryumon",
         "types": [
-            "Fighting",
-            "Dragon"
+            "Dragon",
+            "Fighting"
         ],
         "ability": "Sharpness",
         "hiddenAbility": "Inner Focus",
@@ -9137,12 +9284,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Hisyaryumon",
-                "method": "Lv54"
+                "method": "LV54"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "160",
@@ -9168,7 +9316,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "15",
-                "move": "Rock Smash"
+                "move": "Rock Breaker"
             },
             {
                 "level": "18",
@@ -9184,7 +9332,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "161",
@@ -9222,9 +9371,9 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Gabumon Crest",
             "Route 110 (Guardian)",
-            "Route 114",
-            "Gabumon Crest"
+            "Route 114"
         ],
         "prev": [
             {
@@ -9239,7 +9388,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "162",
@@ -9299,18 +9449,19 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "MirageGaogamon",
-                "method": "Lv54"
+                "method": "LV54"
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "163",
         "name": "MirageGaogamon",
         "types": [
-            "Fighting",
-            "Fairy"
+            "Fairy",
+            "Fighting"
         ],
         "ability": "Speed Boost",
         "hiddenAbility": "Tough Claws",
@@ -9361,17 +9512,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "MachGaogamon",
-                "method": "Lv54"
+                "method": "LV54"
             }
         ],
-        "next": [
-            {
-                "name": "MirageGaogamon Burst",
-                "method": "Mirage Soul"
-            }
-        ],
+        "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "164",
@@ -9417,7 +9564,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "165",
@@ -9471,7 +9619,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "166",
@@ -9533,7 +9682,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "167",
@@ -9594,14 +9744,10 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "next": [
-            {
-                "name": "Ravemon Burst",
-                "method": "Raven Soul"
-            }
-        ],
+        "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "168",
@@ -9635,9 +9781,9 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Rusturf Tunnel",
+            "Fiery Path",
             "Granite Cave",
-            "Fiery Path"
+            "Rusturf Tunnel"
         ],
         "prev": [],
         "next": [
@@ -9650,15 +9796,16 @@ const DIGIMON_DB = [
                 "method": "Lv18"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Rookie",
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "169",
         "name": "Agnimon",
         "types": [
-            "Fire",
-            "Fighting"
+            "Fighting",
+            "Fire"
         ],
         "ability": "Flash Fire",
         "hiddenAbility": "Blaze",
@@ -9702,23 +9849,20 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "Vritamon",
-                "method": "Salamander Break / Flame Storm"
-            },
-            {
                 "name": "Aldamon",
-                "method": "Lv32 (or Vritramon Lv32)"
+                "method": "Lv32"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Champion",
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "170",
         "name": "Aldamon",
         "types": [
-            "Fire",
-            "Dragon"
+            "Dragon",
+            "Fire"
         ],
         "ability": "Flash Fire",
         "hiddenAbility": "Solar Power",
@@ -9761,7 +9905,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Agnimon",
-                "method": "Lv32 (or Vritramon Lv32)"
+                "method": "Lv32"
+            },
+            {
+                "name": "Vritramon",
+                "method": "Lv32"
             }
         ],
         "next": [
@@ -9770,15 +9918,16 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "171",
         "name": "AncientGreymon",
         "types": [
-            "Fire",
-            "Dragon"
+            "Dragon",
+            "Fire"
         ],
         "ability": "Orichalcum Pulse",
         "hiddenAbility": "Dragon's Maw",
@@ -9835,11 +9984,12 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Susanoomon",
-                "method": "Jogress w/ AncientGarurumon"
+                "method": "Jogress AncientGarurumon"
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "172",
@@ -9877,10 +10027,10 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 111",
-            "Route 112",
             "Granite Cave F4",
-            "Magma Hideout"
+            "Magma Hideout",
+            "Route 111",
+            "Route 112"
         ],
         "prev": [
             {
@@ -9891,22 +10041,23 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Asuramon",
-                "method": "Lv32"
+                "method": "Lv32 Amped"
             },
             {
                 "name": "DeathMeramon",
-                "method": "Lv30"
+                "method": "Lv30 Lowkey"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "173",
         "name": "Asuramon",
         "types": [
-            "Fire",
-            "Fighting"
+            "Fighting",
+            "Fire"
         ],
         "ability": "Iron Fist",
         "hiddenAbility": "Flame Body",
@@ -9960,7 +10111,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Meramon",
-                "method": "Lv32"
+                "method": "Lv32 Amped"
             }
         ],
         "next": [
@@ -9974,14 +10125,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "174",
         "name": "Gankoomon",
         "types": [
-            "Fire",
-            "Fighting"
+            "Fighting",
+            "Fire"
         ],
         "ability": "Sheer Force",
         "hiddenAbility": "Reckless",
@@ -10037,7 +10189,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "175",
@@ -10093,11 +10246,12 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "GraceNovamon",
-                "method": "Jogress w/ Dianamon"
+                "method": "Jogress Dianamon"
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "176",
@@ -10145,7 +10299,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Meramon",
-                "method": "Lv30"
+                "method": "Lv30 Lowkey"
             }
         ],
         "next": [
@@ -10155,7 +10309,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "177",
@@ -10218,7 +10373,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "178",
@@ -10252,30 +10408,26 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Rusturf Tunnel",
-            "Gabumon Crest"
+            "Gabumon Crest",
+            "Rusturf Tunnel"
         ],
-        "prev": [
+        "prev": [],
+        "next": [
             {
-                "name": "Gabumon",
+                "name": "Garurumon",
                 "method": "Lv18"
             }
         ],
-        "next": [
-            {
-                "name": "Wolfmon",
-                "method": "Light Data"
-            }
-        ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "179",
         "name": "Wolfmon",
         "types": [
-            "Holy",
-            "Fighting"
+            "Fighting",
+            "Holy"
         ],
         "ability": "Steadfast",
         "hiddenAbility": "Justified",
@@ -10311,22 +10463,83 @@ const DIGIMON_DB = [
         ],
         "prev": [
             {
-                "name": "Strabimon",
+                "name": "Wolfmon",
                 "method": "Light Data"
             }
         ],
         "next": [
             {
+                "name": "Wolfmon",
+                "method": "Light Data"
+            },
+            {
                 "name": "Garummon",
-                "method": "Wolf Kendo / Lupine Laser"
+                "method": "Wolf Kendo"
             },
             {
                 "name": "Beowolfmon",
                 "method": "Lv32"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Champion",
+        "cardLevel": 4,
+        "familyId": 87
+    },
+    {
+        "id": "513",
+        "name": "Garummon",
+        "types": [
+            "Holy"
+        ],
+        "ability": "Speed Boost",
+        "hiddenAbility": "Berserk",
+        "evoMove": "Lupine Laser",
+        "moves": [
+            {
+                "level": "19",
+                "move": "Steel Blade"
+            },
+            {
+                "level": "21",
+                "move": "Flash"
+            },
+            {
+                "level": "23",
+                "move": "Agility"
+            },
+            {
+                "level": "26",
+                "move": "Holy Blast"
+            },
+            {
+                "level": "29",
+                "move": "Pulse Laser"
+            },
+            {
+                "level": "32",
+                "move": "Aerial Ace"
+            }
+        ],
+        "locations": [],
+        "prev": [
+            {
+                "name": "Wolfmon",
+                "method": "Wolf Kendo"
+            },
+            {
+                "name": "Wolfmon",
+                "method": "Lupine Laser"
+            }
+        ],
+        "next": [
+            {
+                "name": "Beowolfmon",
+                "method": "Lv32"
+            }
+        ],
+        "stage": "Ultimate",
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "180",
@@ -10390,11 +10603,12 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Takutoumon",
-                "method": "Auspicious Armor"
+                "method": "Auspicioius Armor"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "181",
@@ -10457,14 +10671,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "182",
         "name": "Takutoumon",
         "types": [
-            "Holy",
-            "Fighting"
+            "Fighting",
+            "Holy"
         ],
         "ability": "Justified",
         "hiddenAbility": "Cursed Body",
@@ -10515,19 +10730,20 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Beowolfmon",
-                "method": "Auspicious Armor"
+                "method": "Auspicioius Armor"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "183",
         "name": "Tinkermon",
         "types": [
-            "Flying",
-            "Fairy"
+            "Fairy",
+            "Flying"
         ],
         "ability": "Cute Charm",
         "hiddenAbility": "Prankster",
@@ -10555,8 +10771,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 104",
             "Petalburg Woods",
+            "Route 104",
             "Spear Pillar"
         ],
         "prev": [],
@@ -10571,14 +10787,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "184",
         "name": "Fairymon",
         "types": [
-            "Flying",
-            "Fairy"
+            "Fairy",
+            "Flying"
         ],
         "ability": "Cute Charm",
         "hiddenAbility": "Pixilate",
@@ -10614,23 +10831,20 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "Shutumon",
-                "method": "Brezzo Petalo / Plasma Talon"
-            },
-            {
                 "name": "JetSilphymon",
                 "method": "Lv32"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Champion",
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "185",
         "name": "JetSilphymon",
         "types": [
-            "Flying",
-            "Fairy"
+            "Fairy",
+            "Flying"
         ],
         "ability": "Wind Rider",
         "hiddenAbility": "Pixilate",
@@ -10686,15 +10900,16 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "186",
         "name": "AncientIrismon",
         "types": [
-            "Flying",
-            "Fairy"
+            "Fairy",
+            "Flying"
         ],
         "ability": "Delta Stream",
         "hiddenAbility": "Pixilate",
@@ -10750,14 +10965,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "187",
         "name": "Darcmon",
         "types": [
-            "Holy",
-            "Flying"
+            "Flying",
+            "Holy"
         ],
         "ability": "Sharpness",
         "hiddenAbility": "Justified",
@@ -10803,14 +11019,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "188",
         "name": "Hippogriffomon",
         "types": [
-            "Holy",
-            "Flying"
+            "Flying",
+            "Holy"
         ],
         "ability": "Solar Power",
         "hiddenAbility": "Beast Boost",
@@ -10850,43 +11067,44 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 114",
             "Biyomon Crest",
+            "Route 114",
             "Spear Pillar"
         ],
         "prev": [
             {
-                "name": "Darcmon",
+                "name": "Aquilamon",
                 "method": "Lv32"
             },
             {
-                "name": "Aquilamon",
+                "name": "Darcmon",
                 "method": "Lv32"
             }
         ],
         "next": [
             {
                 "name": "LovelyAngemon",
-                "method": "Lv54"
-            },
-            {
-                "name": "Griffomon",
-                "method": "Lv54"
+                "method": "Lv54 Female"
             },
             {
                 "name": "Murmukusmon",
                 "method": "Sachet"
+            },
+            {
+                "name": "Griffomon",
+                "method": "Lv54 Male"
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "189",
         "name": "LovelyAngemon",
         "types": [
-            "Holy",
-            "Fighting"
+            "Fighting",
+            "Holy"
         ],
         "ability": "Sturdy",
         "hiddenAbility": "Healer",
@@ -10937,12 +11155,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Hippogriffomon",
-                "method": "Lv54"
+                "method": "Lv54 Female"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "190",
@@ -10985,7 +11204,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "77",
-                "move": "Bitter Blade"
+                "move": "Flame Blade"
             },
             {
                 "level": "80",
@@ -11001,7 +11220,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "191",
@@ -11058,12 +11278,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Hippogriffomon",
-                "method": "Lv54"
+                "method": "Lv54 Male"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "192",
@@ -11089,7 +11310,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "15",
-                "move": "Rock Smash"
+                "move": "Rock Breaker"
             },
             {
                 "level": "18",
@@ -11108,14 +11329,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "193",
         "name": "Blitzmon",
         "types": [
-            "Electric",
-            "Bug"
+            "Bug",
+            "Electric"
         ],
         "ability": "Galvanize",
         "hiddenAbility": "Bulletproof",
@@ -11151,21 +11373,17 @@ const DIGIMON_DB = [
                 "method": "Thunder Data"
             }
         ],
-        "next": [
-            {
-                "name": "Bolgmon",
-                "method": "Thor Hammer / Electro Cannon"
-            }
-        ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "next": [],
+        "stage": "Champion",
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "194",
         "name": "RhinoKabuterimon",
         "types": [
-            "Electric",
-            "Bug"
+            "Bug",
+            "Electric"
         ],
         "ability": "Electric Surge",
         "hiddenAbility": "Wind Power",
@@ -11217,15 +11435,16 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Ultimate",
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "195",
         "name": "AncientBeetlemon",
         "types": [
-            "Electric",
-            "Bug"
+            "Bug",
+            "Electric"
         ],
         "ability": "Hadron Engine",
         "hiddenAbility": "Wind Power",
@@ -11281,7 +11500,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "196",
@@ -11326,15 +11546,16 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Mojyamon",
-                "method": "Lv18"
+                "method": "Lv18 Male"
             },
             {
                 "name": "Frigimon",
-                "method": "Lv18"
+                "method": "Lv18 Female"
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "197",
@@ -11380,16 +11601,13 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "Blizzarmon",
-                "method": "Snow Bomber / Avalanche Step"
-            },
-            {
                 "name": "Frozomon",
                 "method": "Lv32"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Champion",
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "198",
@@ -11404,7 +11622,7 @@ const DIGIMON_DB = [
         "moves": [
             {
                 "level": "33",
-                "move": "Bitter Blade"
+                "move": "Flame Blade"
             },
             {
                 "level": "36",
@@ -11453,7 +11671,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "199",
@@ -11515,14 +11734,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "200",
         "name": "Mojyamon",
         "types": [
-            "Ice",
-            "Ground"
+            "Ground",
+            "Ice"
         ],
         "ability": "Fur Coat",
         "hiddenAbility": "Thick Fat",
@@ -11550,14 +11770,14 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 103 (Part 2)",
             "Gabumon Crest",
+            "Route 103 (Part 2)",
             "Shoal Cave"
         ],
         "prev": [
             {
                 "name": "Penmon",
-                "method": "Lv18"
+                "method": "Lv18 Male"
             }
         ],
         "next": [
@@ -11567,14 +11787,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "201",
         "name": "Mammothmon",
         "types": [
-            "Ice",
-            "Ground"
+            "Ground",
+            "Ice"
         ],
         "ability": "Fur Coat",
         "hiddenAbility": "Thick Fat",
@@ -11629,14 +11850,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "202",
         "name": "SkullMammothmon",
         "types": [
-            "Undead",
-            "Ice"
+            "Ice",
+            "Undead"
         ],
         "ability": "Sand Force",
         "hiddenAbility": "Sand Veil",
@@ -11692,7 +11914,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "203",
@@ -11729,7 +11952,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Penmon",
-                "method": "Lv18"
+                "method": "Lv18 Female"
             }
         ],
         "next": [
@@ -11739,7 +11962,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "204",
@@ -11798,7 +12022,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "205",
@@ -11852,7 +12077,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "206",
@@ -11886,31 +12112,32 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Granite Cave",
             "Route 102",
             "Route 114",
-            "Granite Cave",
             "Rusturf"
         ],
         "prev": [],
         "next": [
             {
-                "name": "Grottemon",
-                "method": "Earth Data"
-            },
-            {
                 "name": "Ogremon",
                 "method": "Lv18"
+            },
+            {
+                "name": "Grottemon",
+                "method": "Earth Data"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Rookie",
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "207",
         "name": "Ogremon",
         "types": [
-            "Ground",
-            "Dark"
+            "Dark",
+            "Ground"
         ],
         "ability": "Intimidate",
         "hiddenAbility": "Sheer Force",
@@ -11942,8 +12169,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 110",
-            "Fiery Path"
+            "Fiery Path",
+            "Route 110"
         ],
         "prev": [
             {
@@ -11958,14 +12185,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "208",
         "name": "Rebellimon",
         "types": [
-            "Steel",
-            "Dark"
+            "Dark",
+            "Steel"
         ],
         "ability": "Intimidate",
         "hiddenAbility": "Sheer Force",
@@ -12021,14 +12249,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "209",
         "name": "Titamon",
         "types": [
-            "Ground",
-            "Dark"
+            "Dark",
+            "Ground"
         ],
         "ability": "Huge Power",
         "hiddenAbility": "Huge Power",
@@ -12084,7 +12313,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "210",
@@ -12128,14 +12358,10 @@ const DIGIMON_DB = [
                 "method": "Earth Data"
             }
         ],
-        "next": [
-            {
-                "name": "Gigasmon",
-                "method": "Grotte Hammer / Quagmire Twist"
-            }
-        ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "next": [],
+        "stage": "Champion",
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "211",
@@ -12195,7 +12421,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "212",
@@ -12258,7 +12485,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "213",
@@ -12292,8 +12520,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 116",
-            "Route 114"
+            "Route 114",
+            "Route 116"
         ],
         "prev": [],
         "next": [
@@ -12307,14 +12535,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "214",
         "name": "Mercurymon",
         "types": [
-            "Steel",
-            "Magic"
+            "Magic",
+            "Steel"
         ],
         "ability": "Mirror Armor",
         "hiddenAbility": "Magic Bounce",
@@ -12360,15 +12589,16 @@ const DIGIMON_DB = [
                 "method": "Lv32"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Champion",
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "215",
         "name": "Wisemon",
         "types": [
-            "Steel",
-            "Magic"
+            "Magic",
+            "Steel"
         ],
         "ability": "Magic Bounce",
         "hiddenAbility": "Analytic",
@@ -12423,14 +12653,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "216",
         "name": "AncientWisemon",
         "types": [
-            "Steel",
-            "Magic"
+            "Magic",
+            "Steel"
         ],
         "ability": "Magic Bounce",
         "hiddenAbility": "Mirror Armor",
@@ -12486,7 +12717,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "217",
@@ -12539,7 +12771,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "218",
@@ -12600,7 +12833,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "219",
@@ -12662,14 +12896,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "220",
         "name": "Sangomon",
         "types": [
-            "Water",
-            "Poison"
+            "Poison",
+            "Water"
         ],
         "ability": "Natural Cure",
         "hiddenAbility": "Regenerator",
@@ -12703,20 +12938,21 @@ const DIGIMON_DB = [
         "prev": [],
         "next": [
             {
+                "name": "Shellmon",
+                "method": "Lv18 Lowkey"
+            },
+            {
                 "name": "Ranamon",
                 "method": "Water Data"
             },
             {
-                "name": "Shellmon",
-                "method": "Lv18"
-            },
-            {
                 "name": "Tobiumon",
-                "method": "Lv18"
+                "method": "Lv18 Amped"
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "221",
@@ -12759,7 +12995,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Sangomon",
-                "method": "Lv18"
+                "method": "Lv18 Lowkey"
             }
         ],
         "next": [
@@ -12769,18 +13005,19 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Pixiemon",
-                "method": "Teleport (Item/Move)"
+                "method": "Teleport"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "222",
         "name": "MarinBullmon",
         "types": [
-            "Water",
-            "Poison"
+            "Poison",
+            "Water"
         ],
         "ability": "Gooey",
         "hiddenAbility": "Poison Touch",
@@ -12833,14 +13070,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "223",
         "name": "Ryugumon",
         "types": [
-            "Water",
-            "Holy"
+            "Holy",
+            "Water"
         ],
         "ability": "Gooey",
         "hiddenAbility": "Healer",
@@ -12901,14 +13139,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "224",
         "name": "Ranamon",
         "types": [
-            "Water",
-            "Fairy"
+            "Fairy",
+            "Water"
         ],
         "ability": "Drizzle",
         "hiddenAbility": "Regenerator",
@@ -12946,14 +13185,10 @@ const DIGIMON_DB = [
                 "method": "Water Data"
             }
         ],
-        "next": [
-            {
-                "name": "Calmaramon",
-                "method": "Jealousy Rain / Titanic Charge"
-            }
-        ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "next": [],
+        "stage": "Champion",
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "225",
@@ -13012,14 +13247,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "226",
         "name": "AncientMermaimon",
         "types": [
-            "Water",
-            "Fairy"
+            "Fairy",
+            "Water"
         ],
         "ability": "Primordial Sea",
         "hiddenAbility": "Storm Drain",
@@ -13071,14 +13307,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "227",
         "name": "Tobiumon",
         "types": [
-            "Water",
-            "Flying"
+            "Flying",
+            "Water"
         ],
         "ability": "Swift Swim",
         "hiddenAbility": "Wind Rider",
@@ -13113,7 +13350,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Sangomon",
-                "method": "Lv18"
+                "method": "Lv18 Amped"
             }
         ],
         "next": [
@@ -13123,7 +13360,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "228",
@@ -13186,14 +13424,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "229",
         "name": "MetalPiranimon",
         "types": [
-            "Water",
-            "Steel"
+            "Steel",
+            "Water"
         ],
         "ability": "Strong Jaw",
         "hiddenAbility": "Intimidate",
@@ -13229,14 +13468,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "230",
         "name": "Cthyllamon",
         "types": [
-            "Water",
-            "Undead"
+            "Undead",
+            "Water"
         ],
         "ability": "Strong Jaw",
         "hiddenAbility": "Intimidate",
@@ -13292,7 +13532,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "231",
@@ -13342,7 +13583,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Shellmon",
-                "method": "Teleport (Item/Move)"
+                "method": "Teleport"
             }
         ],
         "next": [
@@ -13352,7 +13593,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "232",
@@ -13411,7 +13653,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "233",
@@ -13455,15 +13698,16 @@ const DIGIMON_DB = [
                 "method": "Evil Plush"
             }
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Rookie",
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "234",
         "name": "Monzaemon",
         "types": [
-            "Normal",
-            "Fairy"
+            "Fairy",
+            "Normal"
         ],
         "ability": "Misty Surge",
         "hiddenAbility": "Pixilate",
@@ -13511,17 +13755,22 @@ const DIGIMON_DB = [
             {
                 "name": "ShinMonzaemon",
                 "method": "Lv54"
+            },
+            {
+                "name": "ExTyrannomon",
+                "method": "Fire Data"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Champion",
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "235",
         "name": "WaruMonzaemon",
         "types": [
-            "Normal",
-            "Dark"
+            "Dark",
+            "Normal"
         ],
         "ability": "Intimidate",
         "hiddenAbility": "Pressure",
@@ -13569,16 +13818,22 @@ const DIGIMON_DB = [
                 "method": "Evil Plush"
             }
         ],
-        "next": [],
+        "next": [
+            {
+                "name": "ShinMonzaemon",
+                "method": "Lv54"
+            }
+        ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "236",
         "name": "ShinMonzaemon",
         "types": [
-            "Fairy",
-            "Dark"
+            "Dark",
+            "Fairy"
         ],
         "ability": "Bad Dreams",
         "hiddenAbility": "Comatose",
@@ -13630,40 +13885,50 @@ const DIGIMON_DB = [
             {
                 "name": "Monzaemon",
                 "method": "Lv54"
+            },
+            {
+                "name": "WaruMonzaemon",
+                "method": "Lv54"
+            },
+            {
+                "name": "ExTyrannomon",
+                "method": "Night Daze"
             }
         ],
         "next": [],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "237",
         "name": "Culumon",
         "types": [
-            "CHAOS"
+            "Chaos"
         ],
         "ability": "No Guard",
         "hiddenAbility": "",
         "evoMove": "Heal Pulse",
         "moves": [],
         "locations": [
-            "Routes 101",
             "103",
             "117",
             "Mirage Tower",
+            "Routes 101",
             "etc."
         ],
         "prev": [],
         "next": [],
-        "stage": "Unknown",
-        "cardLevel": 3
+        "stage": "Rookie",
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "238",
         "name": "Liollmon",
         "types": [
-            "Holy",
-            "Dark"
+            "Dark",
+            "Holy"
         ],
         "ability": "Super Luck",
         "hiddenAbility": "Intimidate",
@@ -13697,12 +13962,8 @@ const DIGIMON_DB = [
         "prev": [],
         "next": [
             {
-                "name": "Leomon",
-                "method": "Lv18"
-            },
-            {
                 "name": "Liamon",
-                "method": "Lv18"
+                "method": "Lv18 Lowkey"
             },
             {
                 "name": "Lowemon",
@@ -13710,7 +13971,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "239",
@@ -13748,22 +14010,23 @@ const DIGIMON_DB = [
         ],
         "prev": [
             {
-                "name": "Liollmon",
-                "method": "Lv18"
+                "name": "Leomon",
+                "method": "Lv18 Amped"
             }
         ],
         "next": [
             {
-                "name": "GrapLeomon",
-                "method": "Lv32"
+                "name": "Leomon",
+                "method": "Lv18 Amped"
             },
             {
-                "name": "Grizzlymon",
-                "method": "Hammer Rush"
+                "name": "GrapLeomon",
+                "method": "Lv32"
             }
         ],
-        "stage": "Champion",
-        "cardLevel": 4
+        "stage": "Rookie",
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "240",
@@ -13816,12 +14079,16 @@ const DIGIMON_DB = [
             {
                 "name": "Leomon",
                 "method": "Lv32"
+            },
+            {
+                "name": "Gryzzlimon",
+                "method": "Hammer Rush"
             }
         ],
         "next": [
             {
                 "name": "HeavyLeomon",
-                "method": "Lv54"
+                "method": "LV54"
             },
             {
                 "name": "Marsmon",
@@ -13832,8 +14099,9 @@ const DIGIMON_DB = [
                 "method": "Gakuren"
             }
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Champion",
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "241",
@@ -13891,12 +14159,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "GrapLeomon",
-                "method": "Lv54"
+                "method": "LV54"
             }
         ],
         "next": [],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "242",
@@ -13958,8 +14227,9 @@ const DIGIMON_DB = [
             }
         ],
         "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultimate",
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "243",
@@ -14022,12 +14292,17 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
+                "name": "Chaosmon Valdur Arm",
+                "method": "Jogress Valdurmon"
+            },
+            {
                 "name": "Caosmon",
-                "method": "Jogress w/ Darkdramon"
+                "method": "Jogress Darkdramon"
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "244",
@@ -14054,7 +14329,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "29",
-                "move": "Rock Smash"
+                "move": "Rock Breaker"
             },
             {
                 "level": "32",
@@ -14067,7 +14342,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Liollmon",
-                "method": "Lv18"
+                "method": "Lv18 Lowkey"
             }
         ],
         "next": [
@@ -14077,7 +14352,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "245",
@@ -14132,14 +14408,10 @@ const DIGIMON_DB = [
                 "method": "Lv32"
             }
         ],
-        "next": [
-            {
-                "name": "SaberLeomon",
-                "method": "Lv54"
-            }
-        ],
+        "next": [],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "246",
@@ -14198,13 +14470,19 @@ const DIGIMON_DB = [
         ],
         "prev": [
             {
-                "name": "LoaderLeomon",
-                "method": "Lv54"
+                "name": "Loader",
+                "method": "Leomon Lv54"
             }
         ],
-        "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "next": [
+            {
+                "name": "Tlalocmon",
+                "method": "Jogress ElDoradimon"
+            }
+        ],
+        "stage": "Champion",
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "247",
@@ -14250,16 +14528,13 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "KaiserLeomon",
-                "method": "Shadow Meteor / Lv32"
-            },
-            {
                 "name": "Rihimon",
-                "method": "Lv32 / Lv54"
+                "method": "Lv32"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "248",
@@ -14308,11 +14583,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Lowemon",
-                "method": "Lv32 / Lv54"
+                "method": "Lv32"
             },
             {
                 "name": "KaiserLeomon",
-                "method": "Lv32 / Lv54"
+                "method": "Lv32"
             }
         ],
         "next": [
@@ -14322,7 +14597,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "249",
@@ -14384,7 +14660,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "250",
@@ -14418,9 +14695,9 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Petalburg Woods",
             "Route 103",
-            "Route 104",
-            "Petalburg Woods"
+            "Route 104"
         ],
         "prev": [],
         "next": [
@@ -14434,7 +14711,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "251",
@@ -14476,9 +14754,9 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "110 (Guardian)",
             "Route 111",
-            "Route 117",
-            "110 (Guardian)"
+            "Route 117"
         ],
         "prev": [
             {
@@ -14489,15 +14767,16 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Ajatarmon",
-                "method": "Lv18 / Lv32?"
+                "method": "Lv18 Amped"
             },
             {
                 "name": "Tropiamon",
-                "method": "Lv18 / Lv32?"
+                "method": "Lv18 Lowkey"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "252",
@@ -14548,7 +14827,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Parasaurmon",
-                "method": "Lv18 / Lv32?"
+                "method": "Lv18 Amped"
             }
         ],
         "next": [
@@ -14558,14 +14837,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "253",
         "name": "BloomLordmon",
         "types": [
-            "Grass",
-            "Fairy"
+            "Fairy",
+            "Grass"
         ],
         "ability": "Drought",
         "hiddenAbility": "Seed Sower",
@@ -14617,7 +14897,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "254",
@@ -14670,7 +14951,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Parasaurmon",
-                "method": "Lv18 / Lv32?"
+                "method": "Lv18 Lowkey"
             }
         ],
         "next": [
@@ -14680,7 +14961,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "255",
@@ -14743,7 +15025,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "256",
@@ -14789,23 +15072,20 @@ const DIGIMON_DB = [
         ],
         "next": [
             {
-                "name": "Petaldramon",
-                "method": "Blockage Seed / Leaf Cyclone / Lv32"
-            },
-            {
                 "name": "Entmon",
-                "method": "Lv54"
+                "method": "Lv32"
             }
         ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "stage": "Champion",
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "257",
         "name": "Entmon",
         "types": [
-            "Grass",
-            "Bug"
+            "Bug",
+            "Grass"
         ],
         "ability": "Sap Sipper",
         "hiddenAbility": "Cursed Body",
@@ -14848,11 +15128,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Arbormon",
-                "method": "Lv54"
+                "method": "Lv32"
             },
             {
                 "name": "Petaldramon",
-                "method": "Lv54"
+                "method": "Lv32"
             }
         ],
         "next": [
@@ -14862,7 +15142,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "258",
@@ -14925,14 +15206,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "259",
         "name": "Blucomon",
         "types": [
-            "Ice",
-            "Dragon"
+            "Dragon",
+            "Ice"
         ],
         "ability": "Ice Scales",
         "hiddenAbility": "Refrigerate",
@@ -14960,8 +15242,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 116",
-            "Granite Cave"
+            "Granite Cave",
+            "Route 116"
         ],
         "prev": [],
         "next": [
@@ -14975,14 +15257,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "260",
         "name": "Paledramon",
         "types": [
-            "Ice",
-            "Dragon"
+            "Dragon",
+            "Ice"
         ],
         "ability": "Dry Skin",
         "hiddenAbility": "Slush Rush",
@@ -15029,14 +15312,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "261",
         "name": "CrysPaledramon",
         "types": [
-            "Ice",
-            "Dragon"
+            "Dragon",
+            "Ice"
         ],
         "ability": "Thermal Exchange",
         "hiddenAbility": "Slush Rush",
@@ -15092,7 +15376,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "262",
@@ -15151,7 +15436,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "263",
@@ -15190,11 +15476,11 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Mirage Tower",
             "Route 103",
-            "Route 116",
             "Route 110",
-            "Route 117",
-            "Mirage Tower"
+            "Route 116",
+            "Route 117"
         ],
         "prev": [
             {
@@ -15209,7 +15495,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "264",
@@ -15271,14 +15558,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "265",
         "name": "FrosVelgrmon",
         "types": [
-            "Ice",
-            "Flying"
+            "Flying",
+            "Ice"
         ],
         "ability": "Snow Cloak",
         "hiddenAbility": "Snow Warning",
@@ -15330,7 +15618,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "266",
@@ -15370,15 +15659,16 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Dinohumon",
-                "method": "Lv18"
+                "method": "Lv18 Amped"
             },
             {
                 "name": "Musyamon",
-                "method": "Lv18"
+                "method": "Lv18 Lowkey"
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "267",
@@ -15423,7 +15713,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Kotemon",
-                "method": "Lv18"
+                "method": "Lv18 Amped"
             }
         ],
         "next": [
@@ -15433,7 +15723,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "268",
@@ -15493,7 +15784,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "269",
@@ -15556,14 +15848,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "270",
         "name": "Craniummon",
         "types": [
-            "Magic",
-            "Holy"
+            "Holy",
+            "Magic"
         ],
         "ability": "Magic Bounce",
         "hiddenAbility": "Sturdy",
@@ -15619,14 +15912,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "271",
         "name": "Musyamon",
         "types": [
-            "Undead",
-            "Fighting"
+            "Fighting",
+            "Undead"
         ],
         "ability": "Battle Armor",
         "hiddenAbility": "Sharpness",
@@ -15650,7 +15944,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "29",
-                "move": "Bitter Blade"
+                "move": "Flame Blade"
             },
             {
                 "level": "32",
@@ -15659,13 +15953,13 @@ const DIGIMON_DB = [
         ],
         "locations": [
             "Granite Cave",
-            "Route 121",
-            "Mt Pyre"
+            "Mt Pyre",
+            "Route 121"
         ],
         "prev": [
             {
                 "name": "Kotemon",
-                "method": "Lv18"
+                "method": "Lv18 Lowkey"
             }
         ],
         "next": [
@@ -15675,14 +15969,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "272",
         "name": "Oboromon",
         "types": [
-            "Undead",
-            "Fighting"
+            "Fighting",
+            "Undead"
         ],
         "ability": "Sword of Ruin",
         "hiddenAbility": "Cursed Body",
@@ -15737,14 +16032,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "273",
         "name": "Gaiomon",
         "types": [
-            "Undead",
-            "Fighting"
+            "Fighting",
+            "Undead"
         ],
         "ability": "Sword of Ruin",
         "hiddenAbility": "Cursed Body",
@@ -15800,7 +16096,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "274",
@@ -15822,7 +16119,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "12",
-                "move": "Rock Smash"
+                "move": "Rock Breaker"
             },
             {
                 "level": "15",
@@ -15840,22 +16137,23 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Grizzlymon",
-                "method": "Lv18"
+                "method": "Lv18 Amped"
             },
             {
                 "name": "Dorulumon",
-                "method": "Lv18"
+                "method": "Lv18 Lowkey"
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "275",
         "name": "Grizzlymon",
         "types": [
-            "Ground",
-            "Fighting"
+            "Fighting",
+            "Ground"
         ],
         "ability": "Hustle",
         "hiddenAbility": "Sheer Force",
@@ -15893,29 +16191,21 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Leomon",
-                "method": "Hammer Rush"
-            },
-            {
                 "name": "Bearmon",
-                "method": "Lv18"
+                "method": "Lv18 Amped"
             }
         ],
-        "next": [
-            {
-                "name": "GreatGryzzlymon",
-                "method": "Lv18 (?) Amped / Lv32"
-            }
-        ],
+        "next": [],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "276",
         "name": "GreatGryzzlymon",
         "types": [
-            "Fighting",
-            "Dark"
+            "Dark",
+            "Fighting"
         ],
         "ability": "Intimidate",
         "hiddenAbility": "Mold Breaker",
@@ -15957,8 +16247,8 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Grizzlymon",
-                "method": "Lv18 (?) Amped / Lv32"
+                "name": "Gryzzlimon",
+                "method": "Lv18 Amped"
             }
         ],
         "next": [
@@ -15968,14 +16258,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "277",
         "name": "Callismon",
         "types": [
-            "Fighting",
-            "Dark"
+            "Dark",
+            "Fighting"
         ],
         "ability": "Intimidate",
         "hiddenAbility": "Mold Breaker",
@@ -16023,7 +16314,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "278",
@@ -16067,7 +16359,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Bearmon",
-                "method": "Lv18"
+                "method": "Lv18 Lowkey"
             }
         ],
         "next": [
@@ -16081,7 +16373,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "279",
@@ -16145,7 +16438,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "280",
@@ -16210,7 +16504,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "281",
@@ -16271,21 +16566,17 @@ const DIGIMON_DB = [
                 "method": "Malicious Armor"
             }
         ],
-        "next": [
-            {
-                "name": "Duftmon Leopard",
-                "method": "Vulcan Crush"
-            }
-        ],
+        "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "282",
         "name": "Mihiramon",
         "types": [
-            "Ground",
-            "Fighting"
+            "Fighting",
+            "Ground"
         ],
         "ability": "Speed Boost",
         "hiddenAbility": "Sheer Force",
@@ -16340,14 +16631,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "283",
         "name": "Baihumon",
         "types": [
-            "Steel",
-            "Fighting"
+            "Fighting",
+            "Steel"
         ],
         "ability": "Steelworker",
         "hiddenAbility": "Tough Claws",
@@ -16405,7 +16697,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "284",
@@ -16450,7 +16743,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "285",
@@ -16501,7 +16795,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "286",
@@ -16523,7 +16818,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "39",
-                "move": "Bitter Blade"
+                "move": "Flame Blade"
             },
             {
                 "level": "41",
@@ -16562,7 +16857,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "287",
@@ -16608,7 +16904,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "77",
-                "move": "Bitter Blade"
+                "move": "Flame Blade"
             },
             {
                 "level": "80",
@@ -16625,18 +16921,19 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "RagnaLoardmon",
-                "method": "Jogress w/ BryweLudramon"
+                "method": "Jogress BryweLudramon"
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "288",
         "name": "RagnaLoardmon",
         "types": [
-            "Steel",
-            "Fire"
+            "Fire",
+            "Steel"
         ],
         "ability": "Stance Change",
         "hiddenAbility": "",
@@ -16667,12 +16964,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Durandamon",
-                "method": "Jogress w/ BryweLudramon"
+                "method": "Jogress BryweLudramon"
             }
         ],
         "next": [],
         "stage": "Ultra",
-        "cardLevel": 7
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
         "id": "289",
@@ -16717,14 +17015,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "290",
         "name": "TiaLudomon",
         "types": [
-            "Steel",
-            "Ice"
+            "Ice",
+            "Steel"
         ],
         "ability": "Bulletproof",
         "hiddenAbility": "Magic Guard",
@@ -16762,21 +17061,17 @@ const DIGIMON_DB = [
                 "method": "Lv18"
             }
         ],
-        "next": [
-            {
-                "name": "RaijiLudomon",
-                "method": "Lv32"
-            }
-        ],
+        "next": [],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "291",
         "name": "RaijiLudomon",
         "types": [
-            "Steel",
-            "Electric"
+            "Electric",
+            "Steel"
         ],
         "ability": "Bulletproof",
         "hiddenAbility": "Magic Guard",
@@ -16820,7 +17115,7 @@ const DIGIMON_DB = [
         ],
         "prev": [
             {
-                "name": "TiaLudomon",
+                "name": "RiaLudomon",
                 "method": "Lv32"
             }
         ],
@@ -16831,14 +17126,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "292",
         "name": "BryweLudramon",
         "types": [
-            "Steel",
-            "Fire"
+            "Fire",
+            "Steel"
         ],
         "ability": "Bulletproof",
         "hiddenAbility": "Magic Guard",
@@ -16894,7 +17190,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "293",
@@ -16924,23 +17221,24 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Granite Cave",
             "Route 116",
-            "Rusturf Tunnel",
-            "Granite Cave"
+            "Rusturf Tunnel"
         ],
         "prev": [],
         "next": [
             {
                 "name": "CoreDramon Blue",
-                "method": "Lv18"
+                "method": "Lv18 Lowkey"
             },
             {
                 "name": "Coredramon Green",
-                "method": "Lv18"
+                "method": "Lv18 Amped"
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "294",
@@ -16979,14 +17277,14 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Granite Cave F4",
             "Fiery Path",
+            "Granite Cave F4",
             "Meteor Falls"
         ],
         "prev": [
             {
                 "name": "Dracomon",
-                "method": "Lv18"
+                "method": "Lv18 Lowkey"
             }
         ],
         "next": [
@@ -16996,7 +17294,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "295",
@@ -17043,8 +17342,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 112",
             "Jagged Pass",
+            "Route 112",
             "Victory Road F2"
         ],
         "prev": [
@@ -17060,7 +17359,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "296",
@@ -17124,11 +17424,12 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Examon",
-                "method": "Jogress w/ Breakdramon"
+                "method": "Jogress Breakdramon"
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "297",
@@ -17167,14 +17468,14 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Granite Cave F4",
             "Fiery Path",
+            "Granite Cave F4",
             "Meteor Falls"
         ],
         "prev": [
             {
                 "name": "Dracomon",
-                "method": "Lv18"
+                "method": "Lv18 Amped"
             }
         ],
         "next": [
@@ -17184,7 +17485,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "298",
@@ -17231,9 +17533,9 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Rusturf Tunnel",
+            "Magma Hideout",
             "Route 112",
-            "Magma Hideout"
+            "Rusturf Tunnel"
         ],
         "prev": [
             {
@@ -17248,7 +17550,8 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "299",
@@ -17311,7 +17614,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "300",
@@ -17332,19 +17636,20 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Slayerdramon",
-                "method": "Jogress w/ Breakdramon"
+                "method": "Jogress Breakdramon"
             }
         ],
         "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultra",
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
         "id": "301",
         "name": "Vorvomon",
         "types": [
-            "Rock",
-            "Fire"
+            "Fire",
+            "Rock"
         ],
         "ability": "Steam Engine",
         "hiddenAbility": "Flash Fire",
@@ -17372,10 +17677,10 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 116",
+            "Fiery Path",
             "Route 111",
             "Route 112",
-            "Fiery Path"
+            "Route 116"
         ],
         "prev": [],
         "next": [
@@ -17385,14 +17690,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "302",
         "name": "Lavorvomon",
         "types": [
-            "Rock",
-            "Fire"
+            "Fire",
+            "Rock"
         ],
         "ability": "Steam Engine",
         "hiddenAbility": "Flash Fire",
@@ -17440,14 +17746,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "303",
         "name": "Lavogaritamon",
         "types": [
-            "Rock",
-            "Fire"
+            "Fire",
+            "Rock"
         ],
         "ability": "Steam Engine",
         "hiddenAbility": "Flash Fire",
@@ -17483,8 +17790,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 111",
-            "Jagged Pass"
+            "Jagged Pass",
+            "Route 111"
         ],
         "prev": [
             {
@@ -17499,14 +17806,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "304",
         "name": "Volcanicdramon",
         "types": [
-            "Rock",
-            "Fire"
+            "Fire",
+            "Rock"
         ],
         "ability": "Steam Engine",
         "hiddenAbility": "Flash Fire",
@@ -17562,7 +17870,8 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "305",
@@ -17592,7 +17901,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "29",
-                "move": "Rock Smash"
+                "move": "Rock Breaker"
             },
             {
                 "level": "31",
@@ -17606,7 +17915,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Betamon",
-                "method": "Lv18 (Attack > Defense)"
+                "method": "Lv18 Attack > Defense"
             }
         ],
         "next": [
@@ -17617,17 +17926,22 @@ const DIGIMON_DB = [
             {
                 "name": "DarkTyrannomon",
                 "method": "Dark Data"
+            },
+            {
+                "name": "ExTyrannomon",
+                "method": "Cute Plush"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "306",
         "name": "MasterTyrannomon",
         "types": [
-            "Fire",
-            "Dragon"
+            "Dragon",
+            "Fire"
         ],
         "ability": "Blaze",
         "hiddenAbility": "Sheer Force",
@@ -17684,14 +17998,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "307",
         "name": "Dinomon",
         "types": [
-            "Fire",
-            "Dragon"
+            "Dragon",
+            "Fire"
         ],
         "ability": "Intimidate",
         "hiddenAbility": "Sheer Force",
@@ -17743,18 +18058,23 @@ const DIGIMON_DB = [
             {
                 "name": "MasterTyrannomon",
                 "method": "Lv54"
+            },
+            {
+                "name": "ExTyrannomon",
+                "method": "Dragon Pulse"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "308",
         "name": "Jazamon",
         "types": [
-            "Steel",
-            "Flying"
+            "Flying",
+            "Steel"
         ],
         "ability": "Wind Rider",
         "hiddenAbility": "Speed Boost",
@@ -17782,9 +18102,9 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 116",
             "Route 111",
-            "Route 112"
+            "Route 112",
+            "Route 116"
         ],
         "prev": [],
         "next": [
@@ -17794,14 +18114,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "309",
         "name": "Jazardmon",
         "types": [
-            "Steel",
-            "Flying"
+            "Flying",
+            "Steel"
         ],
         "ability": "Gale Wings",
         "hiddenAbility": "Speed Boost",
@@ -17848,14 +18169,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
         "id": "310",
         "name": "Jazarichmon",
         "types": [
-            "Steel",
-            "Flying"
+            "Flying",
+            "Steel"
         ],
         "ability": "Gale Wings",
         "hiddenAbility": "Speed Boost",
@@ -17904,14 +18226,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "311",
         "name": "Metallicdramon",
         "types": [
-            "Steel",
-            "Flying"
+            "Flying",
+            "Steel"
         ],
         "ability": "Gale Wings",
         "hiddenAbility": "Speed Boost",
@@ -17969,14 +18292,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "312",
         "name": "DarkTyrannomon",
         "types": [
-            "Fire",
-            "Dark"
+            "Dark",
+            "Fire"
         ],
         "ability": "Sheer Force",
         "hiddenAbility": "Berserk",
@@ -18023,14 +18347,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "313",
         "name": "MetalTyrannomon",
         "types": [
-            "Steel",
-            "Dark"
+            "Dark",
+            "Steel"
         ],
         "ability": "Sheer Force",
         "hiddenAbility": "Galvanize",
@@ -18086,18 +18411,19 @@ const DIGIMON_DB = [
             },
             {
                 "name": "Mugendramon",
-                "method": "Mechanic Data (or Megadramon Lv70)"
+                "method": "Mechanic Data"
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "314",
         "name": "RustTyranomon",
         "types": [
-            "Steel",
-            "Electric"
+            "Electric",
+            "Steel"
         ],
         "ability": "Sheer Force",
         "hiddenAbility": "Galvanize",
@@ -18149,65 +18475,19 @@ const DIGIMON_DB = [
             {
                 "name": "MetalTyrannomon",
                 "method": "Lv54"
+            },
+            {
+                "name": "ExTyrannomon",
+                "method": "Thunder Cloud"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "315",
-        "name": "Mugendramon",
-        "types": [
-            "Steel"
-        ],
-        "ability": "Supreme Overlord",
-        "hiddenAbility": "Mega Launcher",
-        "evoMove": "Mugen Cannon",
-        "moves": [
-            {
-                "level": "55",
-                "move": "Lock-On"
-            },
-            {
-                "level": "56",
-                "move": "Dragon Energy"
-            },
-            {
-                "level": "59",
-                "move": "Nasty Plot"
-            },
-            {
-                "level": "62",
-                "move": "Laser Focus"
-            },
-            {
-                "level": "68",
-                "move": "Electro Cannon"
-            },
-            {
-                "level": "71",
-                "move": "Dynamax Cannon"
-            }
-        ],
-        "locations": [],
-        "prev": [
-            {
-                "name": "MetalTyrannomon",
-                "method": "Mechanic Data (or Megadramon Lv70)"
-            }
-        ],
-        "next": [
-            {
-                "name": "Millenniummon",
-                "method": "Jogress w/ Kimeramon"
-            }
-        ],
-        "stage": "Mega",
-        "cardLevel": 6
-    },
-    {
-        "id": "316",
         "name": "Phascomon",
         "types": [
             "Dark"
@@ -18248,10 +18528,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "317",
+        "id": "316",
         "name": "MadLeomon",
         "types": [
             "Dark",
@@ -18302,10 +18583,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "318",
+        "id": "317",
         "name": "Astamon",
         "types": [
             "Dark"
@@ -18361,10 +18643,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "319",
+        "id": "318",
         "name": "Belphemon",
         "types": [
             "Dark"
@@ -18419,10 +18702,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "320",
+        "id": "319",
         "name": "KoDokugumon",
         "types": [
             "Bug",
@@ -18465,10 +18749,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "321",
+        "id": "320",
         "name": "Dokugumon",
         "types": [
             "Bug",
@@ -18514,10 +18799,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "322",
+        "id": "321",
         "name": "Archnemon",
         "types": [
             "Bug",
@@ -18567,12 +18853,18 @@ const DIGIMON_DB = [
                 "method": "Lv30"
             }
         ],
-        "next": [],
+        "next": [
+            {
+                "name": "Parasimon",
+                "method": "Lv54"
+            }
+        ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "323",
+        "id": "322",
         "name": "Parasimon",
         "types": [
             "Bug",
@@ -18619,19 +18911,20 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Archnemon",
-                "method": "Unspecified"
+                "method": "Lv54"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "324",
+        "id": "323",
         "name": "Commandramon",
         "types": [
-            "Steel",
-            "Dragon"
+            "Dragon",
+            "Steel"
         ],
         "ability": "Battle Armor",
         "hiddenAbility": "Long Reach",
@@ -18643,7 +18936,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "9",
-                "move": "Lock On"
+                "move": "Lock-On"
             },
             {
                 "level": "12",
@@ -18665,23 +18958,20 @@ const DIGIMON_DB = [
         "prev": [],
         "next": [
             {
-                "name": "Hi-Commandramon",
-                "method": "Lv18"
-            },
-            {
                 "name": "Sealsdramon",
-                "method": "Lv18"
+                "method": "Lv18 Amped"
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "325",
+        "id": "324",
         "name": "Hi-Commandramon",
         "types": [
-            "Steel",
-            "Dragon"
+            "Dragon",
+            "Steel"
         ],
         "ability": "Battle Armor",
         "hiddenAbility": "Long Reach",
@@ -18722,25 +19012,26 @@ const DIGIMON_DB = [
         ],
         "prev": [
             {
-                "name": "Commandramon",
-                "method": "Lv18"
+                "name": "Hi-Commandramon",
+                "method": "Lv18 Lowkey"
             }
         ],
         "next": [
             {
-                "name": "Cargodramon",
-                "method": "Lv32"
+                "name": "Hi-Commandramon",
+                "method": "Lv18 Lowkey"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "326",
+        "id": "325",
         "name": "Cargodramon",
         "types": [
-            "Steel",
-            "Dragon"
+            "Dragon",
+            "Steel"
         ],
         "ability": "Levitate",
         "hiddenAbility": "Levitate",
@@ -18784,25 +19075,26 @@ const DIGIMON_DB = [
         ],
         "prev": [
             {
-                "name": "Hi-Commandramon",
+                "name": "Cargodramon",
                 "method": "Lv32"
             }
         ],
         "next": [
             {
-                "name": "Brigadramon",
-                "method": "Lv54"
+                "name": "Cargodramon",
+                "method": "Lv32"
             },
             {
-                "name": "Ghilliedhumon",
+                "name": "Brigadramon",
                 "method": "Lv54"
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "327",
+        "id": "326",
         "name": "Ghilliedhumon",
         "types": [
             "Dragon",
@@ -18849,26 +19141,27 @@ const DIGIMON_DB = [
             "Route 119",
             "Route 120"
         ],
-        "prev": [
+        "prev": [],
+        "next": [
             {
-                "name": "Cargodramon",
+                "name": "Brigadramon",
                 "method": "Lv54"
             },
             {
-                "name": "Tankdramon",
+                "name": "Darkdramon",
                 "method": "Lv54"
             }
         ],
-        "next": [],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Rookie",
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "328",
+        "id": "327",
         "name": "Brigadramon",
         "types": [
-            "Steel",
-            "Dragon"
+            "Dragon",
+            "Steel"
         ],
         "ability": "Battery",
         "hiddenAbility": "Steely Spirit",
@@ -18920,18 +19213,23 @@ const DIGIMON_DB = [
             {
                 "name": "Cargodramon",
                 "method": "Lv54"
+            },
+            {
+                "name": "Ghilliedhumon",
+                "method": "Lv54"
             }
         ],
         "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Champion",
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "329",
+        "id": "328",
         "name": "Sealsdramon",
         "types": [
-            "Steel",
-            "Dragon"
+            "Dragon",
+            "Steel"
         ],
         "ability": "Moxie",
         "hiddenAbility": "No Guard",
@@ -18973,7 +19271,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Commandramon",
-                "method": "Lv18"
+                "method": "Lv18 Amped"
             }
         ],
         "next": [
@@ -18983,14 +19281,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "330",
+        "id": "329",
         "name": "Tankdramon",
         "types": [
-            "Steel",
-            "Dragon"
+            "Dragon",
+            "Steel"
         ],
         "ability": "Bulletproof",
         "hiddenAbility": "Sturdy",
@@ -19042,21 +19341,18 @@ const DIGIMON_DB = [
             {
                 "name": "Darkdramon",
                 "method": "Lv54"
-            },
-            {
-                "name": "Ghilliedhumon",
-                "method": "Lv54"
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "331",
+        "id": "330",
         "name": "Darkdramon",
         "types": [
-            "Steel",
-            "Dragon"
+            "Dragon",
+            "Steel"
         ],
         "ability": "Competitive",
         "hiddenAbility": "Sturdy",
@@ -19108,17 +19404,22 @@ const DIGIMON_DB = [
             {
                 "name": "Tankdramon",
                 "method": "Lv54"
+            },
+            {
+                "name": "Ghilliedhumon",
+                "method": "Lv54"
             }
         ],
         "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Champion",
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "332",
+        "id": "331",
         "name": "Caosmon",
         "types": [
-            "CHAOS"
+            "Chaos"
         ],
         "ability": "Moody",
         "hiddenAbility": "",
@@ -19149,19 +19450,20 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "BanchoLeomon",
-                "method": "Jogress w/ Darkdramon"
+                "method": "Jogress Darkdramon"
             }
         ],
         "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultimate",
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "333",
+        "id": "332",
         "name": "Dracmon",
         "types": [
-            "Undead",
-            "Dark"
+            "Dark",
+            "Undead"
         ],
         "ability": "Prankster",
         "hiddenAbility": "Pickpocket",
@@ -19200,10 +19502,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "334",
+        "id": "333",
         "name": "Sangloupmon",
         "types": [
             "Dark"
@@ -19238,8 +19541,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 110 (Guardian)",
-            "Mt Pyre"
+            "Mt Pyre",
+            "Route 110 (Guardian)"
         ],
         "prev": [
             {
@@ -19250,22 +19553,23 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Matadormon",
-                "method": "Lv32"
+                "method": "Lv32 Amped"
             },
             {
                 "name": "Myotismon",
-                "method": "Lv32"
+                "method": "Lv32 Lowkey"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "335",
+        "id": "334",
         "name": "Matadormon",
         "types": [
-            "Undead",
-            "Dark"
+            "Dark",
+            "Undead"
         ],
         "ability": "Intimidate",
         "hiddenAbility": "Super Luck",
@@ -19308,7 +19612,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Sangloupmon",
-                "method": "Lv32"
+                "method": "Lv32 Amped"
             }
         ],
         "next": [
@@ -19318,14 +19622,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "336",
+        "id": "335",
         "name": "Grandracmon",
         "types": [
-            "Undead",
-            "Dark"
+            "Dark",
+            "Undead"
         ],
         "ability": "Intimidate",
         "hiddenAbility": "Super Luck",
@@ -19381,14 +19686,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "337",
+        "id": "336",
         "name": "Myotismon",
         "types": [
-            "Undead",
-            "Dark"
+            "Dark",
+            "Undead"
         ],
         "ability": "Dry Skin",
         "hiddenAbility": "Regenerator",
@@ -19431,7 +19737,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Sangloupmon",
-                "method": "Lv32"
+                "method": "Lv32 Lowkey"
             }
         ],
         "next": [
@@ -19441,14 +19747,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "338",
+        "id": "337",
         "name": "VenomMyotismon",
         "types": [
-            "Undead",
-            "Dark"
+            "Dark",
+            "Undead"
         ],
         "ability": "Dry Skin",
         "hiddenAbility": "Regenerator",
@@ -19504,10 +19811,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "339",
+        "id": "338",
         "name": "DemiDevimon",
         "types": [
             "Dark",
@@ -19554,10 +19862,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "340",
+        "id": "339",
         "name": "Devimon",
         "types": [
             "Dark",
@@ -19604,11 +19913,11 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "NeoDevimon",
-                "method": "Lv32"
+                "method": "Lv32 Amped"
             },
             {
                 "name": "Jokermon",
-                "method": "Lv32"
+                "method": "Lv32 Lowkey"
             },
             {
                 "name": "Kimeramon",
@@ -19616,10 +19925,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "341",
+        "id": "340",
         "name": "NeoDevimon",
         "types": [
             "Dark",
@@ -19666,7 +19976,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Devimon",
-                "method": "Lv32"
+                "method": "Lv32 Amped"
             }
         ],
         "next": [
@@ -19676,10 +19986,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "342",
+        "id": "341",
         "name": "DoneDevimon",
         "types": [
             "Dark",
@@ -19735,10 +20046,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "343",
+        "id": "342",
         "name": "Jokermon",
         "types": [
             "Dark",
@@ -19787,20 +20099,21 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Devimon",
-                "method": "Lv32"
+                "method": "Lv32 Lowkey"
             }
         ],
         "next": [
             {
                 "name": "Piedmon",
-                "method": "Lv32 (?)"
+                "method": "Lv32"
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "344",
+        "id": "343",
         "name": "Piedmon",
         "types": [
             "Dark",
@@ -19851,15 +20164,16 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Jokermon",
-                "method": "Lv32 (?)"
+                "method": "Lv32"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "345",
+        "id": "344",
         "name": "Vilemon",
         "types": [
             "Dark"
@@ -19911,14 +20225,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "346",
+        "id": "345",
         "name": "SkullSatamon",
         "types": [
-            "Undead",
-            "Magic"
+            "Magic",
+            "Undead"
         ],
         "ability": "Cursed Body",
         "hiddenAbility": "Perish Body",
@@ -19971,14 +20286,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "347",
+        "id": "346",
         "name": "Barbamon",
         "types": [
-            "Undead",
-            "Magic"
+            "Magic",
+            "Undead"
         ],
         "ability": "Pressure",
         "hiddenAbility": "Perish Body",
@@ -20026,10 +20342,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "348",
+        "id": "347",
         "name": "Gizamon",
         "types": [
             "Water"
@@ -20068,14 +20385,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "349",
+        "id": "348",
         "name": "Gesomon",
         "types": [
-            "Water",
-            "Poison"
+            "Poison",
+            "Water"
         ],
         "ability": "Liquid Ooze",
         "hiddenAbility": "Toxic Debris",
@@ -20124,14 +20442,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "350",
+        "id": "349",
         "name": "MarineDevimon",
         "types": [
-            "Water",
-            "Poison"
+            "Poison",
+            "Water"
         ],
         "ability": "Merciless",
         "hiddenAbility": "Toxic Debris",
@@ -20184,14 +20503,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "351",
+        "id": "350",
         "name": "Leviamon",
         "types": [
-            "Water",
-            "Dark"
+            "Dark",
+            "Water"
         ],
         "ability": "Opportunist",
         "hiddenAbility": "Strong Jaw",
@@ -20247,10 +20567,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "352",
+        "id": "351",
         "name": "Dolphmon",
         "types": [
             "Water"
@@ -20300,10 +20621,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "353",
+        "id": "352",
         "name": "Hangyomon",
         "types": [
             "Water"
@@ -20358,11 +20680,12 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Mega",
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "354",
+        "id": "353",
         "name": "Neptunemon",
         "types": [
             "Water"
@@ -20420,15 +20743,16 @@ const DIGIMON_DB = [
             }
         ],
         "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultra",
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
-        "id": "355",
+        "id": "354",
         "name": "Betamon",
         "types": [
-            "Water",
-            "Electric"
+            "Electric",
+            "Water"
         ],
         "ability": "Volt Absorb",
         "hiddenAbility": "Water Absorb",
@@ -20456,34 +20780,35 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Agumon Crest",
             "Route 103",
-            "Route 104",
-            "Agumon Crest"
+            "Route 104"
         ],
         "prev": [],
         "next": [
             {
                 "name": "Tyrannomon",
-                "method": "Lv18 (Attack > Defense)"
+                "method": "Lv18 Attack > Defense"
             },
             {
                 "name": "Seadramon",
-                "method": "Lv18 (Defense > Attack)"
+                "method": "Lv18 Defense > Attack"
             },
             {
                 "name": "Airdramon",
-                "method": "Lv18 (Attack = Defense)"
+                "method": "Lv18 Attack = Defense"
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "356",
+        "id": "355",
         "name": "Seadramon",
         "types": [
-            "Water",
-            "Dragon"
+            "Dragon",
+            "Water"
         ],
         "ability": "Swift Swim",
         "hiddenAbility": "Water Absorb",
@@ -20516,7 +20841,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Betamon",
-                "method": "Lv18 (Defense > Attack)"
+                "method": "Lv18 Defense > Attack"
             }
         ],
         "next": [
@@ -20526,14 +20851,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "357",
+        "id": "356",
         "name": "MegaSeadramon",
         "types": [
-            "Water",
-            "Dragon"
+            "Dragon",
+            "Water"
         ],
         "ability": "Lightning Rod",
         "hiddenAbility": "Water Absorb",
@@ -20586,14 +20912,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "358",
+        "id": "357",
         "name": "MetalSeadramon",
         "types": [
-            "Water",
-            "Steel"
+            "Steel",
+            "Water"
         ],
         "ability": "Multiscale",
         "hiddenAbility": "Water Absorb",
@@ -20649,14 +20976,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "359",
+        "id": "358",
         "name": "Aegisdramon",
         "types": [
-            "Water",
-            "Steel"
+            "Steel",
+            "Water"
         ],
         "ability": "Mega Launcher",
         "hiddenAbility": "",
@@ -20683,19 +21011,20 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Plesiomon",
-                "method": "Jogress w/ MetalSeadramon"
+                "method": "Jogress MetalSeadramon"
             }
         ],
         "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultra",
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
-        "id": "360",
+        "id": "359",
         "name": "Airdramon",
         "types": [
-            "Flying",
-            "Dragon"
+            "Dragon",
+            "Flying"
         ],
         "ability": "Wind Rider",
         "hiddenAbility": "Gale Wings",
@@ -20723,15 +21052,15 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Magma Hideout",
             "Route 104",
             "Route 110",
-            "Route 111",
-            "Magma Hideout"
+            "Route 111"
         ],
         "prev": [
             {
                 "name": "Betamon",
-                "method": "Lv18 (Attack = Defense)"
+                "method": "Lv18 Attack = Defense"
             }
         ],
         "next": [
@@ -20745,14 +21074,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "361",
+        "id": "360",
         "name": "Megadramon",
         "types": [
-            "Steel",
-            "Dragon"
+            "Dragon",
+            "Steel"
         ],
         "ability": "Levitate",
         "hiddenAbility": "Mega Launcher",
@@ -20798,12 +21128,18 @@ const DIGIMON_DB = [
                 "method": "Lv32"
             }
         ],
-        "next": [],
+        "next": [
+            {
+                "name": "Mugendramon",
+                "method": "Lv70"
+            }
+        ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "362",
+        "id": "361",
         "name": "Sunarizamon",
         "types": [
             "Ground"
@@ -20826,7 +21162,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "15",
-                "move": "Rock Smash"
+                "move": "Rock Breaker"
             },
             {
                 "level": "17",
@@ -20857,10 +21193,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "363",
+        "id": "362",
         "name": "Tortomon",
         "types": [
             "Ground"
@@ -20914,14 +21251,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "364",
+        "id": "363",
         "name": "Jagamon",
         "types": [
-            "Ground",
-            "Grass"
+            "Grass",
+            "Ground"
         ],
         "ability": "Shell Armor",
         "hiddenAbility": "Sap Sipper",
@@ -20974,14 +21312,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "365",
+        "id": "364",
         "name": "Golemon",
         "types": [
-            "Rock",
-            "Ground"
+            "Ground",
+            "Rock"
         ],
         "ability": "Sturdy",
         "hiddenAbility": "Cursed Body",
@@ -21029,14 +21368,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "366",
+        "id": "365",
         "name": "Gogmamon",
         "types": [
-            "Rock",
-            "Ground"
+            "Ground",
+            "Rock"
         ],
         "ability": "Earth Eater",
         "hiddenAbility": "Magic Bounce",
@@ -21076,8 +21416,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Rustboro (Trade)",
-            "Magma Hideout"
+            "Magma Hideout",
+            "Rustboro (Trade)"
         ],
         "prev": [
             {
@@ -21092,14 +21432,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "367",
+        "id": "366",
         "name": "Blastmon",
         "types": [
-            "Rock",
-            "Ground"
+            "Ground",
+            "Rock"
         ],
         "ability": "Earth Eater",
         "hiddenAbility": "Magic Bounce",
@@ -21153,14 +21494,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "368",
+        "id": "367",
         "name": "Monochromon",
         "types": [
-            "Ground",
-            "Fire"
+            "Fire",
+            "Ground"
         ],
         "ability": "Sturdy",
         "hiddenAbility": "Drought",
@@ -21193,8 +21535,8 @@ const DIGIMON_DB = [
         ],
         "locations": [
             "Granite Cave F1/F4",
-            "Route 111",
-            "Magma Hideout"
+            "Magma Hideout",
+            "Route 111"
         ],
         "prev": [
             {
@@ -21213,14 +21555,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "369",
+        "id": "368",
         "name": "Triceramon",
         "types": [
-            "Ground",
-            "Dragon"
+            "Dragon",
+            "Ground"
         ],
         "ability": "Sturdy",
         "hiddenAbility": "Sheer Force",
@@ -21260,8 +21603,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Meteor Falls",
             "Magma Hideout",
+            "Meteor Falls",
             "Victory Road F3"
         ],
         "prev": [
@@ -21277,14 +21620,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "370",
+        "id": "369",
         "name": "DinoRexmon",
         "types": [
-            "Ground",
-            "Dragon"
+            "Dragon",
+            "Ground"
         ],
         "ability": "Intimidate",
         "hiddenAbility": "Sheer Force",
@@ -21336,10 +21680,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "371",
+        "id": "370",
         "name": "Gammamon",
         "types": [
             "Dragon"
@@ -21350,7 +21695,7 @@ const DIGIMON_DB = [
         "moves": [
             {
                 "level": "6",
-                "move": "Rock Smash"
+                "move": "Rock Breaker"
             },
             {
                 "level": "9",
@@ -21370,8 +21715,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Granite Cave F2/F4",
-            "Agumon Crest"
+            "Agumon Crest",
+            "Granite Cave F2/F4"
         ],
         "prev": [],
         "next": [
@@ -21385,10 +21730,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "372",
+        "id": "371",
         "name": "BetelGammamon",
         "types": [
             "Dragon",
@@ -21420,8 +21766,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Granite Cave F4",
-            "Agumon Crest"
+            "Agumon Crest",
+            "Granite Cave F4"
         ],
         "prev": [
             {
@@ -21436,10 +21782,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "373",
+        "id": "372",
         "name": "Canoweissmon",
         "types": [
             "Dragon",
@@ -21498,10 +21845,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "374",
+        "id": "373",
         "name": "Siriusmon",
         "types": [
             "Dragon",
@@ -21558,18 +21906,19 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Proximamon",
-                "method": "Jogress w/ Arcturusmon"
+                "method": "Jogress Arcturusmon"
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "375",
+        "id": "374",
         "name": "GulusGammamon",
         "types": [
-            "Dragon",
-            "Dark"
+            "Dark",
+            "Dragon"
         ],
         "ability": "Beast Boost",
         "hiddenAbility": "Intimidate",
@@ -21616,10 +21965,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "376",
+        "id": "375",
         "name": "Regulusmon",
         "types": [
             "Dragon",
@@ -21678,10 +22028,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "377",
+        "id": "376",
         "name": "Arcturusmon",
         "types": [
             "Dragon",
@@ -21741,14 +22092,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "378",
+        "id": "377",
         "name": "Proximamon",
         "types": [
-            "Holy",
-            "Dark"
+            "Dark",
+            "Holy"
         ],
         "ability": "Beads of Ruin",
         "hiddenAbility": "Beads of Ruin",
@@ -21779,15 +22131,16 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Siriusmon",
-                "method": "Jogress w/ Arcturusmon"
+                "method": "Jogress Arcturusmon"
             }
         ],
         "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultra",
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
-        "id": "379",
+        "id": "378",
         "name": "Angoramon",
         "types": [
             "Fighting",
@@ -21829,10 +22182,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "380",
+        "id": "379",
         "name": "SymbareAngoramon",
         "types": [
             "Fighting",
@@ -21868,8 +22222,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 110 (Guardian)",
-            "Gabumon Crest"
+            "Gabumon Crest",
+            "Route 110 (Guardian)"
         ],
         "prev": [
             {
@@ -21884,10 +22238,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "381",
+        "id": "380",
         "name": "Lamortmon",
         "types": [
             "Fighting",
@@ -21946,10 +22301,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "382",
+        "id": "381",
         "name": "Diarbbitmon",
         "types": [
             "Fighting",
@@ -22005,10 +22361,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "383",
+        "id": "382",
         "name": "Jellymon",
         "types": [
             "Electric",
@@ -22050,10 +22407,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "384",
+        "id": "383",
         "name": "TeslaJellymon",
         "types": [
             "Electric",
@@ -22102,10 +22460,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "385",
+        "id": "384",
         "name": "Thetismon",
         "types": [
             "Electric",
@@ -22162,10 +22521,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "386",
+        "id": "385",
         "name": "Amphimon",
         "types": [
             "Steel",
@@ -22225,10 +22585,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "387",
+        "id": "386",
         "name": "Morphomon",
         "types": [
             "Bug",
@@ -22272,10 +22633,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "388",
+        "id": "387",
         "name": "Hudiemon",
         "types": [
             "Bug",
@@ -22324,13 +22686,18 @@ const DIGIMON_DB = [
             {
                 "name": "Archnemon",
                 "method": "Lv30"
+            },
+            {
+                "name": "LadyDevimon",
+                "method": "Lv30"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "389",
+        "id": "388",
         "name": "FunBeemon",
         "types": [
             "Bug"
@@ -22361,25 +22728,26 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Tentomon Crest",
-            "Route 120"
+            "Route 120",
+            "Tentomon Crest"
         ],
         "prev": [],
         "next": [
             {
                 "name": "Waspmon",
-                "method": "Lv18"
+                "method": "Lv18 Male"
             },
             {
                 "name": "ForgeBeemon",
-                "method": "Lv18"
+                "method": "Lv18 Female"
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "390",
+        "id": "389",
         "name": "Waspmon",
         "types": [
             "Bug",
@@ -22422,7 +22790,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "FunBeemon",
-                "method": "Lv18"
+                "method": "Lv18 Male"
             }
         ],
         "next": [
@@ -22432,10 +22800,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "391",
+        "id": "390",
         "name": "Vespamon",
         "types": [
             "Bug",
@@ -22492,10 +22861,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "392",
+        "id": "391",
         "name": "TigerVespamon",
         "types": [
             "Bug",
@@ -22555,14 +22925,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "393",
+        "id": "392",
         "name": "ForgeBeemon",
         "types": [
             "Bug",
-            "Normal"
+            "Steel"
         ],
         "ability": "Swarm",
         "hiddenAbility": "Battle Armor",
@@ -22600,7 +22971,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "FunBeemon",
-                "method": "Lv18"
+                "method": "Lv18 Female"
             }
         ],
         "next": [
@@ -22610,10 +22981,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "394",
+        "id": "393",
         "name": "CannonBeemon",
         "types": [
             "Bug",
@@ -22672,10 +23044,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "395",
+        "id": "394",
         "name": "QueenBeemon",
         "types": [
             "Bug",
@@ -22723,10 +23096,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "396",
+        "id": "395",
         "name": "Herissmon",
         "types": [
             "Electric",
@@ -22758,8 +23132,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 116",
-            "Old Mauville"
+            "Old Mauville",
+            "Route 116"
         ],
         "prev": [],
         "next": [
@@ -22769,10 +23143,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "397",
+        "id": "396",
         "name": "Filmon",
         "types": [
             "Electric",
@@ -22804,8 +23179,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 110",
-            "Old Mauville"
+            "Old Mauville",
+            "Route 110"
         ],
         "prev": [
             {
@@ -22820,10 +23195,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "398",
+        "id": "397",
         "name": "Stiffilmon",
         "types": [
             "Electric",
@@ -22876,14 +23252,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "399",
+        "id": "398",
         "name": "Rasenmon Fury Mode",
         "types": [
-            "Poison",
-            "Dark"
+            "Dark",
+            "Poison"
         ],
         "ability": "Berserk",
         "hiddenAbility": "Reckless",
@@ -22912,10 +23289,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "400",
+        "id": "399",
         "name": "Rasenmon True Form",
         "types": [
             "Electric",
@@ -22959,10 +23337,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Ultra",
-        "cardLevel": 7
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
-        "id": "401",
+        "id": "400",
         "name": "Pulsemon",
         "types": [
             "Electric"
@@ -22989,9 +23368,9 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Old Mauville",
             "Route 116",
-            "Tentomon Crest",
-            "Old Mauville"
+            "Tentomon Crest"
         ],
         "prev": [],
         "next": [
@@ -23005,10 +23384,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "402",
+        "id": "401",
         "name": "Bulkmon",
         "types": [
             "Electric",
@@ -23059,10 +23439,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "403",
+        "id": "402",
         "name": "Boutmon",
         "types": [
             "Electric",
@@ -23123,10 +23504,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "404",
+        "id": "403",
         "name": "Kazuchimon",
         "types": [
             "Electric",
@@ -23186,10 +23568,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "405",
+        "id": "404",
         "name": "Exermon",
         "types": [
             "Bug",
@@ -23225,8 +23608,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Tentomon Crest",
-            "Mirage Tower"
+            "Mirage Tower",
+            "Tentomon Crest"
         ],
         "prev": [
             {
@@ -23241,10 +23624,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "406",
+        "id": "405",
         "name": "Climbmon",
         "types": [
             "Bug",
@@ -23299,10 +23683,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "407",
+        "id": "406",
         "name": "Shivamon",
         "types": [
             "Bug",
@@ -23354,10 +23739,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "408",
+        "id": "407",
         "name": "Shroudmon",
         "types": [
             "Dark",
@@ -23417,14 +23803,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "409",
+        "id": "408",
         "name": "Loogamon",
         "types": [
-            "Magic",
-            "Fire"
+            "Fire",
+            "Magic"
         ],
         "ability": "Mold Breaker",
         "hiddenAbility": "Anticipation",
@@ -23463,14 +23850,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "410",
+        "id": "409",
         "name": "Loogarmon",
         "types": [
-            "Magic",
-            "Fire"
+            "Fire",
+            "Magic"
         ],
         "ability": "Mold Breaker",
         "hiddenAbility": "Anticipation",
@@ -23514,14 +23902,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "411",
+        "id": "410",
         "name": "Helloogarmon",
         "types": [
-            "Magic",
-            "Fire"
+            "Fire",
+            "Magic"
         ],
         "ability": "Flame Body",
         "hiddenAbility": "Intimidate",
@@ -23546,14 +23935,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "412",
+        "id": "411",
         "name": "Soloogarmon",
         "types": [
-            "Magic",
-            "Fire"
+            "Fire",
+            "Magic"
         ],
         "ability": "Steam Engine",
         "hiddenAbility": "Inner Focus",
@@ -23601,15 +23991,16 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "stage": "Ultimate",
-        "cardLevel": 5
+        "stage": "Mega",
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "413",
+        "id": "412",
         "name": "Fenriloogamon",
         "types": [
-            "Magic",
-            "Fire"
+            "Fire",
+            "Magic"
         ],
         "ability": "Clear Body",
         "hiddenAbility": "Inner Focus",
@@ -23666,18 +24057,19 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Fenriloogamon Takemikazuchi",
-                "method": "Jogress w/ Kazuchimon"
+                "method": "Jogress Kazuchimon"
             }
         ],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultra",
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
-        "id": "414",
+        "id": "413",
         "name": "Fenriloogamon Takemikazuchi",
         "types": [
-            "Magic",
-            "Electric"
+            "Electric",
+            "Magic"
         ],
         "ability": "Sharpness",
         "hiddenAbility": "Inner Focus",
@@ -23704,15 +24096,16 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Fenriloogamon",
-                "method": "Jogress w/ Kazuchimon"
+                "method": "Jogress Kazuchimon"
             }
         ],
         "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
+        "stage": "Ultra",
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
-        "id": "415",
+        "id": "414",
         "name": "Kudamon",
         "types": [
             "Holy"
@@ -23753,10 +24146,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "416",
+        "id": "415",
         "name": "Reppamon",
         "types": [
             "Holy"
@@ -23791,8 +24185,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 110 (Guardian)",
-            "Gabumon Crest"
+            "Gabumon Crest",
+            "Route 110 (Guardian)"
         ],
         "prev": [
             {
@@ -23807,14 +24201,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "417",
+        "id": "416",
         "name": "Tyilinmon",
         "types": [
-            "Holy",
-            "Flying"
+            "Flying",
+            "Holy"
         ],
         "ability": "Hospitality",
         "hiddenAbility": "Justified",
@@ -23871,14 +24266,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "418",
+        "id": "417",
         "name": "Mitamamon",
         "types": [
-            "Holy",
-            "Flying"
+            "Flying",
+            "Holy"
         ],
         "ability": "Wonder Guard",
         "hiddenAbility": "Wonder Guard",
@@ -23934,10 +24330,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "419",
+        "id": "418",
         "name": "Sleipmon",
         "types": [
             "Holy",
@@ -23997,10 +24394,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "420",
+        "id": "419",
         "name": "Ghostmon",
         "types": [
             "Undead"
@@ -24042,10 +24440,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "421",
+        "id": "420",
         "name": "Bakemon",
         "types": [
             "Undead"
@@ -24076,9 +24475,9 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Agumon Crest",
             "Granite Cave F2",
-            "Mt Pyre",
-            "Agumon Crest"
+            "Mt Pyre"
         ],
         "prev": [
             {
@@ -24101,10 +24500,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "422",
+        "id": "421",
         "name": "Phantomon",
         "types": [
             "Undead"
@@ -24162,14 +24562,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "423",
+        "id": "422",
         "name": "Necromon",
         "types": [
-            "Undead",
-            "Magic"
+            "Magic",
+            "Undead"
         ],
         "ability": "Grim Neigh",
         "hiddenAbility": "Cursed Body",
@@ -24225,14 +24626,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "424",
+        "id": "423",
         "name": "Pumpmon",
         "types": [
-            "Undead",
-            "Grass"
+            "Grass",
+            "Undead"
         ],
         "ability": "Intimidate",
         "hiddenAbility": "Shadow Tag",
@@ -24278,21 +24680,17 @@ const DIGIMON_DB = [
                 "method": "Wood Data"
             }
         ],
-        "next": [
-            {
-                "name": "NoblePumpmon",
-                "method": "Lv50"
-            }
-        ],
+        "next": [],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "425",
+        "id": "424",
         "name": "NoblePumpmon",
         "types": [
-            "Undead",
-            "Grass"
+            "Grass",
+            "Undead"
         ],
         "ability": "Intimidate",
         "hiddenAbility": "Shadow Tag",
@@ -24342,20 +24740,21 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Pumpmon",
+                "name": "Pumpkinmon",
                 "method": "Lv50"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "426",
+        "id": "425",
         "name": "Mummymon",
         "types": [
-            "Undead",
-            "Poison"
+            "Poison",
+            "Undead"
         ],
         "ability": "Mummy",
         "hiddenAbility": "Cursed Body",
@@ -24410,14 +24809,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "427",
+        "id": "426",
         "name": "Pharaohmon",
         "types": [
-            "Undead",
-            "Poison"
+            "Poison",
+            "Undead"
         ],
         "ability": "Mummy",
         "hiddenAbility": "Cursed Body",
@@ -24465,14 +24865,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "428",
+        "id": "427",
         "name": "Tsukaimon",
         "types": [
-            "Flying",
-            "Dark"
+            "Dark",
+            "Flying"
         ],
         "ability": "Competitive",
         "hiddenAbility": "Prankster",
@@ -24511,10 +24912,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "429",
+        "id": "428",
         "name": "Witchmon",
         "types": [
             "Dark",
@@ -24550,11 +24952,11 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 111",
             "110 (Guardian)",
+            "Mirage Tower",
+            "Route 111",
             "Route 119",
-            "Route 121",
-            "Mirage Tower"
+            "Route 121"
         ],
         "prev": [
             {
@@ -24565,18 +24967,19 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "LadyDevimon",
-                "method": "Lv32"
+                "method": "Lv32 Lowkey"
             },
             {
                 "name": "Bastemon",
-                "method": "Lv32"
+                "method": "Lv32 Amped"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "430",
+        "id": "429",
         "name": "LadyDevimon",
         "types": [
             "Dark",
@@ -24625,7 +25028,11 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Witchmon",
-                "method": "Lv32"
+                "method": "Lv32 Lowkey"
+            },
+            {
+                "name": "Hudiemon",
+                "method": "Lv30"
             }
         ],
         "next": [
@@ -24639,10 +25046,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "431",
+        "id": "430",
         "name": "Dianamon",
         "types": [
             "Dark",
@@ -24702,14 +25110,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "432",
+        "id": "431",
         "name": "Mastemon",
         "types": [
-            "Holy",
-            "Dark"
+            "Dark",
+            "Holy"
         ],
         "ability": "Dazzling",
         "hiddenAbility": "As One",
@@ -24760,15 +25169,16 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Angewomon",
-                "method": "Jogress w/ LadyDevimon"
+                "method": "Jogress LadyDevimon"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "433",
+        "id": "432",
         "name": "Bastemon",
         "types": [
             "Dark",
@@ -24818,7 +25228,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Witchmon",
-                "method": "Lv32"
+                "method": "Lv32 Amped"
             }
         ],
         "next": [
@@ -24828,10 +25238,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "434",
+        "id": "433",
         "name": "Lilithmon",
         "types": [
             "Dark",
@@ -24891,10 +25302,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "435",
+        "id": "434",
         "name": "Labramon",
         "types": [
             "Normal"
@@ -24934,18 +25346,19 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Seasarmon",
-                "method": "Lv18"
+                "method": "Lv18 Lowkey"
             },
             {
                 "name": "Dobermon",
-                "method": "Lv18"
+                "method": "Lv18 Amped"
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "436",
+        "id": "435",
         "name": "Seasarmon",
         "types": [
             "Holy"
@@ -24980,15 +25393,15 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 110",
             "110 (Guardian)",
             "Gabumon Crest",
+            "Route 110",
             "Spear Pillar"
         ],
         "prev": [
             {
                 "name": "Labramon",
-                "method": "Lv18"
+                "method": "Lv18 Lowkey"
             }
         ],
         "next": [
@@ -24998,10 +25411,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "437",
+        "id": "436",
         "name": "Caturamon",
         "types": [
             "Holy"
@@ -25052,17 +25466,13 @@ const DIGIMON_DB = [
                 "method": "Lv32"
             }
         ],
-        "next": [
-            {
-                "name": "Erlangmon",
-                "method": "Lv54"
-            }
-        ],
+        "next": [],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "438",
+        "id": "437",
         "name": "Erlangmon",
         "types": [
             "Holy"
@@ -25115,16 +25525,17 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "Caturamon",
+                "name": "Canturamon",
                 "method": "Lv54"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "439",
+        "id": "438",
         "name": "Dobermon",
         "types": [
             "Dark"
@@ -25155,14 +25566,14 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Gabumon Crest",
             "Route 103 (Part 2)",
-            "Route 110",
-            "Gabumon Crest"
+            "Route 110"
         ],
         "prev": [
             {
                 "name": "Labramon",
-                "method": "Lv18"
+                "method": "Lv18 Amped"
             }
         ],
         "next": [
@@ -25172,10 +25583,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "440",
+        "id": "439",
         "name": "Cerberusmon",
         "types": [
             "Dark",
@@ -25225,21 +25637,17 @@ const DIGIMON_DB = [
                 "method": "Lv32"
             }
         ],
-        "next": [
-            {
-                "name": "Anubismon",
-                "method": "Lv54"
-            }
-        ],
+        "next": [],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "441",
+        "id": "440",
         "name": "Anubismon",
         "types": [
-            "Undead",
-            "Holy"
+            "Holy",
+            "Undead"
         ],
         "ability": "Guard Dog",
         "hiddenAbility": "Shadow Tag",
@@ -25291,10 +25699,6 @@ const DIGIMON_DB = [
             {
                 "name": "Anubismon",
                 "method": "Lv54"
-            },
-            {
-                "name": "Cerberusmon",
-                "method": "Lv54"
             }
         ],
         "next": [
@@ -25304,10 +25708,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "442",
+        "id": "441",
         "name": "Crabmon",
         "types": [
             "Water"
@@ -25348,14 +25753,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "443",
+        "id": "442",
         "name": "Ebidramon",
         "types": [
-            "Water",
-            "Dragon"
+            "Dragon",
+            "Water"
         ],
         "ability": "Defiant",
         "hiddenAbility": "Sheer Force",
@@ -25400,14 +25806,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "444",
+        "id": "443",
         "name": "MarineKimeramon",
         "types": [
-            "Water",
-            "Electric"
+            "Electric",
+            "Water"
         ],
         "ability": "Beast Boost",
         "hiddenAbility": "Moody",
@@ -25460,14 +25867,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "445",
+        "id": "444",
         "name": "Gusokumon",
         "types": [
-            "Water",
-            "Bug"
+            "Bug",
+            "Water"
         ],
         "ability": "Shell Armor",
         "hiddenAbility": "Sheer Force",
@@ -25520,14 +25928,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "446",
+        "id": "445",
         "name": "Regalecusmon",
         "types": [
-            "Water",
-            "Electric"
+            "Electric",
+            "Water"
         ],
         "ability": "Beast Boost",
         "hiddenAbility": "Moody",
@@ -25587,10 +25996,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "447",
+        "id": "446",
         "name": "Monmon",
         "types": [
             "Normal"
@@ -25631,10 +26041,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "448",
+        "id": "447",
         "name": "Apemon",
         "types": [
             "Fighting",
@@ -25685,10 +26096,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "449",
+        "id": "448",
         "name": "Gokuumon",
         "types": [
             "Fighting"
@@ -25742,18 +26154,23 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Shakamon",
-                "method": "Jogress w/ Sagomon"
+                "method": "Jogress Sagomon"
+            },
+            {
+                "name": "Seiten Gokuumon",
+                "method": "Lv54"
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "450",
+        "id": "449",
         "name": "Kamemon",
         "types": [
-            "Water",
-            "Steel"
+            "Steel",
+            "Water"
         ],
         "ability": "Shell Armor",
         "hiddenAbility": "Solid Rock",
@@ -25793,14 +26210,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "451",
+        "id": "450",
         "name": "Gawappamon",
         "types": [
-            "Water",
-            "Steel"
+            "Steel",
+            "Water"
         ],
         "ability": "Dancer",
         "hiddenAbility": "Tangled Feet",
@@ -25828,8 +26246,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 111",
-            "110 (Guardian)"
+            "110 (Guardian)",
+            "Route 111"
         ],
         "prev": [
             {
@@ -25844,14 +26262,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "452",
+        "id": "451",
         "name": "Sagomon",
         "types": [
-            "Water",
-            "Steel"
+            "Steel",
+            "Water"
         ],
         "ability": "Swift Swim",
         "hiddenAbility": "Tangled Feet",
@@ -25904,14 +26323,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "453",
+        "id": "452",
         "name": "JumboGamemon",
         "types": [
-            "Water",
-            "Steel"
+            "Steel",
+            "Water"
         ],
         "ability": "Shell Armor",
         "hiddenAbility": "Filter",
@@ -25967,10 +26387,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "454",
+        "id": "453",
         "name": "Tylomon",
         "types": [
             "Water"
@@ -26020,14 +26441,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "455",
+        "id": "454",
         "name": "Sandiramon",
         "types": [
-            "Poison",
-            "Holy"
+            "Holy",
+            "Poison"
         ],
         "ability": "Merciless",
         "hiddenAbility": "Corrosion",
@@ -26069,7 +26491,12 @@ const DIGIMON_DB = [
         "locations": [
             "Mirage Tower (Fossil)"
         ],
-        "prev": [],
+        "prev": [
+            {
+                "name": "Tylomon",
+                "method": "Lv32"
+            }
+        ],
         "next": [
             {
                 "name": "Xuanwumon",
@@ -26077,10 +26504,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "456",
+        "id": "455",
         "name": "Xuanwumon",
         "types": [
             "Grass",
@@ -26142,10 +26570,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "457",
+        "id": "456",
         "name": "Kokuwamon",
         "types": [
             "Electric"
@@ -26176,8 +26605,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Tentomon Crest",
-            "Old Mauville"
+            "Old Mauville",
+            "Tentomon Crest"
         ],
         "prev": [],
         "next": [
@@ -26187,10 +26616,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "458",
+        "id": "457",
         "name": "Thundermon",
         "types": [
             "Electric"
@@ -26221,9 +26651,9 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 110",
             "110 (Guardian)",
-            "Old Mauville"
+            "Old Mauville",
+            "Route 110"
         ],
         "prev": [
             {
@@ -26238,14 +26668,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "459",
+        "id": "458",
         "name": "Mamemon",
         "types": [
-            "Normal",
-            "Electric"
+            "Electric",
+            "Normal"
         ],
         "ability": "Iron Fist",
         "hiddenAbility": "Adaptability",
@@ -26304,14 +26735,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "460",
+        "id": "459",
         "name": "BanchoMamemon",
         "types": [
-            "Fighting",
-            "Electric"
+            "Electric",
+            "Fighting"
         ],
         "ability": "Iron Fist",
         "hiddenAbility": "Adaptability",
@@ -26367,14 +26799,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "461",
+        "id": "460",
         "name": "MetalMamemon",
         "types": [
-            "Steel",
-            "Electric"
+            "Electric",
+            "Steel"
         ],
         "ability": "Mega Launcher",
         "hiddenAbility": "Sheer Force",
@@ -26416,12 +26849,18 @@ const DIGIMON_DB = [
                 "method": "Metal Data"
             }
         ],
-        "next": [],
+        "next": [
+            {
+                "name": "Mugendramon",
+                "method": "Lv70"
+            }
+        ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "462",
+        "id": "461",
         "name": "Floramon",
         "types": [
             "Grass"
@@ -26462,10 +26901,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "463",
+        "id": "462",
         "name": "Woodmon",
         "types": [
             "Grass"
@@ -26507,18 +26947,19 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Oleamon",
-                "method": "Lv32"
+                "method": "Lv32 Female"
             },
             {
                 "name": "Cherrymon",
-                "method": "Lv32"
+                "method": "Lv32 Male"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "464",
+        "id": "463",
         "name": "Oleamon",
         "types": [
             "Grass",
@@ -26568,7 +27009,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Woodmon",
-                "method": "Lv32"
+                "method": "Lv32 Female"
             }
         ],
         "next": [
@@ -26578,10 +27019,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "465",
+        "id": "464",
         "name": "Ceresmon",
         "types": [
             "Grass",
@@ -26639,17 +27081,13 @@ const DIGIMON_DB = [
                 "method": "Lv54"
             }
         ],
-        "next": [
-            {
-                "name": "Ceresmon Medium",
-                "method": "Famis (Item?)"
-            }
-        ],
+        "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "466",
+        "id": "465",
         "name": "Cherrymon",
         "types": [
             "Grass"
@@ -26697,7 +27135,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Woodmon",
-                "method": "Lv32"
+                "method": "Lv32 Male"
             }
         ],
         "next": [
@@ -26707,10 +27145,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "467",
+        "id": "466",
         "name": "Pinochimon",
         "types": [
             "Grass",
@@ -26770,14 +27209,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "468",
+        "id": "467",
         "name": "Keramon",
         "types": [
-            "Poison",
-            "Dark"
+            "Dark",
+            "Poison"
         ],
         "ability": "Toxic Debris",
         "hiddenAbility": "Cursed Body",
@@ -26815,14 +27255,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "469",
+        "id": "468",
         "name": "Chrysalimon",
         "types": [
-            "Poison",
-            "Dark"
+            "Dark",
+            "Poison"
         ],
         "ability": "Toxic Debris",
         "hiddenAbility": "Cursed Body",
@@ -26867,14 +27308,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "470",
+        "id": "469",
         "name": "Infermon",
         "types": [
-            "Poison",
-            "Dark"
+            "Dark",
+            "Poison"
         ],
         "ability": "Toxic Debris",
         "hiddenAbility": "Cursed Body",
@@ -26927,14 +27369,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "471",
+        "id": "470",
         "name": "Diaboromon",
         "types": [
-            "Poison",
-            "Dark"
+            "Dark",
+            "Poison"
         ],
         "ability": "Toxic Debris",
         "hiddenAbility": "Cursed Body",
@@ -26990,10 +27433,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "472",
+        "id": "471",
         "name": "Chuumon",
         "types": [
             "Poison"
@@ -27031,10 +27475,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "473",
+        "id": "472",
         "name": "Sukamon",
         "types": [
             "Poison"
@@ -27049,8 +27494,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 110 (Guardian)",
-            "Meteor Falls"
+            "Meteor Falls",
+            "Route 110 (Guardian)"
         ],
         "prev": [
             {
@@ -27069,14 +27514,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "474",
+        "id": "473",
         "name": "Etemon",
         "types": [
-            "Poison",
-            "Fairy"
+            "Fairy",
+            "Poison"
         ],
         "ability": "Punk Rock",
         "hiddenAbility": "Soundproof",
@@ -27132,10 +27578,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "475",
+        "id": "474",
         "name": "MetalEtemon",
         "types": [
             "Poison",
@@ -27191,10 +27638,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "476",
+        "id": "475",
         "name": "Pteromon",
         "types": [
             "Flying"
@@ -27235,10 +27683,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "477",
+        "id": "476",
         "name": "Galemon",
         "types": [
             "Flying"
@@ -27273,9 +27722,9 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 110",
+            "Biyomon Crest",
             "Jagged Pass",
-            "Biyomon Crest"
+            "Route 110"
         ],
         "prev": [
             {
@@ -27290,10 +27739,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "478",
+        "id": "477",
         "name": "GrandGalemon",
         "types": [
             "Flying",
@@ -27337,8 +27787,8 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
-            "Route 114",
-            "Mirage Tower"
+            "Mirage Tower",
+            "Route 114"
         ],
         "prev": [
             {
@@ -27353,10 +27803,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "479",
+        "id": "478",
         "name": "Zephagamon",
         "types": [
             "Flying",
@@ -27416,10 +27867,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "480",
+        "id": "479",
         "name": "Shoemon",
         "types": [
             "Fairy",
@@ -27464,10 +27916,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "481",
+        "id": "480",
         "name": "Shoeshoemon",
         "types": [
             "Fairy",
@@ -27515,14 +27968,15 @@ const DIGIMON_DB = [
         "next": [
             {
                 "name": "Chaperomon",
-                "method": "Lv32"
+                "method": "Lov32"
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "482",
+        "id": "481",
         "name": "Chaperomon",
         "types": [
             "Fairy",
@@ -27571,7 +28025,7 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Shoeshoemon",
-                "method": "Lv32"
+                "method": "Lov32"
             }
         ],
         "next": [
@@ -27585,10 +28039,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "483",
+        "id": "482",
         "name": "Cendrillmon",
         "types": [
             "Fairy",
@@ -27652,10 +28107,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "484",
+        "id": "483",
         "name": "Elizamon",
         "types": [
             "Dragon"
@@ -27686,10 +28142,10 @@ const DIGIMON_DB = [
             }
         ],
         "locations": [
+            "Granite Cave F1",
             "Route 102",
             "Route 118",
-            "Route 119",
-            "Granite Cave F1"
+            "Route 119"
         ],
         "prev": [],
         "next": [
@@ -27699,10 +28155,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
-        "id": "485",
+        "id": "484",
         "name": "Dimetromon",
         "types": [
             "Dragon"
@@ -27752,10 +28209,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "486",
+        "id": "485",
         "name": "Lamiamon",
         "types": [
             "Dragon",
@@ -27812,10 +28270,11 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "487",
+        "id": "486",
         "name": "Medusamon",
         "types": [
             "Dragon",
@@ -27875,13 +28334,14 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "488",
+        "id": "487",
         "name": "Susanoomon",
         "types": [
-            "CHAOS"
+            "Normal"
         ],
         "ability": "Protean",
         "hiddenAbility": "",
@@ -27896,18 +28356,83 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "AncientGreymon",
-                "method": "Jogress w/ AncientGarurumon"
+                "method": "Jogress AncientGarurumon"
             }
         ],
         "next": [],
+        "stage": "Ultra",
+        "cardLevel": 7,
+        "familyId": 87
+    },
+    {
+        "id": "315",
+        "name": "Mugendramon",
+        "types": [
+            "Steel"
+        ],
+        "ability": "Supreme Overlord",
+        "hiddenAbility": "Mega Launcher",
+        "evoMove": "Mugen Cannon",
+        "moves": [
+            {
+                "level": "55",
+                "move": "Lock-On"
+            },
+            {
+                "level": "56",
+                "move": "Dragon Energy"
+            },
+            {
+                "level": "59",
+                "move": "Nasty Plot"
+            },
+            {
+                "level": "62",
+                "move": "Laser Focus"
+            },
+            {
+                "level": "68",
+                "move": "Electro Cannon"
+            },
+            {
+                "level": "71",
+                "move": "Dynamax Cannon"
+            }
+        ],
+        "locations": [],
+        "prev": [
+            {
+                "name": "MetalTyrannomon",
+                "method": "Mechanic Data"
+            },
+            {
+                "name": "Megadramon",
+                "method": "Lv70"
+            },
+            {
+                "name": "Megadramon",
+                "method": "Mechanic Data"
+            },
+            {
+                "name": "MetalMamemon",
+                "method": "Lv70"
+            }
+        ],
+        "next": [
+            {
+                "name": "Millenniummon",
+                "method": "Jogress Kimeramon"
+            }
+        ],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "489",
         "name": "Kimeramon",
         "types": [
-            "CHAOS"
+            "Chaos"
         ],
         "ability": "Protean",
         "hiddenAbility": "Libero",
@@ -27979,13 +28504,14 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "490",
         "name": "Millenniummon",
         "types": [
-            "CHAOS"
+            "Chaos"
         ],
         "ability": "Shadow Shield",
         "hiddenAbility": "Power of Alchemy",
@@ -27995,12 +28521,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Mugendramon",
-                "method": "Jogress w/ Kimeramon"
+                "method": "Jogress Kimeramon"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "491",
@@ -28042,12 +28569,13 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Gokuumon",
-                "method": "Jogress w/ Sagomon"
+                "method": "Jogress Sagomon"
             }
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
         "id": "492",
@@ -28083,14 +28611,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Rookie",
-        "cardLevel": 3
+        "cardLevel": 3,
+        "familyId": 87
     },
     {
         "id": "493",
         "name": "Lucemon Falldown",
         "types": [
-            "Holy",
-            "Dark"
+            "Dark",
+            "Holy"
         ],
         "ability": "Pressure",
         "hiddenAbility": "",
@@ -28134,13 +28663,14 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "494",
         "name": "GraceNovamon",
         "types": [
-            "CHAOS"
+            "Chaos"
         ],
         "ability": "Neuroforce",
         "hiddenAbility": "",
@@ -28171,18 +28701,19 @@ const DIGIMON_DB = [
         "prev": [
             {
                 "name": "Apollomon",
-                "method": "Jogress w/ Dianamon"
+                "method": "Jogress Dianamon"
             }
         ],
         "next": [],
         "stage": "Ultra",
-        "cardLevel": 7
+        "cardLevel": 7,
+        "familyId": 87
     },
     {
         "id": "495",
         "name": "Betsumon",
         "types": [
-            "CHAOS"
+            "Chaos"
         ],
         "ability": "Imposter",
         "hiddenAbility": "Imposter",
@@ -28201,10 +28732,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "496",
+        "id": "505",
         "name": "LaeusGreymon",
         "types": [
             "Fire",
@@ -28218,14 +28750,15 @@ const DIGIMON_DB = [
         "prev": [],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "497",
+        "id": "506",
         "name": "ZinoGarurumon",
         "types": [
-            "Ice",
-            "Electric"
+            "Electric",
+            "Ice"
         ],
         "ability": "Motor Drive",
         "hiddenAbility": "Hadron Engine",
@@ -28235,10 +28768,11 @@ const DIGIMON_DB = [
         "prev": [],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "498",
+        "id": "507",
         "name": "Nyabootmon",
         "types": [
             "Fairy",
@@ -28298,10 +28832,11 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "499",
+        "id": "508",
         "name": "Ariemon",
         "types": [
             "Water"
@@ -28348,7 +28883,7 @@ const DIGIMON_DB = [
             },
             {
                 "level": "78",
-                "move": "VIctory Dance"
+                "move": "Victory Dance"
             }
         ],
         "locations": [],
@@ -28364,14 +28899,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "500",
+        "id": "509",
         "name": "Landramon",
         "types": [
-            "Rock",
-            "Ground"
+            "Ground",
+            "Rock"
         ],
         "ability": "Sand Force",
         "hiddenAbility": "Dry Skin",
@@ -28416,14 +28952,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Champion",
-        "cardLevel": 4
+        "cardLevel": 4,
+        "familyId": 87
     },
     {
-        "id": "501",
+        "id": "510",
         "name": "Proganomon",
         "types": [
-            "Rock",
-            "Ground"
+            "Ground",
+            "Rock"
         ],
         "ability": "Shell Armor",
         "hiddenAbility": "Dry Skin",
@@ -28476,14 +29013,15 @@ const DIGIMON_DB = [
             }
         ],
         "stage": "Ultimate",
-        "cardLevel": 5
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
-        "id": "502",
+        "id": "511",
         "name": "Pyramidimon",
         "types": [
-            "Rock",
-            "Ground"
+            "Ground",
+            "Rock"
         ],
         "ability": "Sand Stream",
         "hiddenAbility": "Earth Eather",
@@ -28523,14 +29061,15 @@ const DIGIMON_DB = [
         ],
         "next": [],
         "stage": "Mega",
-        "cardLevel": 6
+        "cardLevel": 6,
+        "familyId": 87
     },
     {
-        "id": "503",
+        "id": "512",
         "name": "ExTyrannomon",
         "types": [
-            "Fire",
-            "Fairy"
+            "Fairy",
+            "Fire"
         ],
         "ability": "Pixilate",
         "hiddenAbility": "Multiscale",
@@ -28568,844 +29107,737 @@ const DIGIMON_DB = [
         "locations": [],
         "prev": [
             {
-                "name": "WaruMonzaemon",
-                "method": "Night Daze / Fire Data / Cute Plush"
+                "name": "Monzaemon",
+                "method": "Fire Data"
+            },
+            {
+                "name": "Tyrannomon",
+                "method": "Cute Plush"
             }
         ],
-        "next": [],
+        "next": [
+            {
+                "name": "ShinMonzaemon",
+                "method": "Night Daze"
+            },
+            {
+                "name": "Dinomon",
+                "method": "Dragon Pulse"
+            },
+            {
+                "name": "RustTyranomon",
+                "method": "Thunder Cloud"
+            }
+        ],
         "stage": "Ultimate",
-        "cardLevel": 5
-    },
-    {
-        "id": "504",
-        "name": "Garummon",
-        "types": [
-            "Holy"
-        ],
-        "ability": "Speed Boost",
-        "hiddenAbility": "Berserk",
-        "evoMove": "Lupine Laser",
-        "moves": [
-            {
-                "level": "19",
-                "move": "Steel Blade"
-            },
-            {
-                "level": "21",
-                "move": "Flash"
-            },
-            {
-                "level": "23",
-                "move": "Agility"
-            },
-            {
-                "level": "26",
-                "move": "Holy Blast"
-            },
-            {
-                "level": "29",
-                "move": "Pulse Laser"
-            },
-            {
-                "level": "32",
-                "move": "Aerial Ace"
-            }
-        ],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Wolfmon",
-                "method": "Wolf Kendo / Lupine Laser"
-            }
-        ],
-        "next": [
-            {
-                "name": "Beowolfmon",
-                "method": "Lv32"
-            }
-        ],
-        "stage": "Hybrid",
-        "cardLevel": 4
-    },
-    {
-        "id": "514",
-        "name": "Archnemon Disguise",
-        "types": [
-            "Normal"
-        ],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [],
-        "next": [],
-        "stage": "Rookie",
-        "cardLevel": 3
-    },
-    {
-        "id": "515",
-        "name": "Beelzebumon Blast",
-        "types": [],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Beelzebumon",
-                "method": "Toy Gun"
-            }
-        ],
-        "next": [],
-        "stage": "Ultra",
-        "cardLevel": 7
-    },
-    {
-        "id": "516",
-        "name": "Blizzarmon",
-        "types": [
-            "Ice"
-        ],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Chakmon",
-                "method": "Snow Bomber / Avalanche Step"
-            }
-        ],
-        "next": [
-            {
-                "name": "Frozomon",
-                "method": "Lv32"
-            }
-        ],
-        "stage": "Hybrid",
-        "cardLevel": 4
-    },
-    {
-        "id": "517",
-        "name": "Bolgmon",
-        "types": [
-            "Electric",
-            "Steel"
-        ],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Blitzmon",
-                "method": "Thor Hammer / Electro Cannon"
-            }
-        ],
-        "next": [
-            {
-                "name": "RhinoKabuterimon",
-                "method": "Lv32"
-            }
-        ],
-        "stage": "Hybrid",
-        "cardLevel": 4
-    },
-    {
-        "id": "518",
-        "name": "Calmaramon",
-        "types": [
-            "Water",
-            "Poison"
-        ],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Ranamon",
-                "method": "Jealousy Rain / Titanic Charge"
-            }
-        ],
-        "next": [
-            {
-                "name": "Mermaimon",
-                "method": "Lv32"
-            }
-        ],
-        "stage": "Hybrid",
-        "cardLevel": 4
-    },
-    {
-        "id": "519",
-        "name": "Ceresmon Medium",
-        "types": [
-            "Grass",
-            "Poison"
-        ],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Ceresmon",
-                "method": "Famis (Item?)"
-            }
-        ],
-        "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
-    },
-    {
-        "id": "520",
-        "name": "Duftmon Leopard",
-        "types": [
-            "Ground",
-            "Holy"
-        ],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Duftmon",
-                "method": "Vulcan Crush"
-            }
-        ],
-        "next": [],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "cardLevel": 5,
+        "familyId": 87
     },
     {
         "id": "521",
-        "name": "Dukemon Crimson",
-        "types": [],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
+        "name": "Metabee",
+        "types": [
+            "Bug",
+            "Steel"
+        ],
+        "ability": "Clear Body",
+        "hiddenAbility": "Adaptability",
+        "evoMove": "Power Gatling",
+        "moves": [
+            {
+                "level": "36",
+                "move": "Pin Missile"
+            },
+            {
+                "level": "41",
+                "move": "Giga Destroyer"
+            },
+            {
+                "level": "47",
+                "move": "Pulse Laser"
+            },
+            {
+                "level": "50",
+                "move": "Spread Fire"
+            }
+        ],
         "locations": [],
         "prev": [
             {
-                "name": "Dukemon",
-                "method": "Grani"
+                "name": "Kabuterimon",
+                "method": "AW Data"
             }
         ],
-        "next": [],
-        "stage": "Ultra",
-        "cardLevel": 7
+        "next": [
+            {
+                "name": "Omedamon",
+                "method": "Jogress Rokusho"
+            }
+        ],
+        "stage": "Unknown",
+        "cardLevel": 0,
+        "familyId": 87
     },
     {
         "id": "522",
-        "name": "Gigasmon",
+        "name": "Rokusho",
         "types": [
-            "Ground"
+            "Bug",
+            "Steel"
         ],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
+        "ability": "Tough Claws",
+        "hiddenAbility": "Compound Eyes",
+        "evoMove": "X-Scissor",
+        "moves": [
+            {
+                "level": "33",
+                "move": "Cut"
+            },
+            {
+                "level": "36",
+                "move": "Agility"
+            },
+            {
+                "level": "39",
+                "move": "First Impression"
+            },
+            {
+                "level": "41",
+                "move": "U-Turn"
+            },
+            {
+                "level": "44",
+                "move": "Swords Dance"
+            },
+            {
+                "level": "50",
+                "move": "Meteor Mash"
+            }
+        ],
         "locations": [],
         "prev": [
             {
-                "name": "Grottemon",
-                "method": "Grotte Hammer / Quagmire Twist"
+                "name": "Kuwagamon",
+                "method": "AW Data"
             }
         ],
-        "next": [
-            {
-                "name": "Volcamon",
-                "method": "Lv32"
-            }
-        ],
-        "stage": "Hybrid",
-        "cardLevel": 4
+        "next": [],
+        "stage": "Unknown",
+        "cardLevel": 0,
+        "familyId": 87
     },
     {
         "id": "523",
-        "name": "Imperialdramon Fighter",
-        "types": [],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Imperialdramon Dragon",
-                "method": "Positron Laser"
-            }
-        ],
-        "next": [
-            {
-                "name": "Imperialdramon Paladin",
-                "method": "Omega Data"
-            }
-        ],
-        "stage": "Ultra",
-        "cardLevel": 7
-    },
-    {
-        "id": "524",
-        "name": "Imperialdramon Paladin",
-        "types": [],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Imperialdramon Fighter",
-                "method": "Omega Data"
-            }
-        ],
-        "next": [],
-        "stage": "Ultra",
-        "cardLevel": 7
-    },
-    {
-        "id": "525",
-        "name": "KaiserLeomon",
-        "types": [
-            "Dark"
-        ],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Lowemon",
-                "method": "Shadow Meteor / Lv32"
-            }
-        ],
-        "next": [
-            {
-                "name": "Rihimon",
-                "method": "Lv32 / Lv54"
-            }
-        ],
-        "stage": "Ultimate",
-        "cardLevel": 5
-    },
-    {
-        "id": "526",
-        "name": "LaeusGreymon Rage",
-        "types": [
-            "Fire",
-            "Poison"
-        ],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [],
-        "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
-    },
-    {
-        "id": "527",
-        "name": "Magnamon X",
-        "types": [],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Magnamon",
-                "method": "X Antibody"
-            }
-        ],
-        "next": [],
-        "stage": "Champion",
-        "cardLevel": 4
-    },
-    {
-        "id": "528",
-        "name": "MirageGaogamon Burst",
-        "types": [],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "MirageGaogamon",
-                "method": "Mirage Soul"
-            }
-        ],
-        "next": [],
-        "stage": "Ultra",
-        "cardLevel": 7
-    },
-    {
-        "id": "529",
-        "name": "Petaldramon",
-        "types": [
-            "Grass",
-            "Dragon"
-        ],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Arbormon",
-                "method": "Blockage Seed / Leaf Cyclone / Lv32"
-            }
-        ],
-        "next": [
-            {
-                "name": "Entmon",
-                "method": "Lv54"
-            }
-        ],
-        "stage": "Hybrid",
-        "cardLevel": 4
-    },
-    {
-        "id": "530",
-        "name": "Ravemon Burst",
-        "types": [],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Ravemon",
-                "method": "Raven Soul"
-            }
-        ],
-        "next": [],
-        "stage": "Ultra",
-        "cardLevel": 7
-    },
-    {
-        "id": "531",
-        "name": "Rosemon Burst",
-        "types": [],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Rosemon",
-                "method": "Rose Soul"
-            }
-        ],
-        "next": [],
-        "stage": "Ultra",
-        "cardLevel": 7
-    },
-    {
-        "id": "532",
-        "name": "ShineGreymon Burst",
-        "types": [],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "ShineGreymon",
-                "method": "Shine Soul"
-            }
-        ],
-        "next": [],
-        "stage": "Ultra",
-        "cardLevel": 7
-    },
-    {
-        "id": "533",
-        "name": "Shutumon",
-        "types": [
-            "Flying",
-            "Normal"
-        ],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Fairymon",
-                "method": "Brezzo Petalo / Plasma Talon"
-            }
-        ],
-        "next": [
-            {
-                "name": "JetSilphymon",
-                "method": "Lv32"
-            }
-        ],
-        "stage": "Hybrid",
-        "cardLevel": 4
-    },
-    {
-        "id": "534",
-        "name": "Vritamon",
-        "types": [],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [
-            {
-                "name": "Agnimon",
-                "method": "Salamander Break / Flame Storm"
-            }
-        ],
-        "next": [],
-        "stage": "Hybrid",
-        "cardLevel": 4
-    },
-    {
-        "id": "535",
-        "name": "ZinoGarurumon Rage",
-        "types": [
-            "Ice",
-            "Electric"
-        ],
-        "ability": "",
-        "hiddenAbility": "",
-        "evoMove": "",
-        "moves": [],
-        "locations": [],
-        "prev": [],
-        "next": [],
-        "stage": "Mega",
-        "cardLevel": 6
-    },
-    {
-        "id": "536",
-        "name": "Meicoomon",
-        "types": [
-            "Chaos"
-        ],
-        "stage": "Champion",
-        "next": [
-            {
-                "name": "Meicrackmon",
-                "method": "Lv28"
-            }
-        ],
-        "prev": [],
-        "cardLevel": 4
-    },
-    {
-        "id": "537",
-        "name": "Meicrackmon",
-        "types": [
-            "Chaos"
-        ],
-        "stage": "Ultimate",
-        "next": [
-            {
-                "name": "Rasielmon",
-                "method": "Lv50"
-            },
-            {
-                "name": "Raguelmon",
-                "method": "Darkness"
-            }
-        ],
-        "prev": [
-            {
-                "name": "Meicoomon",
-                "method": "Lv28"
-            }
-        ],
-        "cardLevel": 5
-    },
-    {
-        "id": "538",
-        "name": "Rasielmon",
-        "types": [
-            "Holy"
-        ],
-        "stage": "Mega",
-        "next": [],
-        "prev": [
-            {
-                "name": "Meicrackmon",
-                "method": "Lv50"
-            }
-        ],
-        "cardLevel": 6
-    },
-    {
-        "id": "539",
-        "name": "Gaioumon Itto Mode",
-        "types": [
-            "Dragon",
-            "Steel"
-        ],
-        "stage": "Burst Mode",
-        "next": [],
-        "prev": [],
-        "cardLevel": 7
-    },
-    {
-        "id": "540",
-        "name": "Coatlmon",
-        "types": [
-            "Light"
-        ],
-        "stage": "Armor",
-        "next": [
-            {
-                "name": "Sandiramon",
-                "method": "Lv50"
-            }
-        ],
-        "prev": [],
-        "cardLevel": 4
-    },
-    {
-        "id": "541",
-        "name": "Sandiramon",
-        "types": [
-            "Earth"
-        ],
-        "stage": "Ultimate",
-        "next": [
-            {
-                "name": "Xuanwumon",
-                "method": "Genku Core"
-            }
-        ],
-        "prev": [
-            {
-                "name": "Tylomon",
-                "method": "Lv32"
-            }
-        ],
-        "cardLevel": 5
-    },
-    {
-        "id": "542",
-        "name": "Minervamon",
-        "types": [
-            "Olympian"
-        ],
-        "stage": "Mega",
-        "next": [
-            {
-                "name": "Mervamon",
-                "method": "Burst"
-            }
-        ],
-        "prev": [],
-        "cardLevel": 6
-    },
-    {
-        "id": "543",
-        "name": "Mervamon",
-        "types": [
-            "Olympian"
-        ],
-        "stage": "Burst Mode",
-        "next": [],
-        "prev": [
-            {
-                "name": "Minervamon",
-                "method": "Burst"
-            }
-        ],
-        "cardLevel": 7
-    },
-    {
-        "id": "544",
-        "name": "Karatenmon",
-        "types": [
-            "Flying"
-        ],
-        "stage": "Ultimate",
-        "next": [
-            {
-                "name": "Tengumon",
-                "method": "Evolution"
-            }
-        ],
-        "prev": [],
-        "cardLevel": 5
-    },
-    {
-        "id": "545",
-        "name": "Tengumon",
-        "types": [
-            "Flying",
-            "Magic"
-        ],
-        "stage": "Mega",
-        "next": [],
-        "prev": [
-            {
-                "name": "Karatenmon",
-                "method": "Evolution"
-            }
-        ],
-        "cardLevel": 6
-    },
-    {
-        "id": "546",
-        "name": "Seiten Gokuwmon",
-        "types": [
-            "Fighting"
-        ],
-        "stage": "Mega",
-        "next": [],
-        "prev": [
-            {
-                "name": "Gokuwmon",
-                "method": "Evolution"
-            }
-        ],
-        "cardLevel": 6
-    },
-    {
-        "id": "547",
-        "name": "VictoryGreymon",
-        "types": [
-            "Dragon",
-            "Fighting"
-        ],
-        "stage": "Mega",
-        "next": [],
-        "prev": [],
-        "cardLevel": 6
-    },
-    {
-        "id": "548",
-        "name": "Z'dGarurumon",
-        "types": [
-            "Beast",
-            "Steel"
-        ],
-        "stage": "Mega",
-        "next": [],
-        "prev": [],
-        "cardLevel": 6
-    },
-    {
-        "id": "549",
-        "name": "SkullGreymon",
-        "types": [
-            "Undead"
-        ],
-        "stage": "Ultimate",
-        "next": [
-            {
-                "name": "G-Erosion SkullGreymon",
-                "method": "G-Cells"
-            }
-        ],
-        "prev": [],
-        "cardLevel": 5
-    },
-    {
-        "id": "550",
-        "name": "Metabee",
-        "types": [
-            "Steel"
-        ],
-        "stage": "Crossover",
-        "next": [
-            {
-                "name": "Omedamon",
-                "method": "Jogress"
-            }
-        ],
-        "prev": [],
-        "cardLevel": 4
-    },
-    {
-        "id": "551",
-        "name": "Rokusho",
-        "types": [
-            "Steel"
-        ],
-        "stage": "Crossover",
-        "next": [
-            {
-                "name": "Omedamon",
-                "method": "Jogress"
-            }
-        ],
-        "prev": [],
-        "cardLevel": 4
-    },
-    {
-        "id": "552",
         "name": "Omedamon",
         "types": [
-            "Steel"
+            "Fighting",
+            "Flying"
         ],
-        "stage": "Ultra",
-        "next": [],
+        "ability": "Regenerator",
+        "hiddenAbility": "Clear Body",
+        "evoMove": "Meda Combo",
+        "moves": [
+            {
+                "level": "50",
+                "move": "Meda Combo"
+            },
+            {
+                "level": "54",
+                "move": "Megalo Spark"
+            },
+            {
+                "level": "56",
+                "move": "Bug Buzz"
+            },
+            {
+                "level": "59",
+                "move": "Divine Breaker"
+            },
+            {
+                "level": "62",
+                "move": "Gigaton Hammer"
+            },
+            {
+                "level": "65",
+                "move": "Sacred Sword"
+            },
+            {
+                "level": "68",
+                "move": "Detect"
+            },
+            {
+                "level": "71",
+                "move": "Electric Terrain"
+            },
+            {
+                "level": "77",
+                "move": "Mega Death"
+            },
+            {
+                "level": "80",
+                "move": "Sharp Claymore"
+            }
+        ],
+        "locations": [],
         "prev": [
             {
                 "name": "Metabee",
-                "method": "Jogress"
-            },
-            {
-                "name": "Rokusho",
-                "method": "Jogress"
+                "method": "Jogress Rokusho"
             }
         ],
-        "cardLevel": 7
+        "next": [],
+        "stage": "Unknown",
+        "cardLevel": 0,
+        "familyId": 87
     },
     {
-        "id": "553",
-        "name": "Cutemon",
+        "id": "524",
+        "name": "SkullGreymon",
+        "types": [
+            "Fire",
+            "Undead"
+        ],
+        "ability": "Berserk",
+        "hiddenAbility": "Intimidate",
+        "evoMove": "Smart Strike",
+        "moves": [
+            {
+                "level": "34",
+                "move": "Crush Claw"
+            },
+            {
+                "level": "36",
+                "move": "Curse"
+            },
+            {
+                "level": "39",
+                "move": "Meltdown"
+            },
+            {
+                "level": "41",
+                "move": "Dragon Claw"
+            },
+            {
+                "level": "44",
+                "move": "Soul Chopper"
+            },
+            {
+                "level": "47",
+                "move": "Evil Bite"
+            },
+            {
+                "level": "50",
+                "move": "Bone Rush"
+            },
+            {
+                "level": "52",
+                "move": "Bitter Malice"
+            }
+        ],
+        "locations": [],
+        "prev": [
+            {
+                "name": "Greymon",
+                "method": "Dark Data"
+            }
+        ],
+        "next": [
+            {
+                "name": "SkullGreymon G-Erosion",
+                "method": "AW Data"
+            }
+        ],
+        "stage": "Unknown",
+        "cardLevel": 0,
+        "familyId": 87
+    },
+    {
+        "id": "525",
+        "name": "SkullGreymon G-Erosion",
+        "types": [
+            "Dragon",
+            "Undead"
+        ],
+        "ability": "Berserk",
+        "hiddenAbility": "Intimidate",
+        "evoMove": "Smart Strike",
+        "moves": [
+            {
+                "level": "55",
+                "move": "Soul Predator"
+            },
+            {
+                "level": "57",
+                "move": "Phantom Force"
+            },
+            {
+                "level": "59",
+                "move": "Screech"
+            },
+            {
+                "level": "62",
+                "move": "Dragon Hammer"
+            },
+            {
+                "level": "65",
+                "move": "Grave Scream"
+            },
+            {
+                "level": "68",
+                "move": "Haze"
+            },
+            {
+                "level": "74",
+                "move": "Ruination"
+            },
+            {
+                "level": "77",
+                "move": "Draco Meteor"
+            },
+            {
+                "level": "80",
+                "move": "Spectral Thief"
+            }
+        ],
+        "locations": [],
+        "prev": [
+            {
+                "name": "SkullGreymon",
+                "method": "AW Data"
+            }
+        ],
+        "next": [],
+        "stage": "Unknown",
+        "cardLevel": 0,
+        "familyId": 87
+    },
+    {
+        "id": "526",
+        "name": "Seiten Gokuumon",
+        "types": [
+            "Fighting",
+            "Holy"
+        ],
+        "ability": "Inner Focus",
+        "hiddenAbility": "Super Luck",
+        "evoMove": "Hammer Arm",
+        "moves": [
+            {
+                "level": "55",
+                "move": "Divine Breaker"
+            },
+            {
+                "level": "56",
+                "move": "Strength"
+            },
+            {
+                "level": "59",
+                "move": "Flare Blitz"
+            },
+            {
+                "level": "62",
+                "move": "Volt Tackle"
+            },
+            {
+                "level": "65",
+                "move": "Liquidation"
+            },
+            {
+                "level": "68",
+                "move": "Electro Shot"
+            },
+            {
+                "level": "71",
+                "move": "Whirlpool"
+            },
+            {
+                "level": "74",
+                "move": "Raging Fury"
+            },
+            {
+                "level": "77",
+                "move": "Close Combat"
+            },
+            {
+                "level": "80",
+                "move": "Heaven Judge"
+            }
+        ],
+        "locations": [],
+        "prev": [
+            {
+                "name": "Gokuumon",
+                "method": "Lv54"
+            }
+        ],
+        "next": [],
+        "stage": "Unknown",
+        "cardLevel": 0,
+        "familyId": 87
+    },
+    {
+        "id": "527",
+        "name": "Meicoomon",
         "types": [
             "Fairy"
         ],
-        "stage": "Rookie",
-        "next": [],
-        "prev": [],
-        "cardLevel": 3
-    },
-    {
-        "id": "554",
-        "name": "Gokuwmon",
-        "types": [
-            "Fighting"
-        ],
-        "stage": "Ultimate",
-        "next": [
+        "ability": "Pixilate",
+        "hiddenAbility": "Cute Charm",
+        "evoMove": "Quick Attack",
+        "moves": [
             {
-                "name": "Seiten Gokuwmon",
-                "method": "Evolution"
+                "level": "26",
+                "move": "Detect"
+            },
+            {
+                "level": "28",
+                "move": "Glare"
+            },
+            {
+                "level": "30",
+                "move": "Neko Punch"
             }
         ],
+        "locations": [],
         "prev": [],
-        "cardLevel": 5
+        "next": [
+            {
+                "name": "Meicrackmon",
+                "method": "Lv32"
+            },
+            {
+                "name": "Meicrackmon Vicious",
+                "method": "Dark Data"
+            }
+        ],
+        "stage": "Unknown",
+        "cardLevel": 0,
+        "familyId": 87
+    },
+    {
+        "id": "528",
+        "name": "Meicrackmon",
+        "types": [
+            "Fairy"
+        ],
+        "ability": "Pixilate",
+        "hiddenAbility": "Cute Charm",
+        "evoMove": "X-Scissor",
+        "moves": [
+            {
+                "level": "34",
+                "move": "Buster Dive"
+            },
+            {
+                "level": "36",
+                "move": "Double Team"
+            },
+            {
+                "level": "39",
+                "move": "Substitute"
+            },
+            {
+                "level": "41",
+                "move": "Static Electricity"
+            },
+            {
+                "level": "44",
+                "move": "Wrap"
+            },
+            {
+                "level": "47",
+                "move": "Hone Claws"
+            },
+            {
+                "level": "50",
+                "move": "Charm"
+            },
+            {
+                "level": "52",
+                "move": "Double Hit"
+            }
+        ],
+        "locations": [],
+        "prev": [
+            {
+                "name": "Meicoomon",
+                "method": "Lv32"
+            }
+        ],
+        "next": [
+            {
+                "name": "Rasielmon",
+                "method": "Lv54"
+            }
+        ],
+        "stage": "Unknown",
+        "cardLevel": 0,
+        "familyId": 87
+    },
+    {
+        "id": "529",
+        "name": "Rasielmon",
+        "types": [
+            "Fairy",
+            "Holy"
+        ],
+        "ability": "Forewarn",
+        "hiddenAbility": "Adaptability",
+        "evoMove": "Moonblast",
+        "moves": [
+            {
+                "level": "55",
+                "move": "7 Heavens"
+            },
+            {
+                "level": "57",
+                "move": "Eldrich Blast"
+            },
+            {
+                "level": "59",
+                "move": "Calm Mind"
+            },
+            {
+                "level": "65",
+                "move": "Fire Blast"
+            },
+            {
+                "level": "74",
+                "move": "Fleur Cannon"
+            },
+            {
+                "level": "77",
+                "move": "Aether Strike"
+            },
+            {
+                "level": "80",
+                "move": "Misty Terrain"
+            }
+        ],
+        "locations": [],
+        "prev": [
+            {
+                "name": "Meicrackmon",
+                "method": "Lv54"
+            }
+        ],
+        "next": [],
+        "stage": "Unknown",
+        "cardLevel": 0,
+        "familyId": 87
+    },
+    {
+        "id": "530",
+        "name": "Meicrackmon Vicious",
+        "types": [
+            "Fairy",
+            "Poison"
+        ],
+        "ability": "Corrosion",
+        "hiddenAbility": "Berserk",
+        "evoMove": "Poison Tail",
+        "moves": [
+            {
+                "level": "34",
+                "move": "Buster Dive"
+            },
+            {
+                "level": "36",
+                "move": "Double Team"
+            },
+            {
+                "level": "39",
+                "move": "Substitute"
+            },
+            {
+                "level": "41",
+                "move": "Evil Bite"
+            },
+            {
+                "level": "44",
+                "move": "Wrap"
+            },
+            {
+                "level": "47",
+                "move": "Hone Claws"
+            },
+            {
+                "level": "50",
+                "move": "Poison Fang"
+            },
+            {
+                "level": "52",
+                "move": "Play Rough"
+            }
+        ],
+        "locations": [],
+        "prev": [
+            {
+                "name": "Meicoomon",
+                "method": "Dark Data"
+            }
+        ],
+        "next": [
+            {
+                "name": "Raguelmon",
+                "method": "Lv54"
+            }
+        ],
+        "stage": "Unknown",
+        "cardLevel": 0,
+        "familyId": 87
+    },
+    {
+        "id": "531",
+        "name": "Raguelmon",
+        "types": [
+            "Fairy",
+            "Poison"
+        ],
+        "ability": "Corrosion",
+        "hiddenAbility": "Berserk",
+        "evoMove": "Gift of Darkness",
+        "moves": [
+            {
+                "level": "55",
+                "move": "Despair Vortex"
+            },
+            {
+                "level": "57",
+                "move": "Rage"
+            },
+            {
+                "level": "59",
+                "move": "Belly Drum"
+            },
+            {
+                "level": "65",
+                "move": "Fiery Wrath"
+            },
+            {
+                "level": "74",
+                "move": "Raging Fury"
+            },
+            {
+                "level": "77",
+                "move": "Mortal Spin"
+            },
+            {
+                "level": "80",
+                "move": "Double-Edge"
+            }
+        ],
+        "locations": [],
+        "prev": [
+            {
+                "name": "Meicrackmon Vicious",
+                "method": "Lv54"
+            }
+        ],
+        "next": [
+            {
+                "name": "Ordinemon",
+                "method": "Jogress Ophanimon Falldown"
+            }
+        ],
+        "stage": "Unknown",
+        "cardLevel": 0,
+        "familyId": 87
+    },
+    {
+        "id": "532",
+        "name": "Ophanimon Falldown",
+        "types": [
+            "Dark",
+            "Fairy"
+        ],
+        "ability": "Anger Point",
+        "hiddenAbility": "Vessel of Ruin",
+        "evoMove": "Hell Fire",
+        "moves": [
+            {
+                "level": "59",
+                "move": "Flame Blade"
+            },
+            {
+                "level": "62",
+                "move": "Soul Predator"
+            },
+            {
+                "level": "65",
+                "move": "Dark Prominence"
+            },
+            {
+                "level": "68",
+                "move": "Torment"
+            },
+            {
+                "level": "71",
+                "move": "Power Gem"
+            },
+            {
+                "level": "74",
+                "move": "Guillotine"
+            },
+            {
+                "level": "77",
+                "move": "Gift of Darkness"
+            }
+        ],
+        "locations": [],
+        "prev": [
+            {
+                "name": "Ophanimon",
+                "method": "Dark Data"
+            }
+        ],
+        "next": [],
+        "stage": "Unknown",
+        "cardLevel": 0,
+        "familyId": 87
+    },
+    {
+        "id": "533",
+        "name": "Ordinemon",
+        "types": [
+            "Dark",
+            "Poison"
+        ],
+        "ability": "Dark Aura",
+        "hiddenAbility": "",
+        "evoMove": "Apocalypse",
+        "moves": [
+            {
+                "level": "83",
+                "move": "Acid Breath"
+            },
+            {
+                "level": "86",
+                "move": "End of Paradox"
+            },
+            {
+                "level": "89",
+                "move": "Extinction Cloud"
+            },
+            {
+                "level": "92",
+                "move": "Hyper Beam"
+            },
+            {
+                "level": "95",
+                "move": "All Delete"
+            }
+        ],
+        "locations": [],
+        "prev": [
+            {
+                "name": "Raguelmon",
+                "method": "Jogress Ophanimon Falldown"
+            }
+        ],
+        "next": [],
+        "stage": "Unknown",
+        "cardLevel": 0,
+        "familyId": 87
     }
 ];

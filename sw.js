@@ -1,9 +1,9 @@
-const CACHE_NAME = 'digimon-guider-v13';
+const CACHE_NAME = 'digimon-guider-v14';
 const ASSETS_TO_CACHE = [
     '.',
     'index.html',
     'css/bundle.css',
-    'js/bundle.js?v=13',
+    'js/bundle.js?v=14',
 
     'assets/banner.png',
     'assets/appLogo.png',
